@@ -5,6 +5,8 @@ on:
   schedule:
     - cron: '0 */1 * * *'
   push:
+    branches:
+      - test
     paths:
       - '.github/workflows/freenodes-clashfree-cleaner.yml'
       - 'freenodes-clashfree-ss-cleaner-sys.py'
@@ -34,11 +36,11 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git pull origin main
+          git pull origin test
           git add .
           git commit -m "$(date '+%Y-%m-%d %H:%M:%S')"
 
       - name: 推送更改
         uses: ad-m/github-push-action@master
         with:
-          branch: main
+          branch: test
