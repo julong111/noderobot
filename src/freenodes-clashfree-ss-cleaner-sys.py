@@ -23,9 +23,9 @@ def _extract_proxy_name(line: str) -> str | None:
     return name.strip() if name else None
 
 
-def clean_clash_config(file_path: str | Path):
+def process_config_lines(lines: list[str]) -> list[str]:
     """
-    读取Clash YAML配置文件，执行清理操作。
+    处理Clash配置内容，执行清理操作。
 
     该函数不使用PyYAML，通过字符串和正则表达式操作实现：
     1. 找出所有 type 为 'ss' 且 cipher 也为 'ss' 的代理名称。
@@ -33,21 +33,13 @@ def clean_clash_config(file_path: str | Path):
     3. 移除 proxy-groups 中对这些代理的引用行。
     4. 按白名单模式清理 `proxy-groups`，只保留指定的几个组。
     5. 重置 `rules` 配置块，仅保留指定的几条核心规则。
-    6. 将修改写回原文件。
 
     Args:
-        file_path: Clash YAML配置文件的路径。
-    """
-    config_path = Path(file_path)
-    if not config_path.is_file():
-        print(f"错误: 文件 '{file_path}' 未找到。", file=sys.stderr)
-        sys.exit(1)
+        lines: 从配置文件读取的行列表。
 
-    try:
-        lines = config_path.read_text(encoding='utf-8').splitlines()
-    except Exception as e:
-        print(f"错误: 读取文件失败: {e}", file=sys.stderr)
-        sys.exit(1)
+    Returns:
+        处理完成后的新行列表。
+    """
 
     # 找出所有需要移除的代理名称
     proxies_to_remove_names = set()
@@ -199,12 +191,7 @@ def clean_clash_config(file_path: str | Path):
         in_rules_section = False  # 遇到下一个顶层key，rules区域结束
         final_lines.append(line)
 
-    try:
-        config_path.write_text('\n'.join(final_lines) + '\n', encoding='utf-8')
-        print(f"\n清理完成。更新后的配置已写回 '{file_path}'")
-    except Exception as e:
-        print(f"错误: 写入文件失败: {e}", file=sys.stderr)
-        sys.exit(1)
+    return final_lines
 
 
 def download_config_file(url: str, destination_path: Path) -> bool:
@@ -232,11 +219,49 @@ def download_config_file(url: str, destination_path: Path) -> bool:
 
 
 if __name__ == '__main__':
-    CONFIG_URL = 'https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml'
-    LOCAL_FILENAME = 'freenodes-clashfree.yml'
+    # --- 配置区 ---
+    # 脚本文件所在的目录 (src)
     script_dir = Path(__file__).resolve().parent
-    local_config_path = script_dir / LOCAL_FILENAME
+    # 项目根目录
+    project_root = script_dir.parent
+    # 定义输出目录和文件名
+    output_dir_name = 's'
+    output_filename = 'freenodes-clashfree.yml'
 
-    if download_config_file(CONFIG_URL, local_config_path):
-        print("\n开始清理下载的配置文件...")
-        clean_clash_config(local_config_path)
+    output_dir = project_root / output_dir_name
+    output_path = output_dir / output_filename
+
+    # --- 模式选择 ---
+    source_lines = []
+
+    # 检查是否为开发模式
+    if len(sys.argv) > 1 and sys.argv[1] == 'dev':
+        print("--- 运行在开发模式 ---")
+        dev_config_path = project_root / 'resource' / 'freenodes-clashfree-template.yml'
+        print(f"读取本地文件: {dev_config_path}")
+        if not dev_config_path.is_file():
+            print(f"错误: 开发模式输入文件 '{dev_config_path}' 未找到。", file=sys.stderr)
+            sys.exit(1)
+        source_lines = dev_config_path.read_text(encoding='utf-8').splitlines()
+    else:
+        print("--- 运行在生产模式 ---")
+        CONFIG_URL = 'https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml'
+        # 在生产模式下，直接下载内容到内存
+        print(f"开始从 {CONFIG_URL} 下载配置文件...")
+        try:
+            response = requests.get(CONFIG_URL, timeout=15)
+            response.raise_for_status()
+            print(f"下载成功，文件大小: {len(response.content)} 字节。")
+            source_lines = response.text.splitlines()
+        except requests.exceptions.RequestException as e:
+            print(f"错误: 下载文件时发生网络错误: {e}", file=sys.stderr)
+            sys.exit(1)
+
+    # --- 处理与输出 ---
+    if source_lines:
+        print("\n开始清理配置文件...")
+        cleaned_lines = process_config_lines(source_lines)
+        # 确保输出目录存在
+        output_dir.mkdir(parents=True, exist_ok=True)
+        output_path.write_text('\n'.join(cleaned_lines) + '\n', encoding='utf-8')
+        print(f"\n清理完成。更新后的配置已写入 '{output_path}'")

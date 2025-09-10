@@ -9,7 +9,7 @@ on:
       - test
     paths:
       - '.github/workflows/freenodes-clashfree-cleaner.yml'
-      - 'freenodes-clashfree-ss-cleaner-sys.py'
+      - 'src/freenodes-clashfree-ss-cleaner-sys.py'
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -32,7 +32,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 执行任务
-        run: python ./freenodes-clashfree-ss-cleaner-sys.py
+        run: python ./src/freenodes-clashfree-ss-cleaner-sys.py
 
       - name: 提交更改
         run: |
