@@ -47,7 +47,7 @@ rule-providers:
     format: text
     type: http
   JuDirect:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/UnBan.list
+    url: https://raw.githubusercontent.com/julong111/noderobot/refs/heads/test/config/JuDirect.list
     path: ./ruleset/JuDirect.list
     behavior: classical
     interval: 86400
