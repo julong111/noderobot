@@ -1,4 +1,8 @@
 proxy-groups:
+  - name: 我的节点规则
+    include-all: true
+    filter: (?i)新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    type: select
   - name: 🚀 节点选择
     type: select
     proxies:
@@ -33,10 +37,6 @@ proxy-groups:
       - DIRECT
       - 我的节点规则
       - 🚀 手动切换
-  - name: 我的节点规则
-    include-all: true
-    filter: (?i)新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
-    type: select
 
 rule-providers:
   LocalAreaNetwork:
