@@ -1,4 +1,4 @@
-name: FreeNodes ClashFree Cleaner
+name: Clean and Merge
 
 on:
   workflow_dispatch:
@@ -34,10 +34,11 @@ jobs:
       - name: 安装依赖
         run: pip install -r requirements.txt
 
-      - name: 执行任务
-        run: ｜
-          python ./src/freenodes-clashfree-ss-cleaner-sys.py
-          python ./src/merge.py
+      - name: 执行 - Cleaner - freenodes clashfree
+        run: python ./src/freenodes-clashfree-ss-cleaner-sys.py
+
+      - name: 执行 - Merge
+        run: python ./src/merge.py
 
       - name: 提交更改
         run: |
