@@ -1,3 +1,4 @@
 # 用于发起HTTP请求，替代urllib，以更好地处理SSL证书等问题
 # 通过 pip install -r requirements.txt 安装
 requests==2.32.5
+pyyaml>=6.0.2

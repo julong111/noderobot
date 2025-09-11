@@ -8,8 +8,11 @@ on:
     branches:
       - test
     paths:
-      - '.github/workflows/freenodes-clashfree-cleaner.yml'
+      - '.github/workflows/merge.yml'
       - 'src/freenodes-clashfree-ss-cleaner-sys.py'
+      - 'src/merge.py'
+      - 'src/ip_blocklist.txt'
+      - 'src/sources.json'
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -32,7 +35,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 执行任务
-        run: python ./src/freenodes-clashfree-ss-cleaner-sys.py
+        run: ｜
+          python ./src/freenodes-clashfree-ss-cleaner-sys.py
+          python ./src/merge.py
 
       - name: 提交更改
         run: |
