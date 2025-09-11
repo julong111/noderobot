@@ -319,7 +319,8 @@ def main(args):
             # 将代理字典包装在 FlowStyleDict 中，以便以单行风格输出
             unique_proxies.append(FlowStyleDict(ordered_proxy))
         else:
-            print(f"  - 发现重复代理，已跳过: {key[0]}:{key[1]}")
+            if args.dev:
+                print(f"  - 发现重复代理，已跳过: {key[0]}:{key[1]}")
 
     print(f"\n合并去重后，总计 {len(unique_proxies)} 个独立代理。")
 
@@ -353,6 +354,8 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=str,
                         default=str(PWD / '..' /  's' / 'merge.yml'),
                         help='最终合并配置的输出文件路径。')
+    parser.add_argument('--dev', action='store_true',
+                        help='启用开发者模式，打印更详细的日志信息（例如重复的代理）。')
 
     parsed_args = parser.parse_args()
     main(parsed_args)
