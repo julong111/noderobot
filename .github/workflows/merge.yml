@@ -3,7 +3,7 @@ name: Clean and Merge
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '3 */1 * * *'
   push:
     branches:
       - test
