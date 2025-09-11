@@ -40,6 +40,9 @@ jobs:
       - name: 执行 - Merge
         run: python ./src/merge.py
 
+      - name: 执行 - Clash to v2rayN
+        run: python ./src/clash_to_v2rayn.py ./s/merge.yml
+
       - name: 提交更改
         run: |
           git config --local user.email "actions@github.com"
