@@ -57,16 +57,30 @@ jobs:
 
       - name: Send success notification
         if: success()
-        uses: distributhor/workflow-webhook@v3
-        with:
-          webhook_url: ${{ secrets.WEBHOOK_URL }}
-          webhook_type: 'json'
-          data: '{ "title": "✅ 部署成功", "desp" : "仓库：julong111/noderobot" }'
+        run: |
+          echo "Sending notification..."
+          curl -s "https://sctapi.ftqq.com/${{ secrets.SERVERCHAN_KEY }}.send?title=部署成功&desp=仓库:julong111/noderobot"
+          echo "Notification sent!"
 
       - name: Send failure notification
         if: failure()
-        uses: distributhor/workflow-webhook@v3
-        with:
-          webhook_url: ${{ secrets.WEBHOOK_URL }}
-          webhook_type: 'json'
-          data: '{ "title": "❌ 部署失败", "desp" : "仓库：julong111/noderobot" }'
+        run: |
+          echo "Sending notification..."
+          curl -s "https://sctapi.ftqq.com/${{ secrets.SERVERCHAN_KEY }}.send?title=部署失败&desp=仓库:julong111/noderobot"
+          echo "Notification sent!"
+
+#      - name: Send success notification
+#        if: success()
+#        uses: distributhor/workflow-webhook@v3
+#        with:
+#          webhook_url: ${{ secrets.WEBHOOK_URL }}
+#          webhook_type: 'json'
+#          data: '{ "title": "✅ 部署成功", "desp" : "仓库：julong111/noderobot" }'
+#
+#      - name: Send failure notification
+#        if: failure()
+#        uses: distributhor/workflow-webhook@v3
+#        with:
+#          webhook_url: ${{ secrets.WEBHOOK_URL }}
+#          webhook_type: 'json'
+#          data: '{ "title": "❌ 部署失败", "desp" : "仓库：julong111/noderobot" }'
