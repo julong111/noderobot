@@ -1,9 +1,8 @@
 name: Clean and Merge
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '3 * * * *'
+    - cron: '5 * * * *'
   push:
     branches:
       - test
