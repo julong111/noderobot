@@ -5,7 +5,7 @@ on:
     - cron: '5 * * * *'
   push:
     branches:
-      - test
+      - dev
     paths:
       - '.github/workflows/merge.yml'
       - 'src/freenodes-clashfree-ss-cleaner-sys.py'
@@ -19,7 +19,7 @@ jobs:
       - name: 迁出代码
         uses: actions/checkout@v4
         with:
-          ref: test
+          ref: dev
 
       - name: 设置时区
         run: sudo timedatectl set-timezone 'Asia/Shanghai'
@@ -49,7 +49,7 @@ jobs:
           git add .
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Auto-update: $(date '+%Y-%m-%d %H:%M:%S')"
-            git push origin test
+            git push origin dev
           else
             echo "没有文件更改，跳过提交和推送。"
           fi
