@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@Mr_Config_Group✌️', server: chervhill.hajalii.com, port: 29662, type: hysteria2, obfs: salamander, obfs-password: xFGh9dsyreJV9sMs1RUnFbwRdon, password: 10822856-7452-43ec-b35b-6f24ea33530f, skip-cert-verify: false, sni: chervhill.hajalii.com, tls: false}
   - {name: 'US_speednode_0089', server: 172.233.153.209, port: 10001, type: vless, client-fingerprint: firefox, reality-opts: {public-key: 1ltSdo2K6D9EEwebaDQPCb5ypbURcXyO9HsX4RUbbUo, short-id: 1a24af87}, servername: yahoo.com, skip-cert-verify: false, tls: true, udp: true, uuid: e4412006-94f2-4f3c-b568-22a3e31dc264}
   - {name: '[Hysteria2] @FreakConfig', server: hsyg.huasuan666.top, port: 22156, type: hysteria2, auth: 934766f0-204c-42be-8cf7-9afc2a8b5eaf, password: 934766f0-204c-42be-8cf7-9afc2a8b5eaf, skip-cert-verify: false, sni: hsyg.huasuan666.top}
   - {name: '[Hysteria2] @FreakConfig 2', server: gavazn.lnmarketplace.net, port: 45000, type: hysteria2, auth: Telegram--%3E%40Ln2Ray, obfs: salamander, obfs-password: Telegram-->@Ln2Ray, password: Telegram--%3E%40Ln2Ray, skip-cert-verify: false, sni: gavazn.55994421.xyz}
