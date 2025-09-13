@@ -1,0 +1,14 @@
+[
+  {
+    "name": "freenodes-clashfree-clean",
+    "url": "../s/freenodes-clashfree.yml"
+  },
+  {
+    "name": "NoMoreWalls",
+    "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/refs/heads/master/list.meta.yml"
+  },
+  {
+    "name": "go4sharing",
+    "url": "https://raw.githubusercontent.com/go4sharing/sub/refs/heads/main/sub.yaml"
+  }
+]
