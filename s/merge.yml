@@ -29,13 +29,16 @@ proxies:
   - {name: '[Hysteria2] ☞ 𝗝𝗼𝗶𝗻 ➠ @Viturey #4', server: 51.159.111.32, port: 5355, type: hysteria2, auth: dongtaiwang.com, password: dongtaiwang.com, skip-cert-verify: false, sni: www.bing.com}
   - {name: '[Hysteria2] 𝗚𝗲𝗿𝗺𝗮𝗻𝘆 ➠ همه اپراتورها دانل...', server: android.yas-nowin.ir, port: 443, type: hysteria2, auth: 3QlSMKyqLp, password: 3QlSMKyqLp, skip-cert-verify: false, sni: android.yas-nowin.ir}
   - {name: '[SS] tg频道:@ripaojiedian', server: 51.21.249.115, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: '[SS] 🇨🇳 台湾2|@ripaojiedian', server: 125.230.23.59, port: 10026, type: ss, cipher: chacha20-ietf-poly1305, password: 5bc0537c-ffdd-42f4-9012-f8d88efe785d}
+  - {name: '[SS] 🇨🇳 台湾|@ripaojiedian', server: 118.170.202.197, port: 10016, type: ss, cipher: chacha20-ietf-poly1305, password: b542ec52-5ae8-483f-b041-145d07a3ab26}
   - {name: '[SS] 🇭🇰 香港2|@ripaojiedian', server: 156.251.179.135, port: 443, type: ss, cipher: aes-256-gcm, password: 2b5fad3874e5}
   - {name: '[SS] 🇭🇰 香港5|@ripaojiedian', server: 54.46.125.88, port: 16888, type: ss, cipher: aes-256-gcm, password: amazongreatvpn}
-  - {name: '[SS] 🇭🇰 香港7|@ripaojiedian', server: 8.138.9.184, port: 50803, type: ss, cipher: aes-256-gcm, password: RGl5M0p1UHhZSExJM3VwNGFsd3l1WHpmWTVheVRHVWM=}
+  - {name: '[SS] 🇭🇰 香港7|@ripaojiedian', server: shenzhen99.fkfkd.cn, port: 4772, type: ss, cipher: chacha20-ietf-poly1305, password: cb9d4649-57e9-422b-9154-c53ca65a543c}
   - {name: '[SS] 🇯🇵 日本2|@ripaojiedian', server: 137.220.142.150, port: 443, type: ss, cipher: aes-256-gcm, password: 8a6ca14c0936}
   - {name: '[SS] 🇯🇵 日本5|@ripaojiedian', server: 35.77.6.3, port: 16888, type: ss, cipher: aes-256-gcm, password: amazongreatvpn}
   - {name: '[SS] 🇯🇵 日本|@ripaojiedian', server: cn01.efan8867801.xyz, port: 8766, type: ss, cipher: rc4-md5, password: efanccyun}
   - {name: '[SS] 🇺🇸 美国2|@ripaojiedian', server: cn01.efan8867801.xyz, port: 8774, type: ss, cipher: rc4-md5, password: efanccyun}
+  - {name: '[SS] 🇺🇸 美国|@ripaojiedian', server: shenzhen99.fkfkd.cn, port: 17713, type: ss, cipher: chacha20-ietf-poly1305, password: bb0fe0fa-ef19-4dfe-bd0a-92843756a148}
   - {name: '[Trojan] AT_speednode_0001', server: 212.183.88.195, port: 2096, type: trojan, network: ws, password: slch2024, skip-cert-verify: false, sni: ocost-dy.wmlefl.cc, ws-opts: {path: /Telegram, headers: {Host: ocost-dy.wmlefl.cc}}}
   - {name: '[Trojan] AU_speednode_0004', server: 192.65.217.195, port: 2096, type: trojan, network: ws, password: slch2024, skip-cert-verify: false, sni: ocost-dy.wmlefl.cc, ws-opts: {path: /Telegram🇨🇳, headers: {Host: ocost-dy.wmlefl.cc}}}
   - {name: '[Trojan] AU_speednode_0007', server: 185.207.197.195, port: 2096, type: trojan, network: ws, password: slch2024, skip-cert-verify: false, sni: ocost-dy.wmlefl.cc, ws-opts: {path: /TelegramU0001F1E8U0001F1F3, headers: {Host: ocost-dy.wmlefl.cc}}}
@@ -80,16 +83,14 @@ proxies:
   - {name: '[Trojan] 🇭🇰 香港4|@ripaojiedian', server: 36.156.102.77, port: 391, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: www.baidu.com}
   - {name: '[Trojan] 🇭🇰 香港6|@ripaojiedian', server: xingxing.jiasu123.org, port: 2282, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: www.baidu.com}
   - {name: '[Trojan] 🇯🇵 日本3|@ripaojiedian', server: xingxing.jiasu123.org, port: 316, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: 23.45.86.28}
-  - {name: '[Trojan] 🇯🇵 日本4|@ripaojiedian', server: 36.156.102.77, port: 1924, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: 23.45.86.28}
+  - {name: '[Trojan] 🇯🇵 日本4|@ripaojiedian', server: xingxing.jiasu123.org, port: 4613, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: 23.45.86.28}
   - {name: '[Trojan] 🇸🇬 新加坡2|@ripaojiedian', server: 36.156.102.77, port: 9160, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: 23.45.86.28}
   - {name: '[Trojan] 🇸🇬 新加坡|@ripaojiedian', server: xingxing.jiasu123.org, port: 3957, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: 23.45.86.28}
   - {name: '[Trojan] 🇺🇸 美国3|@ripaojiedian', server: xingxing.jiasu123.org, port: 2966, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: 23.45.86.28}
   - {name: '[Trojan] 🇺🇸 美国4|@ripaojiedian', server: xingxing.jiasu123.org, port: 1823, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: 23.45.86.28}
-  - {name: '[VMess] 🇭🇰 香港3|@ripaojiedian', server: 45.89.233.162, port: 40177, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: eb6f0b67-a6b5-461f-81f7-f2e50e4104bc}
+  - {name: '[VMess] 🇭🇰 香港3|@ripaojiedian', server: 43.247.134.211, port: 46981, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: 0f6e3f70-d64d-4825-aa04-1ead22e96b8b}
   - {name: '[VMess] 🇭🇰 香港|@ripaojiedian', server: v9.heduian.link, port: 30809, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
-  - {name: '[VMess] 🇲🇾 马来西亚|@ripaojiedian', server: t.cnmjcn.cyou, port: 16622, type: vmess, cipher: auto, alterId: 0, network: ws, skip-cert-verify: false, tls: false, uuid: 743dbce9-ec7d-49dd-b9d6-3b1a151e729f, ws-opts: {path: /, headers: {Host: f604066249a784d694db65d3ebf5d60c.mobgslb.tbcache.com}}}
   - {name: '[VMess] 🇸🇬 新加坡3|@ripaojiedian', server: v39.heduian.link, port: 30839, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
-  - {name: '[VMess] 🇺🇸 美国|@ripaojiedian', server: v29.heduian.link, port: 30829, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}}
   - {name: '中国 - 上海 - Hangzhou Alibaba Advertising Co - 6', server: 106.14.75.114, port: 50002, type: vmess, cipher: auto, alterId: 64, country: 🇨🇳CN, delay: 271, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 北京 - Hangzhou Alibaba Advertising Co - 8', server: 39.107.155.11, port: 30302, type: vmess, cipher: auto, alterId: 64, delay: 1049, skip-cert-verify: true, tls: false, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 北京 - Hangzhou Alibaba Advertising Co - 9', server: 39.100.81.215, port: 50002, type: vmess, cipher: auto, alterId: 64, delay: 1051, skip-cert-verify: true, tls: false, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
@@ -183,7 +184,6 @@ proxies:
   - {name: '日本 - 东京 - Host Universal Pty Ltd - 2', server: 103.108.230.51, port: 8081, type: http, delay: 2282, password: 1, tls: false, username: afY491o7YfK00koaXQD9kajglYHBNb94lUqgr9BmmieCg1XZn07vnwWAiQjjrgTloXw609MC0WdYefYZbCn32A==}
   - {name: '日本 - 东京 - Host Universal Pty Ltd - 3', server: 103.108.230.31, port: 8081, type: http, delay: 1032, password: 1, tls: false, username: afY491o7YfK00koaXQD9kajglYHBNb94lUqgr9Bmmic_Q25a7bqHY0WS7Dc5cH-XoXw609MC0WdYefYZbCn32A==}
   - {name: '日本 - 东京 - Host Universal Pty Ltd - 4', server: 180.149.230.241, port: 8081, type: http, delay: 1019, password: 1, tls: false, username: afY491o7YfK00koaXQD9kajglYHBNb94lUqgr9Bmmic6mDQLHnFrA-9fXb44HTU8oXw609MC0WdYefYZbCn32A==}
-  - {name: '日本4|@ripaojiedian', server: xingxing.jiasu123.org, port: 4613, type: trojan, network: tcp, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: true, sni: 23.45.86.28}
   - {name: '日本v2|@ripaojiedian', server: 8.209.211.236, port: '34933', type: vmess, cipher: auto, alterId: 0, network: kcp, servername: '', tls: false, uuid: 8a9150bc-b9c8-40ac-be83-aaec45176a81}
   - {name: '比利时 - Nossegem - M247 Europe SRL - 1', server: 146.70.176.222, port: 8081, type: http, delay: 870, password: 1, tls: false, username: afY491o7YfK00koaXQD9kajglYHBNb94lUqgr9BmmicqQWeSlj5Dspgpe75UJ31ZoXw609MC0WdYefYZbCn32A==}
   - {name: '法国 - 巴黎 - Amazon Technologies Inc. - 1', server: 13.37.163.45, port: 22223, type: trojan, country: 🇫🇷FR, delay: 2313, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
@@ -273,11 +273,6 @@ proxies:
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Gigabit Hosting Sdn Bhd - 2', server: 202.87.221.113, port: 8081, type: http, delay: 468, password: 1, tls: false, username: afY491o7YfK00koaXQD9kajglYHBNb94lUqgr9BmmicpuWhLAI_OEfdvUQ892CSAoXw609MC0WdYefYZbCn32A==}
   - {name: '马来西亚 - 吉隆坡 - Shinjiru Technology Sdn Bhd - 1', server: 111.90.141.223, port: 8081, type: http, delay: 2608, password: 1, tls: false, username: afY491o7YfK00koaXQD9kajglYHBNb94lUqgr9BmmicGGLoDWLLS-IE4ecavlSgJoXw609MC0WdYefYZbCn32A==}
-  - {name: '🇭🇰 香港3|@ripaojiedian', server: 43.247.134.211, port: 46981, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: 0f6e3f70-d64d-4825-aa04-1ead22e96b8b}
-  - {name: '🇭🇰 香港7|@ripaojiedian', server: shenzhen99.fkfkd.cn, port: 4772, type: ss, cipher: chacha20-ietf-poly1305, password: cb9d4649-57e9-422b-9154-c53ca65a543c, tfo: false}
-  - {name: '🇹🇼 台湾2|@ripaojiedian', server: 125.230.23.59, port: 10026, type: ss, cipher: chacha20-ietf-poly1305, password: 5bc0537c-ffdd-42f4-9012-f8d88efe785d, tfo: false}
-  - {name: '🇹🇼 台湾|@ripaojiedian', server: 118.170.202.197, port: 10016, type: ss, cipher: chacha20-ietf-poly1305, password: b542ec52-5ae8-483f-b041-145d07a3ab26, tfo: false}
-  - {name: '🇺🇸 美国|@ripaojiedian', server: shenzhen99.fkfkd.cn, port: 17713, type: ss, cipher: chacha20-ietf-poly1305, password: bb0fe0fa-ef19-4dfe-bd0a-92843756a148, tfo: false}
 proxy-groups:
   - name: 我的节点规则
     include-all: true
