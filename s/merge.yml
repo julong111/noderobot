@@ -318,6 +318,7 @@ proxies:
   - {name: '香港3|@ripaojiedian', server: 43.247.135.86, port: '44601', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 3bff49e6-b2e2-44ce-801f-06eab407e8bd}
   - {name: '香港v2|@ripaojiedian', server: 47.239.183.87, port: '28590', type: vmess, cipher: auto, alterId: 0, network: kcp, servername: '', tls: false, uuid: d75481c7-b5c8-40a9-811a-02b709e74816}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
+  - {name: '🇭🇰 香港7|@ripaojiedian', server: 103.224.80.96, port: 13193, type: vmess, cipher: auto, alterId: 0, network: http, skip-cert-verify: false, tfo: false, tls: false, udp: true, uuid: 080d4d5d-6dbd-4d75-9927-aa3902c150a5}
 proxy-groups:
   - name: 我的节点规则
     include-all: true
