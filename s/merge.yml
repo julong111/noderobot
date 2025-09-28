@@ -299,6 +299,8 @@ proxies:
   - {name: '韩国 - 首尔特别市 - Korea Telecom - 2', server: 121.170.203.147, port: 2520, type: ss, cipher: aes-256-cfb, country: 🇰🇷KR, delay: 2959, password: qwerREWQ@@}
   - {name: '香港v2|@ripaojiedian', server: 47.242.186.1, port: '5043', type: vmess, cipher: auto, alterId: 0, network: kcp, servername: '', tls: false, uuid: 93c35277-ee3f-4ab2-9d9e-462b97a8795f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
+  - {name: '🇺🇲@FreakConfig', server: pouria.3dfigures.ir, port: 28777, type: hysteria2, obfs: salamander, obfs-password: wcancmaocnewrivbkacmlmsvwuvdfsv, password: lHoYmNZmLe, skip-cert-verify: true, tls: false}
+  - {name: '🇺🇲@FreakConfig #1', server: pouria.3dfigures.ir, port: 53713, type: hysteria2, obfs: salamander, obfs-password: uvahwuicbhwabhvlhv, password: lHoYmNZmLe, skip-cert-verify: true, tls: false}
 proxy-groups:
   - name: 我的节点规则
     include-all: true
