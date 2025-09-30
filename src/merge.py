@@ -4,8 +4,8 @@ import sys
 from pathlib import Path
 import ipaddress
 import yaml
-from datetime import datetime
 
+from datetime import datetime
 import argparse
 import json
 import requests
@@ -331,21 +331,26 @@ def main(args):
     unique_proxies.sort(key=lambda p: p.get('name', ''))
     print("排序完成。")
 
+    # --- 新增时间戳节点 ---
+    print("\n--- 新增时间戳节点 ---")
+    update_time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    timestamp_node_name = f"Timestamp - [ {update_time_str} ]"
+    timestamp_node = {
+        'name': SingleQuotedString(timestamp_node_name),
+        'type': 'ss',
+        'server': '127.0.0.1',
+        'port': 1,
+        'cipher': 'none',
+        'password': ' '
+    }
+    # 将其包装在 FlowStyleDict 中以便单行输出
+    unique_proxies.append(FlowStyleDict(timestamp_node))
+    print(f"已在 proxies 列表末尾新增: {timestamp_node_name}")
+
     # --- 构建最终配置 ---
     print("\n--- 开始构建最终配置文件 ---")
     final_config = template_data
     final_config['proxies'] = unique_proxies
-
-    # --- 新增更新时间代理组 ---
-    print("\n--- 新增更新时间代理组 ---")
-    update_time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    time_proxy_group = {
-        'name': update_time_str,
-        'type': 'select',
-        'proxies': []
-    }
-    final_config['proxy-groups'].insert(0, time_proxy_group)
-    print(f"已在 proxy-groups 顶部新增: {update_time_str}")
 
     # --- 保存结果 ---
     save_yaml_file(final_config, output_path)

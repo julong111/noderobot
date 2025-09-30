@@ -1,4 +1,8 @@
 proxy-groups:
+  - name: UpdateTimestamp
+    include-all: true
+    filter: (?i)Timestamp
+    type: select
   - name: 🚀 代理
     type: select
     proxies:
