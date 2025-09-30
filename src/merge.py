@@ -334,7 +334,7 @@ def main(args):
     # --- 新增时间戳节点 ---
     print("\n--- 新增时间戳节点 ---")
     update_time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    timestamp_node_name = f"Timestamp - [ {update_time_str} ]"
+    timestamp_node_name = f"[{update_time_str}]-Timestamp"
     timestamp_node = {
         'name': SingleQuotedString(timestamp_node_name),
         'type': 'ss',
