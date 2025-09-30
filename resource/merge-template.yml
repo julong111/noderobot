@@ -6,18 +6,22 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
 proxy-groups:
-  - name: 我的节点规则
+  - name: UpdateTimestamp
     include-all: true
-    filter: (?i)新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    filter: (?i)Timestamp
     type: select
-  - name: 🚀 节点选择
+  - name: 🚀 代理
     type: select
     proxies:
+      - 🔧 我的规则
+      - 🪬 手动切换
       - ♻️ 自动选择
-      - 🚀 手动切换
       - DIRECT
-      - 我的节点规则
-  - name: 🚀 手动切换
+  - name: 🔧 我的规则
+    include-all: true
+    filter: (?i)新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|韩国|韩|KR|France|法国|Paris|Netherlands
+    type: select
+  - name: 🪬 手动切换
     include-all: true
     type: select
   - name: ♻️ 自动选择
@@ -25,12 +29,6 @@ proxy-groups:
     include-all: true
     interval: 300
     tolerance: 100
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
-      - ♻️ 自动选择
   - name: 🛑 广告拦截
     type: select
     proxies:
@@ -39,12 +37,19 @@ proxy-groups:
   - name: 🐟 漏网之鱼
     type: select
     proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
       - DIRECT
-      - 我的节点规则
-      - 🚀 手动切换
-
+      - 🔧 我的规则
+      - 🪬 手动切换
+      - ♻️ 自动选择
+      - 🚀 代理
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🔧 我的规则
+      - 🪬 手动切换
+      - ♻️ 自动选择
+      - 🚀 代理
 rule-providers:
   LocalAreaNetwork:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/LocalAreaNetwork.list
@@ -54,7 +59,7 @@ rule-providers:
     format: text
     type: http
   JuDirect:
-    url: https://raw.githubusercontent.com/julong111/noderobot/refs/heads/test/config/JuDirect.list
+    url: https://raw.githubusercontent.com/julong111/noderobot/refs/heads/dev/config/JuDirect.list
     path: ./ruleset/JuDirect.list
     behavior: classical
     interval: 86400
@@ -265,6 +270,10 @@ rule-providers:
     type: http
 
 rules:
+  - "DOMAIN-SUFFIX,github.com,🚀 代理"
+  - "DOMAIN-SUFFIX,tinyurl.com,🚀 代理"
+  - "DOMAIN-SUFFIX,rogueamoeba.net,🚀 代理"
+
   - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
   - "RULE-SET,BanAD,🛑 广告拦截"
   - "RULE-SET,BanProgramAD,🛑 广告拦截"
@@ -273,7 +282,7 @@ rules:
   - "RULE-SET,Bilibili,🎯 全球直连"
   - "RULE-SET,BilibiliHMT,🎯 全球直连"
   - "RULE-SET,ChinaMedia,🎯 全球直连"
-  - "RULE-SET,ProxyGFWlist,🚀 节点选择"
+  - "RULE-SET,ProxyGFWlist,🚀 代理"
   - "RULE-SET,ChinaDomain,🎯 全球直连"
   - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
   - "RULE-SET,Download,🎯 全球直连"
@@ -284,21 +293,21 @@ rules:
   - "RULE-SET,NetEaseMusic,🎯 全球直连"
 
   - "RULE-SET,Apple,🎯 全球直连"
-  - "RULE-SET,GoogleFCM,🚀 节点选择"
-  - "RULE-SET,GoogleCN,🚀 节点选择"
-  - "RULE-SET,Telegram,🚀 节点选择"
-  - "RULE-SET,OpenAi,🚀 节点选择"
+  - "RULE-SET,GoogleFCM,🚀 代理"
+  - "RULE-SET,GoogleCN,🚀 代理"
+  - "RULE-SET,Telegram,🚀 代理"
+  - "RULE-SET,OpenAi,🚀 代理"
 
-  - "RULE-SET,Steam,🚀 节点选择"
-  - "RULE-SET,Epic,🚀 节点选择"
-  - "RULE-SET,Origin,🚀 节点选择"
-  - "RULE-SET,Sony,🚀 节点选择"
+  - "RULE-SET,Steam,🚀 代理"
+  - "RULE-SET,Epic,🚀 代理"
+  - "RULE-SET,Origin,🚀 代理"
+  - "RULE-SET,Sony,🚀 代理"
 
-  - "RULE-SET,Nintendo,🚀 节点选择"
-  - "RULE-SET,YouTube,🚀 节点选择"
-  - "RULE-SET,Netflix,🚀 节点选择"
-  - "RULE-SET,Bahamut,🚀 节点选择"
-  - "RULE-SET,ProxyMedia,🚀 节点选择"
+  - "RULE-SET,Nintendo,🚀 代理"
+  - "RULE-SET,YouTube,🚀 代理"
+  - "RULE-SET,Netflix,🚀 代理"
+  - "RULE-SET,Bahamut,🚀 代理"
+  - "RULE-SET,ProxyMedia,🚀 代理"
 
   - "GEOIP,CN,🎯 全球直连"
   - "MATCH,🐟 漏网之鱼"
