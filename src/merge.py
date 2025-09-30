@@ -4,6 +4,7 @@ import sys
 from pathlib import Path
 import ipaddress
 import yaml
+from datetime import datetime
 
 import argparse
 import json
@@ -334,6 +335,17 @@ def main(args):
     print("\n--- 开始构建最终配置文件 ---")
     final_config = template_data
     final_config['proxies'] = unique_proxies
+
+    # --- 新增更新时间代理组 ---
+    print("\n--- 新增更新时间代理组 ---")
+    update_time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    time_proxy_group = {
+        'name': update_time_str,
+        'type': 'select',
+        'proxies': []
+    }
+    final_config['proxy-groups'].insert(0, time_proxy_group)
+    print(f"已在 proxy-groups 顶部新增: {update_time_str}")
 
     # --- 保存结果 ---
     save_yaml_file(final_config, output_path)
