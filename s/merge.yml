@@ -244,7 +244,7 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 99', server: 103.186.154.20, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 717, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '韩国 - 首尔特别市 - Kaopu Cloud HK Limited - 1', server: 154.90.62.168, port: 989, type: ss, cipher: aes-256-cfb, country: 🇺🇸 US, delay: 1896, password: f8f7aCzcPKbsF8p3}
   - {name: '韩国 - 首尔特别市 - Korea Telecom - 2', server: 121.170.203.147, port: 2520, type: ss, cipher: aes-256-cfb, country: 🇰🇷KR, delay: 2959, password: qwerREWQ@@}
-  - {name: '[2025-10-01 21:35:25]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-01 22:27:39]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
