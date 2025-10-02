@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@V2rayNGVPN <= کانفیگ رایگان', server: 40.233.82.111, port: 30300, type: hysteria2, password: 2429bee3-e0c1-47dd-b420-75e6512b184b, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: 'AE_speednode_0001', server: 5.44.42.60, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
   - {name: 'AT_speednode_0003', server: 94.228.169.221, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
   - {name: 'CA_speednode_0005', server: 81.19.140.20, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
@@ -248,7 +249,7 @@ proxies:
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Gigabit Hosting Sdn Bhd - 1', server: 202.87.221.113, port: 8081, type: http, delay: 1352, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPOcnjWSM6BPppC4VAXYNCNToXw609MC0WdYefYZbCn32A==}
   - {name: '马耳他 - 瓦莱塔 - Melita Limited - 1', server: 171.22.254.19, port: 8081, type: http, delay: 1246, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPMTkUgKCBZVFQHAbT5tMbH-oXw609MC0WdYefYZbCn32A==}
-  - {name: '[2025-10-03 01:20:22]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-03 02:35:49]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
