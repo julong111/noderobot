@@ -5,6 +5,12 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@freenettir', server: 185.126.255.78, port: 50440, type: hysteria2, password: 07c122ad-50b2-4f61-9435-efcf112bb10b, skip-cert-verify: false, sni: real.getafreenode.sbs, tls: false}
+  - {name: '@freenettir #19', server: 113.192.61.19, port: 63979, type: hysteria2, password: 9772ecf2-6732-4bfb-a8b1-f48af577c76c, skip-cert-verify: true, sni: www.bing.com, tls: false}
+  - {name: '@freenettir #21', server: 206.71.158.37, port: 36300, type: hysteria2, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir, tls: false}
+  - {name: '@freenettir #23', server: yapc-1.adamhayward.co.uk, port: 35200, type: hysteria2, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: true, sni: YAPC-1.afshin.ir, tls: false}
+  - {name: '@freenettir #28', server: 140.245.50.69, port: 13190, type: hysteria2, password: b955a6f6-4c6a-4756-8888-9318463b67b6, skip-cert-verify: true, tls: false}
+  - {name: '@freenettir #35', server: adas-polo-ba-mahi.kotlet.org, port: 2083, type: hysteria2, obfs: salamander, obfs-password: ki(rtoko(s-maret-khamneii, password: siEk2SjZFG, skip-cert-verify: true, sni: ghasem.kotlet.org, tls: false}
   - {name: 'AE_speednode_0001', server: 5.44.42.60, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
   - {name: 'AT_speednode_0003', server: 94.228.169.221, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
   - {name: 'CA_speednode_0005', server: 81.19.140.20, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
@@ -77,6 +83,7 @@ proxies:
   - {name: '[Vless] US_speednode_0034', server: ipw.gfdv54cvghhgfhgj-njhgj64.info, port: 443, type: vless, alpn: [h2%2Chttp/1.1], network: ws, servername: smits.feronix.org, skip-cert-verify: false, tls: true, uuid: 44e16031-bde2-407a-b629-ae4b84e7e49f, ws-opts: {path: /fp=chrome, headers: {Host: smits.feronix.org}}}
   - {name: '[Vless] US_speednode_0036', server: mstr.fastly80.hosting-ip.com, port: 80, type: vless, network: ws, servername: gm195.io, skip-cert-verify: false, tls: false, uuid: d46fbe10-7982-4229-b461-4afef5c690fa, ws-opts: {path: /admin, headers: {Host: gm195.io}}}
   - {name: '[Vless] ZA_speednode_0038', server: 102.132.188.54, port: 2096, type: vless, network: ws, servername: sni.aizrf.com, skip-cert-verify: false, tls: true, uuid: 12345678-1234-1234-1234-123456789123, ws-opts: {path: /snippetsfp=chrome, headers: {Host: sni.aizrf.com}}}
+  - {name: 'tg频道:@ripaojiedian', server: 34.245.185.129, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, tfo: false}
   - {name: '中国 - 北京 - Hangzhou Alibaba Advertising Co - 5', server: 39.107.155.11, port: 30302, type: vmess, cipher: auto, alterId: 64, delay: 301, skip-cert-verify: true, tls: false, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 北京 - Hangzhou Alibaba Advertising Co - 6', server: 39.100.81.215, port: 50002, type: vmess, cipher: auto, alterId: 64, delay: 314, skip-cert-verify: true, tls: false, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 合肥 - China Unicom CHINA169 Anhui Province Network - 3', server: 112.132.215.34, port: 50007, type: vmess, cipher: auto, alterId: 0, country: 🇨🇳 CN, delay: 2337, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, ws-path: /}
@@ -140,7 +147,6 @@ proxies:
   - {name: '日本 - 东京 - Host Universal Pty Ltd - 2', server: 180.149.230.169, port: 8081, type: http, delay: 2010, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPNmq1-aN8GAeRxOOjysuM7ZoXw609MC0WdYefYZbCn32A==}
   - {name: '日本 - 东京 - Host Universal Pty Ltd - 3', server: 180.149.230.241, port: 8081, type: http, delay: 2707, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPMVEaranltxM5Roo0spIk8PoXw609MC0WdYefYZbCn32A==}
   - {name: '日本 - 東京都 - xTom Japan Corporation - 1', server: ty-4.rise-fuji.com, port: 443, type: trojan, country: 🇩🇪DE, delay: 1519, password: YlfdAfTHoAuoRIbTPl, skip-cert-verify: true, udp: true}
-  - {name: '日本v2|@ripaojiedian', server: 43.207.83.60, port: '20932', type: vmess, cipher: auto, alterId: 0, network: kcp, servername: '', tls: false, uuid: bc4e0275-2a83-43be-a5b7-332a61615f1d}
   - {name: '比利时 - 布赖恩拉勒 - M247 Europe SRL - 1', server: 37.120.236.26, port: 8081, type: http, delay: 2296, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPNAWp3n8pqLJiUV5IwFkpE6oXw609MC0WdYefYZbCn32A==}
   - {name: '法国 - 奥耶普拉日 - M247 Europe SRL - 18', server: 188.241.83.138, port: 8081, type: http, delay: 916, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPPNDUFWfs_wKpTESE58ro8ToXw609MC0WdYefYZbCn32A==}
   - {name: '法国 - 巴黎 - Amazon.com, Inc. - 1', server: 15.188.189.248, port: 22222, type: trojan, country: 🇫🇷FR, delay: 1063, password: telegram-id-privatevpns, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
@@ -245,11 +251,12 @@ proxies:
   - {name: '阿根廷 - Bella Vista - Latitude.sh - 3', server: 103.50.33.186, port: 8081, type: http, delay: 2736, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPNac9K9Rs4nHrgN7US71Y3voXw609MC0WdYefYZbCn32A==}
   - {name: '阿根廷 - Chacarita - IPXON Networks - 1', server: 38.165.230.194, port: 8081, type: http, delay: 1636, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPNgnMdDbPDVU4BFF2F5JFC0oXw609MC0WdYefYZbCn32A==}
   - {name: '阿根廷 - Chacarita - IPXON Networks - 2', server: 38.165.230.218, port: 8081, type: http, delay: 1435, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPM8WO5uTB5eCFKS-CcvRfwtoXw609MC0WdYefYZbCn32A==}
-  - {name: '香港v2|@ripaojiedian', server: 13.231.211.146, port: '54483', type: vmess, cipher: auto, alterId: 0, network: kcp, servername: '', tls: false, uuid: dc2fd6a5-36fe-4b06-8b31-a5c5d26add98}
+  - {name: '香港3|@ripaojiedian', server: 103.224.80.49, port: '12114', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: aa92855a-9932-4e87-b5c2-4aed159c7c78}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Gigabit Hosting Sdn Bhd - 1', server: 202.87.221.113, port: 8081, type: http, delay: 1352, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPOcnjWSM6BPppC4VAXYNCNToXw609MC0WdYefYZbCn32A==}
   - {name: '马耳他 - 瓦莱塔 - Melita Limited - 1', server: 171.22.254.19, port: 8081, type: http, delay: 1246, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPMTkUgKCBZVFQHAbT5tMbH-oXw609MC0WdYefYZbCn32A==}
-  - {name: '[2025-10-03 11:01:52]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇭🇰 香港3|@ripaojiedian', server: 103.224.80.49, port: 12114, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: aa92855a-9932-4e87-b5c2-4aed159c7c78}
+  - {name: '[2025-10-03 11:33:13]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
