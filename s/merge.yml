@@ -5,6 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@freenettir #1', server: yd.jjzcloud.top, port: 57338, type: hysteria2, password: 1610231f-7d6f-43dd-9bcf-dc6a665802e7, skip-cert-verify: false, tls: false}
+  - {name: '@freenettir #24', server: 92.112.22.221, port: 32711, type: hysteria2, password: eb053b55-484d-4102-8056-bd7674d0e450, skip-cert-verify: true, sni: www.bing.com, tls: false}
+  - {name: '@freenettir #5', server: hg.jjzcloud.top, port: 57338, type: hysteria2, password: 40e600c5-530b-4f2a-8a19-94564e5c6b83, skip-cert-verify: false, tls: false}
   - {name: 'AE_speednode_0001', server: 5.44.42.60, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
   - {name: 'AE_speednode_0002', server: ae1-2.9966662.xyz, port: 20223, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: RsbED0LyE3f2byTPx5t-dQewju6z9R4xqTWrADM4WnM, short-id: c6842be1}, servername: www.cloudflare.com, skip-cert-verify: false, tls: true, udp: true, uuid: a24c6851-2055-42c1-9c20-2d3bad97334f}
   - {name: 'AT_speednode_0003', server: 94.228.169.221, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
@@ -252,7 +255,7 @@ proxies:
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Gigabit Hosting Sdn Bhd - 1', server: 202.87.221.113, port: 8081, type: http, delay: 1352, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPOcnjWSM6BPppC4VAXYNCNToXw609MC0WdYefYZbCn32A==}
   - {name: '马耳他 - 瓦莱塔 - Melita Limited - 1', server: 171.22.254.19, port: 8081, type: http, delay: 1246, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPMTkUgKCBZVFQHAbT5tMbH-oXw609MC0WdYefYZbCn32A==}
-  - {name: '[2025-10-04 01:21:27]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-04 02:35:10]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
