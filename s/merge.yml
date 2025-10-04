@@ -28,10 +28,10 @@ proxies:
   - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.153.91, port: 37519, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
   - {name: 'US_speednode_0027', server: 192.210.183.136, port: 36678, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: rrGm0NemTtGQ8Vrd2AzB7pSoW_kYtqYvhRxsx_MtwG0, short-id: 5d20}, servername: swdist.apple.com, skip-cert-verify: false, tls: true, udp: true, uuid: bf9b316d-31ac-42ee-b8a5-8dc795118917}
   - {name: '[Hysteria2] @Daily_Configs', server: de1.jueduibupao.top, port: 43836, type: hysteria2, auth: 1a8588b6-9700-4ff6-80e6-64e18f2e5336, password: 1a8588b6-9700-4ff6-80e6-64e18f2e5336, skip-cert-verify: false, sni: de1.jueduibupao.top}
-  - {name: '[Hysteria2] @Daily_Configs #13', server: 185.184.68.7.sslip.io, port: 46129, type: hysteria2, auth: df36ace8-640b-42bb-8169-198901af6d9e, obfs: salamander, obfs-password: JBPVtqk1kMBGleBcLZ, password: df36ace8-640b-42bb-8169-198901af6d9e, skip-cert-verify: false}
+  - {name: '[Hysteria2] @Daily_Configs #11', server: 185.184.68.7.sslip.io, port: 46129, type: hysteria2, auth: df36ace8-640b-42bb-8169-198901af6d9e, obfs: salamander, obfs-password: JBPVtqk1kMBGleBcLZ, password: df36ace8-640b-42bb-8169-198901af6d9e, skip-cert-verify: false}
+  - {name: '[Hysteria2] @Daily_Configs #15', server: 95.181.174.31, port: 443, type: hysteria2, auth: zanzendegiazadi, obfs: salamander, obfs-password: sk8JqhGcrazoMtCeqlBX76nwlPaypmnP, password: zanzendegiazadi, skip-cert-verify: false, sni: slack.com}
   - {name: '[Hysteria2] @Daily_Configs #2', server: 185.92.220.240, port: 30205, type: hysteria2, auth: 8864aa9f-7517-4fd5-aef1-32050eb3095d, obfs: salamander, obfs-password: GdQ4bgvT8RFwuWi2, password: 8864aa9f-7517-4fd5-aef1-32050eb3095d, skip-cert-verify: false, sni: net2025.afsharidempire.uk}
   - {name: '[Hysteria2] @Daily_Configs #6', server: 103.249.133.79, port: 443, type: hysteria2, auth: biadailyconfigs, obfs: salamander, obfs-password: LzmYaFxALuuWNIu3zSeRJeV4z21RU1oS, password: biadailyconfigs, skip-cert-verify: false, sni: microsoft.com}
-  - {name: '[Hysteria2] @Daily_Configs #8', server: 95.181.174.31, port: 443, type: hysteria2, auth: dailyconfigs_dailyconfigs_dailyconfigs_dailyconfigs, obfs: salamander, obfs-password: sk8JqhGcrazoMtCeqlBX76nwlPaypmnP, password: dailyconfigs_dailyconfigs_dailyconfigs_dailyconfigs, skip-cert-verify: false, sni: slack.com}
   - {name: '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات...', server: android.yas-nowin.ir, port: 443, type: hysteria2, auth: 3QlSMKyqLp, password: 3QlSMKyqLp, skip-cert-verify: false, sni: android.yas-nowin.ir}
   - {name: '[Hysteria2] @FreakConfig', server: 5.231.70.79, port: 443, type: hysteria2, auth: 2b67ONZROv%2BfRVMxB94BSw%3D%3D, password: 2b67ONZROv%2BfRVMxB94BSw%3D%3D, skip-cert-verify: false, sni: bing.com}
   - {name: '[Hysteria2] @FreakConfig #1', server: pouria.3dfigures.ir, port: 28777, type: hysteria2, auth: lHoYmNZmLe, obfs: salamander, obfs-password: wcancmaocnewrivbkacmlmsvwuvdfsv, password: lHoYmNZmLe, skip-cert-verify: false}
@@ -236,7 +236,7 @@ proxies:
   - {name: '香港3|@ripaojiedian', server: 43.247.134.213, port: '18366', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: ccc37b1b-4ef0-430c-b1e1-20bf96fcff8c}
   - {name: '香港5|@ripaojiedian', server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com, port: '80', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d, ws-opts: {headers: {Host: broadcastlv.chat.bilibili.com}, path: /}}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-05 04:25:08]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-05 05:19:59]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
