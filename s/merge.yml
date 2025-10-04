@@ -141,10 +141,14 @@ proxies:
   - {name: '斯洛文尼亚 - 卢布尔雅那 - EstNOC OY - 1', server: 195.80.150.202, port: 8081, type: http, delay: 1092, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPPtJHtuQGXxSNvWu-g2rGD7oXw609MC0WdYefYZbCn32A==}
   - {name: '新加坡 - 新加坡 - OneAsiaHost - 1', server: 116.251.217.47, port: 8081, type: http, delay: 872, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPPNC3-qVeU-hE2l0I5xGzASoXw609MC0WdYefYZbCn32A==}
   - {name: '新加坡 - 新加坡 - OneAsiaHost - 2', server: 116.251.216.100, port: 8081, type: http, delay: 877, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPPxkqxUDH5iySR7PNWxACg7oXw609MC0WdYefYZbCn32A==}
+  - {name: '新加坡2|@ripaojiedian', server: 36.156.102.86, port: 22000, type: trojan, network: tcp, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: true, sni: www.nintendogames.net}
+  - {name: '新加坡|@ripaojiedian', server: 160.16.138.24, port: 2283, type: trojan, network: tcp, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: true, sni: www.nintendogames.net}
   - {name: '新西兰 - 奧克蘭都會區 - Host Universal Pty Ltd Auckland Services - 1', server: 180.149.231.103, port: 8081, type: http, delay: 1337, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPPGG2rEabQuyVqfamHNzq3CoXw609MC0WdYefYZbCn32A==}
   - {name: '日本 - 东京 - Host Universal Pty Ltd - 2', server: 180.149.230.169, port: 8081, type: http, delay: 2010, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPNmq1-aN8GAeRxOOjysuM7ZoXw609MC0WdYefYZbCn32A==}
   - {name: '日本 - 东京 - Host Universal Pty Ltd - 3', server: 180.149.230.241, port: 8081, type: http, delay: 2707, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPMVEaranltxM5Roo0spIk8PoXw609MC0WdYefYZbCn32A==}
   - {name: '日本 - 東京都 - xTom Japan Corporation - 1', server: ty-4.rise-fuji.com, port: 443, type: trojan, country: 🇩🇪DE, delay: 1519, password: YlfdAfTHoAuoRIbTPl, skip-cert-verify: true, udp: true}
+  - {name: '日本2|@ripaojiedian', server: 160.16.124.55, port: 1331, type: trojan, network: tcp, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本3|@ripaojiedian', server: 36.156.102.88, port: 1924, type: trojan, network: tcp, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '比利时 - 布赖恩拉勒 - M247 Europe SRL - 1', server: 37.120.236.26, port: 8081, type: http, delay: 2296, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPNAWp3n8pqLJiUV5IwFkpE6oXw609MC0WdYefYZbCn32A==}
   - {name: '法国 - 奥耶普拉日 - M247 Europe SRL - 18', server: 188.241.83.138, port: 8081, type: http, delay: 916, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPPNDUFWfs_wKpTESE58ro8ToXw609MC0WdYefYZbCn32A==}
   - {name: '法国 - 巴黎 - Amazon.com, Inc. - 1', server: 15.188.189.248, port: 22222, type: trojan, country: 🇫🇷FR, delay: 1063, password: telegram-id-privatevpns, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
@@ -220,6 +224,8 @@ proxies:
   - {name: '美国 - 聖荷西 - Cloudflare, Inc. - 8', server: 108.165.152.253, port: 2096, type: vless, country: 🇺🇸US, delay: 1113, network: ws, servername: krill.xfan01.sbs, tls: true, udp: true, uuid: e191ac99-e071-4e36-9a01-107eaf26a780, ws-opts: {path: '/Telegram🇨🇳@WangCai2/?ed=2560', headers: {Host: krill.xfan01.sbs}}}
   - {name: '美国 - 聖荷西 - xTom - 13', server: us-3.regentgrandvalley.com, port: 443, type: trojan, country: 🇺🇸US, delay: 859, password: YlfdAfTHoAuoRIbTPl, skip-cert-verify: true, udp: true}
   - {name: '美国 - 達拉斯 - GTHost - 15', server: 167.17.66.82, port: 8081, type: http, delay: 964, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPO4zG1fOzCNysb6B9VrWKHmxsnp5o63PElOVpFduiCmYA==}
+  - {name: '美国2|@ripaojiedian', server: 36.156.102.88, port: 472, type: trojan, network: tcp, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '美国|@ripaojiedian', server: 160.16.124.55, port: 1572, type: trojan, network: tcp, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '芬兰 - 赫尔辛基 - M247 Europe SRL - 2', server: 83.143.242.74, port: 8081, type: http, delay: 1231, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPNXqbsJezrHZq14NzRiS7tNoXw609MC0WdYefYZbCn32A==}
   - {name: '芬兰 - 赫尔辛基 - Scalaxy B.V. - 1', server: promo18v.bystrivpn.ru, port: 443, type: ss, cipher: chacha20-ietf-poly1305, delay: 1399, password: dAHM1pm8ag7KdlrUylQi6t, udp: true}
   - {name: '英国 - Erith - OVH SAS - 2', server: 51.89.173.123, port: 8081, type: http, delay: 1475, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPOEiZ6D87AWpe_LaZT4JV4Exsnp5o63PElOVpFduiCmYA==}
@@ -250,11 +256,15 @@ proxies:
   - {name: '阿根廷 - Bella Vista - Latitude.sh - 3', server: 103.50.33.186, port: 8081, type: http, delay: 2736, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPNac9K9Rs4nHrgN7US71Y3voXw609MC0WdYefYZbCn32A==}
   - {name: '阿根廷 - Chacarita - IPXON Networks - 1', server: 38.165.230.194, port: 8081, type: http, delay: 1636, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPNgnMdDbPDVU4BFF2F5JFC0oXw609MC0WdYefYZbCn32A==}
   - {name: '阿根廷 - Chacarita - IPXON Networks - 2', server: 38.165.230.218, port: 8081, type: http, delay: 1435, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPM8WO5uTB5eCFKS-CcvRfwtoXw609MC0WdYefYZbCn32A==}
-  - {name: '香港3|@ripaojiedian', server: 103.224.80.49, port: '12114', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: aa92855a-9932-4e87-b5c2-4aed159c7c78}
+  - {name: '香港3|@ripaojiedian', server: 43.247.134.213, port: '18366', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: ccc37b1b-4ef0-430c-b1e1-20bf96fcff8c}
+  - {name: '香港4|@ripaojiedian', server: 221.128.195.217, port: 443, type: trojan, network: tcp, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: true, sni: www.nintendogames.net}
+  - {name: '香港5|@ripaojiedian', server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com, port: '80', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d, ws-opts: {headers: {Host: broadcastlv.chat.bilibili.com}, path: /}}
+  - {name: '香港6|@ripaojiedian', server: 160.16.63.16, port: 443, type: trojan, network: tcp, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Gigabit Hosting Sdn Bhd - 1', server: 202.87.221.113, port: 8081, type: http, delay: 1352, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPOcnjWSM6BPppC4VAXYNCNToXw609MC0WdYefYZbCn32A==}
   - {name: '马耳他 - 瓦莱塔 - Melita Limited - 1', server: 171.22.254.19, port: 8081, type: http, delay: 1246, password: 1, tls: false, username: afY491o7YfK00koaXQD9kUzS0XxmIWg5iAd5FOI6sPMTkUgKCBZVFQHAbT5tMbH-oXw609MC0WdYefYZbCn32A==}
-  - {name: '[2025-10-04 10:56:04]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇭🇰 香港3|@ripaojiedian', server: 43.247.134.213, port: 18366, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: ccc37b1b-4ef0-430c-b1e1-20bf96fcff8c}
+  - {name: '[2025-10-04 11:29:34]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
