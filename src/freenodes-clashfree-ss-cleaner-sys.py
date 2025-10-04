@@ -226,7 +226,9 @@ if __name__ == '__main__':
     project_root = script_dir.parent
     # 定义输出目录和文件名
     output_dir_name = 's'
+    sources_dir_name = 'sources'
     output_filename = 'freenodes-clashfree.yml'
+    original_output_filename = 'freenodes-clashfree-original.yml'
 
     output_dir = project_root / output_dir_name
     output_path = output_dir / output_filename
@@ -259,6 +261,14 @@ if __name__ == '__main__':
 
     # --- 处理与输出 ---
     if source_lines:
+        # 定义并确保 sources 输出目录存在
+        sources_output_dir = output_dir / sources_dir_name
+        sources_output_dir.mkdir(parents=True, exist_ok=True)
+        # 保存原始文件
+        original_output_path = sources_output_dir / original_output_filename
+        original_content = '\n'.join(source_lines) + '\n'
+        original_output_path.write_text(original_content, encoding='utf-8')
+        print(f"原始配置文件已保存到: {original_output_path}")
         print("\n开始清理配置文件...")
         cleaned_lines = process_config_lines(source_lines)
         # 确保输出目录存在

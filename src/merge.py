@@ -253,6 +253,16 @@ def load_all_proxies(sources_path: Path, project_root: Path) -> list[dict]:
                 response.raise_for_status()
                 content = response.text
                 print(f"  - 已从URL下载内容 ({len(content)} 字符)。")
+
+                # 保存下载的原始文件
+                sources_output_dir = project_root.parent / 's' / 'sources'
+                sources_output_dir.mkdir(parents=True, exist_ok=True)
+                # 使用源名称作为文件名，并添加 .yml 后缀
+                source_filename = f"{name}-original.yml"
+                source_output_path = sources_output_dir / source_filename
+                source_output_path.write_text(content, encoding='utf-8')
+                print(f"  - 原始来源文件已保存到: {source_output_path}")
+
             except requests.RequestException as e:
                 print(f"  - 警告: 从URL下载失败: {e}，已跳过此来源。")
                 continue
@@ -303,6 +313,15 @@ def main(args):
         ]
         filtered_count = original_count - len(all_proxies)
         print(f"根据IP黑名单共过滤了 {filtered_count} 个代理。")
+
+    # --- 过滤HTTP代理 ---
+    print("\n--- 开始过滤HTTP代理 ---")
+    original_count = len(all_proxies)
+    all_proxies = [
+        p for p in all_proxies if p.get('type') != 'http'
+    ]
+    filtered_count = original_count - len(all_proxies)
+    print(f"共过滤了 {filtered_count} 个HTTP类型的代理。")
 
     # --- 合并与去重 ---
     print("\n--- 开始合并与去重 ---")
