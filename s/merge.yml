@@ -250,7 +250,7 @@ proxies:
   - {name: '香港5|@ripaojiedian', server: 1e426046-t0fds0-t12cnj-1ol97.hk.p5pv.com, port: '80', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d, ws-opts: {headers: {Host: broadcastlv.chat.bilibili.com}, path: /}}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '🇳🇱@FreakConfig', server: nl1.oomz.ru, port: 30000, type: hysteria2, password: 4e231218-04c8-44ce-b72d-5c1bbcfc3a94, skip-cert-verify: true, sni: bing.com, tls: false}
-  - {name: '[2025-10-06 02:32:44]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-06 03:17:53]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
