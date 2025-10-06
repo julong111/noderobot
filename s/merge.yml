@@ -245,7 +245,7 @@ proxies:
   - {name: '阿尔巴尼亚 - 地拉那 - Baxet Group Inc. - 4', server: tirana.vosniehcihwocc.cfd, port: 443, type: hysteria2, delay: 1390, obfs: salamander, obfs-password: C6jV73AEtt12PFH1, password: 0494e68d-e085-4237-b274-5e65574ad7c2, skip-cert-verify: true, sni: tirana.vosniehcihwocc.cfd}
   - {name: '香港3|@ripaojiedian', server: 43.247.134.213, port: '18366', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: ccc37b1b-4ef0-430c-b1e1-20bf96fcff8c}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-07 00:31:49]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-07 01:22:59]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
