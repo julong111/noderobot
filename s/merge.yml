@@ -39,8 +39,7 @@ proxies:
   - {name: '[Hysteria2] @Daily_Configs #5', server: 103.249.133.79, port: 443, type: hysteria2, auth: biadailyconfigs, obfs: salamander, obfs-password: LzmYaFxALuuWNIu3zSeRJeV4z21RU1oS, password: biadailyconfigs, skip-cert-verify: false, sni: microsoft.com}
   - {name: '[Hysteria2] @EXPRESSVPN_420 -> همه اپرات...', server: android.yas-nowin.ir, port: 443, type: hysteria2, auth: 3QlSMKyqLp, password: 3QlSMKyqLp, skip-cert-verify: false, sni: android.yas-nowin.ir}
   - {name: '[Hysteria2] @FreakConfig', server: nl1.oomz.ru, port: 30000, type: hysteria2, auth: 4e231218-04c8-44ce-b72d-5c1bbcfc3a94, password: 4e231218-04c8-44ce-b72d-5c1bbcfc3a94, skip-cert-verify: false, sni: bing.com}
-  - {name: '[Hysteria2] @FreakConfig #1', server: pouria.3dfigures.ir, port: 28777, type: hysteria2, auth: lHoYmNZmLe, obfs: salamander, obfs-password: wcancmaocnewrivbkacmlmsvwuvdfsv, password: lHoYmNZmLe, skip-cert-verify: false}
-  - {name: '[Hysteria2] @FreakConfig #2', server: pouria.3dfigures.ir, port: 53713, type: hysteria2, auth: lHoYmNZmLe, obfs: salamander, obfs-password: uvahwuicbhwabhvlhv, password: lHoYmNZmLe, skip-cert-verify: false}
+  - {name: '[Hysteria2] @FreakConfig #1', server: pouria.3dfigures.ir, port: 53713, type: hysteria2, auth: lHoYmNZmLe, obfs: salamander, obfs-password: uvahwuicbhwabhvlhv, password: lHoYmNZmLe, skip-cert-verify: false}
   - {name: '[Hysteria2] @FreakConfig #3', server: yapc-1.adamhayward.co.uk, port: 36300, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
   - {name: '[Hysteria2] @FreakConfig 2', server: 81.168.83.89, port: 2083, type: hysteria2, auth: YwuvGJk36B, obfs: salamander, obfs-password: khameniiko@smad@ret, password: YwuvGJk36B, skip-cert-verify: false, sni: kotlet.arshiacomplus.dpdns.org}
   - {name: '[Hysteria2] @FreakConfig 3', server: 208.87.243.187, port: 22222, type: hysteria2, auth: dongtaiwang.com, password: dongtaiwang.com, skip-cert-verify: false, sni: www.bing.com}
@@ -246,7 +245,7 @@ proxies:
   - {name: '阿尔巴尼亚 - 地拉那 - Baxet Group Inc. - 4', server: tirana.vosniehcihwocc.cfd, port: 443, type: hysteria2, delay: 1390, obfs: salamander, obfs-password: C6jV73AEtt12PFH1, password: 0494e68d-e085-4237-b274-5e65574ad7c2, skip-cert-verify: true, sni: tirana.vosniehcihwocc.cfd}
   - {name: '香港3|@ripaojiedian', server: 43.247.134.213, port: '18366', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: ccc37b1b-4ef0-430c-b1e1-20bf96fcff8c}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-06 20:54:40]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-06 21:34:09]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
