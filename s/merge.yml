@@ -134,6 +134,7 @@ proxies:
   - {name: '日本 - 东京 - Baxet Group Inc. - 78', server: 167.17.179.233, port: 24153, type: hysteria2, delay: 1911, obfs: salamander, obfs-password: 10avVdX0KoINIFbx, password: 0494e68d-e085-4237-b274-5e65574ad7c2, skip-cert-verify: true, sni: apple.com}
   - {name: '日本 - 东京 - Eons Data Communications Limited - 91', server: jpv1.86298922.xyz, port: 47255, type: ss, cipher: 2022-blake3-aes-256-gcm, delay: 613, password: 'OTBjODNjYzIwZGJhNDA3NTNjNTlhOWVkOTU4ZjRkNWY=:MTZiMGMwYTUtYjM5My00MTQ1LWI1MWMtYWFiOTlkOGM=', udp: true}
   - {name: '日本 - 东京 - Eons Data Communications Limited - 92', server: itjhcwds.xn--fiqs8sjz2bull.com, port: 20021, type: vmess, cipher: auto, alterId: 0, delay: 1201, udp: true, uuid: 16b0c0a5-b393-4145-b51c-aab99d8c43b8}
+  - {name: '日本|@ripaojiedian', server: v6.heduian.link, port: '30806', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: ocbc.com}, path: /oooo}}
   - {name: '比利时 - 布鲁塞尔 - OVH SAS - 1', server: 141.227.136.11, port: 11716, type: vless, delay: 462, grpc-opts: {grpc-service-name: ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}, network: grpc, udp: true, uuid: 98b988ba-fe55-402e-824a-6f7bb3436f22, xudp: true}
   - {name: '法国 - 巴黎 - OVH SAS - 13', server: 141.227.132.199, port: 42817, type: vless, delay: 673, grpc-opts: {grpc-service-name: ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON}, network: grpc, udp: true, uuid: f7df6c83-e527-4bb2-bae1-ea743edaffcd, xudp: true}
   - {name: '法国 - 巴黎 - Online S.A.S. - 1', server: 195.154.200.40, port: 15010, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, auth_str: dongtaiwang.com, delay: 1382, down: '100', obfs: '', protocol: '', skip-cert-verify: true, sni: apple.com, up: '100'}
@@ -245,7 +246,9 @@ proxies:
   - {name: '阿尔巴尼亚 - 地拉那 - Baxet Group Inc. - 4', server: tirana.vosniehcihwocc.cfd, port: 443, type: hysteria2, delay: 1390, obfs: salamander, obfs-password: C6jV73AEtt12PFH1, password: 0494e68d-e085-4237-b274-5e65574ad7c2, skip-cert-verify: true, sni: tirana.vosniehcihwocc.cfd}
   - {name: '香港3|@ripaojiedian', server: 43.247.134.213, port: '18366', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: ccc37b1b-4ef0-430c-b1e1-20bf96fcff8c}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-07 07:22:43]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇭🇰 香港5|@ripaojiedian', server: lazy.rsqpq.cn, port: 30002, type: trojan, password: 2338a604-dc6a-4470-bc7d-947e462a3cfd, skip-cert-verify: true, sni: lazy.rsqpq.cn}
+  - {name: '🇻🇳 越南|@ripaojiedian', server: 103.186.155.233, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: '[2025-10-07 09:55:47]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
