@@ -403,7 +403,9 @@ proxies:
   - {name: '香港5|@ripaojiedian', server: kf5uhgscrdl73kmihv8c.appsworld.shop, port: '21791', type: vmess, cipher: auto, alterId: 0, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: 3b14ba6e-786f-3b86-8bce-2803ea19b8cc, ws-opts: {headers: {Host: www.baidu.com}, path: /cbf7f6acabd0dde4bef067580c126fed77a00de7}}
   - {name: '香港7|@ripaojiedian', server: 103.30.78.138, port: '35436', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 084928cf-ed55-42e8-b686-b8e271dfb0ce}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-09 11:05:16]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇳🇱@FreakConfig', server: nl1.oomz.ru, port: 30000, type: hysteria2, password: 4e231218-04c8-44ce-b72d-5c1bbcfc3a94, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🇺🇲@FreakConfig', server: 108.165.213.197, port: 23891, type: hysteria2, password: c232f411-96b5-4b07-b2f7-66a434725ffb, skip-cert-verify: true, sni: fus01.mistea.top, tls: false}
+  - {name: '[2025-10-09 12:29:51]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
