@@ -53,7 +53,6 @@ proxies:
   - {name: '[Hysteria2] All-@IRAN_V2RAY1 #1', server: de.youyacloud.me, port: 443, type: hysteria2, auth: 8da7bd17-70ab-472d-a925-cc827857dc35, obfs: salamander, obfs-password: qBbeISsJ8AK48fZW, password: 8da7bd17-70ab-472d-a925-cc827857dc35, skip-cert-verify: false, sni: de.youyacloud.me}
   - {name: '[Hysteria2] All-@IRAN_V2RAY1 #2', server: yapc-1.adamhayward.co.uk, port: 35000, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
   - {name: '[Hysteria2] All-@IRAN_V2RAY1 #3', server: yapc-1.adamhayward.co.uk, port: 36400, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
-  - {name: '[Hysteria2] Channel id: @ShadowProxy66🇬🇧', server: adas-polo-ba-mahi.kotlet.org, port: 2083, type: hysteria2, auth: siEk2SjZFG, obfs: salamander, obfs-password: ki(rtoko(s-maret-khamneii, password: siEk2SjZFG, skip-cert-verify: false, sni: ghasem.kotlet.org}
   - {name: '[Hysteria2] Channel id: @vpnserverrr🇸🇬', server: xjp2.mangshe.xyz, port: 2060, type: hysteria2, auth: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, skip-cert-verify: false, sni: xjp2.mangshe.xyz}
   - {name: '[Hysteria2] Channel id: @vpnserverrr🇺🇸', server: lsj3.mangshe.xyz, port: 2056, type: hysteria2, auth: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, skip-cert-verify: false, sni: lsj3.mangshe.xyz}
   - {name: '[Hysteria2] Channel id: @vpnserverrr🇺🇸 #1', server: mg1.mangshe.xyz, port: 2056, type: hysteria2, auth: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, skip-cert-verify: false, sni: mg1.mangshe.xyz}
@@ -405,7 +404,7 @@ proxies:
   - {name: '香港5|@ripaojiedian', server: kf5uhgscrdl73kmihv8c.appsworld.shop, port: '21791', type: vmess, cipher: auto, alterId: 0, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: 3b14ba6e-786f-3b86-8bce-2803ea19b8cc, ws-opts: {headers: {Host: www.baidu.com}, path: /cbf7f6acabd0dde4bef067580c126fed77a00de7}}
   - {name: '香港7|@ripaojiedian', server: 103.30.78.138, port: '35436', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 084928cf-ed55-42e8-b686-b8e271dfb0ce}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-09 20:54:59]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-09 21:35:56]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
