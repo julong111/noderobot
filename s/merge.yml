@@ -398,7 +398,7 @@ proxies:
   - {name: '香港3|@ripaojiedian', server: 103.224.80.122, port: '55238', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: f6771d73-462f-488e-8419-a133f34d051a}
   - {name: '香港5|@ripaojiedian', server: kf5uhgscrdl73kmihv8c.appsworld.shop, port: '21791', type: vmess, cipher: auto, alterId: 0, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: 3b14ba6e-786f-3b86-8bce-2803ea19b8cc, ws-opts: {headers: {Host: www.baidu.com}, path: /cbf7f6acabd0dde4bef067580c126fed77a00de7}}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-10 13:25:31]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-10 14:37:54]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
