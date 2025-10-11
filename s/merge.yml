@@ -502,7 +502,7 @@ proxies:
   - {name: '🇯🇵 日本4|@ripaojiedian', server: 202.182.98.223, port: 9443, type: ss, cipher: aes-128-gcm, password: lINaALnHIiH4cSj8pJn6TQ==, tfo: false}
   - {name: '🇹🇼 台湾|@ripaojiedian', server: 36.234.105.191, port: 10043, type: ss, cipher: chacha20-ietf-poly1305, password: 3d26cd68-5d4e-44eb-a0d3-04b8276beda4, tfo: false}
   - {name: '🇻🇳 越南|@ripaojiedian', server: 103.186.154.217, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
-  - {name: '[2025-10-11 11:30:50]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-11 12:28:31]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
