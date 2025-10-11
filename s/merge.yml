@@ -475,7 +475,7 @@ proxies:
   - {name: '香港5|@ripaojiedian', server: kf5uhgscrdl73kmihv8c.appsworld.shop, port: '21791', type: vmess, cipher: auto, alterId: 0, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: 3b14ba6e-786f-3b86-8bce-2803ea19b8cc, ws-opts: {headers: {Host: www.baidu.com}, path: /cbf7f6acabd0dde4bef067580c126fed77a00de7}}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Kaopu Cloud HK Limited - 1', server: 38.54.98.110, port: 2052, type: vmess, cipher: auto, alterId: 0, delay: 2096, skip-cert-verify: true, tls: true, udp: true, uuid: 665d9b8f-153d-4907-adac-de12afd9c851}
-  - {name: '[2025-10-12 02:30:34]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-12 03:17:18]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
