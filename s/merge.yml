@@ -475,7 +475,7 @@ proxies:
   - {name: '🇱🇷@V2RayyNGvpn🇱🇷همه اوپراتور ه... #2', server: 138.124.60.198, port: 8443, type: hysteria2, obfs: salamander, obfs-password: MiraCLeOPV2RayyNGvpntheBestt, password: 9Us07IWEOY, skip-cert-verify: true, sni: cdnjs.cloudflare.com, tls: false}
   - {name: '🇱🇺@V2RayyNGvpn🇱🇺همه اوپراتور ه...', server: 209.250.254.12, port: 443, type: hysteria2, obfs: salamander, obfs-password: V2RayyNGvpnuushdhMiracle, password: 9M8uE6ks0h, skip-cert-verify: true, sni: www.oxfamintermon.org, tls: false}
   - {name: '🇳🇱@FreakConfig #9', server: yapc-1.adamhayward.co.uk, port: 35200, type: hysteria2, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: true, sni: YAPC-1.afshin.ir, tls: false}
-  - {name: '[2025-10-11 17:22:55]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-11 18:24:48]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
