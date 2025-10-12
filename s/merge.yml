@@ -478,7 +478,7 @@ proxies:
   - {name: '🔐 @AblNet7 🇨🇦 机场推荐', server: 150.230.28.100, port: 45979, type: hysteria2, password: cfe032e4-1bc3-454f-9d09-301b0aea08ff, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: '🔐 @AblNet7 🇺🇸 机场推荐', server: 836902-20.9966661.xyz, port: 3000, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, skip-cert-verify: false, sni: 836902-20.9966661.xyz, tls: false}
   - {name: '🔐 @AblNet7 🇺🇸 机场推荐 #1', server: 113.192.61.19, port: 63979, type: hysteria2, password: 9772ecf2-6732-4bfb-a8b1-f48af577c76c, skip-cert-verify: true, sni: www.bing.com, tls: false}
-  - {name: '[2025-10-12 19:18:26]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-12 20:47:54]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
