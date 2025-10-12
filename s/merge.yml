@@ -15,6 +15,7 @@ proxies:
   - {name: 'MD_speednode_0013', server: rus-0001-xr.packet-drop-society.net, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: llaiqC-oIhL_bjc236FPq26LSn7IVhIa4cIC6OVytws, short-id: 8453e5fd9af927}, servername: hls-svod.itunes.apple.com, skip-cert-verify: false, tls: true, udp: true, uuid: a71f0ddd-8ae5-437b-8d59-582779757296}
   - {name: 'NL_speednode_0014', server: 77.246.100.169, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
   - {name: 'PL_speednode_0015', server: 77.83.245.220, port: 8080, type: vless, reality-opts: {public-key: iPjWLvXWt7ABJaSRRwzjgLrvlJlwoYQZN8zF-G3D-Qs, short-id: 27cfa05000c23cc4}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1abaa2b6-ab8c-4525-8c91-b73bc2ab2b37}
+  - {name: 'Tel:@Daily_Configs', server: 80.85.241.237, port: 443, type: hysteria2, obfs: salamander, obfs-password: fQ0ZDCeRt1SyOHAUx2TToTBPkMfEXuTf, password: perspoliszibatarineshghjahan, skip-cert-verify: true, sni: stackoverflow.com, tls: false}
   - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.153.91, port: 37519, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
   - {name: '[Hysteria2] @Daily_Configs', server: 5.231.70.79, port: 443, type: hysteria2, auth: 2b67ONZROv%2BfRVMxB94BSw%3D%3D, password: 2b67ONZROv%2BfRVMxB94BSw%3D%3D, skip-cert-verify: false, sni: bing.com}
   - {name: '[Hysteria2] @Daily_Configs #1', server: banmabanmabanmabanmabanmabanma2.wanlidag.top, port: 54265, type: hysteria2, auth: 5f4ba37a-bb3c-4f8e-962e-850f624ad131, password: 5f4ba37a-bb3c-4f8e-962e-850f624ad131, skip-cert-verify: false, sni: banmabanmabanmabanmabanmabanma2.wanlidag.top}
@@ -474,7 +475,10 @@ proxies:
   - {name: '香港3|@ripaojiedian', server: 103.224.80.67, port: '30485', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: a9ba904e-2d8b-401e-9226-b5114c049f05}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Kaopu Cloud HK Limited - 1', server: 38.54.98.110, port: 2052, type: vmess, cipher: auto, alterId: 0, delay: 2096, skip-cert-verify: true, tls: true, udp: true, uuid: 665d9b8f-153d-4907-adac-de12afd9c851}
-  - {name: '[2025-10-12 16:30:08]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🔐 @AblNet7 🇨🇦 机场推荐', server: 150.230.28.100, port: 45979, type: hysteria2, password: cfe032e4-1bc3-454f-9d09-301b0aea08ff, skip-cert-verify: true, sni: www.bing.com, tls: false}
+  - {name: '🔐 @AblNet7 🇺🇸 机场推荐', server: 836902-20.9966661.xyz, port: 3000, type: hysteria2, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, skip-cert-verify: false, sni: 836902-20.9966661.xyz, tls: false}
+  - {name: '🔐 @AblNet7 🇺🇸 机场推荐 #1', server: 113.192.61.19, port: 63979, type: hysteria2, password: 9772ecf2-6732-4bfb-a8b1-f48af577c76c, skip-cert-verify: true, sni: www.bing.com, tls: false}
+  - {name: '[2025-10-12 17:22:45]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
