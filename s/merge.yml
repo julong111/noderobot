@@ -244,7 +244,6 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 70', server: 103.186.155.128, port: 38388, type: ss, cipher: aes-256-cfb, delay: 1107, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: '越南 - Hải Dương - FASTLY - 71', server: 103.186.154.29, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁 ZZ, delay: 616, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 72', server: 103.186.155.62, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 637, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
-  - {name: '越南 - Hải Dương - FASTLY - 73', server: 103.186.154.27, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁 ZZ, delay: 683, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 74', server: 103.186.155.230, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 653, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 75', server: 103.186.154.244, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 666, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 76', server: 103.186.154.165, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 865, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
@@ -269,7 +268,13 @@ proxies:
   - {name: '韩国 - 光明市 - SK Broadband Co Ltd - 1', server: p141.panda001.net, port: 4652, type: ss, cipher: aes-256-cfb, country: 🇰🇷 KR, delay: 617, password: qwerREWQ@@}
   - {name: '香港3|@ripaojiedian', server: 103.224.80.67, port: '30485', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: a9ba904e-2d8b-401e-9226-b5114c049f05}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-13 07:21:42]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇭🇰 香港3|@ripaojiedian', server: 43.247.135.17, port: 41522, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: ea897b9a-0894-4f17-ab5b-7e059678734d}
+  - {name: '🇭🇰 香港4|@ripaojiedian', server: 126.66.52.118, port: 443, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '🇭🇰 香港6|@ripaojiedian', server: 58.152.53.162, port: 443, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: true, sni: fe2.update.microsoft.com}
+  - {name: '🇯🇵 日本2|@ripaojiedian', server: 36.156.102.84, port: 1920, type: trojan, password: 253bc477d4e43c209f2d427272968280, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '🇰🇷 韩国|@ripaojiedian', server: 154.90.63.177, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, tfo: false}
+  - {name: '🇻🇳 越南|@ripaojiedian', server: 103.186.154.27, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: '[2025-10-13 10:04:39]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
