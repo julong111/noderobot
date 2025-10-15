@@ -315,7 +315,7 @@ proxies:
   - {name: '阿拉伯联合酋长国 - 迪拜 - M247 Europe SRL - 1', server: 38.180.27.182, port: 5901, type: vless, country: 🇺🇸US, delay: 1654, network: tcp, udp: true, uuid: c2ec47f4-873f-573f-7d8d-d79d7ad452e6}
   - {name: '香港3|@ripaojiedian', server: 43.247.135.17, port: '41522', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: ea897b9a-0894-4f17-ab5b-7e059678734d}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-16 02:38:01]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-16 03:21:09]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
