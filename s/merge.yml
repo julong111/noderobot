@@ -5,11 +5,11 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 'AT_speednode_0001', server: mengying.eu.org, port: 25801, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: iC7qQK0Yu8sQsiIj5JPTGDVTrFkZDoesDUn24pDwgQk}, servername: updates.cdn-apple.com, skip-cert-verify: false, tls: true, udp: true, uuid: 4c7f66da-af49-4e6d-b60c-f6a0eaa00919}
-  - {name: 'DE_speednode_0004', server: 188.68.53.100, port: 6666, type: vless, reality-opts: {public-key: S_2bepGaT7EHeH5DdyEgio421RTgrAvvOOQiaq8zV0g, short-id: b525ecd2fc}, servername: Tgju.org, skip-cert-verify: false, tls: true, udp: true, uuid: 0abf9050-c7be-464d-80af-24094c2b97de}
+  - {name: 'DE_speednode_0002', server: 188.68.53.100, port: 6666, type: vless, reality-opts: {public-key: S_2bepGaT7EHeH5DdyEgio421RTgrAvvOOQiaq8zV0g, short-id: b525ecd2fc}, servername: Tgju.org, skip-cert-verify: false, tls: true, udp: true, uuid: 0abf9050-c7be-464d-80af-24094c2b97de}
   - {name: 'France_Paris_hysteria_81', server: 62.210.127.217, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
-  - {name: 'NL_speednode_0006', server: 31.207.44.210, port: 32155, type: vless, reality-opts: {public-key: 6-b7u_t7wG_jbda_lucHW4Au9biBl1E0tA2Zkqm8mSw, short-id: 737af772}, servername: yahoo.com, skip-cert-verify: false, tls: true, udp: true, uuid: 2e23b585-a486-4541-83d8-5832a1409c6e}
+  - {name: 'GR_speednode_0003', server: 185.39.207.121, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: Mjz6Gz75xTMe9ZU08h0y-A_VgRQ6tnt3qoOzdEn1k1M, short-id: 0fa84b90}, servername: vk.cc, skip-cert-verify: false, tls: true, udp: true, uuid: 677615f7-87d5-5019-a44d-4fc3ff8d59d7}
   - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.153.91, port: 37519, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
+  - {name: 'US_speednode_0012', server: 212.18.104.19, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: 9tpeVTkuJ5il6GaLG9YqMn99OK8AFlzgEFtoD1_MkyI, short-id: f8c64c7a}, servername: nspk.ru, skip-cert-verify: true, tls: true, udp: true, uuid: 677615f7-87d5-5019-a44d-4fc3ff8d59d7}
   - {name: '[Hysteria2] @AblNet7 🇨🇦 机场推荐', server: 150.230.28.100, port: 45979, type: hysteria2, auth: cfe032e4-1bc3-454f-9d09-301b0aea08ff, password: cfe032e4-1bc3-454f-9d09-301b0aea08ff, skip-cert-verify: false, sni: www.bing.com}
   - {name: '[Hysteria2] @AblNet7 🇸🇪 机场推荐', server: 70.34.215.221, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
   - {name: '[Hysteria2] @AblNet7 🇺🇸 机场推荐', server: 836902-20.9966661.xyz, port: 3000, type: hysteria2, auth: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, password: 8d80603a-d7d7-4bcd-ad88-aaf1cf70b8c6, skip-cert-verify: false, sni: 836902-20.9966661.xyz}
@@ -303,7 +303,9 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 99', server: 103.186.154.69, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 733, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '阿拉伯联合酋长国 - 迪拜 - M247 Europe SRL - 1', server: 38.180.27.182, port: 5901, type: vless, country: 🇺🇸US, delay: 1654, network: tcp, udp: true, uuid: c2ec47f4-873f-573f-7d8d-d79d7ad452e6}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-16 16:36:18]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇩🇪@FreakConfig', server: 31.57.241.25, port: 7009, type: hysteria2, password: 30c075af-9555-4671-b70e-43e3cfb2e707, skip-cert-verify: true, sni: d.eans.top, tls: false}
+  - {name: '🇩🇪@FreakConfig #1', server: d.eans.top, port: 7009, type: hysteria2, password: 30c075af-9555-4671-b70e-43e3cfb2e707, skip-cert-verify: true, sni: d.eans.top, tls: false}
+  - {name: '[2025-10-16 17:29:19]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
