@@ -222,7 +222,7 @@ proxies:
   - {name: '阿拉伯联合酋长国 - 夏尔迦 - Global Communication Network Limited - 1', server: 38.182.115.109, port: 25207, type: vmess, cipher: auto, alterId: 0, country: 🇺🇸US, delay: 697, h2-opts: {}, http-opts: {}, network: none, skip-cert-verify: true, uuid: 614a1e29-67fc-40f0-98c8-ab0d31ebe95f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '🇨🇦@FreakConfig', server: 129.153.59.26, port: 30300, type: hysteria2, password: 2429bee3-e0c1-47dd-b420-75e6512b184b, skip-cert-verify: true, sni: www.bing.com, tls: false}
-  - {name: '[2025-10-17 03:19:29]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-17 04:28:34]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
