@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@Mr_Config_Group✌️', server: chervhill.hajalii.com, port: 29662, type: hysteria2, obfs: salamander, obfs-password: xFGh9dsyreJV9sMs1RUnFbwRdon, password: 10822856-7452-43ec-b35b-6f24ea33530f, skip-cert-verify: false, sni: chervhill.hajalii.com, tls: false}
   - {name: 'DE_speednode_0002', server: 188.68.53.100, port: 6666, type: vless, reality-opts: {public-key: S_2bepGaT7EHeH5DdyEgio421RTgrAvvOOQiaq8zV0g, short-id: b525ecd2fc}, servername: Tgju.org, skip-cert-verify: false, tls: true, udp: true, uuid: 0abf9050-c7be-464d-80af-24094c2b97de}
   - {name: 'France_Paris_hysteria_81', server: 62.210.127.217, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
   - {name: 'GR_speednode_0003', server: 185.39.207.121, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: Mjz6Gz75xTMe9ZU08h0y-A_VgRQ6tnt3qoOzdEn1k1M, short-id: 0fa84b90}, servername: vk.cc, skip-cert-verify: false, tls: true, udp: true, uuid: 677615f7-87d5-5019-a44d-4fc3ff8d59d7}
@@ -220,7 +221,7 @@ proxies:
   - {name: '香港3|@ripaojiedian', server: 38.55.106.62, port: '41199', type: vmess, cipher: none, alterId: 0, network: ws, servername: hk-vmiss-n4.nebulacloud.win, skip-cert-verify: false, tfo: false, tls: true, uuid: e18650e9-264b-4bf7-bbce-d846642dcf26, ws-opts: {headers: {Host: hk-vmiss-n4.nebulacloud.win}, path: /hk-vmiss-n4/getData}}
   - {name: '香港5|@ripaojiedian', server: 103.224.80.42, port: '38901', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 230938d9-ae9d-49e7-b3cb-9f44168f89e8}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-17 11:06:48]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-17 12:30:43]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
