@@ -98,12 +98,12 @@ proxies:
   - {name: '摩尔多瓦 - 基希讷乌 - ''''IT FRUIT'''' S.R.L. - 1', server: 185.153.197.5, port: 989, type: ss, cipher: aes-256-cfb, delay: 640, password: f8f7aCzcPKbsF8p3}
   - {name: '摩洛哥 - Fes - BrainStorm Network, Inc - 1', server: 188.214.157.30, port: 990, type: ss, cipher: chacha20-ietf-poly1305, country: 🇲🇦MA, delay: 703, password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=}
   - {name: '新加坡 - 新加坡 - Akamai Technologies, Inc. - 3', server: v32.emoyes.top, port: 8443, type: vmess, cipher: auto, alterId: 0, country: 🇺🇸US, delay: 2409, h2-opts: {}, http-opts: {}, network: ws, servername: v32.emoyes.top, skip-cert-verify: true, tls: true, uuid: 08b24d8d-10ab-4c5a-990e-4e0e194870af, ws-opts: {path: /, headers: {HOST: v32.emoyes.top}}}
-  - {name: '新加坡 - 新加坡 - DigitalOcean, LLC - 2', server: 174.138.29.1, port: 60523, type: ss, cipher: chacha20-ietf-poly1305, country: 🇸🇬SG, delay: 957, password: X2UQXuTGxwxE1ZMaTQwtxS}
   - {name: '新加坡 - 新加坡 - Greywolf Networks Pte. Ltd. - 4', server: 103.36.91.32, port: 8388, type: ss, cipher: chacha20-ietf, country: 🇸🇬 SG, delay: 698, password: asd123456, udp: true}
-  - {name: '新加坡 - 新加坡 - Melbikomas UAB - 1', server: 5.44.249.42, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, delay: 778, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {host: '(TG @WangCai2)26af988:57468', mode: tls, tls: false}, udp: true}
-  - {name: '新加坡3|@ripaojiedian', server: 47.245.106.193, port: '22286', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 8646218f-a600-4b73-8721-aa5d4567819e}
-  - {name: '新加坡4|@ripaojiedian', server: 47.245.106.193, port: '22433', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: bfcb103f-2133-4965-8684-6b4c8ef7a774}
+  - {name: '新加坡2|@ripaojiedian', server: 153.121.56.122, port: 5321, type: trojan, network: tcp, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: true, sni: www.baidu.com}
+  - {name: '新加坡|@ripaojiedian', server: 153.121.56.122, port: 5041, type: trojan, network: tcp, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: true, sni: www.baidu.com}
   - {name: '日本 - 东京 - Amazon Technologies Inc. - 1', server: jp35g.wi-fi-ai.com, port: 80, type: vmess, cipher: auto, alterId: 0, country: 🇯🇵JP, delay: 767, h2-opts: {}, http-opts: {method: GET, path: [/]}, network: http, servername: a.189.cn, skip-cert-verify: true, uuid: bcb7c581-3c95-4569-a4e7-918141e91ea3}
+  - {name: '日本2|@ripaojiedian', server: 160.16.106.144, port: 316, type: trojan, network: tcp, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: true, sni: www.baidu.com}
+  - {name: '日本3|@ripaojiedian', server: 160.16.106.144, port: 1331, type: trojan, network: tcp, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: true, sni: www.baidu.com}
   - {name: '法国 - 巴黎 - Amazon Technologies Inc. - 1', server: 52.47.82.233, port: 22223, type: trojan, country: 🇫🇷FR, delay: 1275, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '法国 - 巴黎 - Amazon Technologies Inc. - 2', server: 15.237.223.64, port: 22223, type: trojan, country: 🇫🇷FR, delay: 1280, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '法国 - 巴黎 - Amazon Technologies Inc. - 3', server: 15.237.118.240, port: 443, type: ss, cipher: aes-256-cfb, delay: 590, password: amazonskr05, udp: true}
@@ -130,6 +130,8 @@ proxies:
   - {name: '美国 - 圣克拉拉 - prgmr.com, Inc. - 2', server: pupas-shirting-unsung.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 478, password: p78naCf2EfOlRSLTX0wFVx}
   - {name: '美国 - 紐華克 - Cloudflare, Inc. - 3', server: 221.164.142.10, port: 50001, type: vmess, cipher: auto, alterId: 0, country: 🇰🇷KR, delay: 1466, h2-opts: {}, http-opts: {}, network: ws, servername: aa.nbee.pp.ua, skip-cert-verify: true, tls: true, uuid: ffde381b-4a30-41d4-90eb-151f228b06ea, ws-opts: {path: /qq, headers: {HOST: aa.nbee.pp.ua}}}
   - {name: '美国 - 聖荷西 - Eons Data Communications Limited - 1', server: stancsus-alpha.ilayernet.xyz, port: 613, type: ss, cipher: aes-128-gcm, delay: 773, password: 7af26eae-63c7-43c8-b335-e3528f790459, udp: true}
+  - {name: '美国2|@ripaojiedian', server: 160.16.106.144, port: 2467, type: trojan, network: tcp, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: true, sni: www.baidu.com}
+  - {name: '美国|@ripaojiedian', server: 160.16.106.144, port: 2381, type: trojan, network: tcp, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: true, sni: www.baidu.com}
   - {name: '芬兰 - 赫尔辛基 - Hetzner Online GmbH - 1', server: 157.180.123.212, port: 10100, type: vmess, cipher: auto, alterId: 0, country: 🇩🇪DE, delay: 441, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 14fd5c56-2d55-44a5-9876-6ce27d3aec44}
   - {name: '荷兰 - 哈勒姆 - Online S.A.S. - 4', server: 51.159.226.1, port: 49003, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, auth_str: dongtaiwang.com, delay: 960, down: 55, protocol: udp, skip-cert-verify: true, sni: apple.com, udp: true, up: 11}
   - {name: '荷兰 - 阿姆斯特丹 - Cloudflare, Inc. - 5', server: itarmy.com.ua, port: 2095, type: vless, delay: 1027, network: ws, tls: false, udp: true, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, ws-opts: {path: /, headers: {Host: snippets.pusytroller.cf}}}
@@ -205,7 +207,6 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 71', server: 103.186.154.218, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 944, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 72', server: 103.186.155.22, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 651, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 73', server: 103.186.155.38, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1650, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
-  - {name: '越南 - Hải Dương - FASTLY - 74', server: 103.186.154.234, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 684, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 75', server: 103.186.154.50, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1346, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 76', server: 103.186.155.213, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 620, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 77', server: 103.186.154.28, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁 ZZ, delay: 658, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
@@ -221,8 +222,16 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 86', server: 103.186.154.149, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1054, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.154.199, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 669, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '阿拉伯联合酋长国 - 夏尔迦 - Global Communication Network Limited - 1', server: 38.182.115.109, port: 25207, type: vmess, cipher: auto, alterId: 0, country: 🇺🇸US, delay: 697, h2-opts: {}, http-opts: {}, network: none, skip-cert-verify: true, uuid: 614a1e29-67fc-40f0-98c8-ab0d31ebe95f}
+  - {name: '香港3|@ripaojiedian', server: 38.55.106.62, port: '41199', type: vmess, cipher: none, alterId: 0, network: ws, servername: hk-vmiss-n4.nebulacloud.win, skip-cert-verify: false, tfo: false, tls: true, uuid: e18650e9-264b-4bf7-bbce-d846642dcf26, ws-opts: {headers: {Host: hk-vmiss-n4.nebulacloud.win}, path: /hk-vmiss-n4/getData}}
+  - {name: '香港4|@ripaojiedian', server: 58.152.30.87, port: 443, type: trojan, network: tcp, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '香港5|@ripaojiedian', server: 103.224.80.42, port: '38901', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 230938d9-ae9d-49e7-b3cb-9f44168f89e8}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-17 07:20:39]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇭🇰 香港5|@ripaojiedian', server: 103.224.80.42, port: 38901, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: 230938d9-ae9d-49e7-b3cb-9f44168f89e8}
+  - {name: '🇭🇰 香港7|@ripaojiedian', server: 103.149.183.154, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456, tfo: false}
+  - {name: '🇸🇬 新加坡3|@ripaojiedian', server: 5.44.249.42, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {host: '4a81070:6193', mode: tls}, tfo: false}
+  - {name: '🇸🇬 新加坡6|@ripaojiedian', server: 174.138.29.1, port: 60523, type: ss, cipher: chacha20-ietf-poly1305, password: X2UQXuTGxwxE1ZMaTQwtxS, tfo: false}
+  - {name: '🇻🇳 越南|@ripaojiedian', server: 103.186.154.234, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, tfo: false}
+  - {name: '[2025-10-17 09:58:12]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
