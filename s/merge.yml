@@ -221,7 +221,7 @@ proxies:
   - {name: '香港3|@ripaojiedian', server: 38.55.106.62, port: '41199', type: vmess, cipher: none, alterId: 0, network: ws, servername: hk-vmiss-n4.nebulacloud.win, skip-cert-verify: false, tfo: false, tls: true, uuid: e18650e9-264b-4bf7-bbce-d846642dcf26, ws-opts: {headers: {Host: hk-vmiss-n4.nebulacloud.win}, path: /hk-vmiss-n4/getData}}
   - {name: '香港5|@ripaojiedian', server: 103.224.80.42, port: '38901', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 230938d9-ae9d-49e7-b3cb-9f44168f89e8}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-17 18:28:14]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-17 19:21:01]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
