@@ -5,6 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@meli_proxyy', server: 213.108.198.123, port: 22155, type: hysteria2, password: 571ec94e-613c-430a-93de-397d3d237475, skip-cert-verify: true, sni: hsdg.huasuan666.top, tls: false}
+  - {name: '@meli_proxyy #1', server: hsdg.huasuan666.top, port: 22155, type: hysteria2, password: 571ec94e-613c-430a-93de-397d3d237475, skip-cert-verify: true, sni: hsdg.huasuan666.top, tls: false}
+  - {name: '@meli_proxyy #2', server: hshl.huasuan666.top, port: 22157, type: hysteria2, password: 571ec94e-613c-430a-93de-397d3d237475, skip-cert-verify: true, sni: hshl.huasuan666.top, tls: false}
   - {name: 'France_Paris_hysteria_81', server: 62.210.127.217, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
   - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.153.91, port: 37519, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
   - {name: 'US_speednode_0038', server: 54.219.42.163, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: O53KcL6eOfBmpyfB5rM9qPDI-ZCe8hhHgYzdsZZ0b2Q}, servername: dash.cloudflare.com, skip-cert-verify: false, tls: true, udp: true, uuid: da640c05-1831-4c6f-a2c8-ff8ff9c18b0c}
@@ -140,7 +143,11 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 8', server: 103.186.155.82, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1316, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.155.205, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1235, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-19 01:19:43]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇩🇪@FreakConfig #3', server: de2.oomz.ru, port: 30000, type: hysteria2, password: ada5516d-f772-414f-b11c-2faec29b5424, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🇩🇪@FreakConfig #4', server: de3.oomz.ru, port: 30000, type: hysteria2, password: ada5516d-f772-414f-b11c-2faec29b5424, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🇳🇱@FreakConfig #6', server: nl1.oomz.ru, port: 30000, type: hysteria2, password: ada5516d-f772-414f-b11c-2faec29b5424, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🇳🇱@FreakConfig #7', server: nl2.oomz.ru, port: 30000, type: hysteria2, password: ada5516d-f772-414f-b11c-2faec29b5424, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '[2025-10-19 02:32:43]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
