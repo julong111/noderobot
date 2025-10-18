@@ -147,7 +147,7 @@ proxies:
   - {name: '🇩🇪@FreakConfig #4', server: de3.oomz.ru, port: 30000, type: hysteria2, password: ada5516d-f772-414f-b11c-2faec29b5424, skip-cert-verify: true, sni: bing.com, tls: false}
   - {name: '🇳🇱@FreakConfig #6', server: nl1.oomz.ru, port: 30000, type: hysteria2, password: ada5516d-f772-414f-b11c-2faec29b5424, skip-cert-verify: true, sni: bing.com, tls: false}
   - {name: '🇳🇱@FreakConfig #7', server: nl2.oomz.ru, port: 30000, type: hysteria2, password: ada5516d-f772-414f-b11c-2faec29b5424, skip-cert-verify: true, sni: bing.com, tls: false}
-  - {name: '[2025-10-19 02:32:43]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-19 03:18:28]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
