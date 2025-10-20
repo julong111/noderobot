@@ -108,6 +108,8 @@ proxies:
   - {name: '[Vless] TW_speednode_0036', server: 167.179.27.92, port: 443, type: vless, network: ws, servername: gaosir.unfeeling.sbs, skip-cert-verify: false, tls: false, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, ws-opts: {path: '/Telegram🇨🇳@WangCai2/?ed=2560security=tls', headers: {Host: gaosir.unfeeling.sbs}}}
   - {name: '[Vless] US_speednode_0038', server: 195.13.45.253, port: 2096, type: vless, network: ws, servername: gaosir.unfeeling.sbs, skip-cert-verify: false, tls: false, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, ws-opts: {path: /x @节点狂魔security=tlssecurity=tls, headers: {Host: gaosir.unfeeling.sbs}}}
   - {name: '[Vless] 🇺🇦 UA_speednode_0037', server: ktff.tencentapp.cn, port: 443, type: vless, network: ws, servername: sp5.sutu.eu.org, skip-cert-verify: false, tls: false, uuid: 9c8b8aec-7a20-4271-8a4f-a87bb029dae9, ws-opts: {path: /security=tls, headers: {Host: sp5.sutu.eu.org}}}
+  - {name: 'r♡ya #3', server: net2025.afsharidempire.uk, port: 30205, type: hysteria2, obfs: salamander, obfs-password: GdQ4bgvT8RFwuWi2, password: 8864aa9f-7517-4fd5-aef1-32050eb3095d, skip-cert-verify: true, sni: net2025.afsharidempire.uk, tls: false}
+  - {name: 'r♡ya #6', server: de2.oomz.ru, port: 30000, type: hysteria2, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, skip-cert-verify: true, sni: bing.com, tls: false}
   - {name: '中国 - 上海 - Hangzhou Alibaba Advertising Co - 14', server: 106.14.75.114, port: 50002, type: vmess, cipher: auto, alterId: 0, delay: 952, skip-cert-verify: true, tls: false, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 北京 - Hangzhou Alibaba Advertising Co - 15', server: 39.107.155.11, port: 30302, type: vmess, cipher: auto, alterId: 0, delay: 128, skip-cert-verify: true, tls: false, udp: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 北京 - Hangzhou Alibaba Advertising Co - 24', server: 39.100.81.215, port: 50002, type: vmess, cipher: auto, alterId: 64, delay: 705, skip-cert-verify: true, tls: false, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
@@ -171,7 +173,7 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.155.205, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1235, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '香港3|@ripaojiedian', server: 43.247.134.213, port: '58509', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 7f75e117-5cfe-40b9-b18f-d46fa6add969}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-21 01:23:47]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-21 02:39:11]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
