@@ -72,19 +72,29 @@ proxies:
   - {name: '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn', server: us-nb-01.linlujs.pw, port: 25684, type: hysteria2, auth: 70197404-7b40-45e4-bb9c-8bc8995012ae, password: 70197404-7b40-45e4-bb9c-8bc8995012ae, skip-cert-verify: false}
   - {name: '[SS] tg频道:@ripaojiedian', server: 18.196.23.20, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
   - {name: '[SS] 🇭🇰 香港2|@ripaojiedian', server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78}
-  - {name: '[SS] 🇸🇬 新加坡4|@ripaojiedian', server: 103.36.91.32, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456}
   - {name: '[Trojan] CN_speednode_0008', server: 36.156.102.115, port: 26876, type: trojan, password: BxceQaOe, skip-cert-verify: false}
   - {name: '[Trojan] CN_speednode_0009', server: 36.151.251.18, port: 811, type: trojan, password: BxceQaOe, skip-cert-verify: false}
-  - {name: '[Trojan] 🇭🇰 香港5|@ripaojiedian', server: 36.151.195.112, port: 4556, type: trojan, password: BxceQaOe, skip-cert-verify: false}
-  - {name: '[Trojan] 🇯🇵 日本2|@ripaojiedian', server: 160.16.57.238, port: 1331, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.baidu.com}
-  - {name: '[Trojan] 🇯🇵 日本3|@ripaojiedian', server: 160.16.57.238, port: 3161, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.baidu.com}
-  - {name: '[Trojan] 🇸🇬 新加坡2|@ripaojiedian', server: 202.181.103.246, port: 2283, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '[Trojan] 🇸🇬 新加坡3|@ripaojiedian', server: 36.156.102.115, port: 44095, type: trojan, password: BxceQaOe, skip-cert-verify: false}
-  - {name: '[Trojan] 🇸🇬 新加坡|@ripaojiedian', server: 202.181.103.246, port: 5041, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '[Trojan] 🇺🇸 美国2|@ripaojiedian', server: 202.181.103.235, port: 2467, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '[Trojan] 🇺🇸 美国|@ripaojiedian', server: 202.181.103.235, port: 2381, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇭🇰 香港4|@ripaojiedian', server: 203.198.122.55, port: 443, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇭🇰 香港5|@ripaojiedian', server: 36.150.215.138, port: 4451, type: trojan, password: BxceQaOe, skip-cert-verify: false}
+  - {name: '[Trojan] 🇭🇰 香港5|@ripaojiedian 2', server: 36.151.195.112, port: 4556, type: trojan, password: BxceQaOe, skip-cert-verify: false}
+  - {name: '[Trojan] 🇯🇵 日本2|@ripaojiedian', server: 160.16.136.130, port: 4452, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇯🇵 日本2|@ripaojiedian 2', server: 160.16.57.238, port: 1331, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.baidu.com}
+  - {name: '[Trojan] 🇯🇵 日本3|@ripaojiedian', server: 160.16.136.130, port: 1331, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇯🇵 日本3|@ripaojiedian 2', server: 160.16.57.238, port: 3161, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.baidu.com}
+  - {name: '[Trojan] 🇯🇵 日本|@ripaojiedian', server: 36.151.251.18, port: 2145, type: trojan, password: BxceQaOe, skip-cert-verify: false}
+  - {name: '[Trojan] 🇸🇬 新加坡2|@ripaojiedian', server: 202.181.103.246, port: 2283, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.baidu.com}
+  - {name: '[Trojan] 🇸🇬 新加坡3|@ripaojiedian', server: 36.156.102.115, port: 2088, type: trojan, password: BxceQaOe, skip-cert-verify: false}
+  - {name: '[Trojan] 🇸🇬 新加坡3|@ripaojiedian 2', server: 36.156.102.115, port: 44095, type: trojan, password: BxceQaOe, skip-cert-verify: false}
+  - {name: '[Trojan] 🇸🇬 新加坡|@ripaojiedian', server: 160.16.68.250, port: 5321, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇸🇬 新加坡|@ripaojiedian 2', server: 202.181.103.246, port: 5041, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇺🇸 美国2|@ripaojiedian', server: 160.16.68.250, port: 2381, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇺🇸 美国2|@ripaojiedian 2', server: 202.181.103.235, port: 2467, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇺🇸 美国|@ripaojiedian', server: 160.16.68.250, port: 2467, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇺🇸 美国|@ripaojiedian 2', server: 202.181.103.235, port: 2381, type: trojan, password: c53647f3153f784b3c695ffbe5fb43c0, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[VMess] 🇭🇰 香港3|@ripaojiedian', server: 43.247.134.213, port: 58509, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: 7f75e117-5cfe-40b9-b18f-d46fa6add969}
   - {name: '[VMess] 🇭🇰 香港|@ripaojiedian', server: v9.heduian.link, port: 30809, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
+  - {name: '[VMess] 🇸🇬 新加坡4|@ripaojiedian', server: v39.heduian.link, port: 30839, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
+  - {name: '[VMess] 🇺🇸 美国4|@ripaojiedian', server: 124.236.46.114, port: 47083, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: fd49381f-9fd8-4403-8698-48331a4d775d}
   - {name: '[Vless] AE_speednode_0001', server: 217.60.38.191, port: 2053, type: vless, network: ws, servername: gaosir.unfeeling.sbs, skip-cert-verify: false, tls: false, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, ws-opts: {path: '/Telegram🇨🇳@WangCai2/?ed=2560security=tls', headers: {Host: gaosir.unfeeling.sbs}}}
   - {name: '[Vless] HK_speednode_0011', server: 202.85.53.74, port: 443, type: vless, network: ws, servername: gaosir.unfeeling.sbs, skip-cert-verify: false, tls: false, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, ws-opts: {path: '/Telegram🇨🇳@WangCai2/?ed=2560security=tls', headers: {Host: gaosir.unfeeling.sbs}}}
   - {name: '[Vless] IR_speednode_0014', server: 217.60.248.66, port: 443, type: vless, network: ws, servername: gaosir.unfeeling.sbs, skip-cert-verify: false, tls: true, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, ws-opts: {path: '/Telegram🇨🇳 @WangCai2 /?ed=2560fp=chrome', headers: {Host: gaosir.unfeeling.sbs}}}
@@ -172,18 +182,7 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.155.205, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1235, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '香港3|@ripaojiedian', server: 43.247.134.213, port: '58509', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 7f75e117-5cfe-40b9-b18f-d46fa6add969}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '🇭🇰 香港4|@ripaojiedian', server: 203.198.122.55, port: 443, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '🇭🇰 香港5|@ripaojiedian', server: 36.150.215.138, port: 4451, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: '🇯🇵 日本2|@ripaojiedian', server: 160.16.136.130, port: 4452, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '🇯🇵 日本3|@ripaojiedian', server: 160.16.136.130, port: 1331, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '🇯🇵 日本|@ripaojiedian', server: 36.151.251.18, port: 2145, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: '🇸🇬 新加坡3|@ripaojiedian', server: 36.156.102.115, port: 2088, type: trojan, password: BxceQaOe, skip-cert-verify: true}
-  - {name: '🇸🇬 新加坡4|@ripaojiedian', server: v39.heduian.link, port: 30839, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '🇸🇬 新加坡|@ripaojiedian', server: 160.16.68.250, port: 5321, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '🇺🇸 美国2|@ripaojiedian', server: 160.16.68.250, port: 2381, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '🇺🇸 美国4|@ripaojiedian', server: 124.236.46.114, port: 47083, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: fd49381f-9fd8-4403-8698-48331a4d775d}
-  - {name: '🇺🇸 美国|@ripaojiedian', server: 160.16.68.250, port: 2467, type: trojan, password: ea39fa94f1ee00999337ea1fd3318e69, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '[2025-10-21 10:01:27]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-21 11:11:10]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
