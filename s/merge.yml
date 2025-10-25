@@ -139,7 +139,7 @@ proxies:
   - {name: '韩国 - 仁川广域市 - G-Core Labs S.A. - 1', server: baigou1.kkieo555.cn, port: 21871, type: trojan, country: 🇨🇳CN, delay: 1336, password: 5978419a-a183-419e-a88e-9185f1e974f1, skip-cert-verify: true, sni: douyin.com, udp: true}
   - {name: '香港3|@ripaojiedian', server: 103.224.80.100, port: '14994', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 40731c98-9514-4e75-b78e-58311d214095}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-25 21:27:58]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-25 22:22:27]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
