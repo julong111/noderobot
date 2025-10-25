@@ -147,7 +147,7 @@ proxies:
   - {name: '🇩🇪 - DE - @freeOnlineVPN', server: sfjxjp.sufujia.top, port: 57300, type: hysteria2, password: 250ff1f0-5b79-4d9e-a677-2bb7e6a7ee13, skip-cert-verify: true, sni: sfjxjp.sufujia.top, tls: false}
   - {name: '🇩🇪@FreakConfig #2', server: 141.147.52.24, port: 44001, type: hysteria2, password: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, skip-cert-verify: true, tls: false}
   - {name: '🇳🇱@FreakConfig #4', server: 85.208.9.189, port: 44001, type: hysteria2, password: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, skip-cert-verify: true, sni: www.bing.com, tls: false}
-  - {name: '[2025-10-26 02:33:34]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-26 03:18:59]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
