@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 'Channel id: @ShadowProxy66🇹🇼', server: 85.237.206.207, port: 29854, type: hysteria2, password: 308d37dc-cfe1-4d81-a095-d576f90cf581, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: 'France_Paris_hysteria_81', server: 62.210.127.217, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
   - {name: 'IL_speednode_0016', server: ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE, short-id: 55e6af1a35e64a98}, servername: i2pd.website, skip-cert-verify: false, tls: true, udp: true, uuid: 0e8a6896-ad90-4a3b-89a3-77d64aa409e2}
   - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.153.91, port: 37519, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
@@ -94,6 +95,10 @@ proxies:
   - {name: '[Vless] TW_speednode_0037', server: 167.179.27.92, port: 443, type: vless, network: ws, servername: gaosir.unfeeling.sbs, skip-cert-verify: false, tls: false, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, ws-opts: {path: '/TelegramU0001F1E8U0001F1F3@WangCai2/?ed=2560security=tls', headers: {Host: gaosir.unfeeling.sbs}}}
   - {name: '[Vless] US_speednode_0039', server: 104.19.50.238, port: 2096, type: vless, network: ws, servername: gaosir.unfeeling.sbs, skip-cert-verify: false, tls: false, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, ws-opts: {path: '/telegramU0001F1E8U0001F1F3@wangcai2/?ed=2560security=tls', headers: {Host: gaosir.unfeeling.sbs}}}
   - {name: '[Vless] US_speednode_0041', server: 195.13.45.253, port: 2096, type: vless, network: ws, servername: gaosir.unfeeling.sbs, skip-cert-verify: false, tls: false, uuid: f61a4285-7264-4d07-9408-7b9ba1922c26, ws-opts: {path: /x @节点狂魔security=tls, headers: {Host: gaosir.unfeeling.sbs}}}
+  - {name: 'telegram--MTMVPN 18', server: 195.133.79.116, port: 22157, type: hysteria2, password: 571ec94e-613c-430a-93de-397d3d237475, skip-cert-verify: true, sni: 🔒, tls: false}
+  - {name: 'telegram--MTMVPN 22', server: us4.oomz.ru, port: 30000, type: hysteria2, password: ab858115-e0ab-4cb7-8e65-0804c35e52d5, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: 'telegram--MTMVPN 4', server: 193.142.59.41, port: 23899, type: hysteria2, password: c232f411-96b5-4b07-b2f7-66a434725ffb, skip-cert-verify: true, sni: hl01.mistea.top, tls: false}
+  - {name: 'telegram--MTMVPN 6', server: nl2.oomz.ru, port: 30000, type: hysteria2, password: ab858115-e0ab-4cb7-8e65-0804c35e52d5, skip-cert-verify: true, sni: bing.com, tls: false}
   - {name: '中国 - 上海 - Hangzhou Alibaba Advertising Co - 3', server: 106.14.75.114, port: 50002, type: vmess, cipher: auto, alterId: 0, delay: 336, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 佛山市 - China Mobile - 5', server: 183.236.51.36, port: 59003, type: vmess, cipher: auto, alterId: 64, country: 🇨🇳CN, delay: 1158, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 北京 - Hangzhou Alibaba Advertising Co - 4', server: 39.107.155.11, port: 30302, type: vmess, cipher: auto, alterId: 0, delay: 294, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, udp: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
@@ -139,7 +144,10 @@ proxies:
   - {name: '韩国 - 仁川广域市 - G-Core Labs S.A. - 1', server: baigou1.kkieo555.cn, port: 21871, type: trojan, country: 🇨🇳CN, delay: 1336, password: 5978419a-a183-419e-a88e-9185f1e974f1, skip-cert-verify: true, sni: douyin.com, udp: true}
   - {name: '香港3|@ripaojiedian', server: 103.224.80.100, port: '14994', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 40731c98-9514-4e75-b78e-58311d214095}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-10-26 01:20:38]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇩🇪 - DE - @freeOnlineVPN', server: sfjxjp.sufujia.top, port: 57300, type: hysteria2, password: 250ff1f0-5b79-4d9e-a677-2bb7e6a7ee13, skip-cert-verify: true, sni: sfjxjp.sufujia.top, tls: false}
+  - {name: '🇩🇪@FreakConfig #2', server: 141.147.52.24, port: 44001, type: hysteria2, password: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, skip-cert-verify: true, tls: false}
+  - {name: '🇳🇱@FreakConfig #4', server: 85.208.9.189, port: 44001, type: hysteria2, password: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, skip-cert-verify: true, sni: www.bing.com, tls: false}
+  - {name: '[2025-10-26 02:33:34]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
