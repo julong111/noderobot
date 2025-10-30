@@ -5,13 +5,14 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 'CN_speednode_0001', server: linkgulang.evoay.com, port: 53214, type: vless, flow: xtls-rprx-vision, servername: www.lamer.com.hk, skip-cert-verify: true, tls: true, udp: true, uuid: 6c0472bc-82df-449e-90bd-2f91c6a46402}
   - {name: 'France_Paris_hysteria_81', server: 62.210.127.217, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
-  - {name: 'IT_speednode_0004', server: italy.marzxo.biz, port: 8093, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: Ro8OYB3Jq6hTWw95trCnKzQPvWaN2ShcbeLg7dTv8UU, short-id: 828348fc6d8e49cf}, servername: refersion.com, skip-cert-verify: false, tls: true, udp: true, uuid: 2d01afab-6ab0-b2c9-30ea-878969fe9359}
-  - {name: 'JP_speednode_0005', server: softbank88.xzcloudnode.sbs, port: 51623, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: ln4RiHk9_Ea_EyeI2GpZfzilPyrqKYDBqis09esVECo, short-id: 6ba85179e30d4fc2}, servername: itunes.apple.com, skip-cert-verify: false, tls: true, udp: true, uuid: 8129a335-37d4-4932-8dca-ac4358ce60b7}
-  - {name: 'NL_speednode_0006', server: 31.207.44.210, port: 32155, type: vless, reality-opts: {public-key: 6-b7u_t7wG_jbda_lucHW4Au9biBl1E0tA2Zkqm8mSw, short-id: 737af772}, servername: yahoo.com, skip-cert-verify: false, tls: true, udp: true, uuid: 2e23b585-a486-4541-83d8-5832a1409c6e}
-  - {name: 'RU_speednode_0007', server: usa.savanet.pro, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: s1YS6OaMKypumOxq7u22Pf_FaSjEbRvgLrJf1iTOKWY, short-id: bce24697c04e}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 87eff1bd-d55f-4df2-a5ad-863368a16cb7}
+  - {name: 'KR_speednode_0002', server: 3.36.62.128, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: yh4yX6_pM_VzpAx-tYb33PCzHYE6vC9w7Ov1FwNUjR8}, servername: www.ebay.com, skip-cert-verify: false, tls: true, udp: true, uuid: ead2118c-8b60-4805-b264-bb794c8600d0}
+  - {name: 'RU_speednode_0004', server: usa.savanet.pro, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: s1YS6OaMKypumOxq7u22Pf_FaSjEbRvgLrJf1iTOKWY, short-id: bce24697c04e}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 87eff1bd-d55f-4df2-a5ad-863368a16cb7}
   - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.153.91, port: 37519, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
-  - {name: 'US_speednode_0008', server: 172.238.22.96, port: 25599, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: SsbeZ_JdMe3r2IqTESBWRSUMrcm3PdpFzlab5xrKUlU}, servername: www.cloudflare.com, skip-cert-verify: false, tls: true, udp: true, uuid: ff06f97b-09f6-4b8b-8a12-7d2f51b28a75}
+  - {name: 'US_speednode_0006', server: 172.238.22.96, port: 25599, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: SsbeZ_JdMe3r2IqTESBWRSUMrcm3PdpFzlab5xrKUlU}, servername: www.cloudflare.com, skip-cert-verify: false, tls: true, udp: true, uuid: ff06f97b-09f6-4b8b-8a12-7d2f51b28a75}
+  - {name: 'US_speednode_0008', server: usa84.freednet.org, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: BhTJ3phnq-Z-10aFKSsj1lzhA8mULR4L6leE4-0WTAs}, servername: www.utexas.edu, skip-cert-verify: false, tls: true, udp: true, uuid: f2f5905b-e814-4a9f-beae-8b1353f25a06}
+  - {name: 'US_speednode_0009', server: usa102.unlockspace.org, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: BhTJ3phnq-Z-10aFKSsj1lzhA8mULR4L6leE4-0WTAs}, servername: www.utexas.edu, skip-cert-verify: false, tls: true, udp: true, uuid: 5c9f0284-a8da-40f0-9bca-da9a98049fb0}
   - {name: '[Hysteria2] @Daily_Configs', server: 129.153.59.26, port: 30300, type: hysteria2, auth: 2429bee3-e0c1-47dd-b420-75e6512b184b, password: 2429bee3-e0c1-47dd-b420-75e6512b184b, skip-cert-verify: false, sni: www.bing.com}
   - {name: '[Hysteria2] @Daily_Configs #1', server: xg1.mangshe.xyz, port: 2056, type: hysteria2, auth: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, skip-cert-verify: false, sni: xg1.mangshe.xyz}
   - {name: '[Hysteria2] @Daily_Configs #3', server: de3.oomz.ru, port: 30000, type: hysteria2, auth: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, skip-cert-verify: false, sni: bing.com}
@@ -154,7 +155,7 @@ proxies:
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - PT Herza Digital Indonesia - 2', server: 103.219.103.33, port: 45576, type: ss, cipher: aes-128-gcm, delay: 343, password: fe51727afe2fca582ebf, plugin: obfs, plugin-opts: {host: 215996dd9f1c3db1e54b.microsoft.com, mode: http}, udp: true}
   - {name: '马来西亚 - 吉隆坡 - Shinjiru Technology Sdn Bhd - 1', server: 103.219.103.33, port: 45577, type: ss, cipher: chacha20-ietf-poly1305, delay: 322, password: ec1a4ba66999975262e2, plugin: obfs, plugin-opts: {host: 215996dd9f1c3db1e54b.microsoft.com, mode: http}, udp: true}
-  - {name: '[2025-10-30 22:28:28]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-30 23:30:48]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
