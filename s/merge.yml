@@ -180,7 +180,7 @@ proxies:
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - PT Herza Digital Indonesia - 2', server: 103.219.103.33, port: 45576, type: ss, cipher: aes-128-gcm, delay: 343, password: fe51727afe2fca582ebf, plugin: obfs, plugin-opts: {host: 215996dd9f1c3db1e54b.microsoft.com, mode: http}, udp: true}
   - {name: '马来西亚 - 吉隆坡 - Shinjiru Technology Sdn Bhd - 1', server: 103.219.103.33, port: 45577, type: ss, cipher: chacha20-ietf-poly1305, delay: 322, password: ec1a4ba66999975262e2, plugin: obfs, plugin-opts: {host: 215996dd9f1c3db1e54b.microsoft.com, mode: http}, udp: true}
-  - {name: '[2025-10-30 18:29:32]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-10-30 19:22:42]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
