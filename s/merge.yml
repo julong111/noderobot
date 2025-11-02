@@ -112,6 +112,12 @@ proxies:
   - {name: '德国 - Frankfurt am Main - Amazon Technologies Inc. - 1', server: 3.75.116.251, port: 22222, type: trojan, country: 🇩🇪DE, delay: 672, password: telegram-id-privatevpns, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '德国 - Frankfurt am Main - Amazon Technologies Inc. - 2', server: 3.75.116.251, port: 22223, type: trojan, country: 🇩🇪DE, delay: 684, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '新加坡 - 新加坡 - Alibaba (US) Technology Co., Ltd. - 1', server: 47.245.106.193, port: 22525, type: vmess, cipher: auto, alterId: 0, country: 🇸🇬 SG, delay: 1872, h2-opts: {}, http-opts: {method: GET, path: [/]}, network: http, uuid: cabe905a-28ea-4e7e-c34d-2fa38604001f}
+  - {name: '新加坡2|@ripaojiedian', server: 160.16.107.37, port: 5048, type: trojan, network: tcp, password: bca467b8c15211d189008a93c7519d3b, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '新加坡3|@ripaojiedian', server: 36.150.215.197, port: 51825, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true}
+  - {name: '新加坡|@ripaojiedian', server: 117.172.176.24, port: 2283, type: trojan, network: tcp, password: bca467b8c15211d189008a93c7519d3b, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本2|@ripaojiedian', server: 117.172.176.24, port: 1332, type: trojan, network: tcp, password: bca467b8c15211d189008a93c7519d3b, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本3|@ripaojiedian', server: 117.172.176.24, port: 3161, type: trojan, network: tcp, password: bca467b8c15211d189008a93c7519d3b, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本|@ripaojiedian', server: 36.150.215.236, port: 4492, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true}
   - {name: '法国 - 巴黎 - Amazon Technologies Inc. - 1', server: 13.37.84.99, port: 22223, type: trojan, country: 🇫🇷FR, delay: 728, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '法国 - 巴黎 - Amazon Technologies Inc. - 2', server: 13.37.84.99, port: 22222, type: trojan, country: 🇫🇷FR, delay: 743, password: telegram-id-privatevpns, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '法国 - 巴黎 - Online S.A.S. - 3', server: 195.154.200.40, port: 15010, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, auth_str: dongtaiwang.com, country: 🇫🇷FR, delay: 1208, down: '100', protocol: udp, skip-cert-verify: true, sni: apple.com, udp: true, up: '100'}
@@ -119,6 +125,7 @@ proxies:
   - {name: '美国 - Ashburn - Amazon.com, Inc. - 2', server: 54.90.226.121, port: 80, type: ss, cipher: aes-256-gcm, country: 🇺🇸 US, delay: 1478, password: dada0801}
   - {name: '美国 - 圣克拉拉 - prgmr.com, Inc. - 3', server: pupas-shirting-unsung.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 1306, password: p78naCf2EfOlRSLTX0wFVx}
   - {name: '美国 - 洛杉矶 - Cloudflare, Inc. - 4', server: wto.org, port: 443, type: vmess, cipher: auto, alterId: 0, country: 🇺🇸US, delay: 2201, h2-opts: {}, http-opts: {}, network: ws, servername: floral-vol-lexington-liverpool.trycloudflare.com, skip-cert-verify: true, tls: true, uuid: 97b5343c-f8bd-40f2-b32d-7c98e1c196d4, ws-opts: {path: '/97b5343c-f8bd-40f2-b32d-7c98e1c196d4-vm?ed=2048', headers: {HOST: floral-vol-lexington-liverpool.trycloudflare.com}}}
+  - {name: '美国3|@ripaojiedian', server: 36.151.251.47, port: 53743, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true}
   - {name: '荷兰 - 阿姆斯特丹 - Address Limited - 1', server: 170.168.61.141, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 1284, password: aYEzEWyquHob4y8-ZzJ6aw}
   - {name: '荷兰 - 阿姆斯特丹 - Address Limited - 2', server: xce11lxz.pet0er23mh21qq.com, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 1752, password: aYEzEWyquHob4y8-ZzJ6aw}
   - {name: '越南 - Hải Dương - FASTLY - 1', server: 103.186.154.237, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 668, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
@@ -203,9 +210,13 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.154.207, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 389, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '韩国 - 光明市 - SK Broadband Co Ltd - 1', server: 218.237.185.230, port: 4652, type: ss, cipher: aes-256-cfb, country: 🇰🇷 KR, delay: 1249, password: qwerREWQ@@}
   - {name: '韩国 - 光明市 - SK Broadband Co Ltd - 2', server: p141.panda001.net, port: 4652, type: ss, cipher: aes-256-cfb, country: 🇰🇷 KR, delay: 445, password: qwerREWQ@@}
+  - {name: '香港3|@ripaojiedian', server: 58.152.53.42, port: 443, type: trojan, network: tcp, password: bca467b8c15211d189008a93c7519d3b, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '香港4|@ripaojiedian', server: 36.151.192.242, port: 4556, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true}
+  - {name: '香港5|@ripaojiedian', server: 203.198.122.129, port: 443, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true}
   - {name: '香港6|@ripaojiedian', server: 36.133.73.36, port: '11819', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-02 07:22:47]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇯🇵 日本4|@ripaojiedian', server: 54.64.148.82, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {host: '(TG @ripaojiedian)e9e4816:99990', mode: tls}, tfo: false}
+  - {name: '[2025-11-02 10:10:03]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
