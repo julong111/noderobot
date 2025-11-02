@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@GVgg#v2raybluecrystal3-tur', server: 5.133.102.59, port: 28958, type: hysteria2, obfs: salamander, obfs-password: FF, password: e2QEtNgU9v, skip-cert-verify: true, tls: false}
   - {name: 'DE_speednode_0010', server: 188.68.53.100, port: 6666, type: vless, reality-opts: {public-key: S_2bepGaT7EHeH5DdyEgio421RTgrAvvOOQiaq8zV0g, short-id: b525ecd2fc}, servername: Tgju.org, skip-cert-verify: false, tls: true, udp: true, uuid: 0abf9050-c7be-464d-80af-24094c2b97de}
   - {name: 'DE_speednode_0011', server: 79.132.136.80, port: 17287, type: vless, skip-cert-verify: false, tls: false, udp: true, uuid: 0ce5451d-d771-4c7d-887e-1e51aef6fd2b}
   - {name: 'DE_speednode_0012', server: 151.236.15.72, port: 444, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: FOSoac3DIrSrCUcBtQA-BdHMxCtqe2CYCpdvGxKMiUw, short-id: 82b9ca5d8d39ba72}, servername: opensuse.org, skip-cert-verify: false, tls: true, udp: true, uuid: faaaf16e-188e-42f2-bcc1-17feadc84fad}
@@ -114,6 +115,28 @@ proxies:
   - {name: '[Vless] CY_speednode_0006', server: 45.83.21.4, port: 443, type: vless, network: ws, servername: rAyAn-007.pArViN.DpDnS.OrG, skip-cert-verify: false, tls: true, uuid: 1679af35-6dd6-4c09-ae3b-18f239217f3e, ws-opts: {path: '/Telegram:@AZARBAYJAB1?ed=2560fp=chrome', headers: {Host: rAyAn-007.pArViN.DpDnS.OrG}}}
   - {name: '[Vless] CY_speednode_0007', server: 45.83.21.13, port: 443, type: vless, network: ws, servername: rAyAn-007.pArViN.DpDnS.OrG, skip-cert-verify: false, tls: true, uuid: 1679af35-6dd6-4c09-ae3b-18f239217f3e, ws-opts: {path: '/Telegram:@AZARBAYJAB1?ed=2560fp=chrome', headers: {Host: rAyAn-007.pArViN.DpDnS.OrG}}}
   - {name: '[Vless] US_speednode_0035', server: 199.34.230.114, port: 2053, type: vless, network: ws, servername: om1.omidsuccess.uk, skip-cert-verify: false, tls: true, uuid: b27e35a7-51f4-468e-8921-56a4901dd923, ws-opts: {path: /containers/defp=chrome, headers: {Host: om1.omidsuccess.uk}}}
+  - {name: 'rema2', server: rema.3dfigures.ir, port: 23398, type: hysteria2, obfs: salamander, obfs-password: telegram@v2raybluecrystaltelegram@v2raybluecrystaltelegram@v2raybluecrystaltelegram@v2raybluecrystaltelegram@v2raybluecrystaltelegram@v2raybluecrystaltelegram@v2raybluecrystaltelegram@v2raybluecrystal, password: IZ3V4BlqjL, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal', server: 185.219.81.33, port: 20675, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: 4VDmo53kWX, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal #1', server: 78.138.118.228, port: 37804, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: Ys1Z1iA996, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal-ger', server: 185.211.101.15, port: 20358, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: F6HtMurQGt, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal-hou', server: 146.19.56.21, port: 28165, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: UnYCJJ9AQy, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal-ind', server: 160.191.183.244, port: 11282, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: fzgdaH0cJ7, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal-la', server: 165.140.166.78, port: 50163, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: Jj0FrgSd85, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal-tur', server: 5.133.102.59, port: 30062, type: hysteria2, obfs: salamander, obfs-password: xfvgb@ssV, password: e2QEtNgU9v, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal2', server: 185.219.81.33, port: 18865, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: 4VDmo53kWX, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal2 #1', server: 78.138.118.228, port: 22527, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: Ys1Z1iA996, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal2-ger', server: 185.211.101.15, port: 16666, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal2, password: F6HtMurQGt, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal2-hou', server: 146.19.56.21, port: 57418, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal2, password: UnYCJJ9AQy, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal2-ind', server: 160.191.183.244, port: 14849, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal2, password: fzgdaH0cJ7, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal2-la', server: 165.140.166.78, port: 17083, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal2, password: Jj0FrgSd85, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal2-tur', server: 5.133.102.59, port: 41250, type: hysteria2, obfs: salamander, obfs-password: vbn@ffFF, password: e2QEtNgU9v, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal3', server: 185.219.81.33, port: 50757, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: 4VDmo53kWX, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal3 #1', server: 78.138.118.228, port: 33113, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal, password: Ys1Z1iA996, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal3-ger', server: 185.211.101.15, port: 48233, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal3, password: F6HtMurQGt, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal3-hou', server: 146.19.56.21, port: 24803, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal3, password: UnYCJJ9AQy, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal3-ind', server: 160.191.183.244, port: 48004, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal3, password: fzgdaH0cJ7, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal3-la', server: 165.140.166.78, port: 41003, type: hysteria2, obfs: salamander, obfs-password: v2raybluecrystal3, password: Jj0FrgSd85, skip-cert-verify: true, tls: false}
+  - {name: 'v2raybluecrystal4-tur', server: 5.133.102.59, port: 13222, type: hysteria2, obfs: salamander, obfs-password: xfvg@FFG, password: e2QEtNgU9v, skip-cert-verify: true, tls: false}
   - {name: '中国 - 佛山市 - China Mobile - 2', server: 183.236.51.36, port: 59003, type: vmess, cipher: auto, alterId: 64, country: 🇨🇳CN, delay: 132, h2-opts: {}, http-opts: {}, network: tcp, servername: trojan.burgerip.co.uk, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 北京 - Hangzhou Alibaba Advertising Co - 3', server: 39.100.81.215, port: 50002, type: vmess, cipher: auto, alterId: 64, country: 🇨🇳CN, delay: 155, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 香港 - MoeDove - 1', server: 45.207.223.54, port: 45978, type: vmess, cipher: auto, alterId: 0, country: 🇭🇰HK, delay: 2663, h2-opts: {}, http-opts: {}, network: none, skip-cert-verify: true, uuid: da9d831a-f804-4adc-d1a4-4d5bf8237bce}
@@ -213,7 +236,7 @@ proxies:
   - {name: '韩国 - 光明市 - SK Broadband Co Ltd - 2', server: p141.panda001.net, port: 4652, type: ss, cipher: aes-256-cfb, country: 🇰🇷 KR, delay: 445, password: qwerREWQ@@}
   - {name: '香港6|@ripaojiedian', server: 36.133.73.36, port: '11819', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-02 16:29:25]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-02 17:23:01]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
