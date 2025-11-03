@@ -5,14 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 'CA_speednode_0001', server: 40.233.118.103, port: 42557, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: LiHpb4jWrgHBSpi1mjKH3I8m2ahpVNexeNDh-sMW3Xo, short-id: f430927d}, servername: www.yahoo.com, skip-cert-verify: false, tls: true, udp: true, uuid: 2429bee3-e0c1-47dd-b420-75e6512b184b}
   - {name: 'France_Paris_hysteria_81', server: 62.210.127.217, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
-  - {name: 'LB_speednode_0022', server: 77.110.119.225, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo, short-id: 07e904766d29b958}, servername: st.ozone.ru, skip-cert-verify: false, tls: true, udp: true, uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a}
-  - {name: 'RU_speednode_0023', server: russia22.clearorbitllc.com, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: fwyaXZJrcorp1BQM4O2SicK-n15VNO53GWvvFsecbhM, short-id: 10f76a02167e9b}, servername: russia22.clearorbitllc.com, skip-cert-verify: false, tls: true, udp: true, uuid: 5c1bc547-6ed3-4234-873e-966d9eef5d27}
-  - {name: 'RU_speednode_0024', server: fi.aliusvpn.ru, port: 8443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: cynncQk7kKzEQaExg-FN7pMqFaZPSXEi_Ggy7AXXmVg, short-id: 3f8ad1}, servername: yandex.net, skip-cert-verify: false, tls: true, udp: true, uuid: 1bbc55ca-3200-48d8-bffe-948788d72ed0}
-  - {name: 'RU_speednode_0025', server: usa.savanet.pro, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: s1YS6OaMKypumOxq7u22Pf_FaSjEbRvgLrJf1iTOKWY, short-id: bce24697c04e}, servername: yandex.com, skip-cert-verify: false, tls: true, udp: true, uuid: 87eff1bd-d55f-4df2-a5ad-863368a16cb7}
   - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.153.91, port: 37519, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
-  - {name: 'US_speednode_0060', server: usa32.clearorbitllc.com, port: 443, type: vless, client-fingerprint: firefox, flow: xtls-rprx-vision, reality-opts: {public-key: 9VgEU9n4XfImCSwSdLXEAqotO7zVvZRSaolrtxJKEns, short-id: c7f3cc}, servername: usa32.clearorbitllc.com, skip-cert-verify: false, tls: true, udp: true, uuid: 9daf8f3e-089b-4989-9502-dd3d727edb6c}
+  - {name: 'US_speednode_0028', server: usa32.clearorbitllc.com, port: 443, type: vless, client-fingerprint: firefox, flow: xtls-rprx-vision, reality-opts: {public-key: 9VgEU9n4XfImCSwSdLXEAqotO7zVvZRSaolrtxJKEns, short-id: c7f3cc}, servername: usa32.clearorbitllc.com, skip-cert-verify: false, tls: true, udp: true, uuid: 9daf8f3e-089b-4989-9502-dd3d727edb6c}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #2', server: 70.34.215.221, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #4', server: drhystuichdfy.samanidempire.org, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
   - {name: '[Hysteria2] @Daily_Configs', server: 129.153.59.26, port: 30300, type: hysteria2, auth: 2429bee3-e0c1-47dd-b420-75e6512b184b, password: 2429bee3-e0c1-47dd-b420-75e6512b184b, skip-cert-verify: false, sni: www.bing.com}
@@ -385,7 +380,7 @@ proxies:
   - {name: '香港6|@ripaojiedian', server: 36.133.73.36, port: '11819', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Shinjiru Technology Sdn Bhd - 1', server: cn17.closeai.one, port: 8618, type: ss, cipher: chacha20-ietf, delay: 413, password: passwd, plugin: obfs, plugin-opts: {mode: http, host: 31832-qOf3ahM8.download.microsoft.com}}
-  - {name: '[2025-11-03 16:37:01]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-03 17:32:23]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
