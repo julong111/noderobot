@@ -5,6 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 'All-@V2rayAlpha--10', server: hsels.huasuan666.top, port: 22160, type: hysteria2, password: 4ba709e6-6186-412d-a79d-bf256c7df57c, skip-cert-verify: true, sni: hsels.huasuan666.top, tls: false}
+  - {name: 'All-@V2rayAlpha--6 #2', server: els1.dimoyun.top, port: 40001, type: hysteria2, password: 9faf4015-b6c0-44f9-b9d6-d77454a50a72, skip-cert-verify: true, sni: els1.dimoyun.top, tls: false}
+  - {name: 'All-@V2rayAlpha--8 #2', server: de.youyacloud.me, port: 443, type: hysteria2, obfs: salamander, obfs-password: qBbeISsJ8AK48fZW, password: 8da7bd17-70ab-472d-a925-cc827857dc35, skip-cert-verify: true, sni: de.youyacloud.me, tls: false}
   - {name: 'CN_speednode_0001', server: linkgulang.evoay.com, port: 53214, type: vless, flow: xtls-rprx-vision, servername: www.lamer.com.hk, skip-cert-verify: true, tls: true, udp: true, uuid: 6c0472bc-82df-449e-90bd-2f91c6a46402}
   - {name: 'France_Paris_hysteria_81', server: 62.210.127.217, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
   - {name: 'HK_speednode_0011', server: hk4.cv1168.com, port: 36666, type: vless, client-fingerprint: safari, flow: xtls-rprx-vision, reality-opts: {public-key: cqCSxloJscJ3ZrNUlkSKkUFZ7SZ6vzQNszGolW_o7HY, short-id: 6da03029}, servername: www.python.org, skip-cert-verify: false, tls: true, udp: true, uuid: aae56c24-7511-4526-9708-3fcbd804253c}
@@ -380,7 +383,7 @@ proxies:
   - {name: '香港6|@ripaojiedian', server: 36.133.73.36, port: '11819', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Shinjiru Technology Sdn Bhd - 1', server: cn17.closeai.one, port: 8618, type: ss, cipher: chacha20-ietf, delay: 413, password: passwd, plugin: obfs, plugin-opts: {mode: http, host: 31832-qOf3ahM8.download.microsoft.com}}
-  - {name: '[2025-11-04 16:36:24]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-04 17:30:13]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
