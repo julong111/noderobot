@@ -170,9 +170,14 @@ proxies:
   - {name: '新加坡 - 新加坡 - G-Core Labs S.A. - 2', server: n001.xunxunmimisbs.sbs, port: 31201, type: trojan, delay: 738, password: a4397f7a-f47f-49bc-b6b2-ac2fa2175f4d, sni: sg02.xxxxyyyysbs.sbs, udp: true}
   - {name: '新加坡 - 新加坡 - G-Core Labs S.A. - 8', server: n001.xunxunmimisbs.sbs, port: 31200, type: trojan, delay: 749, password: 3bd682f1-64f2-4f49-9263-805c0d1c7909, sni: sg01.xxxxyyyysbs.sbs, udp: true}
   - {name: '新加坡 - 新加坡 - Leaseweb Singapore Pte. Ltd. - 11', server: yue-zz.yuetoto.net, port: 22010, type: ss, cipher: 2022-blake3-aes-128-gcm, delay: 365, password: 'ZjZmYjhhMTM3MTYwYzk4ZQ==:MGUzY2RiOWEtYmI2OC00OA==', udp: true}
+  - {name: '新加坡2|@ripaojiedian', server: 117.172.176.23, port: 2283, type: trojan, network: tcp, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '新加坡3|@ripaojiedian', server: 36.150.215.137, port: 9713, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '日本 - 东京 - Baxet Group Inc. - 1', server: 185.141.219.30, port: 8388, type: ss, cipher: aes-256-gcm, country: 🇹🇷TR, delay: 1114, password: A+C8I1KUCPUdwzMk}
   - {name: '日本 - 东京 - G-Core Labs S.A. - 2', server: n002.xunxunmimisbs.sbs, port: 41300, type: trojan, delay: 2319, password: a4397f7a-f47f-49bc-b6b2-ac2fa2175f4d, skip-cert-verify: true, sni: jp01.xxxxyyyysbs.sbs, udp: true}
   - {name: '日本 - 东京 - G-Core Labs S.A. - 3', server: n001.xunxunmimisbs.sbs, port: 41300, type: trojan, delay: 318, password: 3bd682f1-64f2-4f49-9263-805c0d1c7909, skip-cert-verify: true, sni: jp01.xxxxyyyysbs.sbs, udp: true}
+  - {name: '日本2|@ripaojiedian', server: 117.172.176.23, port: 316, type: trojan, network: tcp, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本3|@ripaojiedian', server: 117.172.176.23, port: 1332, type: trojan, network: tcp, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本|@ripaojiedian', server: 36.150.215.137, port: 5156, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '柬埔寨 - 金边 - Kaopu Cloud HK Limited - 1', server: yue-zz.yuetoto.net, port: 22040, type: ss, cipher: 2022-blake3-aes-128-gcm, delay: 524, password: 'ZjZmYjhhMTM3MTYwYzk4ZQ==:MGUzY2RiOWEtYmI2OC00OA==', udp: true}
   - {name: '格陵兰 - 努克 - Cloudflare, Inc. - 1', server: yue-zz-xy.yuetoto.net, port: 22015, type: ss, cipher: 2022-blake3-aes-128-gcm, delay: 1344, password: 'ZjZmYjhhMTM3MTYwYzk4ZQ==:MGUzY2RiOWEtYmI2OC00OA==', udp: true}
   - {name: '格陵兰 - 努克 - Cloudflare, Inc. - 2', server: yue-zz-xy.yuetoto.net, port: 22016, type: ss, cipher: 2022-blake3-aes-128-gcm, delay: 2209, password: 'ZjZmYjhhMTM3MTYwYzk4ZQ==:MGUzY2RiOWEtYmI2OC00OA==', udp: true}
@@ -196,6 +201,9 @@ proxies:
   - {name: '美国 - 紐華克 - Cloudflare, Inc. - 10', server: yue-zz-xy.yuetoto.net, port: 22001, type: ss, cipher: 2022-blake3-aes-128-gcm, delay: 815, password: 'ZjZmYjhhMTM3MTYwYzk4ZQ==:MGUzY2RiOWEtYmI2OC00OA==', udp: true}
   - {name: '美国 - 芝加哥 - G-Core Labs S.A. - 3', server: n001.xunxunmimisbs.sbs, port: 24100, type: trojan, delay: 1401, password: 3bd682f1-64f2-4f49-9263-805c0d1c7909, sni: us01.xxxxyyyysbs.sbs, udp: true}
   - {name: '美国 - 芝加哥 - G-Core Labs S.A. - 5', server: n002.xunxunmimisbs.sbs, port: 24100, type: trojan, delay: 973, password: a4397f7a-f47f-49bc-b6b2-ac2fa2175f4d, sni: us01.xxxxyyyysbs.sbs, udp: true}
+  - {name: '美国2|@ripaojiedian', server: 160.16.231.103, port: 3777, type: trojan, network: tcp, password: e4e262d453466988575c397a30562337, skip-cert-verify: true, sni: www.nintendogames.net}
+  - {name: '美国3|@ripaojiedian', server: 36.150.215.245, port: 9269, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
+  - {name: '美国|@ripaojiedian', server: 117.172.176.23, port: 4553, type: trojan, network: tcp, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '英国 - Harlesden - G-Core Labs S.A. - 2', server: n002.xunxunmimisbs.sbs, port: 23100, type: trojan, delay: 958, password: 6497bead-8a01-441d-9530-f9e30bda9c38, sni: uk01.xxxxyyyysbs.sbs, udp: true}
   - {name: '英国 - Harlesden - G-Core Labs S.A. - 3', server: n001.xunxunmimisbs.sbs, port: 23100, type: trojan, delay: 970, password: 6497bead-8a01-441d-9530-f9e30bda9c38, sni: uk01.xxxxyyyysbs.sbs, udp: true}
   - {name: '英国 - 倫敦金融城 - Leaseweb UK Limited - 4', server: yue-zz.yuetoto.net, port: 22027, type: ss, cipher: 2022-blake3-aes-128-gcm, delay: 2012, password: 'ZjZmYjhhMTM3MTYwYzk4ZQ==:MGUzY2RiOWEtYmI2OC00OA==', udp: true}
@@ -241,10 +249,11 @@ proxies:
   - {name: '韩国 - 仁川广域市 - G-Core Labs S.A. - 3', server: n002.xunxunmimisbs.sbs, port: 22100, type: trojan, delay: 550, password: 6497bead-8a01-441d-9530-f9e30bda9c38, sni: kr01.xxxxyyyysbs.sbs, udp: true}
   - {name: '韩国 - 首尔特别市 - Baxet Group Inc. - 1', server: 203.32.26.157, port: 10912, type: ss, cipher: aes-256-gcm, country: 🇦🇺AU, delay: 935, password: 63d7c17506d1f48b}
   - {name: '韩国|@ripaojiedian', server: 45.94.68.117, port: '53115', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 7eebdcd7-9d77-4663-bde4-b67a51d13975}
+  - {name: '香港4|@ripaojiedian', server: 36.150.215.231, port: 1655, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '香港6|@ripaojiedian', server: 36.133.73.36, port: '11819', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '马来西亚 - 吉隆坡 - Kaopu Cloud HK Limited - 1', server: yue-zz.yuetoto.net, port: 22030, type: ss, cipher: 2022-blake3-aes-128-gcm, delay: 694, password: 'ZjZmYjhhMTM3MTYwYzk4ZQ==:MGUzY2RiOWEtYmI2OC00OA==', udp: true}
-  - {name: '[2025-11-05 07:24:41]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-05 10:05:43]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
