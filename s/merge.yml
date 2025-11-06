@@ -151,29 +151,34 @@ proxies:
   - {name: '新加坡 - 新加坡 - Prime Security Corp. - 3', server: sgp13.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 480, password: 554c010ce4, udp: true}
   - {name: '新加坡 - 新加坡 - Prime Security Corp. - 4', server: sgp11.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 375, password: 554c010ce4, udp: true}
   - {name: '新加坡 - 新加坡 - Prime Security Corp. - 5', server: sgp10.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 497, password: 554c010ce4, udp: true}
+  - {name: '新加坡2|@ripaojiedian', server: 117.172.176.23, port: 2173, type: trojan, network: tcp, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '日本 - 东京 - Prime Security Corp - 1', server: jpaz08.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 243, password: 554c010ce4, udp: true}
   - {name: '日本 - 东京 - Prime Security Corp - 2', server: jp15.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 240, password: 554c010ce4, udp: true}
   - {name: '日本 - 东京 - Prime Security Corp - 3', server: jpaz02.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 475, password: 554c010ce4, udp: true}
   - {name: '日本 - 东京 - Prime Security Corp - 4', server: jpid01.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 376, password: 554c010ce4, udp: true}
   - {name: '日本 - 东京 - Prime Security Corp - 5', server: jpaz06.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 573, password: 554c010ce4, udp: true}
   - {name: '日本 - 东京 - Prime Security Corp - 6', server: jpid04.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 460, password: 554c010ce4, udp: true}
+  - {name: '日本4|@ripaojiedian', server: 61.224.65.235, port: '3304', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 1307688e-a7ca-325d-a8a2-eba4f3b1952c}
+  - {name: '日本|@ripaojiedian', server: 36.150.215.245, port: 4041, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '美国 - 西雅圖 - GTHost - 1', server: 2.59.62.63, port: 19365, type: vmess, cipher: auto, alterId: 0, country: 🇺🇸US, delay: 802, h2-opts: {}, http-opts: {}, network: none, skip-cert-verify: true, uuid: 9583a647-b0ba-47b0-d4b0-4e12a0201d67}
   - {name: '英国 - Erith - OVH SAS - 1', server: ir02.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 376, password: 554c010ce4, udp: true}
   - {name: '英国 - Erith - OVH SAS - 2', server: uk03.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 455, password: 554c010ce4, udp: true}
-  - {name: '越南 - Hai BàTrưng - TOTHOST - 5', server: 103.197.185.149, port: 23806, type: vmess, cipher: auto, alterId: 0, delay: 765, h2-opts: {}, http-opts: {method: GET, path: [/]}, network: http, uuid: 841550b4-d4bf-4e3e-de9c-cff7baa47df3}
   - {name: '越南 - Hải Dương - FASTLY - 1', server: 103.186.155.218, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 699, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 2', server: 103.186.155.80, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 736, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 3', server: 103.186.154.67, port: 38388, type: ss, cipher: aes-256-cfb, delay: 1799, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: '越南 - Hải Dương - FASTLY - 4', server: 103.186.155.150, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 789, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南|@ripaojiedian', server: 103.197.185.149, port: '23806', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 841550b4-d4bf-4e3e-de9c-cff7baa47df3}
   - {name: '韩国 - 仁川广域市 - G-Core Labs S.A. - 3', server: kraz01.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 249, password: 554c010ce4, udp: true}
   - {name: '韩国 - 仁川广域市 - G-Core Labs S.A. - 4', server: krgame06.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 489, password: 554c010ce4, udp: true}
   - {name: '韩国 - 仁川广域市 - G-Core Labs S.A. - 5', server: krgame03.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 462, password: 554c010ce4, udp: true}
   - {name: '韩国 - 首尔特别市 - Baxet Group Inc. - 2', server: 203.32.26.157, port: 10912, type: ss, cipher: aes-256-gcm, country: 🇹🇷TR, delay: 2768, password: 63d7c17506d1f48b}
-  - {name: '韩国 - 首尔特别市 - Oracle Corporation - 1', server: 152.70.92.69, port: 80, type: vmess, cipher: auto, alterId: 0, delay: 1099, h2-opts: {}, http-opts: {method: GET, path: [/]}, network: http, udp: true, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
-  - {name: '韩国|@ripaojiedian', server: 45.94.68.117, port: '53115', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 7eebdcd7-9d77-4663-bde4-b67a51d13975}
+  - {name: '韩国|@ripaojiedian', server: 152.70.92.69, port: '80', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
   - {name: '香港6|@ripaojiedian', server: 36.133.73.36, port: '11819', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-06 07:24:58]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇯🇵 日本4|@ripaojiedian', server: 61.224.65.235, port: 3304, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: 1307688e-a7ca-325d-a8a2-eba4f3b1952c}
+  - {name: '🇰🇷 韩国|@ripaojiedian', server: 152.70.92.69, port: 80, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
+  - {name: '🇻🇳 越南|@ripaojiedian', server: 103.197.185.149, port: 23806, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: 841550b4-d4bf-4e3e-de9c-cff7baa47df3}
+  - {name: '[2025-11-06 10:06:00]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
