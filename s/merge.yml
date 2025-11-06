@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@Daily_Configs', server: 191.96.11.107, port: 48361, type: hysteria2, password: JOh7tQHdp8, skip-cert-verify: true, tls: false}
   - {name: 'France_None_hysteria_71', server: 62.210.10.186, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
   - {name: 'RU_speednode_0007', server: g72oiqhd.tun.nodeflex.cc, port: 30865, type: vless, client-fingerprint: firefox, flow: xtls-rprx-vision, reality-opts: {public-key: RQGgenaHaaros5JI8XOnAuv4k7t43Gug_mpHjQTRdjE, short-id: a242c9aa}, servername: www.varejaodasmaquinas.com, skip-cert-verify: false, tls: true, udp: true, uuid: d43bc5b9-21f8-42a7-adf8-8db943de75eb}
   - {name: 'RU_speednode_0008', server: g72oiqhd.tun.nodeflex.cc, port: 30866, type: vless, client-fingerprint: qq, flow: xtls-rprx-vision, reality-opts: {public-key: RQGgenaHaaros5JI8XOnAuv4k7t43Gug_mpHjQTRdjE, short-id: a242c9aa}, servername: www.varejaodasmaquinas.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1922fd72-8ebf-44f8-86ea-a032be1d26d7}
@@ -189,7 +190,7 @@ proxies:
   - {name: '韩国|@ripaojiedian', server: 152.70.92.69, port: '80', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
   - {name: '香港6|@ripaojiedian', server: 36.133.73.36, port: '11819', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-06 19:24:02]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-06 20:56:12]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
