@@ -107,17 +107,20 @@ proxies:
   - {name: '[Trojan] 🇭🇰 香港3|@ripaojiedian', server: 58.152.53.42, port: 443, type: trojan, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[Trojan] 🇭🇰 香港4|@ripaojiedian', server: 36.150.215.231, port: 1655, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
   - {name: '[Trojan] 🇭🇰 香港5|@ripaojiedian', server: 203.198.122.129, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
-  - {name: '[Trojan] 🇯🇵 日本2|@ripaojiedian', server: 117.172.176.23, port: 316, type: trojan, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇯🇵 日本2|@ripaojiedian', server: 117.172.176.23, port: 316, type: trojan, password: 1b57001bd214304027025a740b6cf1ac, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[Trojan] 🇯🇵 日本3|@ripaojiedian', server: 117.172.176.23, port: 1332, type: trojan, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '[Trojan] 🇯🇵 日本|@ripaojiedian', server: 36.150.215.137, port: 5156, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
-  - {name: '[Trojan] 🇸🇬 新加坡2|@ripaojiedian', server: 117.172.176.23, port: 2283, type: trojan, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇯🇵 日本|@ripaojiedian', server: 36.150.215.245, port: 4041, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
+  - {name: '[Trojan] 🇸🇬 新加坡2|@ripaojiedian', server: 117.172.176.23, port: 2173, type: trojan, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[Trojan] 🇸🇬 新加坡3|@ripaojiedian', server: 36.150.215.137, port: 9713, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
+  - {name: '[Trojan] 🇸🇬 新加坡|@ripaojiedian', server: 117.172.176.23, port: 2283, type: trojan, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[Trojan] 🇺🇸 美国2|@ripaojiedian', server: 160.16.231.103, port: 3777, type: trojan, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[Trojan] 🇺🇸 美国3|@ripaojiedian', server: 36.150.215.245, port: 9269, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
   - {name: '[Trojan] 🇺🇸 美国|@ripaojiedian', server: 117.172.176.23, port: 4553, type: trojan, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[VMess] 🇭🇰 香港6|@ripaojiedian', server: 36.133.73.36, port: 11819, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '[VMess] 🇭🇰 香港|@ripaojiedian', server: v9.heduian.link, port: 30809, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
-  - {name: '[VMess] 🇰🇷 韩国|@ripaojiedian', server: 45.94.68.117, port: 53115, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: 7eebdcd7-9d77-4663-bde4-b67a51d13975}
+  - {name: '[VMess] 🇯🇵 日本4|@ripaojiedian', server: 61.224.65.235, port: 3304, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: 1307688e-a7ca-325d-a8a2-eba4f3b1952c}
+  - {name: '[VMess] 🇰🇷 韩国|@ripaojiedian', server: 152.70.92.69, port: 80, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
+  - {name: '[VMess] 🇻🇳 越南|@ripaojiedian', server: 103.197.185.149, port: 23806, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: 841550b4-d4bf-4e3e-de9c-cff7baa47df3}
   - {name: '[Vless] US_speednode_0048', server: linux.do, port: 2095, type: vless, network: ws, servername: fangbinxingnmsl.pusytroller.cf, skip-cert-verify: false, tls: false, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, ws-opts: {path: /, headers: {Host: fangbinxingnmsl.pusytroller.cf}}}
   - {name: '[Vless] US_speednode_0049', server: www.npmjs.com, port: 2095, type: vless, network: ws, servername: fangbinxingnmsl.pusytroller.cf, skip-cert-verify: false, tls: false, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, ws-opts: {path: /, headers: {Host: fangbinxingnmsl.pusytroller.cf}}}
   - {name: '中国 - 佛山市 - China Mobile - 2', server: 183.236.51.36, port: 59003, type: vmess, cipher: auto, alterId: 64, country: 🇨🇳CN, delay: 125, h2-opts: {}, http-opts: {}, network: tcp, servername: trojan.burgerip.co.uk, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
@@ -151,7 +154,6 @@ proxies:
   - {name: '新加坡 - 新加坡 - Prime Security Corp. - 3', server: sgp13.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 480, password: 554c010ce4, udp: true}
   - {name: '新加坡 - 新加坡 - Prime Security Corp. - 4', server: sgp11.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 375, password: 554c010ce4, udp: true}
   - {name: '新加坡 - 新加坡 - Prime Security Corp. - 5', server: sgp10.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 497, password: 554c010ce4, udp: true}
-  - {name: '新加坡2|@ripaojiedian', server: 117.172.176.23, port: 2173, type: trojan, network: tcp, password: e4e262d453466988575c397a30562337, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '日本 - 东京 - Prime Security Corp - 1', server: jpaz08.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 243, password: 554c010ce4, udp: true}
   - {name: '日本 - 东京 - Prime Security Corp - 2', server: jp15.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 240, password: 554c010ce4, udp: true}
   - {name: '日本 - 东京 - Prime Security Corp - 3', server: jpaz02.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 475, password: 554c010ce4, udp: true}
@@ -159,7 +161,6 @@ proxies:
   - {name: '日本 - 东京 - Prime Security Corp - 5', server: jpaz06.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 573, password: 554c010ce4, udp: true}
   - {name: '日本 - 东京 - Prime Security Corp - 6', server: jpid04.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 460, password: 554c010ce4, udp: true}
   - {name: '日本4|@ripaojiedian', server: 61.224.65.235, port: '3304', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 1307688e-a7ca-325d-a8a2-eba4f3b1952c}
-  - {name: '日本|@ripaojiedian', server: 36.150.215.245, port: 4041, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '美国 - 西雅圖 - GTHost - 1', server: 2.59.62.63, port: 19365, type: vmess, cipher: auto, alterId: 0, country: 🇺🇸US, delay: 802, h2-opts: {}, http-opts: {}, network: none, skip-cert-verify: true, uuid: 9583a647-b0ba-47b0-d4b0-4e12a0201d67}
   - {name: '英国 - Erith - OVH SAS - 1', server: ir02.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 376, password: 554c010ce4, udp: true}
   - {name: '英国 - Erith - OVH SAS - 2', server: uk03.fjk.wtf, port: 13759, type: ss, cipher: rc4-md5, delay: 455, password: 554c010ce4, udp: true}
@@ -175,10 +176,7 @@ proxies:
   - {name: '韩国|@ripaojiedian', server: 152.70.92.69, port: '80', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
   - {name: '香港6|@ripaojiedian', server: 36.133.73.36, port: '11819', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '🇯🇵 日本4|@ripaojiedian', server: 61.224.65.235, port: 3304, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: 1307688e-a7ca-325d-a8a2-eba4f3b1952c}
-  - {name: '🇰🇷 韩国|@ripaojiedian', server: 152.70.92.69, port: 80, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
-  - {name: '🇻🇳 越南|@ripaojiedian', server: 103.197.185.149, port: 23806, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tfo: false, tls: false, uuid: 841550b4-d4bf-4e3e-de9c-cff7baa47df3}
-  - {name: '[2025-11-06 10:06:00]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-06 11:51:09]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
