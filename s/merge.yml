@@ -5,9 +5,27 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 'CA_speednode_0001', server: 132.145.99.18, port: 40106, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: gqmHb9i4USmQ78auzhAFJMQIrUpnq8QaykJgnjHDTBg, short-id: f44fd3dd}, servername: apple.com, skip-cert-verify: false, tls: true, udp: true, uuid: dcdd09ad-4519-46f7-8107-4c4290a9b2a3}
+  - {name: 'CN_speednode_0002', server: n001.xunxunmimisbs.sbs, port: 41300, type: trojan, password: 5a27a43b-c50f-4374-85b0-300c4e0a77f2, skip-cert-verify: true, sni: jp01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0005', server: n001.xunxunmimisbs.sbs, port: 31200, type: trojan, password: 5a27a43b-c50f-4374-85b0-300c4e0a77f2, skip-cert-verify: false, sni: sg01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0008', server: n002.xunxunmimisbs.sbs, port: 21201, type: trojan, password: 85c7bad3-d246-4ca4-8ecf-f10317bc1c21, skip-cert-verify: false, sni: hk02.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0009', server: n002.xunxunmimisbs.sbs, port: 31200, type: trojan, password: a7bb66bd-973c-424e-90ef-3f2841b2c44f, skip-cert-verify: false, sni: sg01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0011', server: n002.xunxunmimisbs.sbs, port: 27100, type: trojan, password: 85c7bad3-d246-4ca4-8ecf-f10317bc1c21, skip-cert-verify: false, sni: in01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0012', server: n002.xunxunmimisbs.sbs, port: 28300, type: trojan, password: 85c7bad3-d246-4ca4-8ecf-f10317bc1c21, skip-cert-verify: false, sni: tai01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0013', server: n002.xunxunmimisbs.sbs, port: 28200, type: trojan, password: 85c7bad3-d246-4ca4-8ecf-f10317bc1c21, skip-cert-verify: false, sni: vn01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0015', server: n001.xunxunmimisbs.sbs, port: 22100, type: trojan, password: 5a27a43b-c50f-4374-85b0-300c4e0a77f2, skip-cert-verify: false, sni: kr01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0017', server: n001.xunxunmimisbs.sbs, port: 28200, type: trojan, password: 85c7bad3-d246-4ca4-8ecf-f10317bc1c21, skip-cert-verify: false, sni: vn01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0020', server: n002.xunxunmimisbs.sbs, port: 22100, type: trojan, password: 5a27a43b-c50f-4374-85b0-300c4e0a77f2, skip-cert-verify: false, sni: kr01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0024', server: n001.xunxunmimisbs.sbs, port: 26100, type: trojan, password: 85c7bad3-d246-4ca4-8ecf-f10317bc1c21, skip-cert-verify: false, sni: fr01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0025', server: n002.xunxunmimisbs.sbs, port: 26100, type: trojan, password: 85c7bad3-d246-4ca4-8ecf-f10317bc1c21, skip-cert-verify: false, sni: fr01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0026', server: n002.xunxunmimisbs.sbs, port: 23100, type: trojan, password: 5a27a43b-c50f-4374-85b0-300c4e0a77f2, skip-cert-verify: false, sni: uk01.xxxxyyyysbs.sbs, udp: true}
+  - {name: 'CN_speednode_0029', server: n001.xunxunmimisbs.sbs, port: 23100, type: trojan, password: 5a27a43b-c50f-4374-85b0-300c4e0a77f2, skip-cert-verify: false, sni: uk01.xxxxyyyysbs.sbs, udp: true}
   - {name: 'France_None_hysteria_71', server: 62.210.10.186, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
+  - {name: 'LB_speednode_0031', server: 77.110.119.225, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo, short-id: 07e904766d29b958}, servername: st.ozone.ru, skip-cert-verify: false, tls: true, udp: true, uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a}
+  - {name: 'RU_speednode_0032', server: g72oiqhd.tun.nodeflex.cc, port: 30866, type: vless, client-fingerprint: qq, flow: xtls-rprx-vision, reality-opts: {public-key: RQGgenaHaaros5JI8XOnAuv4k7t43Gug_mpHjQTRdjE, short-id: a242c9aa}, servername: www.varejaodasmaquinas.com, skip-cert-verify: false, tls: true, udp: true, uuid: 1922fd72-8ebf-44f8-86ea-a032be1d26d7}
+  - {name: 'RU_speednode_0033', server: g72oiqhd.tun.nodeflex.cc, port: 30865, type: vless, client-fingerprint: firefox, flow: xtls-rprx-vision, reality-opts: {public-key: RQGgenaHaaros5JI8XOnAuv4k7t43Gug_mpHjQTRdjE, short-id: a242c9aa}, servername: www.varejaodasmaquinas.com, skip-cert-verify: false, tls: true, udp: true, uuid: d43bc5b9-21f8-42a7-adf8-8db943de75eb}
   - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.154.97, port: 48429, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
-  - {name: 'US_speednode_0045', server: usvless.yydzx.xyz, port: 17597, type: vless, flow: xtls-rprx-vision, servername: usvless.yydzx.xyz, skip-cert-verify: false, tls: true, udp: true, uuid: 4741863d-e3ac-4b9d-8185-466f437b3fa8}
+  - {name: 'US_speednode_0036', server: 167.68.4.199, port: 2053, type: trojan, network: ws, password: Aimer, skip-cert-verify: true, sni: epge.muarua.filegear-sg.me, udp: true, ws-opts: {headers: {Host: epge.muarua.filegear-sg.me}, path: '/?ed=2560'}}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #2', server: 70.34.215.221, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #4', server: drhystuichdfy.samanidempire.org, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
   - {name: '[Hysteria2] @Daily_Configs', server: yapc-1.adamhayward.co.uk, port: 36600, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
@@ -176,7 +194,7 @@ proxies:
   - {name: '韩国|@ripaojiedian', server: 152.70.92.69, port: '80', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
   - {name: '香港6|@ripaojiedian', server: 36.133.73.36, port: '11819', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: de32752c-0661-467e-82d3-35bc740a787f}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-06 13:27:45]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-06 14:39:35]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
