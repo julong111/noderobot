@@ -211,7 +211,7 @@ proxies:
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '🇳🇱@FreakConfig #6', server: sb1.oomz.ru, port: 30000, type: hysteria2, password: d3da4e16-9bef-4e54-9bd9-960d32740392, skip-cert-verify: true, sni: bing.com, tls: false}
   - {name: '🇳🇱@FreakConfig #7', server: sb2.oomz.ru, port: 30000, type: hysteria2, password: d3da4e16-9bef-4e54-9bd9-960d32740392, skip-cert-verify: true, sni: bing.com, tls: false}
-  - {name: '[2025-11-07 03:21:50]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-07 04:30:03]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
