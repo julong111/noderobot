@@ -5,9 +5,15 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 'CA_speednode_0002', server: 40.233.71.65, port: 26113, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: GUcD8LK1DFNuVun5yhsqeEego_p3PF2yIdvE2KY2Nng, short-id: 1fbd20fd}, servername: www.yahoo.com, skip-cert-verify: false, tls: true, udp: true, uuid: cfe032e4-1bc3-454f-9d09-301b0aea08ff}
+  - {name: 'CN_speednode_0003', server: naiu-hk.05vr9nyqg5.download, port: 13007, type: trojan, password: dce3c42b-f259-4b18-b5c1-a42ebef4e732, skip-cert-verify: false, sni: cloudflare.node-ssl.cdn-alibaba.com, udp: true}
   - {name: 'France_None_hysteria_71', server: 62.210.10.186, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
+  - {name: 'GB_speednode_0011', server: dl.darkterror.fonixapp.org, port: 20579, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: mT6lh-gtbEuWk3Zk6XGF_hYvpLwxTyvwtH7F-_fRbxI, short-id: 89f1da93}, servername: ilovepdf.com, skip-cert-verify: false, tls: true, udp: true, uuid: 93cd7e0f-8a81-4076-be8b-6d3bf3f8f810}
+  - {name: 'HK_speednode_0013', server: 58.152.46.98, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: true, sni: 58.152.46.98, udp: true}
+  - {name: 'RO_speednode_0022', server: london.fonixapp.org, port: 11133, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: y3umRzGnap4t5V4C_rlt870Rku-TG4F8ttsq-_5gKTY, short-id: d3e9}, servername: cloudtalk.io, skip-cert-verify: false, tls: true, udp: true, uuid: 160a7b5d-fd67-4e83-8d8e-73dcfb6d91c2}
   - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.154.97, port: 48429, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
-  - {name: 'US_speednode_0018', server: 198.186.131.216, port: 47387, type: vless, skip-cert-verify: false, tls: false, udp: true, uuid: cdc453bb-34c8-4405-a322-56f6878ccd40}
+  - {name: 'US_speednode_0025', server: ef87bb2b.meti-e9q.pages.dev, port: 443, type: vless, alpn: [http/1.1], network: ws, servername: ef87bb2b.meti-e9q.pages.dev, skip-cert-verify: false, tls: true, udp: true, uuid: 923509aa-bfb0-4758-a5a1-a6c2d0468169, ws-opts: {headers: {Host: ef87bb2b.meti-e9q.pages.dev}, path: '/ck2vlelfdajoybac?ed=2560'}}
+  - {name: 'US_speednode_0026', server: virginia.fonixapp.org, port: 52230, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: DdhKUXb4ICPfsWixehUQ56-4p6H5eE0DfEYtEvbKkUs, short-id: 42c0ec0a}, servername: ilovepdf.com, skip-cert-verify: false, tls: true, udp: true, uuid: dd2961de-3cff-4b6d-bbd1-819d571df66b}
   - {name: '[Hysteria2] @Daily_Configs', server: 191.96.11.107, port: 48361, type: hysteria2, auth: JOh7tQHdp8, password: JOh7tQHdp8, skip-cert-verify: false}
   - {name: '[Hysteria2] @Daily_Configs #1', server: yapc-1.adamhayward.co.uk, port: 36600, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
   - {name: '[Hysteria2] @FreakConfig', server: 204.44.110.129, port: 51541, type: hysteria2, auth: 20050105zhu, password: 20050105zhu, skip-cert-verify: false, sni: www.bing.com}
@@ -159,7 +165,7 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.155.10, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 656, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '香港6|@ripaojiedian', server: 36.150.27.76, port: '49509', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: aed41f1e-75e7-41ce-a2d4-38f65a6bbc86}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-09 01:20:51]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-09 02:34:28]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
