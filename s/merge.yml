@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@NoForcedheaven', server: 46.62.152.236, port: 443, type: hysteria2, obfs: salamander, obfs-password: 9242a8bf, password: a2678c97b8d79059, skip-cert-verify: true, tls: false}
   - {name: 'AT_speednode_0001', server: drow-ranger.fonixapp.org, port: 56765, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: DHIEcMf3BTEwQ_XEFx1j02jzn0KkKKeyPWH7wnWwuG8, short-id: f50f5a}, servername: stackoverflow.com, skip-cert-verify: false, tls: true, udp: true, uuid: 866f919c-aa0d-4edb-b6a9-d5412c1c2ca3}
   - {name: 'AT_speednode_0002', server: magnataur.fonixapp.org, port: 10922, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: BWGB4WcFMvsxbu7rfyGTqVSWVlxNUz0HbmotfvlXuxg, short-id: d2900d}, servername: ilovepdf.com, skip-cert-verify: false, tls: true, udp: true, uuid: 31d35cbe-92d1-44cd-9991-e58d00499fb2}
   - {name: 'AT_speednode_0003', server: sandking.fonixapp.org, port: 33115, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: 53Q1y0Vmf2zaGBBlcO1NyKFvQM1TShkJKBCNjlevpns, short-id: 09cb}, servername: yelp.com, skip-cert-verify: false, tls: true, udp: true, uuid: c37cdcff-42f1-4f09-8ce1-0df6cf7e2520}
@@ -181,7 +182,7 @@ proxies:
   - {name: '韩国|@ripaojiedian', server: 8.148.248.105, port: '11215', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: c74f0304-5b43-3772-852a-2b108c423d23}
   - {name: '香港6|@ripaojiedian', server: 8.148.194.27, port: '11210', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: c74f0304-5b43-3772-852a-2b108c423d23}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-10 01:21:09]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-10 02:33:07]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
