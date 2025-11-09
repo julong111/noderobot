@@ -5,7 +5,6 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: '@NoForcedheaven', server: 46.62.152.236, port: 443, type: hysteria2, obfs: salamander, obfs-password: 9242a8bf, password: a2678c97b8d79059, skip-cert-verify: true, tls: false}
   - {name: 'AT_speednode_0001', server: drow-ranger.fonixapp.org, port: 56765, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: DHIEcMf3BTEwQ_XEFx1j02jzn0KkKKeyPWH7wnWwuG8, short-id: f50f5a}, servername: stackoverflow.com, skip-cert-verify: false, tls: true, udp: true, uuid: 866f919c-aa0d-4edb-b6a9-d5412c1c2ca3}
   - {name: 'AT_speednode_0002', server: magnataur.fonixapp.org, port: 10922, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: BWGB4WcFMvsxbu7rfyGTqVSWVlxNUz0HbmotfvlXuxg, short-id: d2900d}, servername: ilovepdf.com, skip-cert-verify: false, tls: true, udp: true, uuid: 31d35cbe-92d1-44cd-9991-e58d00499fb2}
   - {name: 'AT_speednode_0003', server: sandking.fonixapp.org, port: 33115, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: 53Q1y0Vmf2zaGBBlcO1NyKFvQM1TShkJKBCNjlevpns, short-id: 09cb}, servername: yelp.com, skip-cert-verify: false, tls: true, udp: true, uuid: c37cdcff-42f1-4f09-8ce1-0df6cf7e2520}
@@ -35,13 +34,14 @@ proxies:
   - {name: '[Hysteria2] @FreakConfig', server: 206.71.158.23, port: 45000, type: hysteria2, auth: Telegram--%3E%40Ln2Ray, obfs: salamander, obfs-password: Telegram-->@Ln2Ray, password: Telegram--%3E%40Ln2Ray, skip-cert-verify: false, sni: gavazn.55994421.xyz}
   - {name: '[Hysteria2] @FreakConfig #1', server: gavazn.lnmarketplace.net, port: 45000, type: hysteria2, auth: Telegram--%3E%40Ln2Ray, obfs: salamander, obfs-password: Telegram-->@Ln2Ray, password: Telegram--%3E%40Ln2Ray, skip-cert-verify: false, sni: gavazn.55994421.xyz}
   - {name: '[Hysteria2] @FreakConfig #3', server: yapc-1.adamhayward.co.uk, port: 35000, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
-  - {name: '[Hysteria2] @FreakConfig #4', server: yapc-1.adamhayward.co.uk, port: 36300, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
-  - {name: '[Hysteria2] @FreakConfig #6', server: sb1.oomz.ru, port: 30000, type: hysteria2, auth: d3da4e16-9bef-4e54-9bd9-960d32740392, password: d3da4e16-9bef-4e54-9bd9-960d32740392, skip-cert-verify: false, sni: bing.com}
-  - {name: '[Hysteria2] @FreakConfig #7', server: sb2.oomz.ru, port: 30000, type: hysteria2, auth: d3da4e16-9bef-4e54-9bd9-960d32740392, password: d3da4e16-9bef-4e54-9bd9-960d32740392, skip-cert-verify: false, sni: bing.com}
+  - {name: '[Hysteria2] @FreakConfig #5', server: sb1.oomz.ru, port: 30000, type: hysteria2, auth: d3da4e16-9bef-4e54-9bd9-960d32740392, password: d3da4e16-9bef-4e54-9bd9-960d32740392, skip-cert-verify: false, sni: bing.com}
+  - {name: '[Hysteria2] @FreakConfig #6', server: sb2.oomz.ru, port: 30000, type: hysteria2, auth: d3da4e16-9bef-4e54-9bd9-960d32740392, password: d3da4e16-9bef-4e54-9bd9-960d32740392, skip-cert-verify: false, sni: bing.com}
   - {name: '[Hysteria2] @Mr_Config_Group✌️', server: chervhill.hajalii.com, port: 29662, type: hysteria2, auth: 10822856-7452-43ec-b35b-6f24ea33530f, obfs: salamander, obfs-password: xFGh9dsyreJV9sMs1RUnFbwRdon, password: 10822856-7452-43ec-b35b-6f24ea33530f, skip-cert-verify: false, sni: chervhill.hajalii.com}
+  - {name: '[Hysteria2] @NoForcedheaven', server: 46.62.152.236, port: 443, type: hysteria2, auth: a2678c97b8d79059, obfs: salamander, obfs-password: 9242a8bf, password: a2678c97b8d79059, skip-cert-verify: false}
   - {name: '[Hysteria2] @Selinc #2', server: 85.208.9.189, port: 44001, type: hysteria2, auth: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, password: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, skip-cert-verify: false, sni: www.bing.com}
   - {name: '[Hysteria2] @Selinc #5', server: nl2.oomz.ru, port: 30000, type: hysteria2, auth: ab858115-e0ab-4cb7-8e65-0804c35e52d5, password: ab858115-e0ab-4cb7-8e65-0804c35e52d5, skip-cert-verify: false, sni: bing.com}
   - {name: '[Hysteria2] @Selinc #6', server: us4.oomz.ru, port: 30000, type: hysteria2, auth: ab858115-e0ab-4cb7-8e65-0804c35e52d5, password: ab858115-e0ab-4cb7-8e65-0804c35e52d5, skip-cert-verify: false, sni: bing.com}
+  - {name: '[Hysteria2] @V2rayAlpha--All-3', server: yapc-1.adamhayward.co.uk, port: 36300, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
   - {name: '[Hysteria2] @V2rayNG3', server: 192.3.85.237, port: 443, type: hysteria2, auth: 123456, password: 123456, skip-cert-verify: false, sni: bing.com}
   - {name: '[Hysteria2] @V2rayNG3 #1', server: gb.gomeow.online, port: 20309, type: hysteria2, auth: 15cca331-9e92-449d-93b0-25f82203595f, password: 15cca331-9e92-449d-93b0-25f82203595f, skip-cert-verify: false, sni: gb.gomeow.online}
   - {name: '[Hysteria2] @V2rayNG3 #10', server: all-v4.dgi000.store, port: 443, type: hysteria2, auth: '%40azadi_az_inja_migzare', obfs: salamander, obfs-password: '@azadi_az_inja_migzare', password: '%40azadi_az_inja_migzare', skip-cert-verify: false, sni: all-v4.dgi000.store}
@@ -182,7 +182,7 @@ proxies:
   - {name: '韩国|@ripaojiedian', server: 8.148.248.105, port: '11215', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: c74f0304-5b43-3772-852a-2b108c423d23}
   - {name: '香港6|@ripaojiedian', server: 8.148.194.27, port: '11210', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: c74f0304-5b43-3772-852a-2b108c423d23}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-10 04:26:16]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-10 05:21:53]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
