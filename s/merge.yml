@@ -168,7 +168,7 @@ proxies:
   - {name: '韩国|@ripaojiedian', server: 8.148.248.105, port: '11215', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: c74f0304-5b43-3772-852a-2b108c423d23}
   - {name: '香港6|@ripaojiedian', server: 8.148.194.27, port: '11210', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: c74f0304-5b43-3772-852a-2b108c423d23}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-09 18:25:49]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-09 19:19:34]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
