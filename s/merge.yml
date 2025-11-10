@@ -25,7 +25,6 @@ proxies:
   - {name: 'GB_speednode_0022', server: 212.134.84.117, port: 80, type: vless, reality-opts: {public-key: 9Ie_yGzhOZbjK8OeoCx-iWl0uFe0qu63dtVRAO_aVUI, short-id: 2d}, servername: tgju.org, skip-cert-verify: false, tls: true, udp: true, uuid: d6afdc56-8c96-43e5-9164-43f504d8793f}
   - {name: 'NL_speednode_0025', server: amsterdam.fonixapp.org, port: 31603, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: OLM6uNG4kXvdtjI8uak4GsPsO1p7g9pSsHSJSVZx_D0, short-id: a1db}, servername: merriam-webster.com, skip-cert-verify: false, tls: true, udp: true, uuid: 0581705f-e7ae-40df-9d27-f51fbbc7c42f}
   - {name: 'TR_speednode_0027', server: istanbul.fonixapp.org, port: 11594, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: 3HEjTRfm4CREo6uPExMNwscXcT00q-zlMocwlhmg2DM, short-id: 4f}, servername: yelp.com, skip-cert-verify: false, tls: true, udp: true, uuid: caaea994-1af3-47af-8352-f51c49d4c5c2}
-  - {name: 'The Netherlands_Amsterdam_hy_3', server: 109.104.154.97, port: 48429, type: hysteria, alpn: [h3], auth_str: dongtaiwang.com, down: 1000, fast-open: true, ports: 10000-20000, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 1000}
   - {name: 'US_speednode_0029', server: 104.167.199.50, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: g0EvKBte8zYrEc8oF0VNhxvIqqUvNXCp54UWYekc60k, short-id: f529bb49dc4de6}, servername: bit-site.ru, skip-cert-verify: false, tls: true, udp: true, uuid: b25e3c62-f4eb-45df-adda-eb738959b845}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #2', server: 70.34.215.221, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #4', server: drhystuichdfy.samanidempire.org, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
@@ -178,7 +177,7 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.155.10, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 656, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '香港6|@ripaojiedian', server: 175.29.22.101, port: '28034', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: d2540325-9ad6-33d7-be86-259b5bba4ef8}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tfo: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-10 22:28:19]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-10 23:29:48]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
