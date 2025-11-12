@@ -6,11 +6,7 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: 'France_None_hysteria_71', server: 62.210.10.186, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
-  - {name: 'HK_speednode_0004', server: 116.49.237.130, port: 4569, type: trojan, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian, udp: true}
-  - {name: 'NL_speednode_0006', server: 194.147.115.149, port: 443, type: trojan, network: ws, password: c2d6a850-7e35-44f5-ab9f-8299f6f8c72b, skip-cert-verify: false, sni: joss.dus.biz.id, udp: true, ws-opts: {headers: {Host: joss.dus.biz.id}, path: /Free-VPN-CF-Geo-Project/194.147.115.149=443}}
-  - {name: 'PL_speednode_0007', server: 45.144.48.158, port: 8443, type: trojan, network: ws, password: 49d416e1-4cec-41e1-bff6-3748c466f275, skip-cert-verify: false, sni: joss.dus.biz.id, udp: true, ws-opts: {headers: {Host: joss.dus.biz.id}, path: /Free-VPN-CF-Geo-Project/45.144.48.158=8443}}
   - {name: 'RU_speednode_0008', server: cdn.cloudconvert.top, port: 10012, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: X8bSZA_Q-ReshpPEd17oMU7YfZlHWoOEGB7HM8ZSmXk, short-id: abc82912}, servername: cdn.cloudconvert.top, skip-cert-verify: false, tls: true, udp: true, uuid: 258a5f07-d07e-4de4-90b6-69a0ca34bab7}
-  - {name: 'RU_speednode_0009', server: 213.159.208.88, port: 2053, type: trojan, network: ws, password: 14d6efcf-b0d3-4054-9d4e-e1347e3ceaa2, skip-cert-verify: false, sni: joss.dus.biz.id, udp: true, ws-opts: {headers: {Host: joss.dus.biz.id}, path: /Free-VPN-CF-Geo-Project/213.159.208.88=2053}}
   - {name: 'US_speednode_0019', server: 104.167.199.50, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: g0EvKBte8zYrEc8oF0VNhxvIqqUvNXCp54UWYekc60k, short-id: f529bb49dc4de6}, servername: bit-site.ru, skip-cert-verify: false, tls: true, udp: true, uuid: b25e3c62-f4eb-45df-adda-eb738959b845}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #2', server: 70.34.215.221, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #4', server: drhystuichdfy.samanidempire.org, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
@@ -71,6 +67,7 @@ proxies:
   - {name: '[Hysteria2] WiFi-@V2rayAlpha--6', server: qing-lu.mxtn.net, port: 443, type: hysteria2, auth: c3054d61-c708-4594-9797-f50acd24de2a, password: c3054d61-c708-4594-9797-f50acd24de2a, skip-cert-verify: false}
   - {name: '[Hysteria2] WiFi-@V2rayAlpha--7', server: qing-es.mxtn.net, port: 443, type: hysteria2, auth: c3054d61-c708-4594-9797-f50acd24de2a, password: c3054d61-c708-4594-9797-f50acd24de2a, skip-cert-verify: false}
   - {name: '[Hysteria2] https://t.me/Selinc', server: 31.57.241.25, port: 7009, type: hysteria2, auth: 30c075af-9555-4671-b70e-43e3cfb2e707, password: 30c075af-9555-4671-b70e-43e3cfb2e707, skip-cert-verify: false, sni: d.eans.top}
+  - {name: '[Hysteria2] r♡ya', server: dir.lightnright.com, port: 989, type: hysteria2, auth: 6202ab997f570a6a180ae980b41f5789, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi', password: 6202ab997f570a6a180ae980b41f5789, skip-cert-verify: false, sni: jnir-x.pichondan.com}
   - {name: '[Hysteria2] telegram-@ISVvpn', server: fra-nb-02.linlujs.pw, port: 29854, type: hysteria2, auth: 6803bc9b-1157-431b-8f73-970a6deb741f, password: 6803bc9b-1157-431b-8f73-970a6deb741f, skip-cert-verify: false}
   - {name: '[Hysteria2] telegram-@ISVvpn #1', server: fra-nb-01.linlujs.pw, port: 24568, type: hysteria2, auth: 682c7978-e3eb-44e0-924c-607144495681, password: 682c7978-e3eb-44e0-924c-607144495681, skip-cert-verify: false}
   - {name: '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا...', server: 77.223.214.193, port: 31468, type: hysteria2, auth: 79c4fe11-9787-406b-bf94-c1c1dbf59e28, password: 79c4fe11-9787-406b-bf94-c1c1dbf59e28, skip-cert-verify: false, sni: www.bing.com}
@@ -83,9 +80,10 @@ proxies:
   - {name: '[Hysteria2] 🇺🇸 usa-telegram-@ISVvpn', server: us-nb-01.linlujs.pw, port: 25684, type: hysteria2, auth: 70197404-7b40-45e4-bb9c-8bc8995012ae, password: 70197404-7b40-45e4-bb9c-8bc8995012ae, skip-cert-verify: false}
   - {name: '[SS] tg频道:@ripaojiedian', server: 3.9.17.198, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
   - {name: '[SS] 🇭🇰 香港2|@ripaojiedian', server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78}
-  - {name: '[Trojan] CN_speednode_0009', server: 36.151.251.38, port: 38799, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me/ripaojiedian}
-  - {name: '[Trojan] HK_speednode_0023', server: 203.198.122.129, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: 203.198.122.129}
-  - {name: '[Trojan] US_speednode_0028', server: 51.45.27.162, port: 22223, type: trojan, password: telegram-id-directvpn, skip-cert-verify: false, sni: trojan.burgerip.co.uk}
+  - {name: '[Trojan] HK_speednode_0004', server: 116.49.237.130, port: 4569, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
+  - {name: '[Trojan] NL_speednode_0006', server: 194.147.115.149, port: 443, type: trojan, network: ws, password: c2d6a850-7e35-44f5-ab9f-8299f6f8c72b, skip-cert-verify: false, sni: joss.dus.biz.id, ws-opts: {path: /Free-VPN-CF-Geo-Project/194.147.115.149=443, headers: {Host: joss.dus.biz.id}}}
+  - {name: '[Trojan] PL_speednode_0007', server: 45.144.48.158, port: 8443, type: trojan, network: ws, password: 49d416e1-4cec-41e1-bff6-3748c466f275, skip-cert-verify: false, sni: joss.dus.biz.id, ws-opts: {path: /Free-VPN-CF-Geo-Project/45.144.48.158=8443, headers: {Host: joss.dus.biz.id}}}
+  - {name: '[Trojan] RU_speednode_0009', server: 213.159.208.88, port: 2053, type: trojan, network: ws, password: 14d6efcf-b0d3-4054-9d4e-e1347e3ceaa2, skip-cert-verify: false, sni: joss.dus.biz.id, ws-opts: {path: /Free-VPN-CF-Geo-Project/213.159.208.88=2053, headers: {Host: joss.dus.biz.id}}}
   - {name: '[Trojan] 🇭🇰 香港3|@ripaojiedian', server: 219.76.135.188, port: 443, type: trojan, password: 1b57001bd214304027025a740b6cf1ac, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[Trojan] 🇭🇰 香港4|@ripaojiedian', server: 203.198.122.97, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
   - {name: '[Trojan] 🇭🇰 香港5|@ripaojiedian', server: 219.77.239.35, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
@@ -99,8 +97,6 @@ proxies:
   - {name: '[Trojan] 🇺🇸 美国3|@ripaojiedian', server: 116.49.237.130, port: 2173, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
   - {name: '[Trojan] 🇺🇸 美国|@ripaojiedian', server: 160.16.223.205, port: 31409, type: trojan, password: 1b57001bd214304027025a740b6cf1ac, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[VMess] 🇭🇰 香港|@ripaojiedian', server: v9.heduian.link, port: 30809, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
-  - {name: '[Vless] SI_speednode_0026', server: fl-3-direct.djarbnet.ru, port: 443, type: vless, network: ws, servername: fl-3-direct.djarbnet.ru, skip-cert-verify: false, tls: false, uuid: cc67ca7f-064e-4117-ac31-a66d5728a11c, ws-opts: {path: /getupdatessecurity=tls, headers: {Host: fl-3-direct.djarbnet.ru}}}
-  - {name: 'r♡ya', server: dir.lightnright.com, port: 989, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi', password: 6202ab997f570a6a180ae980b41f5789, skip-cert-verify: false, sni: jnir-x.pichondan.com, tls: false}
   - {name: '中国 - 北京 - Hangzhou Alibaba Advertising Co - 7', server: 39.100.81.215, port: 50002, type: vmess, cipher: auto, alterId: 64, country: 🇨🇳CN, delay: 157, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 广州市 - CHINANET Guangdong province network - 6', server: 14.18.106.88, port: 6100, type: ss, cipher: aes-256-gcm, delay: 464, password: 123}
   - {name: '中国 - 广州市 - Shenzhen Tencent Computer Systems Company Limited - 2', server: 119.29.98.43, port: 11399, type: vmess, cipher: auto, alterId: 0, country: 🇨🇳CN, delay: 192, h2-opts: {}, http-opts: {}, network: ws, skip-cert-verify: true, uuid: 4d53cd6c-31f5-4b3b-bb11-fb012c8d9648, ws-opts: {path: '/arki?ed=2048'}}
@@ -192,7 +188,7 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.154.61, port: 38388, type: ss, cipher: aes-256-cfb, delay: 750, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: '韩国 - Anyang-si - CTG Server Limited - 1', server: 1.32.216.163, port: 27578, type: vmess, cipher: auto, alterId: 0, delay: 188, h2-opts: {}, http-opts: {method: GET, path: [/]}, network: http, uuid: 3b3aff88-2ed2-4c68-bc0f-d1efe4131e2c}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-12 20:58:12]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-12 21:37:44]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
