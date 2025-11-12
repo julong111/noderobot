@@ -215,7 +215,7 @@ proxies:
   - {name: '香港3|@ripaojiedian', server: 219.76.135.188, port: 443, type: trojan, network: tcp, password: 1b57001bd214304027025a740b6cf1ac, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '香港5|@ripaojiedian', server: 219.77.239.35, port: 443, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-12 11:48:36]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-12 12:32:40]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
