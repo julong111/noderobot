@@ -192,7 +192,7 @@ proxies:
   - {name: '🔷🆔@v2ray_configs_pool🔷 #7', server: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk, port: 1743, type: hysteria2, password: 6286105c-fb6d-11ef-be96-f23c93136cb3, skip-cert-verify: false, sni: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk, tls: false}
   - {name: '🔷🆔@v2ray_configs_pool🔷 #8', server: 68407ef0-t3dk00-tcl9of-5fdt.la.shifen.uk, port: 1743, type: hysteria2, password: 712bdc36-24be-11ee-be53-f23c9313b177, skip-cert-verify: false, sni: 68407ef0-t3dk00-tcl9of-5fdt.la.shifen.uk, tls: false}
   - {name: '🔷🆔@v2ray_configs_pool🔷 #9', server: 67e01b04-t3dk00-tcm6ys-deip.la.shifen.uk, port: 1743, type: hysteria2, password: 7a2512b4-09ee-11f0-8d46-f23c9313b177, skip-cert-verify: false, tls: false}
-  - {name: '[2025-11-13 03:23:06]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-13 04:30:15]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
