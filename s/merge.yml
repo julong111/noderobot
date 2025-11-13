@@ -175,7 +175,7 @@ proxies:
   - {name: '🔷🆔@v2ray_configs_pool🔷 #7', server: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk, port: 1743, type: hysteria2, password: 6286105c-fb6d-11ef-be96-f23c93136cb3, skip-cert-verify: false, sni: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk, tls: false}
   - {name: '🔷🆔@v2ray_configs_pool🔷 #8', server: 9b91d3c4-t53wg0-t6h87s-63bp.la.shifen.uk, port: 443, type: hysteria2, password: 92b2a3d4-f353-11ef-b714-f23c93136cb3, skip-cert-verify: false, sni: 9b91d3c4-t53wg0-t6h87s-63bp.la.shifen.uk, tls: false}
   - {name: '🔷🆔@v2ray_configs_pool🔷 #9', server: 113.192.61.19, port: 63979, type: hysteria2, password: 9772ecf2-6732-4bfb-a8b1-f48af577c76c, skip-cert-verify: true, sni: www.bing.com, tls: false}
-  - {name: '[2025-11-14 02:38:08]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-14 03:21:30]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
