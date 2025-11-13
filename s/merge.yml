@@ -177,7 +177,7 @@ proxies:
   - {name: '韩国 - 首尔特别市 - The Constant Company, LLC - 2', server: xdd.dashuai.cyou, port: 45075, type: vmess, cipher: auto, alterId: 0, delay: 314, tls: false, udp: true, uuid: 9b4fd596-fa49-4d21-9bb7-76549e85447b}
   - {name: '韩国 - 首尔特别市 - The Constant Company, LLC - 4', server: haa.dashuai.cyou, port: 45076, type: vmess, cipher: auto, alterId: 0, delay: 421, tls: false, udp: true, uuid: 50b07073-57a0-49a6-826f-36cc41af4f3b}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-13 13:28:07]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-13 14:40:22]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
