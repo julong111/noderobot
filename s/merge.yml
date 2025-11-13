@@ -164,7 +164,18 @@ proxies:
   - {name: '荷兰 - 阿姆斯特丹 - Greenhost BV - 1', server: 45.87.175.197, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, delay: 1068, password: k1dBOmOB4oqi7Ump37a1bQ}
   - {name: '越南 - Bo - VNPT Corp - 1', server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, delay: 2336, password: Nk9asglDzHzjktVzTkvhaA, udp: true}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-14 01:26:43]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🔷🆔@v2ray_configs_pool🔷', server: 6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk, port: 1743, type: hysteria2, password: 17cdeb6c-f046-11ee-bdac-f23c93141fad, skip-cert-verify: false, sni: 6adab57e-t53wg0-tdvgqe-2gok.la.shifen.uk, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #1', server: 132.226.162.10, port: 30102, type: hysteria2, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: true, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #14', server: 9edb1f6e-t56dc0-t9lxaa-1glq.la.shifen.uk, port: 443, type: hysteria2, password: df7bed3c-06eb-11f0-8ebc-f23c93141fad, skip-cert-verify: false, sni: 9edb1f6e-t56dc0-t9lxaa-1glq.la.shifen.uk, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #15', server: e10829f0-t4un40-t9lb2a-1glq.la.shifen.uk, port: 1743, type: hysteria2, password: df7bed3c-06eb-11f0-8ebc-f23c93141fad, skip-cert-verify: false, sni: e10829f0-t4un40-t9lb2a-1glq.la.shifen.uk, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #2', server: 140.238.137.165, port: 30102, type: hysteria2, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: true, sni: du.wish.ml, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #3', server: 140.245.68.133, port: 30102, type: hysteria2, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: true, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #4', server: 144.24.101.176, port: 30102, type: hysteria2, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: true, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #5', server: 14ff4864-t4x400-tcjtj6-d70y.la.shifen.uk, port: 1743, type: hysteria2, password: 537d7098-fdbe-11ef-8ebc-f23c93141fad, skip-cert-verify: false, sni: 14ff4864-t4x400-tcjtj6-d70y.la.shifen.uk, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #7', server: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk, port: 1743, type: hysteria2, password: 6286105c-fb6d-11ef-be96-f23c93136cb3, skip-cert-verify: false, sni: cc65f71a-t4v9c0-t5waci-4550.la.shifen.uk, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #8', server: 9b91d3c4-t53wg0-t6h87s-63bp.la.shifen.uk, port: 443, type: hysteria2, password: 92b2a3d4-f353-11ef-b714-f23c93136cb3, skip-cert-verify: false, sni: 9b91d3c4-t53wg0-t6h87s-63bp.la.shifen.uk, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #9', server: 113.192.61.19, port: 63979, type: hysteria2, password: 9772ecf2-6732-4bfb-a8b1-f48af577c76c, skip-cert-verify: true, sni: www.bing.com, tls: false}
+  - {name: '[2025-11-14 02:38:08]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
