@@ -159,7 +159,7 @@ proxies:
   - {name: '荷兰 - 阿姆斯特丹 - Greenhost BV - 1', server: 45.87.175.197, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, delay: 1068, password: k1dBOmOB4oqi7Ump37a1bQ}
   - {name: '越南 - Bo - VNPT Corp - 1', server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, delay: 2336, password: Nk9asglDzHzjktVzTkvhaA, udp: true}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-14 05:24:16]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-14 06:26:44]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
