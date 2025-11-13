@@ -190,7 +190,7 @@ proxies:
   - {name: '🔷🆔@v2ray_configs_pool🔷 #6', server: mla5.maliaojc.top, port: 58330, type: hysteria2, password: 619bc9f0-ae50-45d5-b349-4ed0e17d0881, skip-cert-verify: true, sni: mla5.maliaojc.top, tls: false}
   - {name: '🔷🆔@v2ray_configs_pool🔷 #7', server: mla6.maliaojc.top, port: 58330, type: hysteria2, password: 6cb8a5dc-6e80-4fe1-8d4b-22618dca4746, skip-cert-verify: true, sni: mla6.maliaojc.top, tls: false}
   - {name: '🔷🆔@v2ray_configs_pool🔷 #9', server: lsdg1.lansecs.top, port: 58338, type: hysteria2, password: 8e2b5009-f215-4341-a155-2a33f00f6c45, skip-cert-verify: true, sni: lsdg1.lansecs.top, tls: false}
-  - {name: '[2025-11-13 18:31:31]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-13 19:24:47]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
