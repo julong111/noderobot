@@ -136,7 +136,6 @@ proxies:
   - {name: '中国 - 广州市 - CHINANET Guangdong province network - 2', server: 14.18.106.88, port: 6100, type: ss, cipher: aes-256-gcm, country: 🇨🇳CN, delay: 182, password: '123'}
   - {name: '中国 - 杭州 - Hangzhou Alibaba Advertising Co., Ltd. - 3', server: 120.26.137.112, port: 50002, type: vmess, cipher: auto, alterId: 64, delay: 173, tls: false, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 香港 - Akari Networks - 14', server: xdd.dashuai.cyou, port: 45051, type: vmess, cipher: auto, alterId: 0, delay: 241, tls: false, udp: true, uuid: 50b07073-57a0-49a6-826f-36cc41af4f3b}
-  - {name: '中国 - 香港 - Hong Kong Cable Television Limited - 4', server: oshk02.mynode.me, port: 2000, type: ss, cipher: chacha20-ietf, delay: 428, password: passwd, plugin: obfs, plugin-opts: {host: 31832-qOf3ahM8.download.microsoft.com, mode: http}}
   - {name: '克罗地亚 - 萨格勒布 - WorkTitans B.V. - 1', server: 185.156.110.92, port: 443, type: ss, cipher: chacha20-ietf-poly1305, delay: 1533, password: gXOXk2FJwsz9P6nXIICuDNOqF9gWX1dn, udp: true}
   - {name: '印度 - 孟买 - The Constant Company, LLC - 1', server: haa.dashuai.cyou, port: 45074, type: vmess, cipher: auto, alterId: 0, delay: 295, tls: false, udp: true, uuid: 50b07073-57a0-49a6-826f-36cc41af4f3b}
   - {name: '印度 - 孟买 - The Constant Company, LLC - 2', server: xdd.dashuai.cyou, port: 45073, type: vmess, cipher: auto, alterId: 0, delay: 286, tls: false, udp: true, uuid: 7a3b16cf-a78d-4a00-ada8-d4b3dc2940b9}
@@ -144,10 +143,15 @@ proxies:
   - {name: '新加坡 - 新加坡 - Alibaba (US) Technology Co., Ltd. - 1', server: 47.245.106.193, port: 22525, type: vmess, cipher: auto, alterId: 0, delay: 1384, http-opts: {method: GET, path: [/]}, network: http, tls: false, udp: true, uuid: cabe905a-28ea-4e7e-c34d-2fa38604001f}
   - {name: '新加坡 - 新加坡 - Choopa - 2', server: xdd.dashuai.cyou, port: 45055, type: vmess, cipher: auto, alterId: 0, delay: 310, tls: false, udp: true, uuid: 0425b33c-fc52-4daa-8d5a-0038d4cecda7}
   - {name: '新加坡 - 新加坡 - Choopa - 4', server: haa.dashuai.cyou, port: 45054, type: vmess, cipher: auto, alterId: 0, delay: 338, tls: false, udp: true, uuid: 50b07073-57a0-49a6-826f-36cc41af4f3b}
+  - {name: '新加坡3|@ripaojiedian', server: 116.49.237.130, port: 2753, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '日本 - Minamishinagawa - Choopa - 3', server: xdd.dashuai.cyou, port: 45057, type: vmess, cipher: auto, alterId: 0, delay: 237, tls: false, udp: true, uuid: 7ffe5604-6af0-494c-98ba-00dd83f93198}
   - {name: '日本 - Minamishinagawa - Choopa - 8', server: haa.dashuai.cyou, port: 45056, type: vmess, cipher: auto, alterId: 0, delay: 1200, tls: false, udp: true, uuid: 7ffe5604-6af0-494c-98ba-00dd83f93198}
   - {name: '日本 - 东京 - Akari Networks Limited - 1', server: osjp04.mynode.me, port: 2000, type: ss, cipher: chacha20-ietf, delay: 726, password: passwd, plugin: obfs, plugin-opts: {host: 31832-qOf3ahM8.download.microsoft.com, mode: http}}
   - {name: '日本 - 东京 - Akari Networks Limited - 2', server: osjp05.mynode.me, port: 2000, type: ss, cipher: chacha20-ietf, delay: 688, password: passwd, plugin: obfs, plugin-opts: {host: 31832-qOf3ahM8.download.microsoft.com, mode: http}}
+  - {name: '日本2|@ripaojiedian', server: 160.16.204.136, port: 1334, type: trojan, network: tcp, password: 2274c52572e721086f8bd8f88984643c, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本3|@ripaojiedian', server: 160.16.214.6, port: 4095, type: trojan, network: tcp, password: 2274c52572e721086f8bd8f88984643c, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本4|@ripaojiedian', server: 175.29.22.101, port: '28016', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: d2540325-9ad6-33d7-be86-259b5bba4ef8}
+  - {name: '日本|@ripaojiedian', server: 36.150.215.246, port: 2145, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '法国 - 巴黎 - Amazon Technologies Inc. - 1', server: 13.37.160.136, port: 22222, type: trojan, country: 🇫🇷FR, delay: 811, password: telegram-id-privatevpns, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '法国 - 巴黎 - Online S.A.S. - 6', server: '2001:bc8:32d7:302::10', port: 44579, type: vmess, cipher: auto, alterId: 0, client-fingerprint: '', delay: 2379, fast-open: false, network: ws, tfo: false, tls: false, uuid: 8e34e170-13ae-4892-9d20-05962acc9f84, ws-opts: {path: /, headers: {}}}
   - {name: '法国 - 巴黎 - The Constant Company, LLC - 2', server: haa.dashuai.cyou, port: 45072, type: vmess, cipher: auto, alterId: 0, delay: 720, tls: false, udp: true, uuid: 7a3b16cf-a78d-4a00-ada8-d4b3dc2940b9}
@@ -159,6 +163,8 @@ proxies:
   - {name: '美国 - 洛杉矶 - Cloudflare, Inc. - 1', server: wto.org, port: 443, type: vmess, cipher: auto, alterId: 0, country: 🇺🇸US, delay: 1324, h2-opts: {}, http-opts: {}, network: ws, servername: floral-vol-lexington-liverpool.trycloudflare.com, skip-cert-verify: true, tls: true, uuid: 97b5343c-f8bd-40f2-b32d-7c98e1c196d4, ws-opts: {path: '/97b5343c-f8bd-40f2-b32d-7c98e1c196d4-vm?ed=2048', headers: {HOST: floral-vol-lexington-liverpool.trycloudflare.com}}}
   - {name: '美国 - 洛杉矶 - Multacom Corporation - 2', server: 142.171.237.17, port: 1988, type: vmess, cipher: auto, alterId: 0, delay: 2401, h2-opts: {}, http-opts: {}, skip-cert-verify: true, udp: true, uuid: aed0feeb-1283-4b7d-b3a4-71ef038d59af}
   - {name: '美国 - 洛杉矶 - Xnnet LLC - 11', server: 38.55.108.105, port: 20000, type: hysteria2, delay: 578, fast-open: false, obfs: salamander, obfs-password: fdrccJDGatdFDDRp, password: 92cf2b59-6aab-44d2-bb42-63b820af1b76, skip-cert-verify: true, tfo: false}
+  - {name: '美国3|@ripaojiedian', server: 36.150.215.243, port: 19220, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
+  - {name: '美国|@ripaojiedian', server: 160.16.68.250, port: 2890, type: trojan, network: tcp, password: 2274c52572e721086f8bd8f88984643c, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '越南 - Bo - VNPT Corp - 12', server: arxfw2b78fi2q9hzylhn.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🏁 ZZ, delay: 2123, password: Nk9asglDzHzjktVzTkvhaA}
   - {name: '越南 - Hải Dương - FASTLY - 1', server: 103.186.155.135, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 734, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 10', server: 103.186.155.183, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 281, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
@@ -191,8 +197,12 @@ proxies:
   - {name: '韩国 - 首尔特别市 - Oracle Corporation - 1', server: 152.70.92.69, port: 80, type: vmess, cipher: auto, alterId: 0, delay: 827, h2-opts: {}, http-opts: {method: GET, path: [/]}, network: http, udp: true, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
   - {name: '韩国 - 首尔特别市 - The Constant Company, LLC - 2', server: xdd.dashuai.cyou, port: 45075, type: vmess, cipher: auto, alterId: 0, delay: 314, tls: false, udp: true, uuid: 9b4fd596-fa49-4d21-9bb7-76549e85447b}
   - {name: '韩国 - 首尔特别市 - The Constant Company, LLC - 4', server: haa.dashuai.cyou, port: 45076, type: vmess, cipher: auto, alterId: 0, delay: 421, tls: false, udp: true, uuid: 50b07073-57a0-49a6-826f-36cc41af4f3b}
+  - {name: '香港3|@ripaojiedian', server: 58.152.110.9, port: 443, type: trojan, network: tcp, password: 2274c52572e721086f8bd8f88984643c, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '香港6|@ripaojiedian', server: 118.253.166.237, port: 49213, type: trojan, network: tcp, password: 50a99183-2543-40bd-98a2-12bbc6ecf882, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-13 07:25:20]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇭🇰 香港7|@ripaojiedian', server: oshk02.mynode.me, port: 2000, type: ss, cipher: chacha20-ietf, password: passwd, plugin: obfs, plugin-opts: {host: 31832-qOf3ahM8.download.microsoft.com, mode: http}}
+  - {name: '🇯🇵 日本4|@ripaojiedian', server: 175.29.22.101, port: 28016, type: vmess, cipher: auto, alterId: 0, skip-cert-verify: false, tls: false, uuid: d2540325-9ad6-33d7-be86-259b5bba4ef8}
+  - {name: '[2025-11-13 10:07:31]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
