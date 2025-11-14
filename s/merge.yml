@@ -177,7 +177,7 @@ proxies:
   - {name: '香港7|@ripaojiedian', server: onecat-jp.03ezhg0qsa.download, port: '25007', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 69749298-6821-3358-b6d3-1d18d8642cba}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '🇱🇷@V2RayyNGvpn🇱🇷همه اوپراتور ه...', server: 138.124.60.198, port: 443, type: hysteria2, obfs: salamander, obfs-password: MiraCLeOPV2RayyNGvpntheBest, password: aRA6WhGcZJ, skip-cert-verify: true, sni: cdnjs.cloudflare.com, tls: false}
-  - {name: '[2025-11-14 19:23:01]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-14 20:55:44]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
