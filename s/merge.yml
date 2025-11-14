@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: '@meli_proxyy #21', server: 92.5.77.25, port: 44001, type: hysteria2, password: 5001b8d8-76ce-474c-bc29-94e6caa61164, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: 'AT_speednode_0001', server: sandking.fonixapp.org, port: 10668, type: vless, client-fingerprint: firefox, flow: xtls-rprx-vision, reality-opts: {public-key: Q6xd8H-9jQy5bqqAaCqHqV1VKkzbp2-tzwQGjgoI8GI, short-id: f7}, servername: ilovepdf.com, skip-cert-verify: false, tls: true, udp: true, uuid: 53e91da4-f382-4b8e-890a-2499bc877554}
   - {name: 'AT_speednode_0002', server: 152.53.133.12, port: 37876, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: ldoGIafEPJu2W4gODAoLjobXOOe9NKb-110WCz1-EwM, short-id: 907e}, servername: yelp.com, skip-cert-verify: false, tls: true, udp: true, uuid: 29397c5b-be3b-41d9-8a49-21575668e915}
   - {name: 'AT_speednode_0003', server: 152.53.84.101, port: 20579, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: mT6lh-gtbEuWk3Zk6XGF_hYvpLwxTyvwtH7F-_fRbxI, short-id: 89f1da93}, servername: ilovepdf.com, skip-cert-verify: false, tls: true, udp: true, uuid: 93cd7e0f-8a81-4076-be8b-6d3bf3f8f810}
@@ -198,7 +199,8 @@ proxies:
   - {name: '韩国|@ripaojiedian', server: 114.98.183.61, port: '47093', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: b3fa070f-5511-48be-934b-f632f6b8a7c7}
   - {name: '香港7|@ripaojiedian', server: onecat-jp.03ezhg0qsa.download, port: '25007', type: vmess, cipher: auto, alterId: 0, network: tcp, servername: '', tls: false, uuid: 69749298-6821-3358-b6d3-1d18d8642cba}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-15 01:24:27]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇧🇷  (Hysteria)', server: 132.226.162.10, port: 30102, type: hysteria2, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: true, tls: false}
+  - {name: '[2025-11-15 02:37:56]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
