@@ -188,7 +188,7 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.155.59, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 2327, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '韩国 - 羅州市 - SK Broadband Co Ltd - 1', server: 221.139.79.57, port: 37008, type: ss, cipher: aes-256-cfb, country: 🇰🇷KR, delay: 268, password: qwerREWQ@@}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-15 19:19:47]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-15 20:50:29]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
