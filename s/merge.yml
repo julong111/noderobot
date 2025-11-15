@@ -213,7 +213,7 @@ proxies:
   - {name: '🔷🆔@v2ray_configs_pool🔷 #7', server: 140.238.137.165, port: 30102, type: hysteria2, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: true, sni: du.wish.ml, tls: false}
   - {name: '🔷🆔@v2ray_configs_pool🔷 #8', server: 144.22.187.105, port: 30102, type: hysteria2, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: true, tls: false}
   - {name: '🔷🆔@v2ray_configs_pool🔷 #9', server: sfjxjp.sufujia.top, port: 57300, type: hysteria2, password: 339738d4-f790-42a9-b20e-533435c53051, skip-cert-verify: true, sni: sfjxjp.sufujia.top, tls: false}
-  - {name: '[2025-11-15 07:24:34]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-15 10:01:53]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
