@@ -15,7 +15,6 @@ proxies:
   - {name: 'GR_speednode_0010', server: 185.242.84.182, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: 1pX4yQMG3Gji_VeRpJgZ0dCxHafgiK0ul1_Paje38S4, short-id: 4395cf86}, servername: vk.cc, skip-cert-verify: false, tls: true, udp: true, uuid: 3c0e49cb-8940-561a-83b8-1efbb17f7cf7}
   - {name: 'LB_speednode_0011', server: 77.110.127.105, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: -Bdu8i-HU28Xmx87RMou5okYo8TqfbyZ8Ufs9RodUGE, short-id: 097de35e52ec5256}, servername: st.ozone.ru, skip-cert-verify: false, tls: true, udp: true, uuid: 72239cbc-5a25-411c-b4f5-b9167a10f5e1}
   - {name: 'LB_speednode_0012', server: 77.110.119.225, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo, short-id: 07e904766d29b958}, servername: st.ozone.ru, skip-cert-verify: false, tls: true, udp: true, uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a}
-  - {name: 'RU_speednode_0013', server: 81.161.98.228, port: 1443, type: vless, network: ws, servername: cdn.filterai.ru, skip-cert-verify: false, tls: true, udp: true, uuid: 00f02ab2-6f2d-449f-a089-d182a2fac59a, ws-opts: {headers: {Host: cdn.filterai.ru}, path: /websocketpl}}
   - {name: '[Hysteria2] (Hysteria)', server: 132.226.162.10, port: 30102, type: hysteria2, auth: 338ce171-d764-4610-8fd5-6688b0d321f0, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: false}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #2', server: 70.34.215.221, port: 20335, type: hysteria2, auth: 80747420-96c4-4a2f-83e6-eea4e46beb09, obfs: salamander, obfs-password: U1wBrYQyFm, password: 80747420-96c4-4a2f-83e6-eea4e46beb09, skip-cert-verify: false, sni: drhystuichdfy.samanidempire.org}
   - {name: '[Hysteria2] @FreakConfig', server: 206.71.158.23, port: 45000, type: hysteria2, auth: Telegram--%3E%40Ln2Ray, obfs: salamander, obfs-password: Telegram-->@Ln2Ray, password: Telegram--%3E%40Ln2Ray, skip-cert-verify: false, sni: gavazn.55994421.xyz}
@@ -116,10 +115,8 @@ proxies:
   - {name: '[SS] tg频道:@ripaojiedian', server: 3.9.17.198, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
   - {name: '[SS] 🇭🇰 香港2|@ripaojiedian', server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78}
   - {name: '[SS] 🇻🇳 越南|@ripaojiedian', server: 103.186.154.53, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
-  - {name: '[Trojan] HK_speednode_0003', server: 58.152.26.173, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
-  - {name: '[Trojan] NL_speednode_0004', server: 89.110.116.141, port: 443, type: trojan, network: ws, password: e812343b-61a1-46fd-b086-b1395d0eb7de, skip-cert-verify: false, sni: joss.gpj.web.id, ws-opts: {path: /Free-VPN-CF-Geo-Project/89.110.116.141=443, headers: {Host: joss.gpj.web.id}}}
-  - {name: '[Trojan] RU_speednode_0005', server: 95.182.120.208, port: 2053, type: trojan, network: ws, password: 3b38715b-f08a-46dd-9904-7531ca4bb6e8, skip-cert-verify: false, sni: joss.gpj.web.id, ws-opts: {path: /Free-VPN-CF-Geo-Project/95.182.120.208=2053, headers: {Host: joss.gpj.web.id}}}
   - {name: '[Trojan] 🇭🇰 香港3|@ripaojiedian', server: 203.198.122.135, port: 443, type: trojan, password: dd2f25b4c70689de8bc0f7fa9d6591cb, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '[Trojan] 🇭🇰 香港4|@ripaojiedian', server: 58.152.26.173, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
   - {name: '[Trojan] 🇭🇰 香港5|@ripaojiedian', server: 219.79.165.55, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: false, sni: t.me%2Fripaojiedian}
   - {name: '[Trojan] 🇯🇵 日本2|@ripaojiedian', server: 160.16.131.243, port: 1334, type: trojan, password: dd2f25b4c70689de8bc0f7fa9d6591cb, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[Trojan] 🇯🇵 日本3|@ripaojiedian', server: 202.181.103.246, port: 1334, type: trojan, password: dd2f25b4c70689de8bc0f7fa9d6591cb, skip-cert-verify: false, sni: www.nintendogames.net}
@@ -132,6 +129,7 @@ proxies:
   - {name: '[Trojan] 🇺🇸 美国|@ripaojiedian', server: 153.121.76.9, port: 4054, type: trojan, password: dd2f25b4c70689de8bc0f7fa9d6591cb, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '[VMess] 🇭🇰 香港6|@ripaojiedian', server: 8.138.208.3, port: 11209, type: vmess, cipher: auto, alterId: 2, skip-cert-verify: false, tls: false, uuid: d975a2bf-0fa0-3c3e-947a-a7c75b159b1c}
   - {name: '[VMess] 🇭🇰 香港|@ripaojiedian', server: v9.heduian.link, port: 30809, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
+  - {name: '[Vless] RU_speednode_0013', server: 81.161.98.228, port: 1443, type: vless, network: ws, servername: cdn.filterai.ru, skip-cert-verify: false, tls: false, uuid: 00f02ab2-6f2d-449f-a089-d182a2fac59a, ws-opts: {path: /websocketplsecurity=tls, headers: {Host: cdn.filterai.ru}}}
   - {name: '中国 - 广州市 - CHINANET Guangdong province network - 1', server: 14.18.106.88, port: 6100, type: ss, cipher: aes-256-gcm, country: 🇨🇳CN, delay: 437, password: '123'}
   - {name: '中国 - 香港 - Dalian Yichuan Industrial CO - 2', server: 103.149.182.79, port: 8388, type: ss, cipher: chacha20-ietf, country: 🇭🇰HK, delay: 225, password: asd123456}
   - {name: '乌克兰 - Kyiv - Green Floid LLC - 1', server: 216.227.168.157, port: 45229, type: vmess, cipher: auto, alterId: 0, country: 🇺🇸US, delay: 802, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 469e0b31-30c3-4dab-800d-711232634ce1}
@@ -176,7 +174,7 @@ proxies:
   - {name: '韩国 - 首尔特别市 - Kaopu Cloud HK Limited - 1', server: 154.90.62.168, port: 989, type: ss, cipher: aes-256-cfb, country: 🇺🇸 US, delay: 2807, password: f8f7aCzcPKbsF8p3}
   - {name: '香港6|@ripaojiedian', server: 8.138.208.3, port: '11209', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: d975a2bf-0fa0-3c3e-947a-a7c75b159b1c}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-17 16:38:04]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-17 17:32:55]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
