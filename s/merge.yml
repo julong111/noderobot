@@ -283,7 +283,7 @@ proxies:
   - {name: '韩国 - 首尔特别市 - Amazon.com, Inc. - 4', server: 43.203.199.246, port: 80, type: ss, cipher: aes-256-gcm, delay: 549, password: dada0801, udp: true}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
   - {name: '🏴‍☠️@FreakConfig', server: 107.167.18.123, port: 1743, type: hysteria2, password: 16955d72-1794-11f0-a035-f23c95b6f51d, skip-cert-verify: false, sni: fecc1dc4-t4v9c0-t5ht86-dnss.la.shifen.uk, tls: false}
-  - {name: '[2025-11-19 07:24:36]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-19 10:05:04]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
