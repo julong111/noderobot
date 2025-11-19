@@ -5,8 +5,6 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: '@meli_proxyy #20', server: 94.249.197.95, port: 30000, type: hysteria2, password: 7daa4a7f-f76e-4941-84bd-c6004cdbb859, skip-cert-verify: true, sni: bing.com, tls: false}
-  - {name: '@meli_proxyy #24', server: node.waifly.com, port: 28132, type: hysteria2, obfs: salamander, obfs-password: 09fdd186-3d5b-482a-a7b6-285cc88a38c8, password: 91bf574a-4a2f-42eb-bfa9-5824317f541c, skip-cert-verify: true, sni: example.com, tls: false}
   - {name: 'France_None_hysteria_71', server: 62.210.10.186, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
   - {name: 'GB_speednode_0005', server: nl.nodes.rocketnetwork.ru, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: Mn0DIMKW6zu0_D3E1qKO7xMlIVZvB-rqO_-f7Le2vAs, short-id: 428ef87fd47a3a32}, servername: nl.nodes.rocketnetwork.ru, skip-cert-verify: false, tls: true, udp: true, uuid: bccbecc9-c1d2-45d1-b3fa-771a19b9831c}
   - {name: '[Hysteria2] - SE - @freeOnlineVPN #1', server: dd.openaccessnode.com, port: 989, type: hysteria2, auth: 5ea499f5c73554214870e187a55f4d71, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi', password: 5ea499f5c73554214870e187a55f4d71, skip-cert-verify: false, sni: dd.ircybersec.org}
@@ -31,8 +29,10 @@ proxies:
   - {name: '[Hysteria2] @V2rayNG3 #2', server: 109.120.135.123, port: 12122, type: hysteria2, auth: 22f2c759db51b3d0, obfs: salamander, obfs-password: de8287cd33b05fa3, password: 22f2c759db51b3d0, skip-cert-verify: false, sni: www.bing.com}
   - {name: '[Hysteria2] @V2rayNG3 #9', server: s15.serv00.com, port: 7777, type: hysteria2, auth: 75577117-ABCD-DCBA-AAAA-CC777775577B, password: 75577117-ABCD-DCBA-AAAA-CC777775577B, skip-cert-verify: false, sni: www.bing.com}
   - {name: '[Hysteria2] @meli_proxyy #1', server: 40.233.80.237, port: 30300, type: hysteria2, auth: 2429bee3-e0c1-47dd-b420-75e6512b184b, password: 2429bee3-e0c1-47dd-b420-75e6512b184b, skip-cert-verify: false, sni: www.bing.com}
-  - {name: '[Hysteria2] @meli_proxyy #23', server: 141.147.52.24, port: 44001, type: hysteria2, auth: 5001b8d8-76ce-474c-bc29-94e6caa61164, password: 5001b8d8-76ce-474c-bc29-94e6caa61164, skip-cert-verify: false}
-  - {name: '[Hysteria2] @meli_proxyy #24', server: 92.5.77.25, port: 44001, type: hysteria2, auth: 5001b8d8-76ce-474c-bc29-94e6caa61164, password: 5001b8d8-76ce-474c-bc29-94e6caa61164, skip-cert-verify: false, sni: www.bing.com}
+  - {name: '[Hysteria2] @meli_proxyy #15', server: 141.147.52.24, port: 44001, type: hysteria2, auth: 5001b8d8-76ce-474c-bc29-94e6caa61164, password: 5001b8d8-76ce-474c-bc29-94e6caa61164, skip-cert-verify: false}
+  - {name: '[Hysteria2] @meli_proxyy #16', server: 92.5.77.25, port: 44001, type: hysteria2, auth: 5001b8d8-76ce-474c-bc29-94e6caa61164, password: 5001b8d8-76ce-474c-bc29-94e6caa61164, skip-cert-verify: false, sni: www.bing.com}
+  - {name: '[Hysteria2] @meli_proxyy #20', server: 94.249.197.95, port: 30000, type: hysteria2, auth: 7daa4a7f-f76e-4941-84bd-c6004cdbb859, password: 7daa4a7f-f76e-4941-84bd-c6004cdbb859, skip-cert-verify: false, sni: bing.com}
+  - {name: '[Hysteria2] @meli_proxyy #24', server: node.waifly.com, port: 28132, type: hysteria2, auth: 91bf574a-4a2f-42eb-bfa9-5824317f541c, obfs: salamander, obfs-password: 09fdd186-3d5b-482a-a7b6-285cc88a38c8, password: 91bf574a-4a2f-42eb-bfa9-5824317f541c, skip-cert-verify: false, sni: example.com}
   - {name: '[Hysteria2] @sunflowerplato🌻', server: 129.153.59.26, port: 30300, type: hysteria2, auth: 2429bee3-e0c1-47dd-b420-75e6512b184b, password: 2429bee3-e0c1-47dd-b420-75e6512b184b, skip-cert-verify: false, sni: www.bing.com}
   - {name: '[Hysteria2] @sunflowerplato🌻 #1', server: xg1.mangshe.xyz, port: 2056, type: hysteria2, auth: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, skip-cert-verify: false, sni: xg1.mangshe.xyz}
   - {name: '[Hysteria2] @sunflowerplato🌻 #2', server: 108.165.213.197, port: 23891, type: hysteria2, auth: c232f411-96b5-4b07-b2f7-66a434725ffb, password: c232f411-96b5-4b07-b2f7-66a434725ffb, skip-cert-verify: false, sni: fus01.mistea.top}
@@ -108,6 +108,7 @@ proxies:
   - {name: '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #2', server: yapc-1.adamhayward.co.uk, port: 36600, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
   - {name: '[Hysteria2] ۳', server: 206.71.158.37, port: 35200, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
   - {name: '[Hysteria2] ۵', server: 206.71.158.37, port: 36600, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
+  - {name: '[Hysteria2] ‍☠️@FreakConfig', server: 107.167.18.123, port: 1743, type: hysteria2, auth: 16955d72-1794-11f0-a035-f23c95b6f51d, password: 16955d72-1794-11f0-a035-f23c95b6f51d, skip-cert-verify: false, sni: fecc1dc4-t4v9c0-t5ht86-dnss.la.shifen.uk}
   - {name: '[Hysteria2] 🇬🇧 - GB - @freeOnlineVPN', server: 81.168.83.89, port: 2083, type: hysteria2, auth: YwuvGJk36B, obfs: salamander, obfs-password: khameniiko@smad@ret, password: YwuvGJk36B, skip-cert-verify: false}
   - {name: '[Hysteria2] 🇳🇱 - NL - @freeOnlineVPN #1', server: 185.92.220.240, port: 30205, type: hysteria2, auth: 8864aa9f-7517-4fd5-aef1-32050eb3095d, obfs: salamander, obfs-password: GdQ4bgvT8RFwuWi2, password: 8864aa9f-7517-4fd5-aef1-32050eb3095d, skip-cert-verify: false, sni: net2025.afsharidempire.uk}
   - {name: '[Hysteria2] 🇳🇱 - NL - @freeOnlineVPN #10', server: yapc-1.adamhayward.co.uk, port: 36400, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
@@ -282,8 +283,7 @@ proxies:
   - {name: '韩国 - 首尔特别市 - Amazon.com, Inc. - 3', server: 43.201.70.24, port: 80, type: ss, cipher: aes-256-gcm, delay: 548, password: dada0801, udp: true}
   - {name: '韩国 - 首尔特别市 - Amazon.com, Inc. - 4', server: 43.203.199.246, port: 80, type: ss, cipher: aes-256-gcm, delay: 549, password: dada0801, udp: true}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '🏴‍☠️@FreakConfig', server: 107.167.18.123, port: 1743, type: hysteria2, password: 16955d72-1794-11f0-a035-f23c95b6f51d, skip-cert-verify: false, sni: fecc1dc4-t4v9c0-t5ht86-dnss.la.shifen.uk, tls: false}
-  - {name: '[2025-11-19 10:05:04]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-19 11:18:05]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
