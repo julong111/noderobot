@@ -137,6 +137,7 @@ proxies:
   - {name: '[VMess] 🇨🇳 台湾|@ripaojiedian', server: 8.138.145.90, port: 11223, type: vmess, cipher: auto, alterId: 2, skip-cert-verify: false, tls: false, uuid: 2a49163d-eaff-38d2-bb0e-5048a031f6b6}
   - {name: '[VMess] 🇭🇰 香港|@ripaojiedian', server: v9.heduian.link, port: 30809, type: vmess, cipher: auto, alterId: 2, network: ws, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {path: /oooo, headers: {Host: baidu.com}}}
   - {name: '[Vless] RU_speednode_0016', server: 81.161.98.228, port: 1443, type: vless, network: ws, servername: cdn.filterai.ru, skip-cert-verify: false, tls: false, uuid: 00f02ab2-6f2d-449f-a089-d182a2fac59a, ws-opts: {path: /websocketplsecurity=tls, headers: {Host: cdn.filterai.ru}}}
+  - {name: 'telegram @mtmvpn', server: tr.xn--9kqx4sc0n.shop, port: 21325, type: hysteria2, password: afc8e385-dc0f-4b26-a5ed-b0fbf08b9df6, skip-cert-verify: false, tls: false}
   - {name: '中国 - 佛山市 - China Mobile - 1', server: 183.236.51.36, port: 59003, type: vmess, cipher: auto, alterId: 64, country: 🇨🇳CN, delay: 130, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 台湾 - Chunghwa Telecom Co., Ltd. - 10', server: 60.249.35.95, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, country: 🇹🇼 TW, delay: 441, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {host: '(TG @WangCai2)26af988:57468', mode: tls}}
   - {name: '中国 - 台湾 - Chunghwa Telecom Co., Ltd. - 11', server: 59.125.62.191, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, country: 🇹🇼 TW, delay: 453, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {host: '(TG @WangCai2)32cf132:178330', mode: tls}}
@@ -282,7 +283,7 @@ proxies:
   - {name: '韩国 - 首尔特别市 - Amazon.com, Inc. - 3', server: 43.201.70.24, port: 80, type: ss, cipher: aes-256-gcm, delay: 548, password: dada0801, udp: true}
   - {name: '韩国 - 首尔特别市 - Amazon.com, Inc. - 4', server: 43.203.199.246, port: 80, type: ss, cipher: aes-256-gcm, delay: 549, password: dada0801, udp: true}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-20 01:24:45]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-20 02:39:29]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
