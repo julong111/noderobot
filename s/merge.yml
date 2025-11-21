@@ -301,7 +301,11 @@ proxies:
   - {name: '韩国 - 首尔特别市 - Amazon.com, Inc. - 3', server: 43.201.70.24, port: 80, type: ss, cipher: aes-256-gcm, delay: 548, password: dada0801, udp: true}
   - {name: '韩国 - 首尔特别市 - Amazon.com, Inc. - 4', server: 43.203.199.246, port: 80, type: ss, cipher: aes-256-gcm, delay: 549, password: dada0801, udp: true}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-21 11:16:48]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🇩🇪@V2RayyNGvpn🇩🇪همه اوپراتور ه...', server: 91.99.225.11, port: 443, type: hysteria2, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 46gfRN8Pcy, skip-cert-verify: true, sni: refersion.com, tls: false}
+  - {name: '🇩🇪@V2RayyNGvpn🇩🇪همه اوپراتور ه... #2', server: 91.99.225.11, port: 20820, type: hysteria2, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 8Er8TicySe, skip-cert-verify: true, sni: refersion.com, tls: false}
+  - {name: '🇱🇷@V2RayyNGvpn🇱🇷همه اوپراتور ه...', server: 138.124.60.198, port: 8443, type: hysteria2, obfs: salamander, obfs-password: MiraCLeOPV2RayyNGvpntheBestt, password: D3N3IJQX2S, skip-cert-verify: true, sni: cdnjs.cloudflare.com, tls: false}
+  - {name: '🇱🇺@V2RayyNGvpn🇱🇺همه اوپراتور ه...', server: 83.147.253.96, port: 2053, type: hysteria2, obfs: salamander, obfs-password: MiracleV2RayyNGvpnfreeconf, password: 6fpNfkUmvR, skip-cert-verify: true, sni: webservice-admin.tgju.org, tls: false}
+  - {name: '[2025-11-21 12:32:14]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
