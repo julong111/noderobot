@@ -114,7 +114,6 @@ proxies:
   - {name: '[Hysteria2] telegram » mainv𝟮ray¹', server: 144.24.101.176, port: 30102, type: hysteria2, auth: 338ce171-d764-4610-8fd5-6688b0d321f0, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: false}
   - {name: '[Hysteria2] telegram-@ISVvpn', server: fra-nb-02.linlujs.pw, port: 29854, type: hysteria2, auth: 6803bc9b-1157-431b-8f73-970a6deb741f, password: 6803bc9b-1157-431b-8f73-970a6deb741f, skip-cert-verify: false}
   - {name: '[Hysteria2] telegram-@ISVvpn #1', server: fra-nb-01.linlujs.pw, port: 24568, type: hysteria2, auth: 682c7978-e3eb-44e0-924c-607144495681, password: 682c7978-e3eb-44e0-924c-607144495681, skip-cert-verify: false}
-  - {name: '[Hysteria2] کانال تلگرام MTMVPN@', server: speedhk1.jiasujd.top, port: 24955, type: hysteria2, auth: 09cc2935-0eb4-469a-9d67-2037c68440ca, obfs: salamander, obfs-password: Ey8WkRLz34SadllK, password: 09cc2935-0eb4-469a-9d67-2037c68440ca, skip-cert-verify: false}
   - {name: '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا...', server: 77.223.214.193, port: 31468, type: hysteria2, auth: 79c4fe11-9787-406b-bf94-c1c1dbf59e28, password: 79c4fe11-9787-406b-bf94-c1c1dbf59e28, skip-cert-verify: false, sni: www.bing.com}
   - {name: '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #1', server: yapc-1.adamhayward.co.uk, port: 36300, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
   - {name: '[Hysteria2] کانفیگ های بیشتر در چنل تلگرا... #2', server: yapc-1.adamhayward.co.uk, port: 36600, type: hysteria2, auth: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir}
@@ -210,7 +209,7 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.154.223, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 645, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '阿拉伯联合酋长国 - 富吉拉 - Melbikomas UAB - 1', server: 95.174.68.33, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🇦🇹AT, delay: 1823, password: YzH4id7ZEyKpfy39F2YcOmzCsBklGwh8}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-23 04:28:12]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-23 05:23:17]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
