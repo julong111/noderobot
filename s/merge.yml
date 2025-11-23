@@ -159,6 +159,7 @@ proxies:
   - {name: '[Vless] IR_speednode_0030', server: 185.97.119.25, port: 80, type: vless, network: ws, skip-cert-verify: false, tls: false, uuid: 34155f4a-b42f-4961-9268-df5069fca1ff, ws-opts: {path: /}}
   - {name: '[Vless] RU_speednode_0040', server: 81.161.98.228, port: 1443, type: vless, network: ws, servername: cdn.filterai.ru, skip-cert-verify: false, tls: false, uuid: 00f02ab2-6f2d-449f-a089-d182a2fac59a, ws-opts: {path: /websocketplsecurity=tls, headers: {Host: cdn.filterai.ru}}}
   - {name: '[Vless] US_speednode_0052', server: 104.16.53.11, port: 8443, type: vless, network: ws, servername: hetzner-9.cfuk.name.ng, skip-cert-verify: false, tls: false, uuid: ccbe6b7c-9264-40c4-8bc1-ef8f6205d7a4, ws-opts: {path: '/?ed=2048security=tls', headers: {Host: hetzner-9.cfuk.name.ng}}}
+  - {name: '✅سرورهایبیشتردرکانال:prrofile_... #2', server: adas-polo-ba-mahi.kotlet.org, port: 2083, type: hysteria2, obfs: salamander, obfs-password: ki(rtoko(s-maret-khamneii, password: siEk2SjZFG, skip-cert-verify: true, sni: ghasem.kotlet.org, tls: false}
   - {name: '中国 - 佛山市 - China Mobile - 1', server: 183.236.51.36, port: 59003, type: vmess, cipher: auto, alterId: 64, country: 🇨🇳CN, delay: 149, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 台湾 - Chunghwa Telecom Co., Ltd. - 7', server: levuior.missionsec.us, port: 443, type: trojan, country: 🇹🇼TW, delay: 1441, password: ZZRSKlyjjAR36CS0CD8uYFBgNODpgTeC9A7aERSp3aFaq42na8KZzuDIn3D9Yw3xX3A6e, skip-cert-verify: true, udp: true}
   - {name: '中国 - 香港 - Dalian Yichuan Industrial CO - 4', server: 103.149.183.113, port: 8388, type: ss, cipher: chacha20-ietf, country: 🇭🇰HK, delay: 162, password: asd123456}
@@ -208,7 +209,7 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.154.223, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 645, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '阿拉伯联合酋长国 - 富吉拉 - Melbikomas UAB - 1', server: 95.174.68.33, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🇦🇹AT, delay: 1823, password: YzH4id7ZEyKpfy39F2YcOmzCsBklGwh8}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-23 16:33:03]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-23 17:25:57]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
