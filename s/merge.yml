@@ -209,7 +209,78 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.154.223, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 645, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '阿拉伯联合酋长国 - 富吉拉 - Melbikomas UAB - 1', server: 95.174.68.33, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🇦🇹AT, delay: 1823, password: YzH4id7ZEyKpfy39F2YcOmzCsBklGwh8}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-23 19:20:40]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '🔷🆔@v2ray_configs_pool🔷', server: hg.kunlun01.com, port: 20301, type: hysteria2, password: 10e80038-9671-4dcf-878d-a8a231a99edb, skip-cert-verify: true, sni: hg.kunlun01.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #1', server: jp7.dexlos.com, port: 13954, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: false, sni: jp7.dexlos.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #10', server: kr.xn--9kqv66eehg.site, port: 21098, type: hysteria2, password: 22967c2b-26f2-4d6a-b560-d08ca327ce2c, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #11', server: kr.xn--9kqv66eehg.site, port: 21861, type: hysteria2, password: 22967c2b-26f2-4d6a-b560-d08ca327ce2c, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #12', server: vn.xn--9kqv66eehg.site, port: 21854, type: hysteria2, password: 22967c2b-26f2-4d6a-b560-d08ca327ce2c, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #13', server: vn.xn--9kqv66eehg.site, port: 21901, type: hysteria2, password: 22967c2b-26f2-4d6a-b560-d08ca327ce2c, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #14', server: chuncheon-2.nezhasu.com, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: chuncheon-2.nezhasu.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #16', server: tokyo.nezhasu.com, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: Tokyo.nezhasu.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #17', server: valparaiso-1.nezhasu.cn, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: Valparaiso-1.nezhasu.cn, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #18', server: valparaiso-3.nezhasu.cn, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: Valparaiso-3.nezhasu.cn, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #2', server: jp8.dexlos.com, port: 15213, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #20', server: xg.kunlun01.com, port: 20301, type: hysteria2, password: 3071d260-0125-461b-af95-73b0c161152c, skip-cert-verify: true, sni: xg.kunlun01.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #21', server: hk.xn--9kqv66eehg.site, port: 21021, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #22', server: hk.xn--9kqv66eehg.site, port: 21277, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #23', server: hk.xn--9kqv66eehg.site, port: 21479, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #24', server: hk.xn--9kqv66eehg.site, port: 21796, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #25', server: jp.xn--9kqv66eehg.site, port: 21022, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #26', server: jp.xn--9kqv66eehg.site, port: 21058, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #27', server: jp.xn--9kqv66eehg.site, port: 21506, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #28', server: jp.xn--9kqv66eehg.site, port: 21646, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #29', server: kr.xn--9kqv66eehg.site, port: 21058, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #30', server: kr.xn--9kqv66eehg.site, port: 21102, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #31', server: kr.xn--9kqv66eehg.site, port: 21585, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #32', server: kr.xn--9kqv66eehg.site, port: 21862, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #33', server: vn.xn--9kqv66eehg.site, port: 21147, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #34', server: vn.xn--9kqv66eehg.site, port: 21275, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #35', server: vn.xn--9kqv66eehg.site, port: 21654, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #36', server: vn.xn--9kqv66eehg.site, port: 21680, type: hysteria2, password: 34c684c5-b4fc-4a37-8125-690e6535eccf, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #37', server: lsxg1.lansecs.top, port: 58338, type: hysteria2, password: 4a4a80f7-1cf3-4d66-8441-dc083a269b3a, skip-cert-verify: true, sni: lsxg1.lansecs.top, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #39', server: tg.kunlun01.com, port: 20301, type: hysteria2, password: 4e4e8b1c-b201-4422-a111-5faa042a5999, skip-cert-verify: true, sni: tg.kunlun01.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #4', server: jp9.dexlos.com, port: 17052, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: false, sni: jp9.dexlos.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #40', server: dg.jgpyjc.top, port: 40000, type: hysteria2, obfs: salamander, obfs-password: ZDQxZDhjZDk4ZjAwYjIwNA==, password: 59fd10f7-6b90-4976-90ff-7dcd339c0168, skip-cert-verify: false, sni: dg.jgpyjc.top, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #44', server: lsus3.lansecs.top, port: 58338, type: hysteria2, password: 6aba8345-ddc6-412d-860c-df01fcc4fd3c, skip-cert-verify: true, sni: lsus3.lansecs.top, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #47', server: hk1.oomz.ru, port: 50000, type: hysteria2, password: 89451f48-2b2e-4f8b-8f64-edef856ba484, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #48', server: hk2.oomz.ru, port: 50000, type: hysteria2, password: 89451f48-2b2e-4f8b-8f64-edef856ba484, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #49', server: hk3.oomz.ru, port: 50000, type: hysteria2, password: 89451f48-2b2e-4f8b-8f64-edef856ba484, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #5', server: tw1.dexlos.com, port: 1470, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #50', server: jp3.oomz.ru, port: 30000, type: hysteria2, password: 89451f48-2b2e-4f8b-8f64-edef856ba484, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #51', server: jp4.oomz.ru, port: 30000, type: hysteria2, password: 89451f48-2b2e-4f8b-8f64-edef856ba484, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #52', server: kr3.oomz.ru, port: 30000, type: hysteria2, password: 89451f48-2b2e-4f8b-8f64-edef856ba484, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #53', server: kr4.oomz.ru, port: 30000, type: hysteria2, password: 89451f48-2b2e-4f8b-8f64-edef856ba484, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #54', server: tw2.oomz.ru, port: 30000, type: hysteria2, password: 89451f48-2b2e-4f8b-8f64-edef856ba484, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #6', server: hk.xn--9kqv66eehg.site, port: 21050, type: hysteria2, password: 22967c2b-26f2-4d6a-b560-d08ca327ce2c, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #61', server: mg.kunlun01.com, port: 20301, type: hysteria2, password: b65dc212-c070-4fdb-8a94-bf4d8696d810, skip-cert-verify: true, sni: mg.kunlun01.com, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #64', server: hk.xn--gmq00sc0nuve.shop, port: 21253, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #65', server: my.xn--gmq00sc0nuve.shop, port: 21168, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #66', server: my.xn--gmq00sc0nuve.shop, port: 21404, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #67', server: my.xn--gmq00sc0nuve.shop, port: 21812, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #68', server: my.xn--gmq00sc0nuve.shop, port: 21935, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #69', server: sg.xn--gmq00sc0nuve.shop, port: 21456, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #7', server: hk.xn--9kqv66eehg.site, port: 21635, type: hysteria2, password: 22967c2b-26f2-4d6a-b560-d08ca327ce2c, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #70', server: sg.xn--gmq00sc0nuve.shop, port: 21514, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #71', server: sg.xn--gmq00sc0nuve.shop, port: 21772, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #72', server: sg.xn--gmq00sc0nuve.shop, port: 21975, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #74', server: hk.xn--9kqv66eehg.site, port: 21224, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #75', server: hk.xn--9kqv66eehg.site, port: 21451, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #76', server: hk.xn--9kqv66eehg.site, port: 21685, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #77', server: hk.xn--9kqv66eehg.site, port: 21975, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #78', server: jp.xn--9kqv66eehg.site, port: 21254, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #79', server: jp.xn--9kqv66eehg.site, port: 21319, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #8', server: jp.xn--9kqv66eehg.site, port: 21530, type: hysteria2, password: 22967c2b-26f2-4d6a-b560-d08ca327ce2c, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #80', server: jp.xn--9kqv66eehg.site, port: 21498, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #81', server: jp.xn--9kqv66eehg.site, port: 21902, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #82', server: kr.xn--9kqv66eehg.site, port: 21093, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #83', server: kr.xn--9kqv66eehg.site, port: 21559, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #84', server: kr.xn--9kqv66eehg.site, port: 21790, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #85', server: kr.xn--9kqv66eehg.site, port: 21889, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #86', server: vn.xn--9kqv66eehg.site, port: 21141, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #87', server: vn.xn--9kqv66eehg.site, port: 21351, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #88', server: vn.xn--9kqv66eehg.site, port: 21900, type: hysteria2, password: e1b910ae-0efa-4926-b883-619e5aacf787, skip-cert-verify: false, tls: false}
+  - {name: '🔷🆔@v2ray_configs_pool🔷 #9', server: jp.xn--9kqv66eehg.site, port: 21894, type: hysteria2, password: 22967c2b-26f2-4d6a-b560-d08ca327ce2c, skip-cert-verify: false, tls: false}
+  - {name: '[2025-11-23 20:48:53]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
