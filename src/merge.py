@@ -350,6 +350,29 @@ def main(args):
     unique_proxies.sort(key=lambda p: p.get('name', ''))
     print("排序完成。")
 
+    # --- 检查与旧文件是否有变化 ---
+    print("\n--- 检查与现有配置文件的差异 ---")
+    if output_path.is_file():
+        old_config = load_yaml_file(output_path, exit_on_error=False)
+        old_proxies = old_config.get('proxies', [])
+
+        # 从旧代理列表中移除时间戳节点以便比较
+        old_proxies_for_comparison = [
+            p for p in old_proxies if '-Timestamp' not in p.get('name', '')
+        ]
+
+        # 将当前新生成的代理列表转换为普通字典列表以便比较
+        current_proxies_for_comparison = [dict(p) for p in unique_proxies]
+
+        if current_proxies_for_comparison == old_proxies_for_comparison:
+            print("代理列表与现有文件内容相同，无需更新。")
+            print("--- 操作提前结束 ---")
+            sys.exit(0)
+        else:
+            print("代理列表有更新，将继续生成新文件。")
+    else:
+        print("未找到现有输出文件，将创建新文件。")
+
     # --- 新增时间戳节点 ---
     print("\n--- 新增时间戳节点 ---")
     update_time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
