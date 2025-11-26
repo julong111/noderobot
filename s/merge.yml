@@ -33,7 +33,7 @@ proxies:
   - {name: '[Hysteria2] @Selinc #11', server: us4.oomz.ru, port: 30000, type: hysteria2, auth: ab858115-e0ab-4cb7-8e65-0804c35e52d5, password: ab858115-e0ab-4cb7-8e65-0804c35e52d5, skip-cert-verify: false, sni: bing.com}
   - {name: '[Hysteria2] @Selinc #5', server: 85.208.9.189, port: 44001, type: hysteria2, auth: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, password: 907d9a05-3bd2-4b44-b1f9-4f26dba76f88, skip-cert-verify: false, sni: www.bing.com}
   - {name: '[Hysteria2] @V2RayyNGvpn🇩🇪همه اوپراتور ه...', server: 91.99.225.11, port: 443, type: hysteria2, auth: 46gfRN8Pcy, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 46gfRN8Pcy, skip-cert-verify: false, sni: refersion.com}
-  - {name: '[Hysteria2] @V2RayyNGvpn🇩🇪همه اوپراتور ه... #2', server: 91.99.225.11, port: 20820, type: hysteria2, auth: 8Er8TicySe, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 8Er8TicySe, skip-cert-verify: false, sni: refersion.com}
+  - {name: '[Hysteria2] @V2RayyNGvpn🇩🇪همه اوپراتور ه... #3', server: 91.99.225.11, port: 20820, type: hysteria2, auth: 8Er8TicySe, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 8Er8TicySe, skip-cert-verify: false, sni: refersion.com}
   - {name: '[Hysteria2] @V2RayyNGvpn🇱🇺همه اوپراتور ه...', server: 83.147.253.96, port: 2053, type: hysteria2, auth: 6fpNfkUmvR, obfs: salamander, obfs-password: MiracleV2RayyNGvpnfreeconf, password: 6fpNfkUmvR, skip-cert-verify: false, sni: webservice-admin.tgju.org}
   - {name: '[Hysteria2] @V2rayNG3', server: 192.3.85.237, port: 443, type: hysteria2, auth: 123456, password: 123456, skip-cert-verify: false, sni: bing.com}
   - {name: '[Hysteria2] @V2rayNG3 #1', server: gb.gomeow.online, port: 20309, type: hysteria2, auth: 15cca331-9e92-449d-93b0-25f82203595f, password: 15cca331-9e92-449d-93b0-25f82203595f, skip-cert-verify: false, sni: gb.gomeow.online}
@@ -238,7 +238,7 @@ proxies:
   - {name: '阿拉伯联合酋长国 - 迪拜 - Cloudflare, Inc. - 1', server: 139.185.50.5, port: 14594, type: vless, delay: 1397, network: ws, servername: kuangbao.xiejiang.dpdns.org, tls: true, udp: true, uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e, ws-opts: {path: /, headers: {Host: kuangbao.xiejiang.dpdns.org}, early-data-header-name: Sec-WebSocket-Protocol, max-early-data: 2560}}
   - {name: '香港6|@ripaojiedian', server: v10.hdacd.com, port: '30807', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-26 13:28:17]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-26 21:39:07]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
