@@ -170,6 +170,8 @@ proxies:
   - {name: '[Vless] RU_speednode_0033', server: 194.35.119.135, port: 2053, type: vless, network: ws, servername: kuangbao.xiejiang.dpdns.org, skip-cert-verify: false, tls: false, uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e, ws-opts: {path: '/?ed=2560security=tls', headers: {Host: kuangbao.xiejiang.dpdns.org}}}
   - {name: '[Vless] RU_speednode_0034', server: 194.35.119.49, port: 2053, type: vless, network: ws, servername: kuangbao.xiejiang.dpdns.org, skip-cert-verify: false, tls: false, uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e, ws-opts: {path: '/?ed=2560security=tls', headers: {Host: kuangbao.xiejiang.dpdns.org}}}
   - {name: '[Vless] RU_speednode_0035', server: zcreat.ethervpn.fun, port: 8443, type: vless, alpn: [h2%2Chttp/1.1], network: ws, servername: zcreat.ethervpn.fun, skip-cert-verify: false, tls: true, uuid: a47595a8-1add-401a-8189-e6799f8d8628, ws-opts: {path: '/websocketpl?ed=2047fp=chrome', headers: {Host: zcreat.ethervpn.fun}}}
+  - {name: 'jswUgy556@&insecure=0&sni=arma...', server: armani.8.8.8.8.fizikade.ir, port: 443, type: hysteria2, obfs: salamander, obfs-password: 'hh-?ksjsHyGY6j', password: f6cf2e049f46db997a7142252d49aafa, tls: false}
+  - {name: 'r♡ya #3', server: blogtest.ghazatehran.ir, port: 4431, type: hysteria2, obfs: salamander, obfs-password: 2wsx, password: a1996dcf-0717-4dea-a6c1-9abeace8acf1, skip-cert-verify: true, sni: blogtest.ghazatehran.ir, tls: false}
   - {name: '中国 - 佛山市 - China Mobile - 2', server: 183.236.51.36, port: 59003, type: vmess, cipher: auto, alterId: 64, country: 🇨🇳CN, delay: 152, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24}
   - {name: '中国 - 香港 - Akile LTD - 10', server: 156.224.77.55, port: 31920, type: ss, cipher: chacha20-ietf-poly1305, delay: 972, password: 43a12a36-c28d-4549-a89d-9152b12db079, udp: true}
   - {name: '中国 - 香港 - Alibaba (US) Technology Co., Ltd. - 7', server: 47.79.22.221, port: 39191, type: ss, cipher: chacha20-ietf-poly1305, delay: 2813, password: ac6dc089-1891-4860-88dc-a67063885e07, udp: true}
@@ -295,7 +297,10 @@ proxies:
   - {name: '韩国 - 首尔特别市 - Oracle Corporation - 2', server: 152.70.92.69, port: 80, type: vmess, cipher: auto, alterId: 0, country: 🇰🇷KR, delay: 1486, h2-opts: {}, http-opts: {method: GET, path: [/]}, network: http, skip-cert-verify: true, uuid: bb9c3993-a4b9-4dad-aeb9-ac86371ae68b}
   - {name: '香港6|@ripaojiedian', server: v10.hdacd.com, port: '30807', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484}
   - {name: '香港|@ripaojiedian', server: v9.heduian.link, port: '30809', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, ws-opts: {headers: {Host: baidu.com}, path: /oooo}}
-  - {name: '[2025-11-26 23:28:07]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '👉🆔@v2ray_configs_pool📡🇭🇰®️Hong...', server: bb06bea8-t6e740-tb3p3s-lj7z.hk1.hyhuawei.com, port: 443, type: hysteria2, password: 331cae90-f7e9-11ed-b4e2-f23c913c8d2b, sni: bb06bea8-t6e740-tb3p3s-lj7z.hk1.hyhuawei.com, tls: false}
+  - {name: '👉🆔@v2ray_configs_pool📡🇺🇸®️Unit...', server: eca509d2-t56dc0-tcjtj6-d70y.la.shifen.uk, port: 443, type: hysteria2, password: 537d7098-fdbe-11ef-8ebc-f23c93141fad, sni: eca509d2-t56dc0-tcjtj6-d70y.la.shifen.uk, tls: false}
+  - {name: '👉🆔@v2ray_configs_pool📡🇺🇸®️Unit... #1', server: 8b56a93d-t58800-tcm6ys-deip.la.shifen.uk, port: 443, type: hysteria2, password: 7a2512b4-09ee-11f0-8d46-f23c9313b177, sni: 8b56a93d-t58800-tcm6ys-deip.la.shifen.uk, tls: false}
+  - {name: '[2025-11-27 02:35:22]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
