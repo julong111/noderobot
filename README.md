@@ -1,3 +1,14 @@
+程序处理流程
+
+从freenodes/clashfree下载最新的clash配置到本地source目录freenodes-clashfree-original.yml。  因为这个里面会有错误的节点，需要过滤。
+
+执行merge合并
+读取sources.json的配置，读取过滤后的节点和其它节点来源。
+清洗合并并输出到merge.yml   如果没有更新的-采用hash检测，则停止输出
+
+执行clash_to_v2rayn.py 将merge.yml转为v2rayn订阅输出到v2rayn.txt
+
+
 ClashParty
 
 JuACL4SSR

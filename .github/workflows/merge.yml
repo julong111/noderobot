@@ -39,20 +39,29 @@ jobs:
       - name: 执行 - Merge
         run: python ./src/merge.py
 
+      - name: 检查 merge.yml 文件是否有变动
+        id: check_changes
+        run: |
+          git add s/merge.yml
+          if git diff --staged --quiet; then
+            echo "merge.yml 文件没有变动。"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "merge.yml 文件有更新。"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: 执行 - Clash to v2rayN
+        if: steps.check_changes.outputs.has_changes == 'true'
         run: python ./src/clash_to_v2rayn.py ./s/merge.yml
 
       - name: 提交更改
+        if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add .
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Auto-update: $(date '+%Y-%m-%d %H:%M:%S')"
-            git push origin dev
-          else
-            echo "没有文件更改，跳过提交和推送。"
-          fi
+          git commit -m "Auto-update: $(date '+%Y-%m-%d %H:%M:%S')"
+          git push origin dev
 
       - name: Send success notification
         if: success()

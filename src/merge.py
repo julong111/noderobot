@@ -223,6 +223,21 @@ def reorder_proxy_keys(proxy: dict) -> dict:
     return ordered_proxy
 
 
+def _get_proxy_fingerprint(proxy: dict) -> tuple:
+    """
+    将代理字典转换为一个规范的、可哈希的元组（指纹），用于比较。
+
+    Args:
+        proxy: 代理字典。
+
+    Returns:
+        一个可哈希的元组。
+    """
+    # 确保所有值都是基本类型，以便比较
+    cleaned_proxy = {k: str(v) if isinstance(v, SingleQuotedString) else v for k, v in proxy.items()}
+    return tuple(sorted(cleaned_proxy.items()))
+
+
 def load_all_proxies(sources_path: Path, project_root: Path) -> list[dict]:
     """从sources文件指定的来源加载所有代理。"""
     if not sources_path.is_file():
@@ -361,11 +376,12 @@ def main(args):
             p for p in old_proxies if '-Timestamp' not in p.get('name', '')
         ]
 
-        # 将当前新生成的代理列表转换为普通字典列表以便比较
-        current_proxies_for_comparison = [dict(p) for p in unique_proxies]
+        # 创建代理“指纹”集合，用于无序比较
+        current_proxies_set = {_get_proxy_fingerprint(p) for p in unique_proxies}
+        old_proxies_set = {_get_proxy_fingerprint(p) for p in old_proxies_for_comparison}
 
-        if current_proxies_for_comparison == old_proxies_for_comparison:
-            print("代理列表与现有文件内容相同，无需更新。")
+        if current_proxies_set == old_proxies_set:
+            print("代理列表与现有文件内容相同（忽略顺序），无需更新。")
             print("--- 操作提前结束 ---")
             sys.exit(0)
         else:
