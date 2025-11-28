@@ -64,7 +64,8 @@ jobs:
           git push origin dev
 
       - name: 发送成功通知到 Telegram
-        if: success() && steps.check_changes.outputs.has_changes == 'true'
+        if: success() 
+        # if: success() && steps.check_changes.outputs.has_changes == 'true'
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
