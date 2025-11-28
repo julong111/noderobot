@@ -223,19 +223,22 @@ def reorder_proxy_keys(proxy: dict) -> dict:
     return ordered_proxy
 
 
-def _get_proxy_fingerprint(proxy: dict) -> tuple:
-    """
-    将代理字典转换为一个规范的、可哈希的元组（指纹），用于比较。
-
-    Args:
-        proxy: 代理字典。
-
-    Returns:
-        一个可哈希的元组。
-    """
-    # 确保所有值都是基本类型，以便比较
-    cleaned_proxy = {k: str(v) if isinstance(v, SingleQuotedString) else v for k, v in proxy.items()}
-    return tuple(sorted(cleaned_proxy.items()))
+def _make_hashable(obj):
+    """递归地将字典、列表或集合转换为可哈希的格式。"""
+    if isinstance(obj, dict):
+        # 对字典，递归处理其键和值，并返回一个可哈希的frozenset
+        return frozenset((k, _make_hashable(v)) for k, v in sorted(obj.items()))
+    if isinstance(obj, list):
+        # 对列表，递归处理其所有元素，并返回一个元组
+        return tuple(_make_hashable(e) for e in obj)
+    if isinstance(obj, set):
+        # 对集合，递归处理其所有元素，并返回一个frozenset
+        return frozenset(_make_hashable(e) for e in sorted(list(obj)))
+    # 对于SingleQuotedString，先转换为普通字符串
+    if isinstance(obj, SingleQuotedString):
+        return str(obj)
+    # 其他基本类型（int, str, bool, None等）本身就是可哈希的
+    return obj
 
 
 def load_all_proxies(sources_path: Path, project_root: Path) -> list[dict]:
@@ -377,8 +380,8 @@ def main(args):
         ]
 
         # 创建代理“指纹”集合，用于无序比较
-        current_proxies_set = {_get_proxy_fingerprint(p) for p in unique_proxies}
-        old_proxies_set = {_get_proxy_fingerprint(p) for p in old_proxies_for_comparison}
+        current_proxies_set = {_make_hashable(p) for p in unique_proxies}
+        old_proxies_set = {_make_hashable(p) for p in old_proxies_for_comparison}
 
         if current_proxies_set == old_proxies_set:
             print("代理列表与现有文件内容相同（忽略顺序），无需更新。")
