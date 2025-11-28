@@ -83,6 +83,7 @@ proxies:
   - {name: 'KR_speednode_0021', server: 175.210.217.204, port: 50001, type: vless, alpn: [h3], network: ws, servername: s3.sni565.netlib.re, skip-cert-verify: false, tls: true, udp: true, uuid: 69228a95-e9cb-b1ff-40d2-7315d9d4b9b7, ws-opts: {headers: {Host: s3.sni565.netlib.re}, path: /proxyip=tw.sni2025.netlib.re}}
   - {name: 'LB_speednode_0022', server: 77.110.127.105, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: -Bdu8i-HU28Xmx87RMou5okYo8TqfbyZ8Ufs9RodUGE, short-id: 097de35e52ec5256}, servername: st.ozone.ru, skip-cert-verify: false, tls: true, udp: true, uuid: 72239cbc-5a25-411c-b4f5-b9167a10f5e1}
   - {name: 'LB_speednode_0023', server: 77.110.119.225, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo, short-id: 07e904766d29b958}, servername: st.ozone.ru, skip-cert-verify: false, tls: true, udp: true, uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a}
+  - {name: 'MCI-@IRAN_V2RAY1', server: 81.168.83.89, port: 2083, type: hysteria2, obfs: salamander, obfs-password: khameniiko@smad@ret, password: YwuvGJk36B, skip-cert-verify: true, sni: kotlet.arshiacomplus.dpdns.org, tls: false}
   - {name: 'MCI-IR--@V2rayAlpha-1', server: mumbai-1.nezhasu.com, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: mumbai-1.nezhasu.com, tls: false}
   - {name: 'MCI-IR--@V2rayAlpha-11', server: yn2.nezhasu.com, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: yn2.nezhasu.com, tls: false}
   - {name: 'MCI-IR--@V2rayAlpha-12', server: gy6.nezhasu.com, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: gy6.nezhasu.com, tls: false}
@@ -635,10 +636,6 @@ proxies:
   - {name: '✅سرورهایبیشتردرکانال:prrofile_...', server: 193.142.59.41, port: 23899, type: hysteria2, password: c232f411-96b5-4b07-b2f7-66a434725ffb, skip-cert-verify: true, sni: hl01.mistea.top, tls: false}
   - {name: '✅سرورهایبیشتردرکانال:prrofile_... #1', server: nl1.oomz.ru, port: 30000, type: hysteria2, password: faa8b629-13ea-4ccd-94dd-ff1615cb1ba1, skip-cert-verify: true, sni: bing.com, tls: false}
   - {name: '✅سرورهایبیشتردرکانال:prrofile_... #2', server: adas-polo-ba-mahi.kotlet.org, port: 2083, type: hysteria2, obfs: salamander, obfs-password: ki(rtoko(s-maret-khamneii, password: siEk2SjZFG, skip-cert-verify: true, sni: ghasem.kotlet.org, tls: false}
-  - {name: '✨43@oneclickvpnkeys', server: 208.87.243.187, port: 22222, type: hysteria2, password: dongtaiwang.com, skip-cert-verify: true, sni: www.bing.com, tls: false}
-  - {name: '✨45@oneclickvpnkeys', server: us5.dexlos.com, port: 443, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: true, sni: us5.dexlos.com, tls: false}
-  - {name: '✨46@oneclickvpnkeys', server: us8.dexlos.com, port: 443, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: true, sni: us8.dexlos.com, tls: false}
-  - {name: '✨49@oneclickvpnkeys', server: us10.dexlos.com, port: 443, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: true, sni: us10.dexlos.com, tls: false}
   - {name: '✨52@oneclickvpnkeys', server: dir.cybsecguru.com, port: 35000, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi', password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, skip-cert-verify: true, sni: jnir.pichondan.com, tls: false}
   - {name: '✨56@oneclickvpnkeys', server: us9.dexlos.com, port: 443, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: true, sni: us9.dexlos.com, tls: false}
   - {name: '✨58@oneclickvpnkeys', server: jp4.dexlos.com, port: 443, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: true, sni: jp4.dexlos.com, tls: false}
@@ -700,7 +697,6 @@ proxies:
   - {name: '🇩🇪@FreakConfig', server: de.eyucdn.xyz, port: 2056, type: hysteria2, password: a084933d-0b41-4571-ae0c-7163b8c71ed1, skip-cert-verify: true, sni: de.eyucdn.xyz, tls: false}
   - {name: '🇩🇪@V2RayyNGvpn🇩🇪همه اوپراتور ه...', server: 91.99.225.11, port: 443, type: hysteria2, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 2cUfzeGOZG, skip-cert-verify: true, sni: refersion.com, tls: false}
   - {name: '🇩🇪@V2RayyNGvpn🇩🇪همه اوپراتور ه... #4', server: 91.99.225.11, port: 20820, type: hysteria2, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 8Er8TicySe, skip-cert-verify: true, sni: refersion.com, tls: false}
-  - {name: '🇬🇧@FreakConfig', server: 81.168.83.89, port: 2083, type: hysteria2, obfs: salamander, obfs-password: khameniiko@smad@ret, password: YwuvGJk36B, skip-cert-verify: true, sni: kotlet.arshiacomplus.dpdns.org, tls: false}
   - {name: '🇭🇰 香港2|@ripaojiedian', server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {host: newroot2v1.dsjsapp.com, mode: websocket, mux: true, path: /zksuapgx, skip-cert-verify: false, tls: true}}
   - {name: '🇯🇵a@oneclickvpnkeys', server: jp6.dexlos.com, port: 443, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: true, sni: jp6.dexlos.com, tls: false}
   - {name: '🇯🇵b@oneclickvpnkeys', server: jp10.dexlos.com, port: 443, type: hysteria2, password: 14FD150A-579E-42A1-8212-9D2F6510A70C, skip-cert-verify: true, sni: jp10.dexlos.com, tls: false}
@@ -729,6 +725,9 @@ proxies:
   - {name: '🎵5@oneclickvpnkeys', server: 51.158.218.2, port: 50066, type: hysteria2, password: dongtaiwang.com, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: '🎵6@oneclickvpnkeys', server: lundun2.nezhasu.com, port: 443, type: hysteria2, password: 52d0cb21-56da-4f00-862f-be01b66446a8, skip-cert-verify: true, sni: lundun2.nezhasu.com, tls: false}
   - {name: '🏴‍☠️@FreakConfig #1', server: tr.xn--gmq00sc0nuve.shop, port: 21105, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: true, tls: false}
+  - {name: '👉🆔@v2ray_configs_pool📡🇺🇸®️Unit... #1', server: 71f0c743-t6e740-t7t5pe-1s0a7.us.hyhuawei.com, port: 443, type: hysteria2, password: 1b9c460e-f026-11ef-b737-f23c91cfbbc9, sni: 71f0c743-t6e740-t7t5pe-1s0a7.us.hyhuawei.com, tls: false}
+  - {name: '👉🆔@v2ray_configs_pool📡🇺🇸®️Unit... #2', server: 98f4acfe-t4un40-tdini3-cdfn.la.shifen.uk, port: 1743, type: hysteria2, password: 94931862-1484-11f0-9ab7-f23c95b6f51d, sni: 98f4acfe-t4un40-tdini3-cdfn.la.shifen.uk, tls: false}
+  - {name: '👉🆔@v2ray_configs_pool📡🤷‍♀️®️🤷‍...', server: null, port: 443, type: hysteria2, password: 71504eaf-29ac-4190-89d1-dd9ce2c9ee14, tls: false}
   - {name: '💎کانفیگ های بیشتر در چنل تلگرا...', server: 77.223.214.193, port: 31468, type: hysteria2, password: 79c4fe11-9787-406b-bf94-c1c1dbf59e28, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: '💎کانفیگ های بیشتر در چنل تلگرا... #1', server: yapc-1.adamhayward.co.uk, port: 36300, type: hysteria2, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir, tls: false}
   - {name: '💎کانفیگ های بیشتر در چنل تلگرا... #2', server: yapc-1.adamhayward.co.uk, port: 36600, type: hysteria2, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: false, sni: YAPC-1.afshin.ir, tls: false}
@@ -741,7 +740,7 @@ proxies:
   - {name: '🔒92@oneclickvpnkeys', server: chuncheon-2.nezhasu.com, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, sni: chuncheon-2.nezhasu.com, tls: false}
   - {name: '🔒93@oneclickvpnkeys', server: jp.xn--gmq00sc0nuve.shop, port: 21917, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, tls: false}
   - {name: '🩵+@Azarakhsh_Proxy+🩷', server: 179.61.132.96, port: 8443, type: hysteria2, obfs: salamander, obfs-password: KevinZakarian, password: KevinZakarian, skip-cert-verify: true, sni: 179.61.132.96, tls: false}
-  - {name: '[2025-11-28 17:28:45]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-11-28 20:56:10]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
