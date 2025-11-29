@@ -55,44 +55,50 @@ jobs:
         if: steps.check_changes.outputs.has_changes == 'true'
         run: python ./src/clash_to_v2rayn.py ./s/merge.yml
 
+      - name: 获取当前时间
+        id: get_time
+        run: echo "commit_time=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+
       - name: 提交更改
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git commit -m "Auto-update: $(date '+%Y-%m-%d %H:%M:%S')"
+          git commit -m "Update: ${{ steps.get_time.outputs.commit_time }}"
           git push origin dev
 
-      - name: Send success notification
-        if: success()
-        env:
-          SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
-        run: |
-          echo "Sending notification..."
-          curl -s "https://sctapi.ftqq.com/${SERVERCHAN_KEY}.send?title=部署成功&desp=仓库:julong111/noderobot"
-          echo "Notification sent!"
+      - name: 发送成功通知到 Telegram
+        if: steps.check_changes.outputs.has_changes == 'true'
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          message: |
+            ✅ *任务成功*
+            **Time**: `${{ steps.get_time.outputs.commit_time }}`
+            **消息内容**: `${{ github.repository }} - 节点列表已更新`
 
-      - name: Send failure notification
+      - name: 发送失败通知到 Telegram
+        if: steps.check_changes.outputs.has_changes == 'false'
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          message: |
+            ❌ *任务失败*
+            **Time**: `${{ steps.get_time.outputs.commit_time }}`
+            **消息内容**: `${{ github.repository }} - 没有更新的节点`
+
+      - name: 发送异常通知到 Telegram
         if: failure()
-        env:
-          SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
-        run: |
-          echo "Sending notification..."
-          curl -s "https://sctapi.ftqq.com/${SERVERCHAN_KEY}.send?title=部署失败&desp=仓库:julong111/noderobot"
-          echo "Notification sent!"
-
-#      - name: Send success notification
-#        if: success()
-#        uses: distributhor/workflow-webhook@v3
-#        with:
-#          webhook_url: ${{ secrets.WEBHOOK_URL }}
-#          webhook_type: 'json'
-#          data: '{ "title": "✅ 部署成功", "desp" : "仓库：julong111/noderobot" }'
-#
-#      - name: Send failure notification
-#        if: failure()
-#        uses: distributhor/workflow-webhook@v3
-#        with:
-#          webhook_url: ${{ secrets.WEBHOOK_URL }}
-#          webhook_type: 'json'
-#          data: '{ "title": "❌ 部署失败", "desp" : "仓库：julong111/noderobot" }'
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          message: |
+            ⚠️ *任务异常*
+            **Time**: `${{ steps.get_time.outputs.commit_time }}`
+            **消息内容**: `${{ github.repository }} 任务发生异常，请检查`
