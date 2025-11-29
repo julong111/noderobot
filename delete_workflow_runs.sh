@@ -19,9 +19,9 @@ fi
 owner="julong111"
 repo="noderobot"
 
-# 获取所有 workflow run 的 ID
+# 获取除最近一条外的所有 workflow run 的 ID
 runs=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-    "https://api.github.com/repos/$owner/$repo/actions/runs?per_page=200" | jq '.workflow_runs[].id')
+    "https://api.github.com/repos/$owner/$repo/actions/runs?per_page=200" | jq '.workflow_runs[1:][].id')
 
 # 批量删除
 for run_id in $runs; do
