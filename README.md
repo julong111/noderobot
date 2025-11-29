@@ -9,6 +9,8 @@
 执行clash_to_v2rayn.py 将merge.yml转为v2rayn订阅输出到v2rayn.txt
 
 
+delete_workflow_runs.sh  清理workflow记录脚本
+
 ClashParty
 
 JuACL4SSR
