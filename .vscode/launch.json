@@ -1,0 +1,22 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "freenode-cleaner",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/freenodes-clashfree-ss-cleaner-sys.py",
+      "args": ["dev"]
+    },
+    {
+      "name": "merge",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/merge.py",
+      "args": ["--dev"]
+    }
+  ]
+}
