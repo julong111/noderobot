@@ -839,7 +839,7 @@ proxies:
   - {name: '香港5|@ripaojiedian', server: 58.152.25.242, port: 443, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '香港6|@ripaojiedian', server: fe3a9432-sv0xs0-sywkhi-1o4kv.hk3.p5pv.com, port: '80', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: 87b31a02-172e-11ee-a11f-f23c913c8d2b, ws-opts: {headers: {Host: fe3a9432-sv0xs0-sywkhi-1o4kv.hk3.p5pv.com}, path: /}}
   - {name: '香港|@ripaojiedian', server: v10.hdacd.com, port: '30807', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484}
-  - {name: '🇩🇪 - DE - @freeOnlineVPN #5', server: 77.90.41.197, port: 35000, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi', password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, skip-cert-verify: false, sni: api.kermanshahi.org, tls: false}
+  - {name: '🇩🇪 - DE - @freeOnlineVPN #4', server: 77.90.41.197, port: 35000, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi', password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, skip-cert-verify: false, sni: api.kermanshahi.org, tls: false}
   - {name: '🇩🇪@V2RayyNGvpn🇩🇪همه اوپراتور ه...', server: 91.99.225.11, port: 443, type: hysteria2, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 2cUfzeGOZG, skip-cert-verify: true, sni: refersion.com, tls: false}
   - {name: '🇩🇪@V2RayyNGvpn🇩🇪همه اوپراتور ه... #15', server: 91.99.225.11, port: 20820, type: hysteria2, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: VaKHp6TQN6, skip-cert-verify: true, sni: refersion.com, tls: false}
   - {name: '🇭🇰 香港2|@ripaojiedian', server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {host: newroot2v1.dsjsapp.com, mode: websocket, mux: true, path: /zksuapgx, skip-cert-verify: false, tls: true}}
@@ -848,6 +848,7 @@ proxies:
   - {name: '🇳🇱@FreakConfig', server: genshin-v4-oracle-amd.damaoooo.com, port: 443, type: hysteria2, password: 2408982813-20241210, skip-cert-verify: false, tls: false}
   - {name: '🇳🇱@FreakConfig #1', server: 206.71.158.23, port: 45000, type: hysteria2, obfs: salamander, obfs-password: Telegram-->@Ln2Ray, password: Telegram-->@Ln2Ray, skip-cert-verify: true, sni: gavazn.55994421.xyz, tls: false}
   - {name: '🇳🇱@FreakConfig #2', server: gavazn.lnmarketplace.net, port: 45000, type: hysteria2, obfs: salamander, obfs-password: Telegram-->@Ln2Ray, password: Telegram-->@Ln2Ray, skip-cert-verify: true, sni: gavazn.55994421.xyz, tls: false}
+  - {name: '🇷🇺 - RU - @freeOnlineVPN', server: 194.87.196.112, port: 11000, type: hysteria2, password: 15d8d4f4-a050-4034-bb08-3a262dba2c2d, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: '🇸🇪 - SE - @freeOnlineVPN #1', server: dd.openaccessnode.com, port: 989, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi', password: 77238c49bd20e407f05e0c073ad08fdb, skip-cert-verify: true, sni: dd.ircybersec.org, tls: false}
   - {name: '🇺🇸 美国4|@ripaojiedian', server: 67.209.177.69, port: 26351, type: ss, cipher: aes-256-gcm, password: 57dtozbdQRZT9MaL}
   - {name: '🇻🇳 越南|@ripaojiedian', server: 103.186.154.174, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
@@ -897,6 +898,8 @@ proxies:
   - {name: '🔴85@oneclickvpnkeys', server: sg4.oomz.ru, port: 30000, type: hysteria2, password: d3b0b361-b878-4246-8a0e-ae86f6caa1f9, skip-cert-verify: true, sni: bing.com, tls: false}
   - {name: '🔴86@oneclickvpnkeys', server: 465e5b71-t53wg0-t6xrvm-1qaek.us.hyhuawei.com, port: 443, type: hysteria2, password: 98cedeca-99a0-11ef-bb64-f23c913c8d2b, skip-cert-verify: true, sni: 465e5b71-t53wg0-t6xrvm-1qaek.us.hyhuawei.com, tls: false}
   - {name: '🔴89@oneclickvpnkeys', server: us6.oomz.ru, port: 30000, type: hysteria2, password: d3b0b361-b878-4246-8a0e-ae86f6caa1f9, skip-cert-verify: true, sni: bing.com, tls: false}
+  - {name: '🔵62@oneclickvpnkeys', server: 46.243.232.105, port: 443, type: hysteria2, password: SNItest, skip-cert-verify: true, sni: raiffeisen.ru, tls: false}
+  - {name: '🔵79@oneclickvpnkeys', server: 46.243.235.119, port: 443, type: hysteria2, password: SNItest, skip-cert-verify: true, sni: gazprombank.ru, tls: false}
   - {name: '🔸@IRAN_V2RAY1💘 #10', server: dir.cybsecguru.com, port: 35000, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi', password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, skip-cert-verify: false, sni: api.kermanshahi.org, tls: false}
   - {name: '🔸@IRAN_V2RAY1💘 #11', server: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk, port: 1743, type: hysteria2, password: be8cc8f6-0c6a-11f0-a5a3-f23c93141fad, skip-cert-verify: false, sni: ea9466bf-t3dk00-t3i5yp-b4pt.la.shifen.uk, tls: false}
   - {name: '🔸@IRAN_V2RAY1💘 #12', server: hk.xn--gmq00sc0nuve.shop, port: 21268, type: hysteria2, password: da9adc6f-03ca-4d32-9e93-7b2bdbc9b00d, skip-cert-verify: false, tls: false}
@@ -908,7 +911,6 @@ proxies:
   - {name: '🔸@V2ray1_Ng💘 #4', server: de.eyucdn.xyz, port: 2056, type: hysteria2, password: a084933d-0b41-4571-ae0c-7163b8c71ed1, skip-cert-verify: true, sni: de.eyucdn.xyz, tls: false}
   - {name: '🔸ALL: {@IRAN_V2RAY1}💘', server: 206.71.158.40, port: 35000, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi', password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, skip-cert-verify: false, sni: api.kermanshahi.org, tls: false}
   - {name: '🟢14@oneclickvpnkeys', server: iij.mggl.wang, port: 35789, type: hysteria2, password: 79d73809-f5ed-4099-8588-ba77578def1d, skip-cert-verify: true, sni: iij.mggl.wang, tls: false}
-  - {name: '🟢61@oneclickvpnkeys', server: 194.87.196.112, port: 11000, type: hysteria2, password: 15d8d4f4-a050-4034-bb08-3a262dba2c2d, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: '🟢64@oneclickvpnkeys', server: 129.146.169.138, port: 59000, type: hysteria2, password: 15d8d4f4-a050-4034-bb08-3a262dba2c2d, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: '🟢73@oneclickvpnkeys', server: hk1.shiyuandian.shop, port: 24591, type: hysteria2, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: true, sni: hk1.shiyuandian.shop, tls: false}
   - {name: '🟢87@oneclickvpnkeys', server: ea74117f-t6ngg0-thd0h1-1rz5s.hk1.hyhuawei.com, port: 443, type: hysteria2, password: 40e084d6-0316-11f0-90e2-f23c913c8d2b, skip-cert-verify: true, sni: ea74117f-t6ngg0-thd0h1-1rz5s.hk1.hyhuawei.com, tls: false}
@@ -950,7 +952,7 @@ proxies:
   - {name: '🪝81@oneclickvpnkeys', server: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com, port: 443, type: hysteria2, password: 676c67c6-5e73-11ee-9a79-f23c9164ca5d, skip-cert-verify: true, sni: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com, tls: false}
   - {name: '🪝82@oneclickvpnkeys', server: 99d80c6b-t57ls0-t8kd6j-1c9em.hk2.hyhuawei.com, port: 443, type: hysteria2, password: 336501b6-51d2-11ee-a993-f23c9164ca5d, skip-cert-verify: true, sni: 99d80c6b-t57ls0-t8kd6j-1c9em.hk2.hyhuawei.com, tls: false}
   - {name: '🪝83@oneclickvpnkeys', server: 2fe149f1-t53wg0-taksay-1tcuf.hk2.hyhuawei.com, port: 443, type: hysteria2, password: 3952a514-eaa7-11ef-97da-f23c91cfbbc9, skip-cert-verify: true, sni: 2fe149f1-t53wg0-taksay-1tcuf.hk2.hyhuawei.com, tls: false}
-  - {name: '[2025-12-06 01:29:08]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-12-06 02:38:43]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
