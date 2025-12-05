@@ -73,9 +73,14 @@ proxies:
   - {name: 'All-@V2ray_Alpha--7 #1', server: 9edb1f6e-t56dc0-t9lxaa-1glq.la.shifen.uk, port: 443, type: hysteria2, password: df7bed3c-06eb-11f0-8ebc-f23c93141fad, skip-cert-verify: false, sni: 9edb1f6e-t56dc0-t9lxaa-1glq.la.shifen.uk, tls: false}
   - {name: 'All-@V2ray_Alpha--8', server: lsj3.mangshe.xyz, port: 2056, type: hysteria2, password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b, skip-cert-verify: true, sni: lsj3.mangshe.xyz, tls: false}
   - {name: 'All-@V2ray_Alpha--9', server: 40.233.83.110, port: 45979, type: hysteria2, password: cfe032e4-1bc3-454f-9d09-301b0aea08ff, skip-cert-verify: true, sni: www.bing.com, tls: false}
-  - {name: 'FR_speednode_0001', server: 13.39.61.165, port: 22223, type: trojan, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
+  - {name: 'BG_speednode_0002', server: 178.239.123.216, port: 24443, type: vless, network: ws, servername: vless3.datatestvless.click, skip-cert-verify: false, tls: true, udp: true, uuid: aa7f42cc-616f-4550-9a87-4b85bb409121, ws-opts: {headers: {Host: vless3.datatestvless.click}, path: '/?ed=2560'}}
+  - {name: 'CN_speednode_0003', server: oss-ydniddsasa-3.7.baidu.jjuu.shrestart.com, port: 12210, type: trojan, password: 13eb9352-7d04-4523-af91-4d7e84066a95, skip-cert-verify: true, sni: m.ctrip.com, udp: true}
+  - {name: 'CN_speednode_0004', server: oss-ydniddsasa-3.7.baidu.jjuu.shrestart.com, port: 12205, type: trojan, password: 13eb9352-7d04-4523-af91-4d7e84066a95, skip-cert-verify: true, sni: m.ctrip.com, udp: true}
+  - {name: 'CN_speednode_0005', server: oss-ydniddsasa-3.7.baidu.jjuu.shrestart.com, port: 12206, type: trojan, password: 13eb9352-7d04-4523-af91-4d7e84066a95, skip-cert-verify: true, sni: m.ctrip.com, udp: true}
+  - {name: 'CN_speednode_0006', server: oss-ydniddsasa-3.7.baidu.jjuu.shrestart.com, port: 12208, type: trojan, password: 13eb9352-7d04-4523-af91-4d7e84066a95, skip-cert-verify: true, sni: m.ctrip.com, udp: true}
+  - {name: 'DE_speednode_0008', server: 52.57.238.174, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
   - {name: 'France_None_hysteria_71', server: 62.210.10.186, port: 50011, type: hysteria, alpn: [h3], auth-str: dongtaiwang.com, down: 55 Mbps, protocol: udp, skip-cert-verify: true, sni: apple.com, up: 11 Mbps}
-  - {name: 'IR_speednode_0005', server: 151.243.171.156, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: FscaEWx0paNBzL7GWHj4Fll7Xc-KxdhKgTthBAnByWI}, servername: pingless.com, skip-cert-verify: false, tls: true, udp: true, uuid: 669be00c-67b4-4b87-b08f-311c45abced2}
+  - {name: 'GB_speednode_0012', server: 140.238.101.212, port: 443, type: vless, flow: xtls-rprx-vision, reality-opts: {public-key: _dsOu_vxEU7pY3sIeGJxIpR0Ac2KoqIyBor2Bx0CwGA, short-id: d923}, servername: www.bp.com, skip-cert-verify: false, tls: true, udp: true, uuid: 49bfe308-0c0f-4770-bd81-bb2ff8efa03a}
   - {name: 'MCI-IR--@V2rayAlpha-1', server: mumbai-1.nezhasu.com, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: mumbai-1.nezhasu.com, tls: false}
   - {name: 'MCI-IR--@V2rayAlpha-11', server: yn2.nezhasu.com, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: yn2.nezhasu.com, tls: false}
   - {name: 'MCI-IR--@V2rayAlpha-12', server: gy6.nezhasu.com, port: 443, type: hysteria2, password: 2b195c17-5ff5-4b0d-a809-210b92212394, skip-cert-verify: true, sni: gy6.nezhasu.com, tls: false}
@@ -90,9 +95,10 @@ proxies:
   - {name: 'MCI-IR--@V2rayAlpha-6', server: 91.149.238.71, port: 30102, type: hysteria2, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: true, tls: false}
   - {name: 'MCI-IR--@V2rayAlpha-7', server: 135.148.82.248, port: 33333, type: hysteria2, password: 9ec830fd-79da-4706-a964-cb227d7198db, skip-cert-verify: true, tls: false}
   - {name: 'MCI-IR--@V2rayAlpha-8', server: 193.123.76.141, port: 30102, type: hysteria2, password: 338ce171-d764-4610-8fd5-6688b0d321f0, skip-cert-verify: true, sni: du.wish.ml, tls: false}
-  - {name: 'SG_speednode_0006', server: 20.247.137.183, port: 443, type: vless, client-fingerprint: random, network: ws, servername: ak.suoni.nyc.mn, skip-cert-verify: false, tls: true, udp: true, uuid: 78fc9ba9-9c68-4b49-891f-ea9e38bd3b56, ws-opts: {headers: {Host: ak.suoni.nyc.mn}, path: /proxyip=sjc.o00o.ooo}}
-  - {name: 'US_speednode_0008', server: 63.181.49.45, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
-  - {name: 'US_speednode_0012', server: 63.180.93.12, port: 22223, type: trojan, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
+  - {name: 'NL_speednode_0015', server: 161.35.82.57, port: 1080, type: socks5, udp: true}
+  - {name: 'US_speednode_0017', server: usaa.fastlynew.hosting-ip.com, port: 80, type: vless, network: ws, servername: mojhsjd.global.ssl.fastly.net, skip-cert-verify: false, tls: false, udp: true, uuid: 24ad69fa-fee3-44d5-fff0-a46eeb3d56e0, ws-opts: {headers: {Host: mojhsjd.global.ssl.fastly.net}, path: /}}
+  - {name: 'US_speednode_0021', server: 69.84.182.13, port: 443, type: vless, network: ws, servername: fr-1-fr-1.aiopen.sbs, skip-cert-verify: false, tls: true, udp: true, uuid: 04f3ed37-bfd4-46d3-b4eb-e62d1f32b6f9, ws-opts: {headers: {Host: fr-1-fr-1.aiopen.sbs}, path: /kbjc/fr1}}
+  - {name: 'US_speednode_0022', server: serena.ns.cloudflare.com, port: 443, type: vless, network: ws, servername: freudd.info, skip-cert-verify: false, tls: true, udp: true, uuid: f028a8c0-6763-4558-aee3-2563db9d7825, ws-opts: {headers: {Host: freudd.info}, path: /xxvclws}}
   - {name: 'WiFi-@V2ray_Alpha--1', server: 206.71.158.37, port: 35000, type: hysteria2, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, password: Yet-Another-Public-Config-1, skip-cert-verify: true, sni: YAPC-1.afshin.ir, tls: false}
   - {name: '[SS] TR SS-58 | free-nodes', server: 185.39.204.161, port: 33563, type: ss, cipher: chacha20-ietf-poly1305, password: bSlgCoGhApOb55tIMD0zxY}
   - {name: '[SS] 未知 SS-03 | free-nodes', server: 142.111.146.222, port: 8443, type: ss, cipher: chacha20-ietf-poly1305, password: RYZXis51g7ctFPdkX6zA88}
@@ -796,7 +802,6 @@ proxies:
   - {name: '俄罗斯 - 莫斯科 - Kaopu Cloud HK Limited - 1', server: 38.60.223.8, port: 989, type: ss, cipher: aes-256-cfb, country: 🇷🇺RU, delay: 708, password: f8f7aCzcPKbsF8p3}
   - {name: '加拿大 - 多伦多 - Cloudflare, Inc. - 1', server: www.visa.com.sg, port: 2052, type: vless, country: 🏁ZZ, delay: 587, network: ws, udp: true, uuid: d0c1a844-40be-4717-accf-fd4f67980d4a, ws-opts: {path: /, headers: {Host: vlesstest.nchen5022-797.workers.dev}}}
   - {name: '印度 - 班加羅爾 - DigitalOcean, LLC - 1', server: 134.209.147.198, port: 989, type: ss, cipher: aes-256-cfb, country: 🇮🇳IN, delay: 854, password: f8f7aCzcPKbsF8p3}
-  - {name: '德国 - Frankfurt am Main - Amazon Technologies Inc. - 1', server: 52.57.238.174, port: 22222, type: trojan, country: 🇩🇪DE, delay: 954, password: telegram-id-privatevpns, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '德国 - Frankfurt am Main - Amazon Technologies Inc. - 2', server: 52.57.238.174, port: 22223, type: trojan, country: 🇩🇪DE, delay: 1753, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '挪威 - 奥斯陆 - BrainStorm Network, Inc - 1', server: 107.174.114.71, port: 443, type: ss, cipher: chacha20-ietf-poly1305, delay: 665, password: 595HLF3fHUuw0McM51tpvPygSIB1uf4D}
   - {name: '摩尔多瓦 - 基希讷乌 - ''''IT FRUIT'''' S.R.L. - 1', server: 185.153.197.5, port: 989, type: ss, cipher: aes-256-cfb, delay: 1709, password: f8f7aCzcPKbsF8p3}
@@ -944,7 +949,7 @@ proxies:
   - {name: '🪝81@oneclickvpnkeys', server: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com, port: 443, type: hysteria2, password: 676c67c6-5e73-11ee-9a79-f23c9164ca5d, skip-cert-verify: true, sni: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com, tls: false}
   - {name: '🪝82@oneclickvpnkeys', server: 99d80c6b-t57ls0-t8kd6j-1c9em.hk2.hyhuawei.com, port: 443, type: hysteria2, password: 336501b6-51d2-11ee-a993-f23c9164ca5d, skip-cert-verify: true, sni: 99d80c6b-t57ls0-t8kd6j-1c9em.hk2.hyhuawei.com, tls: false}
   - {name: '🪝83@oneclickvpnkeys', server: 2fe149f1-t53wg0-taksay-1tcuf.hk2.hyhuawei.com, port: 443, type: hysteria2, password: 3952a514-eaa7-11ef-97da-f23c91cfbbc9, skip-cert-verify: true, sni: 2fe149f1-t53wg0-taksay-1tcuf.hk2.hyhuawei.com, tls: false}
-  - {name: '[2025-12-05 22:32:03]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-12-05 23:32:23]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
