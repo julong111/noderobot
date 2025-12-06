@@ -799,21 +799,29 @@ proxies:
   - {name: 'tg频道:@ripaojiedian', server: 63.180.254.10, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
   - {name: '✅سرورهایبیشتردرکانال:prrofile_...', server: 193.142.59.41, port: 23899, type: hysteria2, password: c232f411-96b5-4b07-b2f7-66a434725ffb, skip-cert-verify: true, sni: hl01.mistea.top, tls: false}
   - {name: '✅سرورهایبیشتردرکانال:prrofile_... #2', server: adas-polo-ba-mahi.kotlet.org, port: 2083, type: hysteria2, obfs: salamander, obfs-password: ki(rtoko(s-maret-khamneii, password: siEk2SjZFG, skip-cert-verify: true, sni: ghasem.kotlet.org, tls: false}
-  - {name: '中国 - 香港 - Dalian Yichuan Industrial CO - 1', server: 103.149.182.38, port: 8388, type: ss, cipher: chacha20-ietf, delay: 225, password: asd123456, udp: true}
-  - {name: '卢森堡 - Schieren - WorkTitans B.V. - 1', server: 45.12.144.18, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 1482, password: LQyAUItafUmmO3EZZx9UbiX6IGydSBgL}
-  - {name: '德国 - Frankfurt am Main - Amazon.com, Inc. - 1', server: 63.180.118.37, port: 22222, type: trojan, country: 🇺🇸US, delay: 2379, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
-  - {name: '德国 - Frankfurt am Main - Amazon.com, Inc. - 2', server: 63.180.118.37, port: 22223, type: trojan, country: 🇺🇸US, delay: 1114, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
-  - {name: '摩尔多瓦 - 基希讷乌 - ''''IT FRUIT'''' S.R.L. - 1', server: 185.153.197.5, port: 989, type: ss, cipher: aes-256-cfb, country: 🇷🇺RU, delay: 1260, password: f8f7aCzcPKbsF8p3}
+  - {name: '中国 - 台湾 - Chunghwa Telecom Co., Ltd. - 4', server: 36.141.116.183, port: 40380, type: ss, cipher: 2022-blake3-aes-128-gcm, client-fingerprint: chrome, delay: 2497, password: 'ZTc1ZDIxMzg1OGE1ZjYyOQ==:ZjQ3OGIzMzQtZjYxMi00Mg==', tfo: true, udp: true}
+  - {name: '中国 - 香港 - DMIT Cloud Services - 3', server: 183.236.97.191, port: 40382, type: ss, cipher: 2022-blake3-aes-128-gcm, client-fingerprint: chrome, delay: 131, password: 'ZTc1ZDIxMzg1OGE1ZjYyOQ==:MmRjYmJmY2QtOGJjZC00OA==', tfo: true, udp: true}
+  - {name: '卢森堡 - Schieren - WorkTitans B.V. - 1', server: 45.12.144.18, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 523, password: LQyAUItafUmmO3EZZx9UbiX6IGydSBgL}
+  - {name: '德国 - Frankfurt am Main - Amazon.com, Inc. - 1', server: 63.180.118.37, port: 22223, type: trojan, country: 🇺🇸US, delay: 690, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
+  - {name: '德国 - Frankfurt am Main - Amazon.com, Inc. - 2', server: 63.180.118.37, port: 22222, type: trojan, country: 🇺🇸US, delay: 1660, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
+  - {name: '新加坡 - 新加坡 - Greywolf Networks Pte. Ltd. - 1', server: 103.36.91.32, port: 8388, type: ss, cipher: chacha20-ietf, country: 🇭🇰HK, delay: 888, password: asd123456}
   - {name: '新加坡|@ripaojiedian', server: 153.121.44.99, port: 507, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '法国 - 巴黎 - Amazon Technologies Inc. - 1', server: 52.47.134.169, port: 22222, type: trojan, country: 🇫🇷FR, delay: 1826, password: telegram-id-privatevpns, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
-  - {name: '波兰 - 华沙 - H2nexus LTD - 1', server: clr.ducks.tel, port: 17844, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 879, password: '907560230'}
-  - {name: '美国 - Utah - SERV.HOST GROUP LTD - 1', server: clr.ducks.tel, port: 17847, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 1152, password: '907560230'}
-  - {name: '美国 - 波特蘭 - Amazon.com, Inc. - 2', server: cgroup.node5.s.nodelist-airport.com, port: 5003, type: ss, cipher: aes-256-gcm, country: 🇺🇸US, delay: 1610, password: 8f3a835c-8a45-480d-ae35-1deb2c52dcae}
-  - {name: '美国 - 洛杉矶 - DMIT Cloud Services - 3', server: v24.hdacd.com, port: 30824, type: vmess, cipher: auto, alterId: 2, country: 🇭🇰HK, delay: 1128, h2-opts: {}, http-opts: {}, network: tcp, skip-cert-verify: true, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484}
+  - {name: '美国 - 洛杉矶 - Datacamp Limited - 1', server: 82.198.246.97, port: 180, type: vmess, cipher: auto, alterId: 0, delay: 505, skip-cert-verify: true, tls: false, udp: true, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552}
   - {name: '美国|@ripaojiedian', server: 153.121.39.240, port: 4054, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: false, sni: www.nintendogames.net}
-  - {name: '越南 - Hải Dương - FASTLY - 1', server: 103.186.154.231, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1228, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
-  - {name: '越南 - Hải Dương - FASTLY - 2', server: 103.186.154.207, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 2985, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
-  - {name: '越南 - Hải Dương - FASTLY - 3', server: 103.186.154.251, port: 38388, type: ss, cipher: aes-256-cfb, delay: 993, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: '荷兰 - 阿姆斯特丹 - Matteo Martelloni trading as DELUXHOST - 1', server: switcher-nick-croquet.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 1561, password: 9tqhMdIrTkgQ46PvhyAtMH}
+  - {name: '越南 - Hải Dương - FASTLY - 1', server: 103.186.155.124, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 900, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 10', server: 103.186.154.19, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁 ZZ, delay: 1084, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 11', server: 103.186.154.33, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁 ZZ, delay: 1025, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 12', server: 103.186.154.252, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 988, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 2', server: 103.186.154.231, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 880, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 3', server: 103.186.154.220, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 917, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 4', server: 103.186.154.155, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 916, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 5', server: 103.186.155.13, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 889, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 6', server: 103.186.154.179, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1863, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 7', server: 103.186.154.207, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 1338, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 8', server: 103.186.155.122, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 2963, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.154.140, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 1270, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '韩国 - Gwanak-gu - SK Broadband Co Ltd - 1', server: 218.237.185.230, port: 4652, type: ss, cipher: aes-256-cfb, country: 🇰🇷KR, delay: 1144, password: qwerREWQ@@}
   - {name: '香港|@ripaojiedian', server: v10.hdacd.com, port: '30807', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484}
   - {name: '🇩🇪 - DE - @freeOnlineVPN #1', server: 77.90.41.197, port: 35000, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi', password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, skip-cert-verify: false, sni: api.kermanshahi.org, tls: false}
   - {name: '🇩🇪@V2RayyNGvpn🇩🇪همه اوپراتور ه...', server: 91.99.225.11, port: 443, type: hysteria2, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 2cUfzeGOZG, skip-cert-verify: true, sni: refersion.com, tls: false}
@@ -928,7 +936,7 @@ proxies:
   - {name: '🪝81@oneclickvpnkeys', server: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com, port: 443, type: hysteria2, password: 676c67c6-5e73-11ee-9a79-f23c9164ca5d, skip-cert-verify: true, sni: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com, tls: false}
   - {name: '🪝82@oneclickvpnkeys', server: 99d80c6b-t57ls0-t8kd6j-1c9em.hk2.hyhuawei.com, port: 443, type: hysteria2, password: 336501b6-51d2-11ee-a993-f23c9164ca5d, skip-cert-verify: true, sni: 99d80c6b-t57ls0-t8kd6j-1c9em.hk2.hyhuawei.com, tls: false}
   - {name: '🪝83@oneclickvpnkeys', server: 2fe149f1-t53wg0-taksay-1tcuf.hk2.hyhuawei.com, port: 443, type: hysteria2, password: 3952a514-eaa7-11ef-97da-f23c91cfbbc9, skip-cert-verify: true, sni: 2fe149f1-t53wg0-taksay-1tcuf.hk2.hyhuawei.com, tls: false}
-  - {name: '[2025-12-06 21:33:16]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-12-07 00:33:25]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
