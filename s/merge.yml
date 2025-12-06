@@ -806,13 +806,21 @@ proxies:
   - {name: '德国 - Frankfurt am Main - Amazon Technologies Inc. - 2', server: 52.57.238.174, port: 22223, type: trojan, country: 🇩🇪DE, delay: 1753, password: telegram-id-directvpn, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '挪威 - 奥斯陆 - BrainStorm Network, Inc - 1', server: 107.174.114.71, port: 443, type: ss, cipher: chacha20-ietf-poly1305, delay: 665, password: 595HLF3fHUuw0McM51tpvPygSIB1uf4D}
   - {name: '摩尔多瓦 - 基希讷乌 - ''''IT FRUIT'''' S.R.L. - 1', server: 185.153.197.5, port: 989, type: ss, cipher: aes-256-cfb, delay: 1709, password: f8f7aCzcPKbsF8p3}
-  - {name: '新加坡2|@ripaojiedian', server: 160.16.68.250, port: 1596, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '新加坡2|@ripaojiedian', server: 160.16.107.37, port: 507, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '新加坡3|@ripaojiedian', server: 54.199.213.179, port: 3579, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
+  - {name: '新加坡|@ripaojiedian', server: 153.121.44.99, port: 507, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '日本 - 东京 - Amazon Technologies Inc. - 1', server: 5vpif-g05.jp06-7c5a-vm0.entry.fr0307a.art, port: 28787, type: vmess, cipher: auto, alterId: 1, delay: 1341, h2-opts: {}, http-opts: {}, network: tcp, tls: true, uuid: b0e1254b-6ac6-3d12-bd6e-bd719eaab486}
+  - {name: '日本2|@ripaojiedian', server: 160.16.87.174, port: 3169, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本3|@ripaojiedian', server: 160.16.72.33, port: 3093, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: false, sni: www.nintendogames.net}
+  - {name: '日本|@ripaojiedian', server: jp.baidu.com, port: 4012, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
   - {name: '法国 - 巴黎 - Amazon Technologies Inc. - 1', server: 13.36.44.112, port: 22222, type: trojan, country: 🇫🇷FR, delay: 2069, password: telegram-id-privatevpns, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '法国 - 巴黎 - Amazon.com, Inc. - 2', server: 15.188.133.222, port: 22222, type: trojan, country: 🇫🇷FR, delay: 2090, password: telegram-id-privatevpns, skip-cert-verify: true, sni: trojan.burgerip.co.uk, udp: true}
   - {name: '立陶宛 - 维尔纽斯 - WorkTitans B.V. - 1', server: 45.12.136.170, port: 443, type: ss, cipher: chacha20-ietf-poly1305, country: 🇺🇸US, delay: 522, password: l668XHPejoSNNuD66BYzyehaCpZexiF7}
   - {name: '美国 - 洛杉矶 - Dedicated.com - 1', server: 104.192.226.106, port: 989, type: ss, cipher: aes-256-cfb, country: 🇺🇸US, delay: 418, password: f8f7aCzcPKbsF8p3}
   - {name: '美国 - 聖荷西 - Cloudflare, Inc. - 2', server: www.speedtest.net, port: 8443, type: vless, alpn: [http/1.1], client-fingerprint: randomized, delay: 810, network: ws, servername: niki-a5g.pages.dev, tls: true, uuid: c54a5878-ca9e-429b-856e-14c04f2dee91, ws-opts: {path: /r6my2qnblj2cbh5e/mzquodgunjmumtyw, headers: {Host: niki-a5g.pages.dev}, early-data-header-name: Sec-WebSocket-Protocol, max-early-data: 2560}}
+  - {name: '美国2|@ripaojiedian', server: 160.16.116.227, port: 2890, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: true, sni: www.nintendogames.net}
+  - {name: '美国3|@ripaojiedian', server: 18.163.210.14, port: 1112, type: trojan, network: tcp, password: BxceQaOe, skip-cert-verify: true, sni: t.me%2Fripaojiedian}
+  - {name: '美国|@ripaojiedian', server: 153.121.39.240, port: 4054, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '荷兰 - 阿姆斯特丹 - Greenhost BV - 1', server: 82.38.31.218, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, country: 🇬🇧GB, delay: 1088, password: k1dBOmOB4oqi7Ump37a1bQ}
   - {name: '越南 - Hải Dương - FASTLY - 1', server: 103.186.154.182, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 871, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 10', server: 103.186.155.52, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 1306, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
@@ -820,7 +828,6 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 12', server: 103.186.155.142, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 1110, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 13', server: 103.186.154.208, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 2878, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 14', server: 103.186.155.143, port: 38388, type: ss, cipher: aes-256-cfb, delay: 1090, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
-  - {name: '越南 - Hải Dương - FASTLY - 15', server: 103.186.155.138, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 809, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 16', server: 103.186.155.48, port: 38388, type: ss, cipher: aes-256-cfb, delay: 1281, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 17', server: 103.186.155.133, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁 ZZ, delay: 833, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 18', server: 103.186.155.20, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁 ZZ, delay: 2181, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
@@ -835,21 +842,21 @@ proxies:
   - {name: '越南 - Hải Dương - FASTLY - 7', server: 103.186.154.159, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 2160, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 8', server: 103.186.154.219, port: 38388, type: ss, cipher: aes-256-cfb, country: 🇻🇳VN, delay: 843, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '越南 - Hải Dương - FASTLY - 9', server: 103.186.155.183, port: 38388, type: ss, cipher: aes-256-cfb, country: 🏁ZZ, delay: 2031, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
-  - {name: '香港6|@ripaojiedian', server: fe3a9432-sv0xs0-sywkhi-1o4kv.hk3.p5pv.com, port: '80', type: vmess, cipher: auto, alterId: 2, network: ws, servername: '', skip-cert-verify: false, tls: false, uuid: 87b31a02-172e-11ee-a11f-f23c913c8d2b, ws-opts: {headers: {Host: fe3a9432-sv0xs0-sywkhi-1o4kv.hk3.p5pv.com}, path: /}}
+  - {name: '香港3|@ripaojiedian', server: 58.152.110.154, port: 443, type: trojan, network: tcp, password: 79314e99f0a473fe86efc7827942ad00, skip-cert-verify: false, sni: www.nintendogames.net}
   - {name: '香港|@ripaojiedian', server: v10.hdacd.com, port: '30807', type: vmess, cipher: auto, alterId: 2, network: tcp, servername: '', tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484}
   - {name: '🇩🇪 - DE - @freeOnlineVPN #4', server: 77.90.41.197, port: 35000, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi', password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, skip-cert-verify: false, sni: api.kermanshahi.org, tls: false}
   - {name: '🇩🇪@V2RayyNGvpn🇩🇪همه اوپراتور ه...', server: 91.99.225.11, port: 443, type: hysteria2, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: 2cUfzeGOZG, skip-cert-verify: true, sni: refersion.com, tls: false}
   - {name: '🇩🇪@V2RayyNGvpn🇩🇪همه اوپراتور ه... #15', server: 91.99.225.11, port: 20820, type: hysteria2, obfs: salamander, obfs-password: Jsbdksj@V2RayyNGvpn$Miracle, password: VaKHp6TQN6, skip-cert-verify: true, sni: refersion.com, tls: false}
   - {name: '🇭🇰 香港2|@ripaojiedian', server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {host: newroot2v1.dsjsapp.com, mode: websocket, mux: true, path: /zksuapgx, skip-cert-verify: false, tls: true}}
   - {name: '🇭🇰 香港|@ripaojiedian', server: v10.hdacd.com, port: 30807, type: vmess, cipher: auto, alterId: 2, skip-cert-verify: false, tls: false, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484}
+  - {name: '🇯🇵 日本4|@ripaojiedian', server: 172.237.6.53, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {host: 'a4ebd80:164401', mode: tls}}
   - {name: '🇱🇺@V2RayyNGvpn🇱🇺همه اوپراتور ه...', server: 83.147.253.96, port: 2053, type: hysteria2, obfs: salamander, obfs-password: MiracleV2RayyNGvpnfreeconf, password: 6fpNfkUmvR, skip-cert-verify: true, sni: webservice-admin.tgju.org, tls: false}
   - {name: '🇳🇱@FreakConfig', server: genshin-v4-oracle-amd.damaoooo.com, port: 443, type: hysteria2, password: 2408982813-20241210, skip-cert-verify: false, tls: false}
   - {name: '🇳🇱@FreakConfig #1', server: 206.71.158.23, port: 45000, type: hysteria2, obfs: salamander, obfs-password: Telegram-->@Ln2Ray, password: Telegram-->@Ln2Ray, skip-cert-verify: true, sni: gavazn.55994421.xyz, tls: false}
   - {name: '🇳🇱@FreakConfig #2', server: gavazn.lnmarketplace.net, port: 45000, type: hysteria2, obfs: salamander, obfs-password: Telegram-->@Ln2Ray, password: Telegram-->@Ln2Ray, skip-cert-verify: true, sni: gavazn.55994421.xyz, tls: false}
   - {name: '🇷🇺 - RU - @freeOnlineVPN', server: 194.87.196.112, port: 11000, type: hysteria2, password: 15d8d4f4-a050-4034-bb08-3a262dba2c2d, skip-cert-verify: true, sni: www.bing.com, tls: false}
   - {name: '🇸🇪 - SE - @freeOnlineVPN #1', server: dd.openaccessnode.com, port: 989, type: hysteria2, obfs: salamander, obfs-password: '@JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi', password: 77238c49bd20e407f05e0c073ad08fdb, skip-cert-verify: true, sni: dd.ircybersec.org, tls: false}
-  - {name: '🇺🇸 美国4|@ripaojiedian', server: 67.209.177.69, port: 26351, type: ss, cipher: aes-256-gcm, password: 57dtozbdQRZT9MaL}
-  - {name: '🇻🇳 越南|@ripaojiedian', server: 103.186.154.174, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
+  - {name: '🇻🇳 越南|@ripaojiedian', server: 103.186.155.138, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV}
   - {name: '🎶35@oneclickvpnkeys', server: 195.154.206.231, port: 33880, type: hysteria2, password: dongtaiwang.com, skip-cert-verify: true, sni: apple.com, tls: false}
   - {name: '🎶94@oneclickvpnkeys', server: a033d21f-t6ngg0-tcinla-hrtf.us.hyhuawei.com, port: 443, type: hysteria2, password: 0da8651e-e1f6-11ec-bd7c-f23c913c8d2b, skip-cert-verify: true, sni: a033d21f-t6ngg0-tcinla-hrtf.us.hyhuawei.com, tls: false}
   - {name: '🎶95@oneclickvpnkeys', server: d2ab175b-t55r40-tgzvop-hns7.us.hyhuawei.com, port: 443, type: hysteria2, password: 6857f1bc-f27b-11ea-87ad-f23c913c8d2b, skip-cert-verify: true, sni: d2ab175b-t55r40-tgzvop-hns7.us.hyhuawei.com, tls: false}
@@ -950,7 +957,7 @@ proxies:
   - {name: '🪝81@oneclickvpnkeys', server: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com, port: 443, type: hysteria2, password: 676c67c6-5e73-11ee-9a79-f23c9164ca5d, skip-cert-verify: true, sni: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com, tls: false}
   - {name: '🪝82@oneclickvpnkeys', server: 99d80c6b-t57ls0-t8kd6j-1c9em.hk2.hyhuawei.com, port: 443, type: hysteria2, password: 336501b6-51d2-11ee-a993-f23c9164ca5d, skip-cert-verify: true, sni: 99d80c6b-t57ls0-t8kd6j-1c9em.hk2.hyhuawei.com, tls: false}
   - {name: '🪝83@oneclickvpnkeys', server: 2fe149f1-t53wg0-taksay-1tcuf.hk2.hyhuawei.com, port: 443, type: hysteria2, password: 3952a514-eaa7-11ef-97da-f23c91cfbbc9, skip-cert-verify: true, sni: 2fe149f1-t53wg0-taksay-1tcuf.hk2.hyhuawei.com, tls: false}
-  - {name: '[2025-12-06 05:26:58]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
+  - {name: '[2025-12-06 10:04:30]-Timestamp', type: ss, server: 127.0.0.1, port: 1, cipher: none, password: ' '}
 proxy-groups:
   - name: UpdateTimestamp
     include-all: true
