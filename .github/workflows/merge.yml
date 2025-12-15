@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: '5 * * * *'
   push:
+    branches:
+      - main
     paths:
       - '.github/workflows/merge.yml'
       - 'src/freenodes-clashfree-ss-cleaner-sys.py'
