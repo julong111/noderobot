@@ -18,8 +18,8 @@ jobs:
     steps:
       - name: 迁出代码
         uses: actions/checkout@v4
-        with:
-          ref: dev
+        # with:
+        #   ref: main
 
       - name: 设置时区
         run: sudo timedatectl set-timezone 'Asia/Shanghai'
