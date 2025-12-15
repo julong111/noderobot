@@ -5,7 +5,7 @@ on:
     - cron: '5 * * * *'
   push:
     branches:
-      - dev
+      - main
     paths:
       - '.github/workflows/merge.yml'
       - 'src/freenodes-clashfree-ss-cleaner-sys.py'
