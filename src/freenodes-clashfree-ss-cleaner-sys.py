@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
+import os
 import sys
 import requests
 from pathlib import Path
@@ -158,13 +159,11 @@ def process_config_lines(lines: list[str]) -> list[str]:
 
     # 查找并重置 rules 区域
     final_lines = []
-    rules_section_found = False
     in_rules_section = False
     for line in lines_after_group_removal:
         # 使用 `strip()` 来处理行首可能存在的空格
         stripped_line = line.strip()
         if stripped_line == 'rules:':
-            rules_section_found = True
             in_rules_section = True
             final_lines.append(line)  # 保留 'rules:' 这一行
             # 添加新的、固定的规则列表
@@ -194,28 +193,48 @@ def process_config_lines(lines: list[str]) -> list[str]:
     return final_lines
 
 
-def download_config_file(url: str, destination_path: Path) -> bool:
-    """从指定的URL下载文件并保存到本地。"""
-    print(f"开始从 {url} 下载配置文件...")
-    # 设置合理的超时时间，防止无限期等待
-    timeout_seconds = 15
+def find_latest_config_on_github(repo: str, token: str | None = None) -> dict | None:
+    # 通过GitHub API查找仓库中最新的clash配置文件
+    api_url = f"https://api.github.com/repos/{repo}/contents/"
+    print(f"正在查询GitHub API: {api_url}")
+
+    headers = {'Accept': 'application/vnd.github.v3+json'}
+    if token:
+        print("找到 GITHUB_TOKEN，将使用认证模式访问 API。")
+        headers['Authorization'] = f"token {token}"
+    else:
+        print("警告: 未找到 GITHUB_TOKEN，将使用匿名模式访问 API，可能会遇到速率限制。")
+
     try:
-        response = requests.get(url, timeout=timeout_seconds)
-        # 如果HTTP响应状态码不是200-299，则会引发HTTPError异常
+        response = requests.get(api_url, headers=headers, timeout=15)
         response.raise_for_status()
+        files = response.json()
 
-        content = response.content
-        print(f"下载成功，文件大小: {len(content)} 字节。")
+        # 查找所有符合 clash<date>.yml 格式的文件
+        config_files = []
+        for file_info in files:
+            if file_info['type'] == 'file' and re.match(r'clash\d{8,}\.yml', file_info['name']):
+                config_files.append({
+                    'name': file_info['name'],
+                    'sha': file_info['sha'],
+                    'download_url': file_info['download_url']
+                })
 
-        destination_path.write_bytes(content)
-        print(f"配置文件已保存到: {destination_path}")
-        return True
+        if not config_files:
+            print("错误: 在仓库中未找到格式为 'clash<date>.yml' 的配置文件。", file=sys.stderr)
+            return None
+
+        # 按文件名（日期）降序排序，获取最新的一个
+        latest_config = sorted(config_files, key=lambda x: x['name'], reverse=True)[0]
+        print(f"找到最新配置文件: {latest_config['name']} (SHA: {latest_config['sha'][:7]})")
+        return latest_config
+
     except requests.exceptions.RequestException as e:
-        print(f"错误: 下载文件时发生网络错误: {e}", file=sys.stderr)
-        return False
+        print(f"错误: 查询GitHub API时发生网络错误: {e}", file=sys.stderr)
+        return None
     except Exception as e:
-        print(f"错误: 处理下载或保存文件时发生未知错误: {e}", file=sys.stderr)
-        return False
+        print(f"错误: 解析API响应时发生未知错误: {e}", file=sys.stderr)
+        return None
 
 
 if __name__ == '__main__':
@@ -232,9 +251,11 @@ if __name__ == '__main__':
 
     output_dir = project_root / output_dir_name
     output_path = output_dir / output_filename
+    sha_file_path = output_dir / f"{output_filename}.sha"
 
     # --- 模式选择 ---
     source_lines = []
+    update_sha_on_success = False
 
     # 检查是否为开发模式
     if len(sys.argv) > 1 and sys.argv[1] == 'dev':
@@ -247,17 +268,38 @@ if __name__ == '__main__':
         source_lines = dev_config_path.read_text(encoding='utf-8').splitlines()
     else:
         print("--- 运行在生产模式 ---")
-        CONFIG_URL = 'https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/clash.yml'
-        # 在生产模式下，直接下载内容到内存
-        print(f"开始从 {CONFIG_URL} 下载配置文件...")
+        # 1. 查找最新的配置文件信息
+        github_token = os.getenv('REPO_API_TOKEN')
+        latest_config = find_latest_config_on_github('free-nodes/clashfree', token=github_token)
+        if not latest_config:
+            sys.exit(1)
+
+        # 2. 检查文件是否已更新
+        new_sha = latest_config['sha']
+        old_sha = ""
+        if sha_file_path.is_file():
+            old_sha = sha_file_path.read_text(encoding='utf-8').strip()
+
+        if new_sha == old_sha:
+            print(f"配置文件未更新 (SHA: {new_sha[:7]})。无需操作，脚本退出。")
+            sys.exit(0)
+
+        print(f"检测到配置文件更新: {old_sha[:7] if old_sha else 'None'} -> {new_sha[:7]}")
+
+        # 3. 下载新文件
+        download_url = latest_config['download_url']
+        print(f"开始从 {download_url} 下载新配置文件...")
         try:
-            response = requests.get(CONFIG_URL, timeout=15)
+            response = requests.get(download_url, timeout=15)
             response.raise_for_status()
             print(f"下载成功，文件大小: {len(response.content)} 字节。")
             source_lines = response.text.splitlines()
         except requests.exceptions.RequestException as e:
             print(f"错误: 下载文件时发生网络错误: {e}", file=sys.stderr)
             sys.exit(1)
+        
+        # 只有在所有处理成功后才更新SHA
+        update_sha_on_success = True
 
     # --- 处理与输出 ---
     if source_lines:
@@ -275,3 +317,8 @@ if __name__ == '__main__':
         output_dir.mkdir(parents=True, exist_ok=True)
         output_path.write_text('\n'.join(cleaned_lines) + '\n', encoding='utf-8')
         print(f"\n清理完成。更新后的配置已写入 '{output_path}'")
+
+        # 如果是在生产模式下成功处理，则更新SHA文件
+        if update_sha_on_success:
+            sha_file_path.write_text(new_sha, encoding='utf-8')
+            print(f"已更新SHA记录文件: {sha_file_path}")
