@@ -81,17 +81,17 @@ jobs:
             **Time**: `${{ steps.get_time.outputs.commit_time }}`
             **消息内容**: `${{ github.repository }} - 节点列表已更新`
 
-      - name: 发送失败通知到 Telegram
-        if: steps.check_changes.outputs.has_changes == 'false'
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          format: markdown
-          message: |
-            ❌ *任务失败*
-            **Time**: `${{ steps.get_time.outputs.commit_time }}`
-            **消息内容**: `${{ github.repository }} - 没有更新的节点`
+      # - name: 发送失败通知到 Telegram
+      #   if: steps.check_changes.outputs.has_changes == 'false'
+      #   uses: appleboy/telegram-action@master
+      #   with:
+      #     to: ${{ secrets.TELEGRAM_CHAT_ID }}
+      #     token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      #     format: markdown
+      #     message: |
+      #       ❌ *任务失败*
+      #       **Time**: `${{ steps.get_time.outputs.commit_time }}`
+      #       **消息内容**: `${{ github.repository }} - 没有更新的节点`
 
       - name: 发送异常通知到 Telegram
         if: failure()
