@@ -269,7 +269,7 @@ if __name__ == '__main__':
     else:
         print("--- 运行在生产模式 ---")
         # 1. 查找最新的配置文件信息
-        github_token = os.getenv('GITHUB_TOKEN')
+        github_token = os.getenv('REPO_API_TOKEN')
         latest_config = find_latest_config_on_github('free-nodes/clashfree', token=github_token)
         if not latest_config:
             sys.exit(1)
