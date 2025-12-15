@@ -34,6 +34,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 执行 - Cleaner - freenodes clashfree
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python ./src/freenodes-clashfree-ss-cleaner-sys.py
 
       - name: 执行 - Merge
