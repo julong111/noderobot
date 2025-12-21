@@ -28,50 +28,73 @@ def check_content_changes(new_proxies: list, output_path: Path, manual_file_path
     """
     检查新生成的代理列表与现有文件是否一致。
     指纹仅基于 (server, port)，忽略名称、密码等其他字段。
-    对比逻辑：(新抓取节点 + 手动节点) vs (旧文件节点 - 时间戳)。
+    对比逻辑：(新抓取节点) vs (旧文件中的自动节点)。
+    旧文件中的自动节点通过排除手动节点(名称含'|M|')和时间戳节点来识别。
+    在对比前，会从新抓取节点中排除与手动节点IP冲突的节点。
     返回 True 表示有变化（或无旧文件），需要更新；False 表示无变化。
     """
     if not output_path.is_file():
         logger.info("未找到现有输出文件，将创建新文件。")
         return True
 
-    logger.info("检查与现有配置文件的差异")
+    logger.info("检查自动抓取节点与现有配置文件的差异")
     try:
         # 1. 加载旧文件
+        logger.info("从merge中加载上一次的节点")
         old_config = load_yaml_file(output_path, exit_on_error=False)
         old_proxies = old_config.get('proxies', []) if old_config else []
 
-        # 2. 加载手动节点 (为了构建完整的目标集合)
+        # 2. 加载手动节点，以排除IP冲突
+        logger.info("从自动抓取的节点中移除手工节点")
         manual_proxies = []
         if manual_file_path.is_file():
             manual_data = load_yaml_file(manual_file_path, exit_on_error=False)
             if manual_data and isinstance(manual_data, dict):
                 manual_proxies = manual_data.get('proxies', [])
+        manual_servers = {p.get('server') for p in manual_proxies if p.get('server')}
 
         # 定义简化指纹: (server, port)
         def get_fingerprint(p):
             # 强制转换为字符串以避免类型不匹配 (如 443 vs "443", str vs SingleQuotedString)
             return (str(p.get('server')), str(p.get('port')))
 
-        # 3. 构建目标指纹集合 (新抓取 + 手动)
-        target_set = {get_fingerprint(p) for p in new_proxies if p.get('server')}
-        for p in manual_proxies:
-            if p.get('server'):
-                target_set.add(get_fingerprint(p))
+        # 3. 构建新抓取节点的指纹集合 (排除与手动节点IP冲突的节点)
+        # 这一步是为了确保与后续 merge_manual_nodes 的行为一致
+        new_set = {
+            get_fingerprint(p)
+            for p in new_proxies
+            if p.get('server') and p.get('server') not in manual_servers
+        }
 
-        # 4. 构建现有指纹集合 (旧文件 - 时间戳)
+        # 4. 构建旧文件中自动抓取节点的指纹集合
+        # 从旧文件中移除手动节点（含'|M|'）和时间戳节点
         current_set = {
             get_fingerprint(p)
             for p in old_proxies
-            if '-Timestamp' not in p.get('name', '') and p.get('server')
+            if p.get('server') and
+               '|M|' not in p.get('name', '') and
+               '-Timestamp' not in p.get('name', '')
         }
 
-        # 5. 集合对比 (无需排序)
-        if target_set == current_set:
-            logger.info("代理列表(IP/Port)与现有文件一致，无需更新。")
+        # 5. 集合对比
+        if new_set == current_set:
+            logger.info("自动抓取的代理列表(IP/Port)与现有文件一致，无需更新。")
             return False
-        
+
+        # 找出并记录差异
+        added_proxies = new_set - current_set
+        removed_proxies = current_set - new_set
+
         logger.info("代理列表有更新，将继续生成新文件。")
+        if added_proxies:
+            logger.info(f"  - 新增节点 ({len(added_proxies)}):")
+            for ip, port in sorted(list(added_proxies)):
+                logger.info(f"    - {ip}:{port}")
+        if removed_proxies:
+            logger.info(f"  - 移除节点 ({len(removed_proxies)}):")
+            for ip, port in sorted(list(removed_proxies)):
+                logger.info(f"    - {ip}:{port}")
+
         return True
     except Exception as e:
         logger.warning(f"差异检测过程中出错: {e}，将默认视为有更新。")
@@ -133,6 +156,13 @@ def rename_proxies_by_country(proxies: list, db_path: Path, debug: bool = False)
     country_counter = {}
     
     for proxy in proxies:
+        original_name = proxy.get('name', '')
+        # 如果是手动节点（名称包含|M|），则跳过重命名
+        if '|M|' in str(original_name):
+            if debug:
+                logger.debug(f"跳过对 手动节点 的重命名: {original_name}")
+            continue
+
         server = proxy.get('server')
         if not server:
             continue
@@ -142,8 +172,6 @@ def rename_proxies_by_country(proxies: list, db_path: Path, debug: bool = False)
         # 统计计数，用于生成序号
         count = country_counter.get(code, 0) + 1
         country_counter[code] = count
-        
-        original_name = proxy.get('name')
         flag = get_flag(code)
         if code == 'XX':
             new_name = f"{flag} {code} {count:02d}"
@@ -272,7 +300,7 @@ def main(args):
     # --- 检查与旧文件是否有变化 ---
     if not args.skipcheck:
         if not check_content_changes(unique_proxies, output_path, config.MANUAL_NODES_FILE):
-            logger.info("操作提前结束")
+            logger.info("检测到自动抓取节点无变化，操作提前结束。")
             sys.exit(0)
 
     # --- 更新节点服务器统计 ---
@@ -280,7 +308,7 @@ def main(args):
     # 提取所有有效节点的 server 字段
     server_ips = [p.get('server') for p in unique_proxies if p.get('server')]
     stats = csvtool.read_stats(config.NODE_STATS_FILE)
-    if not args.dev:
+    if not args.skipcount:
         csvtool.update_stats(stats, server_ips)
         csvtool.write_stats(config.NODE_STATS_FILE, stats)
         logger.info("节点服务器统计更新完成。")
@@ -319,6 +347,8 @@ if __name__ == '__main__':
                         help='启用开发者模式，打印更详细的日志信息（例如重复的代理）。')
     parser.add_argument('--skipcheck', action='store_true',
                         help='跳过旧文件对比检查')
+    parser.add_argument('--skipcount', action='store_true',
+                        help='update服务器计数')
 
     parsed_args = parser.parse_args()
     main(parsed_args)
