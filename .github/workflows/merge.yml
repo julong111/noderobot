@@ -1,0 +1,135 @@
+name: Clean and Merge
+
+on:
+  schedule:
+    - cron: '5 * * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/merge.yml'
+      - 'src/cleaner.py'
+      - 'src/merge.py'
+      - 'config/templates/clash/merge-template.yml'
+      - 'config/ip-block-list.txt'
+      - 'config/sources.json'
+      - 'config/manual_nodes.yml'
+  # 这允许用户通过 GitHub 界面或 API 手动运行此 workflow
+  workflow_dispatch:
+    # 可以在这里定义输入参数，让用户在触发时选择或输入值 (可选)
+    inputs:
+      logLevel:
+        description: '日志级别 (Log level)'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      run_v2rayn_conversion:
+        description: '执行v2rayN转换'
+        required: false
+        default: false
+        type: boolean
+      # environment:
+      #   description: '运行环境 (Environment to run on)'
+      #   required: true
+      #   default: 'main'
+      #   type: environment # 这会下拉显示 GitHub Environments
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 迁出代码
+        uses: actions/checkout@v4
+        # with:
+        #   ref: main
+
+      - name: 设置时区
+        run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 执行生成和合并脚本
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python ./src/cleaner.py
+          python ./src/merge.py
+
+      - name: 暂存所有文件并检查变动
+        id: check_all_changes
+        run: |
+          # 将所有可能被修改的文件添加到暂存区
+          git add .
+
+          # 检查暂存区是否有任何变动，并设置总体输出
+          if git diff --staged --quiet; then
+            echo "所有文件均无变动，无需提交。"
+            echo "any_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "检测到文件更新，准备提交。"
+            echo "any_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 执行 - Clash to v2rayN
+        if: inputs.run_v2rayn_conversion == true
+        run: |
+          python ./src/clash_to_v2rayn.py --input ./s/merge.yml --output ./s/v2rayn.txt
+          git add s/v2rayn.txt
+
+      - name: 获取当前时间
+        id: get_time
+        run: echo "commit_time=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+
+      - name: 提交更改
+        if: steps.check_all_changes.outputs.any_changes == 'true'
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git commit -m "Update: ${{ steps.get_time.outputs.commit_time }}"
+          git push origin main
+
+      - name: 发送成功通知到 Telegram
+        if: steps.check_all_changes.outputs.any_changes == 'true'
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          message: |
+            ✅ *任务成功*
+            **Time**: `${{ steps.get_time.outputs.commit_time }}`
+            **消息内容**: `${{ github.repository }} - 节点列表已更新`
+
+      # - name: 发送失败通知到 Telegram
+      #   if: steps.check_changes.outputs.has_changes == 'false'
+      #   uses: appleboy/telegram-action@master
+      #   with:
+      #     to: ${{ secrets.TELEGRAM_CHAT_ID }}
+      #     token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      #     format: markdown
+      #     message: |
+      #       ❌ *任务失败*
+      #       **Time**: `${{ steps.get_time.outputs.commit_time }}`
+      #       **消息内容**: `${{ github.repository }} - 没有更新的节点`
+
+      - name: 发送异常通知到 Telegram
+        if: failure()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          message: |
+            ⚠️ *任务异常*
+            **Time**: `${{ steps.get_time.outputs.commit_time }}`
+            **消息内容**: `${{ github.repository }} 任务发生异常，请检查`
