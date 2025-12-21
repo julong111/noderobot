@@ -89,11 +89,11 @@ def check_content_changes(new_proxies: list, output_path: Path, manual_file_path
         if added_proxies:
             logger.info(f"  - 新增节点 ({len(added_proxies)}):")
             for ip, port in sorted(list(added_proxies)):
-                logger.info(f"    - {ip}:{port}")
+                logger.debug(f"    - {ip}:{port}")
         if removed_proxies:
             logger.info(f"  - 移除节点 ({len(removed_proxies)}):")
             for ip, port in sorted(list(removed_proxies)):
-                logger.info(f"    - {ip}:{port}")
+                logger.debug(f"    - {ip}:{port}")
 
         return True
     except Exception as e:
@@ -270,7 +270,7 @@ def main(args):
     
     if not has_updates:
         if args.dev:
-            logger.info("开发者模式：忽略来源更新检测，继续执行。")
+            logger.debug("开发者模式：忽略来源更新检测，继续执行。")
         else:
             logger.info("所有来源均无更新，程序退出。")
             sys.exit(0)
