@@ -199,6 +199,7 @@ Thumbs.db
 
 GEMINI.md
 README.md
+.aiexclude
 
 .idea/
 *.mmdb
