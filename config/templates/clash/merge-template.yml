@@ -64,7 +64,7 @@ rule-providers:
     format: text
     type: http
   JuDirect:
-    url: https://raw.githubusercontent.com/julong111/noderobot/refs/heads/main/config/JuDirect.list
+    url: https://raw.githubusercontent.com/julong111/noderobot/refs/heads/main/config/templates/clash/JuDirect.list
     path: ./ruleset/JuDirect.list
     behavior: classical
     interval: 86400
