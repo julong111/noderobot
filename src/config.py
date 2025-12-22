@@ -17,7 +17,7 @@ IP_BLOCKLIST_FILE = CONFIG_ROOT / 'ip-block-list.txt'
 MANUAL_NODES_FILE = CONFIG_ROOT / 'manual_nodes.yml'
 MERGE_TEMPLATE_FILE = CONFIG_ROOT / 'templates' / 'clash' / 'merge-template.yml'
 MERGE_OUTPUT_FILE = OUTPUT_DIR / 'merge.yml'
-MOBILE_OUTPUT_FILE = OUTPUT_DIR / 'mobile.yml'
+
 ORIGINAL_DATA_DIR = OUTPUT_DIR / 'original'
 GEOIP_DB_FILE = CONFIG_ROOT / 'Country.mmdb'
 GEOIP_CITY_DB_FILE = CONFIG_ROOT / 'City.mmdb'

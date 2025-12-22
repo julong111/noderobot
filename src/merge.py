@@ -6,7 +6,6 @@ from datetime import datetime
 import argparse
 import json
 import logging
-import copy
 
 import config
 from core.yaml_handler import (
@@ -236,14 +235,6 @@ def save_configs(proxies: list, template_data: dict, output_path: Path):
 
     # --- 保存结果 ---
     save_yaml_file(final_config, output_path)
-
-    # --- 生成并保存 mobile.yml ---
-    logger.info("正在生成 mobile.yml (去除 rules 和 rule-providers)")
-    mobile_config = copy.deepcopy(final_config)
-    mobile_config.pop('rules', None)
-    mobile_config.pop('rule-providers', None)
-    save_yaml_file(mobile_config, config.MOBILE_OUTPUT_FILE)
-
     logger.info("合并完成")
 
 
