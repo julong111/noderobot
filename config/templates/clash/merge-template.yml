@@ -61,31 +61,41 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-      - DIRECT
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
-      - 🔧 我的规则
-      - 🪬 手动切换
-      - ♻️ 自动选择
-      - 🚀 代理
 
 rules:
+  # 1. 最高优先级：局域网和特殊地址直连，避免代理冲突
   - "GEOSITE,private,🎯 全球直连"
+  - "GEOIP,private,🎯 全球直连,no-resolve"
+
+  # 2. 手工指定的需要代理的域名
+
+  # 3. 广告拦截
   - "GEOSITE,category-ads-all,🛑 广告拦截"
+
+  # 4. 必须直连的特定服务 (如微软/苹果/Steam的中国区CDN)
   - "GEOSITE,microsoft@cn,🎯 全球直连"
   - "GEOSITE,apple-cn,🎯 全球直连"
   - "GEOSITE,steam@cn,🎯 全球直连"
   - "GEOSITE,bilibili,🎯 全球直连"
-  - "GEOSITE,cn,🎯 全球直连"
+
+  # 5. 必须走代理的特定服务
   - "GEOSITE,google,🚀 代理"
   - "GEOSITE,youtube,🚀 代理"
   - "GEOSITE,telegram,🚀 代理"
+  - "GEOIP,telegram,🚀 代理"
   - "GEOSITE,netflix,🚀 代理"
   - "GEOSITE,openai,🚀 代理"
+
+  # 6. 被墙网站列表
   - "GEOSITE,gfw,🚀 代理"
-  - "GEOIP,telegram,🚀 代理"
-  - "GEOIP,private,🎯 全球直连"
+
+  # 7. 国内域名和IP地址直连
+  - "GEOSITE,cn,🎯 全球直连"
   - "GEOIP,CN,🎯 全球直连"
+
+  # 8. 最终规则：所有其他流量直连 (黑名单模式)
   - "MATCH,🎯 全球直连"
