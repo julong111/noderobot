@@ -18,7 +18,6 @@ dns:
   fallback:
     - 8.8.8.8
     - 1.1.1.1
-
 sniffer:
   enable: true
   parse-pure-ip: true
@@ -29,7 +28,6 @@ sniffer:
       ports: [443, 8443]
     QUIC:
       ports: [443, 8443]
-
 proxy-groups:
   - name: 🚀 代理
     type: select
@@ -74,25 +72,3 @@ proxy-groups:
       - 🚀 代理
 
 rules:
-  - "DOMAIN-SUFFIX,github.com,🚀 代理"
-  - "DOMAIN-SUFFIX,tinyurl.com,🚀 代理"
-  - "DOMAIN-SUFFIX,rogueamoeba.net,🚀 代理"
-  - "DOMAIN-SUFFIX,st.com,🚀 代理"
-
-  - "GEOSITE,private,🎯 全球直连"
-  - "GEOSITE,category-ads-all,🛑 广告拦截"
-  - "GEOSITE,microsoft@cn,🎯 全球直连"
-  - "GEOSITE,apple-cn,🎯 全球直连"
-  - "GEOSITE,steam@cn,🎯 全球直连"
-  - "GEOSITE,bilibili,🎯 全球直连"
-  - "GEOSITE,cn,🎯 全球直连"
-  - "GEOSITE,google,🚀 代理"
-  - "GEOSITE,youtube,🚀 代理"
-  - "GEOSITE,telegram,🚀 代理"
-  - "GEOSITE,netflix,🚀 代理"
-  - "GEOSITE,openai,🚀 代理"
-  - "GEOSITE,gfw,🚀 代理"
-  - "GEOIP,telegram,🚀 代理"
-  - "GEOIP,private,🎯 全球直连"
-  - "GEOIP,CN,🎯 全球直连"
-  - "MATCH,🎯 全球直连"
