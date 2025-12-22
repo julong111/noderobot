@@ -6,14 +6,14 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '.github/workflows/merge.yml'
-      - 'src/cleaner.py'
-      - 'src/merge.py'
-      - 'config/templates/clash/merge-template.yml'
-      - 'config/ip-block-list.txt'
-      - 'config/sources.json'
-      - 'config/manual_nodes.yml'
+    # paths:
+    #   - '.github/workflows/merge.yml'
+    #   - 'src/cleaner.py'
+    #   - 'src/merge.py'
+    #   - 'config/templates/clash/merge-template.yml'
+    #   - 'config/ip-block-list.txt'
+    #   - 'config/sources.json'
+    #   - 'config/manual_nodes.yml'
   # 这允许用户通过 GitHub 界面或 API 手动运行此 workflow
   workflow_dispatch:
     # 可以在这里定义输入参数，让用户在触发时选择或输入值 (可选)
