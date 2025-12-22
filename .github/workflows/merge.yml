@@ -32,6 +32,11 @@ on:
         required: false
         default: false
         type: boolean
+      force_execution:
+        description: '强制执行 (跳过验证)'
+        required: false
+        default: false
+        type: boolean
       # environment:
       #   description: '运行环境 (Environment to run on)'
       #   required: true
@@ -65,9 +70,15 @@ jobs:
       - name: 执行生成和合并脚本
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_EXECUTION: ${{ inputs.force_execution }}
         run: |
-          python ./src/cleaner.py
-          python ./src/merge.py
+          ARGS=""
+          if [ "$FORCE_EXECUTION" == "true" ]; then
+            ARGS="--force"
+            echo "⚠️ 强制执行模式已开启，将传递 --force 参数。"
+          fi
+          python ./src/cleaner.py $ARGS
+          python ./src/merge.py $ARGS
 
       - name: 暂存所有文件并检查变动
         id: check_all_changes

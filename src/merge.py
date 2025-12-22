@@ -268,12 +268,9 @@ def main(args):
     template_data = load_yaml_file(template_path)
     all_proxies, sources_data, has_updates = source_manager.load_and_update_sources(sources_path)
     
-    if not has_updates:
-        if args.dev:
-            logger.debug("开发者模式：忽略来源更新检测，继续执行。")
-        else:
-            logger.info("所有来源均无更新，程序退出。")
-            sys.exit(0)
+    if not has_updates and not args.force:
+        logger.info("所有来源均无更新，程序退出。")
+        sys.exit(0)
 
     # 保存更新后的 sources.json
     try:
@@ -298,7 +295,7 @@ def main(args):
     logger.info("排序完成。")
 
     # --- 检查与旧文件是否有变化 ---
-    if not args.skipcheck:
+    if not args.force:
         if not check_content_changes(unique_proxies, output_path, config.MANUAL_NODES_FILE):
             logger.info("检测到自动抓取节点无变化，操作提前结束。")
             sys.exit(0)
@@ -308,7 +305,7 @@ def main(args):
     # 提取所有有效节点的 server 字段
     server_ips = [p.get('server') for p in unique_proxies if p.get('server')]
     stats = csvtool.read_stats(config.NODE_STATS_FILE)
-    if not args.skipcount:
+    if not args.nostats:
         csvtool.update_stats(stats, server_ips)
         csvtool.write_stats(config.NODE_STATS_FILE, stats)
         logger.info("节点服务器统计更新完成。")
@@ -345,10 +342,10 @@ if __name__ == '__main__':
                         help='最终合并配置的输出文件路径。')
     parser.add_argument('--dev', action='store_true',
                         help='启用开发者模式，打印更详细的日志信息（例如重复的代理）。')
-    parser.add_argument('--skipcheck', action='store_true',
-                        help='跳过旧文件对比检查')
-    parser.add_argument('--skipcount', action='store_true',
-                        help='update服务器计数')
+    parser.add_argument('--force', action='store_true',
+                        help='强制执行，跳过更新检测和旧文件对比检查')
+    parser.add_argument('--nostats', action='store_true',
+                        help='跳过服务器计数更新')
 
     parsed_args = parser.parse_args()
     main(parsed_args)

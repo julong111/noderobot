@@ -179,15 +179,15 @@ def process_config_lines(lines: list[str]) -> list[str]:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Freenodes Cleaner')
     parser.add_argument('--token', type=str, help='GitHub API Token')
-    parser.add_argument('--debug', action='store_true', help='启用调试模式')
-    parser.add_argument('--skip-SHA', action='store_true', help='跳过SHA检查，强制更新')
+    parser.add_argument('--dev', action='store_true', help='启用开发者模式 (调试日志)')
+    parser.add_argument('--force', action='store_true', help='强制执行，跳过SHA检查并强制更新')
     args = parser.parse_args()
 
-    if args.debug:
+    if args.dev:
         root_logger.setLevel(logging.DEBUG)
         for handler in root_logger.handlers:
             handler.setLevel(logging.DEBUG)
-        logger.debug("调试模式已开启")
+        logger.debug("开发者模式已开启")
 
     source_lines = []
     newest_sha = ""
@@ -203,7 +203,7 @@ if __name__ == '__main__':
     newest_sha = latest_config['sha']
     local_sha = config.FREENODES_SHA_FILE.read_text(encoding='utf-8').strip() if config.FREENODES_SHA_FILE.is_file() else ""
 
-    if not args.skip_SHA and newest_sha == local_sha:
+    if not args.force and newest_sha == local_sha:
         logger.info(f"配置文件未更新 (SHA: {newest_sha[:7]})。无需操作。")
         sys.exit(0)
 
