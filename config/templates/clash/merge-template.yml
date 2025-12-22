@@ -7,27 +7,52 @@ external-controller: 127.0.0.1:9090
 proxies:
 dns:
   enable: true
-  listen: 0.0.0.0:1053
+  # 强烈建议关闭 IPv6 以防止 DNS 泄漏
   ipv6: false
+  listen: 0.0.0.0:1053
+  # 防泄漏的核心：对国外请求只给假 IP
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  fake-ip-filter: [ '+.lan', '+.local' ]
-  nameserver:
+  
+  # 用于解析下面 DOH 服务器的域名，必须是纯 IP
+  default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
-  fallback:
-    - 8.8.8.8
-    - 1.1.1.1
+    - 1.12.12.12
+
+  # 专门解析代理服务器（节点）域名
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+  # 默认解析服务器，配合 fake-ip 处理日常流量
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+  # 只有在 fake-ip 模式下，为了防泄漏，不建议在这里填国外地址
+  # 因为国外地址在没连上代理前会报错或超时
+  fallback: []
+
+  # 分流解析：确保国内常用域名不走国外解析逻辑
+  nameserver-policy:
+    "geosite:cn,private,apple,steam":
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+
+# 嗅探配置：用于还原 Fake-IP 对应的真实域名，提升分流准确性
 sniffer:
   enable: true
   parse-pure-ip: true
   sniff:
-    HTTP:
-      ports: [80, 8080-8880]
     TLS:
       ports: [443, 8443]
+    HTTP:
+      ports: [80, 8080-8888]
+      priority-domain-vendors: [google, youtube]
     QUIC:
-      ports: [443, 8443]
+      ports: [443]
+
 proxy-groups:
   - name: 🚀 代理
     type: select
