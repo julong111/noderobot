@@ -18,9 +18,11 @@ def extract_leading_number(name):
         return int(match.group(1))
     return -1
 
-# 7天=168
-# 15天=360
-# 30天=720
+
+#需要/2   源2小时更新  
+# 7天=168/2=84
+# 15天=360/2=180
+# 30天=720/2=360
 def main():
     # 1. 确定 merge.yml 的路径 (从 config.py 读取)
     yaml_path = config.MERGE_OUTPUT_FILE
