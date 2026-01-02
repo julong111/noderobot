@@ -30,7 +30,12 @@ class GitHubClient:
         try:
             response = self.client.get(api_url, headers=self._get_headers())
             data = response.json()
-            return data if isinstance(data, list) else []
+            if isinstance(data, list):
+                logger.info(f"成功获取文件列表，共 {len(data)} 个文件。")
+                return data
+            else:
+                logger.warning(f"GitHub API 返回了非列表数据: {data}")
+                return []
         except Exception as e:
             logger.error(f"GitHub API 请求失败: {e}")
             return []
@@ -41,6 +46,7 @@ class GitHubClient:
         """
         files = self.list_files(repo)
         if not files:
+            logger.warning(f"仓库 {repo} 文件列表为空或获取失败。")
             return None
 
         matched_files = []

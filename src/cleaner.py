@@ -192,12 +192,19 @@ if __name__ == '__main__':
     source_lines = []
     newest_sha = ""
 
-    github_token = args.token or os.getenv('REPO_API_TOKEN')
+    github_token = args.token or os.getenv('REPO_API_TOKEN') or os.getenv('GITHUB_TOKEN')
+    
+    if github_token:
+        logger.info("已检测到 GitHub Token。")
+    else:
+        logger.warning("未检测到 GitHub Token，API 请求可能会受到速率限制。")
+
     client = GitHubClient(token=github_token)
     
     # 查询clashfree最新配置文件
     latest_config = client.find_latest_file('free-nodes/clashfree', r'clash\d{8,}\.yml')
     if not latest_config:
+        logger.error("无法获取最新的配置文件信息，程序退出。")
         sys.exit(1)
 
     newest_sha = latest_config['sha']
