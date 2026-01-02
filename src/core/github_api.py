@@ -51,19 +51,29 @@ class GitHubClient:
 
         matched_files = []
         for file_info in files:
-            if isinstance(file_info, dict) and file_info.get('type') == 'file' and re.match(file_pattern, file_info.get('name', '')):
-                matched_files.append({
-                    'name': file_info['name'],
-                    'sha': file_info['sha'],
-                    'download_url': file_info['download_url']
-                })
+            if not isinstance(file_info, dict) or file_info.get('type') != 'file':
+                continue
+
+            name = file_info.get('name', '')
+            if re.match(file_pattern, name):
+                if file_info.get('size', 0) > 0:
+                    matched_files.append({
+                        'name': name,
+                        'sha': file_info.get('sha'),
+                        'download_url': file_info.get('download_url')
+                    })
+                else:
+                    logger.warning(f"跳过匹配但为空的文件: {name}")
 
         if not matched_files:
-            logger.warning(f"在仓库 {repo} 中未找到匹配 '{file_pattern}' 的文件。")
+            logger.warning(f"在仓库 {repo} 中未找到匹配 '{file_pattern}' 的有效(非空)文件。")
+            all_filenames = [f.get('name') for f in files if isinstance(f, dict) and f.get('name')]
+            logger.info(f"仓库中现有的文件: {all_filenames}")
             return None
 
         # 按文件名降序排序（通常文件名包含日期），获取最新的一个
         latest = sorted(matched_files, key=lambda x: x['name'], reverse=True)[0]
+        logger.info(f"找到最新的有效配置文件: {latest.get('name')}")
         return latest
 
     def fetch_content(self, url: str) -> Optional[str]:
