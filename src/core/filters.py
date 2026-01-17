@@ -44,14 +44,17 @@ def load_ip_blocklist(file_path: Path) -> tuple[set[str], set]:
 
 
 def is_ip_blocked(server: str, blocked_ips: set[str], blocked_networks: set) -> bool:
+    # 移除可能存在的 [] 包裹 (IPv6)
+    server_clean = server.strip('[]')
+
     # 检查是否为单个被屏蔽的IP
-    if server in blocked_ips:
+    if server_clean in blocked_ips:
         return True
 
     # 检查是否在被屏蔽的IP段内
     try:
         # 如果server是域名, ip_address会抛出ValueError
-        ip_addr = ipaddress.ip_address(server)
+        ip_addr = ipaddress.ip_address(server_clean)
         for network in blocked_networks:
             if ip_addr in network:
                 return True

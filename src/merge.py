@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import re
 from pathlib import Path
 from datetime import datetime
 import argparse
@@ -18,6 +19,7 @@ from core import filters
 from core import proxy_tools
 from core import source_manager
 from core import geoip
+from core import parser as link_parser
 
 setup_logger(name=None)
 logger = logging.getLogger("Merge")
@@ -136,7 +138,9 @@ def merge_manual_nodes(unique_proxies: list, manual_file_path: Path) -> list:
 def get_flag(country_code: str) -> str:
     """将国家代码转换为 Emoji 国旗"""
     if not country_code or len(country_code) != 2 or country_code == 'UNK':
-        return "🏁"
+        return "XX"
+    if country_code.upper() == 'XX':
+        return "🌐"
     # 区域指示符符号 A 的 Unicode 是 127462，'A' 是 65，偏移量 127397
     return "".join([chr(ord(c) + 127397) for c in country_code.upper()])
 
@@ -185,6 +189,41 @@ def rename_proxies_by_country(proxies: list, db_path: Path, debug: bool = False)
             logger.debug(f"Renamed: {original_name} -> {new_name}")
         
     return proxies
+
+
+def sort_proxies_by_country_and_count(proxies: list) -> list:
+    """
+    根据名称中的国家代码和统计次数进行排序。
+    格式: "count#Flag Code|..." (例如: "58#🇲🇩 MD|摩尔多瓦 05")
+    排序规则: Code 升序, count 降序
+    """
+    logger.info("正在根据国家代码和统计次数对节点进行排序...")
+    
+    def get_sort_key(proxy):
+        name = str(proxy.get('name', ''))
+        # 匹配: 数字#剩余部分
+        match = re.match(r'^(\d+)#(.*)$', name)
+        if match:
+            try:
+                count = int(match.group(1))
+                rest = match.group(2).strip()
+                
+                # 尝试提取国家代码 (例如 "🇦🇪 AE|..." -> "AE")
+                # 假设格式为: Flag + Space + Code + ...
+                code_match = re.match(r'^.*? ([A-Z]{2})', rest)
+                if code_match:
+                    code = code_match.group(1)
+                    return (0, code, -count)
+                
+                # 如果没有代码 (例如手动节点)，按剩余部分排序
+                return (1, rest, -count)
+            except ValueError:
+                pass
+        
+        # 不符合格式的节点
+        return (2, name, 0)
+
+    return sorted(proxies, key=get_sort_key)
 
 
 def filter_proxies(proxies: list, blocklist_path: Path) -> list:
@@ -237,6 +276,16 @@ def save_configs(proxies: list, template_data: dict, output_path: Path):
     save_yaml_file(final_config, output_path)
     logger.info("合并完成")
 
+def save_v2ray_sub(proxies: list, output_path: Path):
+    """生成并保存 V2RayN 格式的订阅文件 (Base64)"""
+    logger.info("正在生成 V2RayN 订阅文件...")
+    try:
+        content = link_parser.generate_v2ray_sub(proxies)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        logger.info(f"V2RayN 订阅已保存至: {output_path}")
+    except Exception as e:
+        logger.error(f"生成 V2RayN 订阅失败: {e}")
 
 def main(args):
     """主执行函数"""
@@ -259,6 +308,20 @@ def main(args):
     template_data = load_yaml_file(template_path)
     all_proxies, sources_data, has_updates = source_manager.load_and_update_sources(sources_path)
     
+    # --- [新增] 强制加载 extra_subs.txt ---
+    # 即使 source_manager 未能正确解析非 YAML 格式，这里也会作为补充加载
+    extra_subs_path = sources_path.parent / "extra_subs.txt"
+    if extra_subs_path.is_file():
+        logger.info(f"正在解析本地订阅文件: {extra_subs_path}")
+        try:
+            content = extra_subs_path.read_text(encoding='utf-8')
+            extra_nodes = link_parser.parse_content(content)
+            if extra_nodes:
+                logger.info(f"成功解析出 {len(extra_nodes)} 个节点，加入合并队列。")
+                all_proxies.extend([FlowStyleDict(n) for n in extra_nodes])
+        except Exception as e:
+            logger.warning(f"解析 extra_subs.txt 失败: {e}")
+
     if not has_updates and not args.force:
         logger.info("所有来源均无更新，程序退出。")
         sys.exit(0)
@@ -313,8 +376,14 @@ def main(args):
     logger.info("根据统计数据更新所有节点名称")
     unique_proxies = proxy_tools.apply_node_statistics(unique_proxies, stats)
 
+    # --- 根据国家和统计次数排序 ---
+    unique_proxies = sort_proxies_by_country_and_count(unique_proxies)
+
     # --- 保存配置文件 ---
     save_configs(unique_proxies, template_data, output_path)
+    
+    # --- [新增] 保存 V2RayN 订阅 ---
+    save_v2ray_sub(unique_proxies, output_path.parent / "v2ray_sub.txt")
 
 
 if __name__ == '__main__':

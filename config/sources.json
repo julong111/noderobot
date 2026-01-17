@@ -1,5 +1,10 @@
 [
   {
+    "name": "Extra-Subs",
+    "url": "./extra_subs.txt",
+    "format": "nodes"
+  },
+  {
     "name": "freenodes-clashfree-clean",
     "url": "../s/original/freenodes-clashfree-cleaner.yml",
     "sha256": "5cc36ebbb3245f2018a02f96033600831bc8ef619317b1d3a9da2cadde20da8b"
