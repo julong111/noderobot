@@ -1,0 +1,340 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+- name: 101#🇨🇳 CN|中国 01
+  server: 183.236.51.36
+  port: '59003'
+  type: vmess
+  cipher: auto
+  alterId: 64
+  network: tcp
+  tls: false
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- name: 103#🇨🇾 CY|塞浦路斯 04
+  server: 45.12.136.170
+  port: 443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: l668XHPejoSNNuD66BYzyehaCpZexiF7
+- name: 242#🇩🇪 DE|德国 13
+  server: 82.198.246.97
+  port: '180'
+  type: vmess
+  cipher: auto
+  alterId: 0
+  network: tcp
+  tls: false
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+- name: 93#🇩🇪 DE|德国-黑森州 法兰克福 23
+  server: 146.75.119.82
+  port: 80
+  type: vless
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 74542945-0d84-4797-a56e-e7f31b84c5be
+  ws-opts:
+    path: ws/?ed=2048/@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz/?2048
+    headers:
+      Host: welcomtofreeboarders.com
+- name: 88#🇩🇪 DE|德国-黑森州 法兰克福 12
+  server: 193.233.254.7
+  port: 1080
+  type: socks5
+  tls: false
+  username: T2dAMTkzLjIzMy4yNTQuNzpAMTkzLjIzMy4yNTQuNw%3D%3D
+- name: 21#🇩🇪 DE|德国-黑森州 法兰克福 14
+  server: 193.233.254.9
+  port: 1080
+  type: socks5
+  tls: false
+  username: T2dAMTkzLjIzMy4yNTQuOTpAMTkzLjIzMy4yNTQuOTo%3D
+- name: 6#🇩🇪 DE|德国-黑森州 法兰克福 40
+  server: 103.75.199.3
+  port: 52312
+  type: vless
+  network: tcp
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: cb69f3d7-bfd3-4a83-8882-d5349ce5703c
+- name: 3#🇫🇷 FR|法国-Paris Department 巴黎 28
+  server: 213.176.73.206
+  port: 2083
+  type: vless
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: UpdateService
+  network: grpc
+  reality-opts:
+    public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
+    short-id: 6da16b1335651b38
+  servername: apple.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
+- name: 59#🇬🇧 GB|英国 31
+  server: 25.129.197.138
+  port: 2053
+  type: vless
+  network: ws
+  servername: KhAmeneI.DPdNs.OrG
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 8a07740f-b932-4372-a3a2-ed91f184cd33
+  ws-opts:
+    headers:
+      Host: khamenei.dpdns.org
+    path: /eyJqdW5rIjoiNDBNWGY3Z0NPd0loZ2YiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560
+- name: 11#🇬🇧 GB|英国 33
+  server: 25.129.199.122
+  port: 2095
+  type: vless
+  network: ws
+  servername: ip6-free2.shakhle.ir.
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 06d4a2dd-b823-4b6a-843e-c159b6858d91
+  ws-opts:
+    path: /
+    headers:
+      Host: ip6-free2.shakhle.ir.
+- name: 18#🇯🇵 JP|日本-东京都 东京 11
+  server: 167.17.179.87
+  port: 8388
+  type: ss
+  cipher: aes-256-gcm
+  password: vEY+Etsv/KTEM3vq
+- name: 102#🇰🇷 KR|韩国-京畿道 Hwaseong-si 03
+  server: 121.169.46.116
+  port: 1090
+  type: socks5
+  tls: false
+  username: Og%3D%3D
+- name: 2#🇷🇺 RU|俄罗斯 07
+  server: 95.174.92.156
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw
+    short-id: c7e42004e5f024be
+  servername: sun6-21.userapi.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: cc61ea7c-92f2-4c2d-b272-32cfe8fdf99f
+- name: 2#🇷🇺 RU|俄罗斯 12
+  server: 51.250.41.54
+  port: 47051
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: y8f0sznQFqvSOPFcFvPcQFfXbz0Ag10ySB4A88OXMy0
+    short-id: effab4f3a0ed698e
+  servername: api.security.max.ru
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
+- name: 46#🇸🇬 SG|新加坡-新加坡 04
+  server: 34.143.159.175
+  port: 443
+  type: vless
+  network: ws
+  servername: sni.meibidi.pp.ua
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  ws-opts:
+    headers:
+      Host: sni.meibidi.pp.ua
+    path: /?ed=2560
+- name: 41#🇹🇷 TR|土耳其-伊斯坦布尔 Levent 04
+  server: 92.60.70.36
+  port: 2053
+  type: vless
+  network: tcp
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 08c7f096-d057-4d53-82fd-c739d372887b
+- name: 90#🌐 XX 191
+  server: octopusss5.info
+  port: 22955
+  type: vless
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: grpc
+  network: grpc
+  reality-opts:
+    public-key: 9Mt_Y8J_qDb1khlieWnhDSAq-kGtLHw6aOKgkAzOMms
+    short-id: 6ba85179e30d4fc2
+  servername: one-piece.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
+- name: 83#🌐 XX 58
+  server: 107.174.82.102.sslip.io
+  port: 443
+  type: trojan
+  password: bb824a22-b7ce-427b-9ed6-1adf0751da02
+  skip-cert-verify: true
+  sni: 107.174.82.102.sslip.io
+- name: 44#🌐 XX 20
+  server: turkiye.torprospeed.ir
+  port: 587
+  type: vless
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: HnPEhCDTcZnDejsAiidoOSx2-h0EvJMILj4bv3X1mBc
+    short-id: 916e8258c4a01b02
+  servername: excoino.com
+  skip-cert-verify: false
+  tls: true
+  udp: true
+  uuid: 65a1e22c-d37e-4b92-b6ca-1d09dcd1d441
+- name: 44#🌐 XX 181
+  server: v2.dabache.top
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  delay: 1439
+  network: ws
+  servername: sni.meibidi.pp.ua
+  tls: true
+  udp: true
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.meibidi.pp.ua
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 39#🌐 XX 11
+  server: de3.xiaoliyu.cyou
+  port: 4433
+  type: hysteria2
+  password: 7424db1f-ba68-496d-9426-4018b6a3a23c
+  skip-cert-verify: true
+  sni: de3.xiaoliyu.cyou
+  tls: false
+- name: 22#🌐 XX 141
+  server: hk13.network-cdn-gw-yd.net
+  port: 32061
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  delay: 1449
+  password: aed6e687-58a9-4836-ba62-7d8184c94df4
+  udp: true
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 1.12.12.12
+  proxy-server-nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  fallback: []
+  nameserver-policy:
+    geosite:cn,private,apple,steam:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  sniff:
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8888
+      priority-domain-vendors:
+      - google
+      - youtube
+    QUIC:
+      ports:
+      - 443
+proxy-groups:
+- name: 🚀 代理
+  type: select
+  proxies:
+  - 🌟 手工精选
+  - 🔧 我的规则
+  - 🪬 手动切换
+  - ♻️ 自动选择
+  - DIRECT
+- name: UpdateTimestamp
+  include-all: true
+  filter: (?i)Timestamp
+  type: select
+- name: 🔧 我的规则
+  include-all: true
+  filter: (?i)🌟|新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United
+    States|韩国|韩|KR|France|法国|Paris|Netherlands
+  type: select
+- name: 🌟 手工精选
+  include-all: true
+  filter: (?i)🌟
+  type: select
+- name: 🪬 手动切换
+  include-all: true
+  type: select
+- name: ♻️ 自动选择
+  type: url-test
+  include-all: true
+  interval: 300
+  tolerance: 100
+- name: 🛑 广告拦截
+  type: select
+  proxies:
+  - REJECT
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+rules:
+- GEOSITE,private,🎯 全球直连
+- GEOIP,private,🎯 全球直连,no-resolve
+- GEOSITE,category-ads-all,🛑 广告拦截
+- GEOSITE,microsoft@cn,🎯 全球直连
+- GEOSITE,apple-cn,🎯 全球直连
+- GEOSITE,steam@cn,🎯 全球直连
+- GEOSITE,bilibili,🎯 全球直连
+- GEOSITE,google,🚀 代理
+- GEOSITE,youtube,🚀 代理
+- GEOSITE,telegram,🚀 代理
+- GEOIP,telegram,🚀 代理
+- GEOSITE,netflix,🚀 代理
+- GEOSITE,openai,🚀 代理
+- GEOSITE,gfw,🚀 代理
+- GEOSITE,cn,🎯 全球直连
+- GEOIP,CN,🎯 全球直连
+- MATCH,🎯 全球直连
