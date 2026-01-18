@@ -3,3 +3,4 @@ proxies:
   # 格式示例:
   # - {name: 'Manual-Node-01', type: ss, server: 1.2.3.4, port: 8888, cipher: aes-256-gcm, password: 'password'}
   - {name: '🌟|M|France_None_hysteria_81', type: hysteria, server: 62.210.196.68, port: 26691, auth_str: 'dongtaiwang.com', alpn: [h3], sni: apple.com, skip-cert-verify: true, up: '11 Mbps', down: '55 Mbps', protocol: udp}
+  - {name: '🌟|M|🇫🇷 Paris Department 11', server: 13.38.30.95, port: 443, type: ss, cipher: aes-256-cfb, country: 🇫🇷FR, delay: 1410, password: amazonskr05}
