@@ -53,7 +53,6 @@ jobs:
         id: check_all_changes
         run: |
           # 将所有可能被修改的文件添加到暂存区
-          git add s/node-connective.csv
           git add s/conn.yml
 
           # 检查暂存区是否有任何变动，并设置总体输出
