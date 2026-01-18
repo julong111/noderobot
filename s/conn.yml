@@ -14,21 +14,6 @@ proxies:
   network: tcp
   tls: false
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 103#🇨🇾 CY|塞浦路斯 04
-  server: 45.12.136.170
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: l668XHPejoSNNuD66BYzyehaCpZexiF7
-- name: 242#🇩🇪 DE|德国 13
-  server: 82.198.246.97
-  port: '180'
-  type: vmess
-  cipher: auto
-  alterId: 0
-  network: tcp
-  tls: false
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 - name: 93#🇩🇪 DE|德国-黑森州 法兰克福 23
   server: 146.75.119.82
   port: 80
@@ -54,60 +39,6 @@ proxies:
   type: socks5
   tls: false
   username: T2dAMTkzLjIzMy4yNTQuOTpAMTkzLjIzMy4yNTQuOTo%3D
-- name: 6#🇩🇪 DE|德国-黑森州 法兰克福 40
-  server: 103.75.199.3
-  port: 52312
-  type: vless
-  network: tcp
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  uuid: cb69f3d7-bfd3-4a83-8882-d5349ce5703c
-- name: 3#🇫🇷 FR|法国-Paris Department 巴黎 28
-  server: 213.176.73.206
-  port: 2083
-  type: vless
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: UpdateService
-  network: grpc
-  reality-opts:
-    public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
-    short-id: 6da16b1335651b38
-  servername: apple.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 59#🇬🇧 GB|英国 31
-  server: 25.129.197.138
-  port: 2053
-  type: vless
-  network: ws
-  servername: KhAmeneI.DPdNs.OrG
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 8a07740f-b932-4372-a3a2-ed91f184cd33
-  ws-opts:
-    headers:
-      Host: khamenei.dpdns.org
-    path: /eyJqdW5rIjoiNDBNWGY3Z0NPd0loZ2YiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560
-- name: 11#🇬🇧 GB|英国 33
-  server: 25.129.199.122
-  port: 2095
-  type: vless
-  network: ws
-  servername: ip6-free2.shakhle.ir.
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  uuid: 06d4a2dd-b823-4b6a-843e-c159b6858d91
-  ws-opts:
-    path: /
-    headers:
-      Host: ip6-free2.shakhle.ir.
 - name: 18#🇯🇵 JP|日本-东京都 东京 11
   server: 167.17.179.87
   port: 8388
@@ -120,36 +51,6 @@ proxies:
   type: socks5
   tls: false
   username: Og%3D%3D
-- name: 2#🇷🇺 RU|俄罗斯 07
-  server: 95.174.92.156
-  port: 443
-  type: vless
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw
-    short-id: c7e42004e5f024be
-  servername: sun6-21.userapi.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: cc61ea7c-92f2-4c2d-b272-32cfe8fdf99f
-- name: 2#🇷🇺 RU|俄罗斯 12
-  server: 51.250.41.54
-  port: 47051
-  type: vless
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: y8f0sznQFqvSOPFcFvPcQFfXbz0Ag10ySB4A88OXMy0
-    short-id: effab4f3a0ed698e
-  servername: api.security.max.ru
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
 - name: 46#🇸🇬 SG|新加坡-新加坡 04
   server: 34.143.159.175
   port: 443
@@ -235,14 +136,6 @@ proxies:
   skip-cert-verify: true
   sni: de3.xiaoliyu.cyou
   tls: false
-- name: 22#🌐 XX 141
-  server: hk13.network-cdn-gw-yd.net
-  port: 32061
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  delay: 1449
-  password: aed6e687-58a9-4836-ba62-7d8184c94df4
-  udp: true
 dns:
   enable: true
   ipv6: false
