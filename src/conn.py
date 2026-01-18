@@ -82,12 +82,12 @@ def main():
             pass_num = stats['pass']
             notpass_num = stats['notpass']
 
-            # 过滤条件: pass=0 并且 notpass > pass * 2
-            # 当 pass=0 时，pass*2=0。只要 notpass > 0 即满足条件。
-            # 含义：从未成功过，且至少失败过一次的节点。
-            if pass_num == 0 and notpass_num > (pass_num * 2):
-                keep = False
-                print(f"[剔除] {name} | Pass: {pass_num}, Fail: {notpass_num}")
+            total = pass_num + notpass_num
+            if total > 0:
+                rate = pass_num / total
+                if rate <= 0.5:
+                    keep = False
+                    print(f"[剔除] {name} | Pass: {pass_num}, Fail: {notpass_num}, Rate: {rate:.1%}")
         
         if keep:
             filtered_proxies.append(proxy)
