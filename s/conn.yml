@@ -5,7 +5,15 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 102#🇨🇳 CN|中国 01
+- name: 1#🇦🇪 AE|阿联酋 01
+  server: 151.242.251.153
+  port: 8080
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  delay: 2261
+  password: QCXDxuDlTTMD7jtgHUjIoj
+  udp: true
+- name: 103#🇨🇳 CN|中国 01
   server: 183.236.51.36
   port: '59003'
   type: vmess
@@ -14,7 +22,43 @@ proxies:
   network: tcp
   tls: false
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 94#🇩🇪 DE|德国-黑森州 法兰克福 22
+- name: 4#🇨🇳 CN|中国 02
+  server: 103.216.255.171
+  port: 32602
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  delay: 527
+  password: 8DbEw1vVdfr9KHVqPcaD+Cyd2QUGA+2deEVLqIHBvCE=:7el8sVVg2De2M+qNnLqPxisWHCUmquQZpVCB5a884cg=
+  skip-cert-verify: false
+  udp: false
+- name: 4#🇨🇳 CN|中国 03
+  server: 103.216.255.171
+  port: 32601
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  delay: 531
+  password: 0q54tcFeEmTCuser8HZXuXh7XOrJq54dKwlcbvdufec=:AMIh7lzyCzRr9v2GYmZoGQbtghH8gppMJaFXzKDZrpE=
+  skip-cert-verify: false
+  udp: false
+- name: 4#🇨🇳 CN|中国 04
+  server: 103.216.255.171
+  port: 32605
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  delay: 671
+  password: kVoTwq9hXxdit0zDg7Lv089a25lXMeYKIvWl/39U7p4=:SVVNqcXExjIh/aSzjiACWr5g3ZZmxGnKs0sZLylgnGE=
+  skip-cert-verify: false
+  udp: false
+- name: 4#🇨🇳 CN|中国 05
+  server: 103.216.255.171
+  port: 32604
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  delay: 591
+  password: axT9g9SpM2MMMu5GJxDSGCJsuhfc3YpqtmsaQKfpLNs=:3AplWDlQp/OQt6advNeFF/LgjdfTYn2rPX+7F4Y8kOE=
+  skip-cert-verify: false
+  udp: false
+- name: 95#🇩🇪 DE|德国-黑森州 法兰克福 23
   server: 146.75.119.82
   port: 80
   type: vless
@@ -27,37 +71,78 @@ proxies:
     path: ws/?ed=2048/@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz/?2048
     headers:
       Host: welcomtofreeboarders.com
-- name: 89#🇩🇪 DE|德国-黑森州 法兰克福 12
+- name: 90#🇩🇪 DE|德国-黑森州 法兰克福 12
   server: 193.233.254.7
   port: 1080
   type: socks5
   tls: false
   username: T2dAMTkzLjIzMy4yNTQuNzpAMTkzLjIzMy4yNTQuNw%3D%3D
-- name: 22#🇩🇪 DE|德国-黑森州 法兰克福 14
+- name: 23#🇩🇪 DE|德国-黑森州 法兰克福 14
   server: 193.233.254.9
   port: 1080
   type: socks5
   tls: false
   username: T2dAMTkzLjIzMy4yNTQuOTpAMTkzLjIzMy4yNTQuOTo%3D
-- name: 111#🇮🇱 IL|以色列-特拉维夫区 02
+- name: 1#🇩🇪 DE|德国 21
+  server: 85.209.53.178
+  port: 8443
+  type: hysteria2
+  auth: 003b6a3f-4bff-46f7-a515-73c734a24dd7
+  delay: 1511
+  down: 2
+  obfs: salamander
+  obfs-password: NDhhNmY5YTY0MGYzOTgxYQ==
+  password: 003b6a3f-4bff-46f7-a515-73c734a24dd7
+  skip-cert-verify: true
+  udp: true
+  up: 2
+- name: 1#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 22
+  server: 152.53.191.55
+  port: 10002
+  type: anytls
+  delay: 2815
+  password: 047590b8-37ea-4702-b1fa-d80f184dabe9
+  skip-cert-verify: true
+  sni: www.bing.com
+  udp: true
+- name: 1#🇫🇷 FR|法国-Paris Department 巴黎 12
+  server: 15.236.169.109
+  port: 22222
+  type: trojan
+  country: 🇫🇷FR
+  delay: 1515
+  password: telegram-id-privatevpns
+  skip-cert-verify: true
+  sni: trojan.burgerip.co.uk
+  udp: true
+- name: 1#🇭🇷 HR|克罗地亚-Sisak-Moslavina County Sisak 01
+  server: 45.95.169.14
+  port: 20002
+  type: anytls
+  delay: 1375
+  password: 047590b8-37ea-4702-b1fa-d80f184dabe9
+  skip-cert-verify: true
+  sni: bing.com
+  udp: true
+- name: 112#🇮🇱 IL|以色列-特拉维夫区 02
   server: 5.188.227.18
   port: 11205
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 317f13c5c2ebdea3
-- name: 19#🇯🇵 JP|日本-东京都 东京 11
+- name: 20#🇯🇵 JP|日本-东京都 东京 11
   server: 167.17.179.87
   port: 8388
   type: ss
   cipher: aes-256-gcm
   password: vEY+Etsv/KTEM3vq
-- name: 103#🇰🇷 KR|韩国-京畿道 Hwaseong-si 03
+- name: 104#🇰🇷 KR|韩国-京畿道 Hwaseong-si 03
   server: 121.169.46.116
   port: 1090
   type: socks5
   tls: false
   username: Og%3D%3D
-- name: 95#🇷🇺 RU|俄罗斯-Moscow 莫斯科 14
+- name: 96#🇷🇺 RU|俄罗斯-Moscow 莫斯科 14
   server: 45.139.26.152
   port: 7443
   type: vless
@@ -72,7 +157,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 7fc953d6-ae75-46fb-a970-10b57d513487
-- name: 47#🇸🇬 SG|新加坡-新加坡 04
+- name: 48#🇸🇬 SG|新加坡-新加坡 04
   server: 34.143.159.175
   port: 443
   type: vless
@@ -86,7 +171,7 @@ proxies:
     headers:
       Host: sni.meibidi.pp.ua
     path: /?ed=2560
-- name: 42#🇹🇷 TR|土耳其-伊斯坦布尔 Levent 04
+- name: 43#🇹🇷 TR|土耳其-伊斯坦布尔 Levent 04
   server: 92.60.70.36
   port: 2053
   type: vless
@@ -95,7 +180,233 @@ proxies:
   tfo: false
   tls: false
   uuid: 08c7f096-d057-4d53-82fd-c739d372887b
-- name: 91#🌐 XX 194
+- name: 1#🇺🇸 US|美国-加州 洛杉矶 21
+  server: 107.174.53.62
+  port: 20001
+  type: anytls
+  delay: 1957
+  password: 047590b8-37ea-4702-b1fa-d80f184dabe9
+  skip-cert-verify: true
+  sni: www.bing.com
+  udp: true
+- name: 1#🇺🇸 US|美国-加州 洛杉矶 22
+  server: 95.174.71.98
+  port: 2377
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  country: 🇱🇹LT
+  delay: 1637
+  password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+  plugin: obfs
+  plugin-opts:
+    host: e7b7ab7:102816
+    mode: tls
+- name: 33#🇻🇳 VN|越南 06
+  server: 103.186.154.248
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 2297
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 31#🇻🇳 VN|越南 11
+  server: 103.186.155.119
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1768
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 29#🇻🇳 VN|越南 21
+  server: 103.186.154.62
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 2438
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 27#🇻🇳 VN|越南 16
+  server: 103.186.155.76
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1978
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 25#🇻🇳 VN|越南 08
+  server: 103.186.155.227
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1841
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 17#🇻🇳 VN|越南 10
+  server: 103.186.154.237
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 2314
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 17#🇻🇳 VN|越南 13
+  server: 103.186.154.246
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1710
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 15#🇻🇳 VN|越南 09
+  server: 103.186.155.126
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 2313
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 15#🇻🇳 VN|越南 20
+  server: 103.186.155.120
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1424
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 13#🇻🇳 VN|越南 23
+  server: 103.186.154.68
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1602
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 11#🇻🇳 VN|越南 07
+  server: 103.186.155.62
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1936
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 11#🇻🇳 VN|越南 12
+  server: 103.186.154.43
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1710
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 5#🇻🇳 VN|越南 19
+  server: 103.186.155.71
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1408
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 1#🇻🇳 VN|越南 03
+  server: 103.137.184.146
+  port: 20002
+  type: anytls
+  delay: 1442
+  password: 047590b8-37ea-4702-b1fa-d80f184dabe9
+  skip-cert-verify: true
+  sni: www.bing.com
+  udp: true
+- name: 1#🇻🇳 VN|越南 04
+  server: 103.186.154.4
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1385
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 1#🇻🇳 VN|越南 05
+  server: 103.186.155.114
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 2111
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 1#🇻🇳 VN|越南 14
+  server: 103.186.155.17
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1341
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 1#🇻🇳 VN|越南 15
+  server: 103.186.155.108
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1586
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 1#🇻🇳 VN|越南 17
+  server: 103.186.154.67
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 2185
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 1#🇻🇳 VN|越南 18
+  server: 103.186.154.249
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 2025
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 1#🇻🇳 VN|越南 22
+  server: 103.186.155.213
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  delay: 1597
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  udp: true
+- name: 105#🌐 XX 97
+  server: 162.159.44.142
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  delay: 430
+  encryption: none
+  network: ws
+  servername: l.ayovo.netlib.re
+  skip-cert-verify: false
+  tls: true
+  uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+  ws-opts:
+    headers:
+      Host: l.ayovo.netlib.re
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 98#🌐 XX 98
+  server: 162.159.45.232
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  delay: 536
+  encryption: none
+  network: ws
+  servername: l.ayovo.netlib.re
+  skip-cert-verify: false
+  tls: true
+  uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+  ws-opts:
+    headers:
+      Host: l.ayovo.netlib.re
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 92#🌐 XX 158
   server: octopusss5.info
   port: 22955
   type: vless
@@ -112,14 +423,101 @@ proxies:
   tfo: false
   tls: true
   uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
-- name: 84#🌐 XX 59
+- name: 85#🌐 XX 59
   server: 107.174.82.102.sslip.io
   port: 443
   type: trojan
   password: bb824a22-b7ce-427b-9ed6-1adf0751da02
   skip-cert-verify: true
   sni: 107.174.82.102.sslip.io
-- name: 45#🌐 XX 20
+- name: 74#🌐 XX 143
+  server: cloudflare.182682.xyz
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  delay: 1384
+  encryption: none
+  network: ws
+  servername: l.ayovo.netlib.re
+  skip-cert-verify: false
+  tls: true
+  uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+  ws-opts:
+    headers:
+      Host: l.ayovo.netlib.re
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 67#🌐 XX 142
+  server: www.udemy.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 2885
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 58#🌐 XX 144
+  server: 104.18.185.26
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  delay: 1610
+  encryption: none
+  network: ws
+  servername: l.ayovo.netlib.re
+  skip-cert-verify: false
+  tls: true
+  uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+  ws-opts:
+    headers:
+      Host: l.ayovo.netlib.re
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 57#🌐 XX 91
+  server: vip3.kaixincloud.top
+  port: 2096
+  type: vless
+  client-fingerprint: chrome
+  delay: 691
+  encryption: none
+  network: ws
+  servername: sni.meibidi.pp.ua
+  skip-cert-verify: false
+  tls: true
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  ws-opts:
+    headers:
+      Host: sni.meibidi.pp.ua
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 56#🌐 XX 84
+  server: 162.159.16.63
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  delay: 420
+  encryption: none
+  network: ws
+  servername: l.ayovo.netlib.re
+  skip-cert-verify: false
+  tls: true
+  uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+  ws-opts:
+    headers:
+      Host: l.ayovo.netlib.re
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 46#🌐 XX 20
   server: turkiye.torprospeed.ir
   port: 587
   type: vless
@@ -132,12 +530,50 @@ proxies:
   tls: true
   udp: true
   uuid: 65a1e22c-d37e-4b92-b6ca-1d09dcd1d441
-- name: 45#🌐 XX 183
-  server: v2.dabache.top
+- name: 43#🌐 XX 11
+  server: de3.xiaoliyu.cyou
+  port: 4433
+  type: hysteria2
+  password: 7424db1f-ba68-496d-9426-4018b6a3a23c
+  skip-cert-verify: true
+  sni: de3.xiaoliyu.cyou
+  tls: false
+- name: 42#🌐 XX 93
+  server: www.shopify.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 782
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 38#🌐 XX 92
+  server: cf.090227.xyz
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 678
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 33#🌐 XX 135
+  server: vip2.kaixincloud.top
   port: 443
   type: vless
   client-fingerprint: chrome
-  delay: 1439
+  delay: 2883
   network: ws
   servername: sni.meibidi.pp.ua
   tls: true
@@ -149,15 +585,278 @@ proxies:
       Host: sni.meibidi.pp.ua
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 41#🌐 XX 11
-  server: de3.xiaoliyu.cyou
-  port: 4433
-  type: hysteria2
-  password: 7424db1f-ba68-496d-9426-4018b6a3a23c
-  skip-cert-verify: true
-  sni: de3.xiaoliyu.cyou
+- name: 32#🌐 XX 87
+  server: openai.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 683
+  network: ws
+  skip-cert-verify: false
+  tfo: false
   tls: false
-- name: 5#🌐 XX 151
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 32#🌐 XX 138
+  server: docs.cloudflare.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 1107
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 31#🌐 XX 133
+  server: blog.cloudflare.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 1102
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 30#🌐 XX 139
+  server: www.fbi.gov
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 2079
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 30#🌐 XX 141
+  server: www.npmjs.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 1854
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 30#🌐 XX 146
+  server: vip1.kaixincloud.top
+  port: 2096
+  type: vless
+  client-fingerprint: chrome
+  delay: 1997
+  network: ws
+  servername: sni.meibidi.pp.ua
+  tls: true
+  udp: true
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  ws-opts:
+    path: /
+    headers:
+      Host: sni.meibidi.pp.ua
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 25#🌐 XX 134
+  server: 104.21.224.5
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  delay: 950
+  encryption: none
+  network: ws
+  servername: l.ayovo.netlib.re
+  skip-cert-verify: false
+  tls: true
+  uuid: 3e2e3c21-3fc8-468f-9ab5-e782bdf5bf97
+  ws-opts:
+    headers:
+      Host: l.ayovo.netlib.re
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 21#🌐 XX 86
+  server: ns.cloudflare.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 775
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 21#🌐 XX 137
+  server: www.temu.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 1130
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 21#🌐 XX 140
+  server: support.cloudflare.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 2074
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
+- name: 12#🌐 XX 88
+  server: staticdelivery.nexusmods.com
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  delay: 438
+  encryption: none
+  network: ws
+  servername: kb.as129394.me
+  skip-cert-verify: false
+  tls: true
+  uuid: b5dbd0aa-22f6-4a00-9bcc-3606fa8fc56d
+  ws-opts:
+    headers:
+      Host: kb.as129394.me
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 11#🌐 XX 90
+  server: saas.sin.fan
+  port: 2096
+  type: vless
+  client-fingerprint: chrome
+  delay: 537
+  encryption: none
+  network: ws
+  servername: sni.meibidi.pp.ua
+  skip-cert-verify: false
+  tls: true
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  ws-opts:
+    headers:
+      Host: sni.meibidi.pp.ua
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 8#🌐 XX 82
+  server: 123001.wdy88.com
+  port: 61142
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2314
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 8#🌐 XX 83
+  server: 123001.wdy88.com
+  port: 42492
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2286
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 8#🌐 XX 94
+  server: 123001.wdy88.com
+  port: 36008
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2108
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 8#🌐 XX 96
+  server: 123001.wdy88.com
+  port: 37473
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2631
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: v1.kwaicdn.com
+- name: 8#🌐 XX 132
+  server: 123001.wdy88.com
+  port: 57999
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2593
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 8#🌐 XX 136
+  server: 123001.wdy88.com
+  port: 38185
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2521
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 8#🌐 XX 151
+  server: 123001.wdy88.com
+  port: 19606
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2430
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 8#🌐 XX 152
+  server: 123001.wdy88.com
+  port: 43651
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2469
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 6#🌐 XX 103
   server: midorinote.online
   port: 8443
   type: vless
@@ -172,6 +871,93 @@ proxies:
   tfo: false
   tls: true
   uuid: 55e9b476-53fb-4a91-9d0e-48098267d926
+- name: 1#🌐 XX 89
+  server: 104.18.45.223
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  delay: 699
+  encryption: none
+  network: ws
+  servername: sni.meibidi.pp.ua
+  skip-cert-verify: false
+  tls: true
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  ws-opts:
+    headers:
+      Host: sni.meibidi.pp.ua
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 1#🌐 XX 99
+  server: 172.64.229.220
+  port: 2096
+  type: vless
+  client-fingerprint: chrome
+  delay: 532
+  encryption: none
+  network: ws
+  servername: sni.meibidi.pp.ua
+  skip-cert-verify: false
+  tls: true
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  ws-opts:
+    headers:
+      Host: sni.meibidi.pp.ua
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 1#🌐 XX 145
+  server: 104.17.102.95
+  port: 2096
+  type: vless
+  client-fingerprint: chrome
+  delay: 1953
+  encryption: none
+  network: ws
+  servername: sni.meibidi.pp.ua
+  skip-cert-verify: false
+  tls: true
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  ws-opts:
+    headers:
+      Host: sni.meibidi.pp.ua
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 1#🌐 XX 147
+  server: cf.3666888.xyz
+  port: 2096
+  type: vless
+  client-fingerprint: chrome
+  delay: 2452
+  encryption: none
+  network: ws
+  servername: sni.meibidi.pp.ua
+  skip-cert-verify: false
+  tls: true
+  uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
+  ws-opts:
+    headers:
+      Host: sni.meibidi.pp.ua
+    path: /
+    early-data-header-name: Sec-WebSocket-Protocol
+    max-early-data: 2560
+- name: 1#🌐 XX 149
+  server: cdnjs.com
+  port: 2095
+  type: vless
+  client-fingerprint: randomized
+  delay: 1181
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    path: /
+    headers:
+      Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
 dns:
   enable: true
   ipv6: false
