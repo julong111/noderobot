@@ -1,0 +1,97 @@
+name: Connective
+
+on:
+  schedule:
+    - cron: '5 * * * *'
+  workflow_dispatch:
+    # 可以在这里定义输入参数，让用户在触发时选择或输入值 (可选)
+    # inputs:
+    #   run_v2rayn_conversion:
+    #     description: '执行v2rayN转换'
+    #     required: false
+    #     default: false
+    #     type: boolean
+    #   force_execution:
+    #     description: '强制执行 (跳过验证)'
+    #     required: false
+    #     default: false
+    #     type: boolean
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 迁出代码
+        uses: actions/checkout@v4
+        # with:
+        #   ref: main
+
+      - name: 设置时区
+        run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 执行连通性清洗脚本
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_EXECUTION: ${{ inputs.force_execution }}
+        run: |
+          python ./src/conn.py
+
+      - name: 暂存所有文件并检查变动
+        id: check_all_changes
+        run: |
+          # 将所有可能被修改的文件添加到暂存区
+          git add s/node-connective.csv
+          git add s/conn.yml
+
+          # 检查暂存区是否有任何变动，并设置总体输出
+          if git diff --staged --quiet; then
+            echo "所有文件均无变动，无需提交。"
+            echo "any_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "检测到文件更新，准备提交。"
+            echo "any_changes=true" >> $GITHUB_OUTPUT
+          fi
+ 
+      - name: 获取当前时间
+        id: get_time
+        run: echo "commit_time=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+
+      - name: 提交更改
+        if: steps.check_all_changes.outputs.any_changes == 'true'
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git commit -m "Node Connective Update: ${{ steps.get_time.outputs.commit_time }}"
+          git push origin main
+
+      - name: 发送成功通知到 Telegram
+        if: steps.check_all_changes.outputs.any_changes == 'true'
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          message: |
+            ✅ *Connective任务成功*
+            **Time**: `${{ steps.get_time.outputs.commit_time }}`
+            **消息内容**: `${{ github.repository }} - Connective节点列表已更新`
+
+      - name: 发送异常通知到 Telegram
+        if: failure()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          message: |
+            ⚠️ *Connective任务异常*
+            **Time**: `${{ steps.get_time.outputs.commit_time }}`
+            **消息内容**: `${{ github.repository }} Connective任务发生异常，请检查`
