@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 1#🇦🇪 AE|阿联酋 01
+- name: 2#🇦🇪 AE|阿联酋 01
   server: 151.242.251.153
   port: 8080
   type: ss
@@ -13,7 +13,7 @@ proxies:
   delay: 2261
   password: QCXDxuDlTTMD7jtgHUjIoj
   udp: true
-- name: 103#🇨🇳 CN|中国 01
+- name: 104#🇨🇳 CN|中国 01
   server: 183.236.51.36
   port: '59003'
   type: vmess
@@ -22,7 +22,7 @@ proxies:
   network: tcp
   tls: false
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 4#🇨🇳 CN|中国 02
+- name: 8#🇨🇳 CN|中国 02
   server: 103.216.255.171
   port: 32602
   type: ss
@@ -31,7 +31,7 @@ proxies:
   password: 8DbEw1vVdfr9KHVqPcaD+Cyd2QUGA+2deEVLqIHBvCE=:7el8sVVg2De2M+qNnLqPxisWHCUmquQZpVCB5a884cg=
   skip-cert-verify: false
   udp: false
-- name: 4#🇨🇳 CN|中国 03
+- name: 8#🇨🇳 CN|中国 03
   server: 103.216.255.171
   port: 32601
   type: ss
@@ -40,7 +40,7 @@ proxies:
   password: 0q54tcFeEmTCuser8HZXuXh7XOrJq54dKwlcbvdufec=:AMIh7lzyCzRr9v2GYmZoGQbtghH8gppMJaFXzKDZrpE=
   skip-cert-verify: false
   udp: false
-- name: 4#🇨🇳 CN|中国 04
+- name: 8#🇨🇳 CN|中国 04
   server: 103.216.255.171
   port: 32605
   type: ss
@@ -49,7 +49,7 @@ proxies:
   password: kVoTwq9hXxdit0zDg7Lv089a25lXMeYKIvWl/39U7p4=:SVVNqcXExjIh/aSzjiACWr5g3ZZmxGnKs0sZLylgnGE=
   skip-cert-verify: false
   udp: false
-- name: 4#🇨🇳 CN|中国 05
+- name: 8#🇨🇳 CN|中国 05
   server: 103.216.255.171
   port: 32604
   type: ss
@@ -58,7 +58,7 @@ proxies:
   password: axT9g9SpM2MMMu5GJxDSGCJsuhfc3YpqtmsaQKfpLNs=:3AplWDlQp/OQt6advNeFF/LgjdfTYn2rPX+7F4Y8kOE=
   skip-cert-verify: false
   udp: false
-- name: 95#🇩🇪 DE|德国-黑森州 法兰克福 23
+- name: 96#🇩🇪 DE|德国-黑森州 法兰克福 24
   server: 146.75.119.82
   port: 80
   type: vless
@@ -71,19 +71,19 @@ proxies:
     path: ws/?ed=2048/@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz@AzadMarz/?2048
     headers:
       Host: welcomtofreeboarders.com
-- name: 90#🇩🇪 DE|德国-黑森州 法兰克福 12
+- name: 91#🇩🇪 DE|德国-黑森州 法兰克福 12
   server: 193.233.254.7
   port: 1080
   type: socks5
   tls: false
   username: T2dAMTkzLjIzMy4yNTQuNzpAMTkzLjIzMy4yNTQuNw%3D%3D
-- name: 23#🇩🇪 DE|德国-黑森州 法兰克福 14
+- name: 24#🇩🇪 DE|德国-黑森州 法兰克福 14
   server: 193.233.254.9
   port: 1080
   type: socks5
   tls: false
   username: T2dAMTkzLjIzMy4yNTQuOTpAMTkzLjIzMy4yNTQuOTo%3D
-- name: 1#🇩🇪 DE|德国 21
+- name: 2#🇩🇪 DE|德国 21
   server: 85.209.53.178
   port: 8443
   type: hysteria2
@@ -96,7 +96,7 @@ proxies:
   skip-cert-verify: true
   udp: true
   up: 2
-- name: 1#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 22
+- name: 2#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 22
   server: 152.53.191.55
   port: 10002
   type: anytls
@@ -105,7 +105,7 @@ proxies:
   skip-cert-verify: true
   sni: www.bing.com
   udp: true
-- name: 1#🇫🇷 FR|法国-Paris Department 巴黎 12
+- name: 2#🇫🇷 FR|法国-Paris Department 巴黎 14
   server: 15.236.169.109
   port: 22222
   type: trojan
@@ -115,7 +115,7 @@ proxies:
   skip-cert-verify: true
   sni: trojan.burgerip.co.uk
   udp: true
-- name: 1#🇭🇷 HR|克罗地亚-Sisak-Moslavina County Sisak 01
+- name: 2#🇭🇷 HR|克罗地亚-Sisak-Moslavina County Sisak 01
   server: 45.95.169.14
   port: 20002
   type: anytls
@@ -124,25 +124,32 @@ proxies:
   skip-cert-verify: true
   sni: bing.com
   udp: true
-- name: 112#🇮🇱 IL|以色列-特拉维夫区 02
+- name: 113#🇮🇱 IL|以色列-特拉维夫区 02
   server: 5.188.227.18
   port: 11205
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 317f13c5c2ebdea3
-- name: 20#🇯🇵 JP|日本-东京都 东京 11
+- name: 21#🇯🇵 JP|日本-东京都 东京 13
   server: 167.17.179.87
   port: 8388
   type: ss
   cipher: aes-256-gcm
   password: vEY+Etsv/KTEM3vq
-- name: 104#🇰🇷 KR|韩国-京畿道 Hwaseong-si 03
+- name: 105#🇰🇷 KR|韩国-京畿道 Hwaseong-si 03
   server: 121.169.46.116
   port: 1090
   type: socks5
   tls: false
   username: Og%3D%3D
-- name: 96#🇷🇺 RU|俄罗斯-Moscow 莫斯科 14
+- name: 1#🇳🇴 NO|挪威 01
+  server: 80.173.231.254
+  port: 12420
+  type: trojan
+  password: wp9IsiY82uQhcmgNC1eoBM
+  skip-cert-verify: false
+  sni: www.semanticstaplegun.click
+- name: 97#🇷🇺 RU|俄罗斯-Moscow 莫斯科 15
   server: 45.139.26.152
   port: 7443
   type: vless
@@ -157,7 +164,21 @@ proxies:
   tfo: false
   tls: true
   uuid: 7fc953d6-ae75-46fb-a970-10b57d513487
-- name: 48#🇸🇬 SG|新加坡-新加坡 04
+- name: 1#🇷🇺 RU|俄罗斯 08
+  server: 51.250.42.73
+  port: 8443
+  type: vless
+  client-fingerprint: chrome
+  network: tcp
+  reality-opts:
+    public-key: 8j9xx2O2pywcSy1EiGsMALbyzZXLs2EEbihC-E9E7nw
+    short-id: c2ec7bbfdbbad490
+  servername: api-maps.yandex.ru
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 71031aa1-067e-425e-97f5-37875f838a10
+- name: 49#🇸🇬 SG|新加坡-新加坡 04
   server: 34.143.159.175
   port: 443
   type: vless
@@ -171,7 +192,7 @@ proxies:
     headers:
       Host: sni.meibidi.pp.ua
     path: /?ed=2560
-- name: 43#🇹🇷 TR|土耳其-伊斯坦布尔 Levent 04
+- name: 44#🇹🇷 TR|土耳其-伊斯坦布尔 Levent 03
   server: 92.60.70.36
   port: 2053
   type: vless
@@ -180,7 +201,7 @@ proxies:
   tfo: false
   tls: false
   uuid: 08c7f096-d057-4d53-82fd-c739d372887b
-- name: 1#🇺🇸 US|美国-加州 洛杉矶 21
+- name: 2#🇺🇸 US|美国-加州 洛杉矶 20
   server: 107.174.53.62
   port: 20001
   type: anytls
@@ -189,7 +210,7 @@ proxies:
   skip-cert-verify: true
   sni: www.bing.com
   udp: true
-- name: 1#🇺🇸 US|美国-加州 洛杉矶 22
+- name: 2#🇺🇸 US|美国-加州 洛杉矶 21
   server: 95.174.71.98
   port: 2377
   type: ss
@@ -201,7 +222,13 @@ proxies:
   plugin-opts:
     host: e7b7ab7:102816
     mode: tls
-- name: 33#🇻🇳 VN|越南 06
+- name: 2#🇺🇸 US|美国-加州 洛杉矶 28
+  server: 167.160.90.51
+  port: 11475
+  type: ss
+  cipher: aes-128-gcm
+  password: 523z2fgrd7jx0z5xv6o5
+- name: 34#🇻🇳 VN|越南 06
   server: 103.186.154.248
   port: 38388
   type: ss
@@ -209,7 +236,7 @@ proxies:
   delay: 2297
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 31#🇻🇳 VN|越南 11
+- name: 32#🇻🇳 VN|越南 11
   server: 103.186.155.119
   port: 38388
   type: ss
@@ -217,7 +244,7 @@ proxies:
   delay: 1768
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 29#🇻🇳 VN|越南 21
+- name: 30#🇻🇳 VN|越南 21
   server: 103.186.154.62
   port: 38388
   type: ss
@@ -225,7 +252,7 @@ proxies:
   delay: 2438
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 27#🇻🇳 VN|越南 16
+- name: 28#🇻🇳 VN|越南 16
   server: 103.186.155.76
   port: 38388
   type: ss
@@ -233,7 +260,7 @@ proxies:
   delay: 1978
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 25#🇻🇳 VN|越南 08
+- name: 26#🇻🇳 VN|越南 08
   server: 103.186.155.227
   port: 38388
   type: ss
@@ -241,7 +268,7 @@ proxies:
   delay: 1841
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 17#🇻🇳 VN|越南 10
+- name: 18#🇻🇳 VN|越南 10
   server: 103.186.154.237
   port: 38388
   type: ss
@@ -249,7 +276,7 @@ proxies:
   delay: 2314
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 17#🇻🇳 VN|越南 13
+- name: 18#🇻🇳 VN|越南 13
   server: 103.186.154.246
   port: 38388
   type: ss
@@ -257,7 +284,7 @@ proxies:
   delay: 1710
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 15#🇻🇳 VN|越南 09
+- name: 16#🇻🇳 VN|越南 09
   server: 103.186.155.126
   port: 38388
   type: ss
@@ -265,7 +292,7 @@ proxies:
   delay: 2313
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 15#🇻🇳 VN|越南 20
+- name: 16#🇻🇳 VN|越南 20
   server: 103.186.155.120
   port: 38388
   type: ss
@@ -273,7 +300,7 @@ proxies:
   delay: 1424
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 13#🇻🇳 VN|越南 23
+- name: 14#🇻🇳 VN|越南 23
   server: 103.186.154.68
   port: 38388
   type: ss
@@ -281,7 +308,7 @@ proxies:
   delay: 1602
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 11#🇻🇳 VN|越南 07
+- name: 12#🇻🇳 VN|越南 07
   server: 103.186.155.62
   port: 38388
   type: ss
@@ -289,7 +316,7 @@ proxies:
   delay: 1936
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 11#🇻🇳 VN|越南 12
+- name: 12#🇻🇳 VN|越南 12
   server: 103.186.154.43
   port: 38388
   type: ss
@@ -297,7 +324,7 @@ proxies:
   delay: 1710
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 5#🇻🇳 VN|越南 19
+- name: 6#🇻🇳 VN|越南 19
   server: 103.186.155.71
   port: 38388
   type: ss
@@ -305,7 +332,7 @@ proxies:
   delay: 1408
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 1#🇻🇳 VN|越南 03
+- name: 2#🇻🇳 VN|越南 03
   server: 103.137.184.146
   port: 20002
   type: anytls
@@ -314,7 +341,7 @@ proxies:
   skip-cert-verify: true
   sni: www.bing.com
   udp: true
-- name: 1#🇻🇳 VN|越南 04
+- name: 2#🇻🇳 VN|越南 04
   server: 103.186.154.4
   port: 38388
   type: ss
@@ -322,7 +349,7 @@ proxies:
   delay: 1385
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 1#🇻🇳 VN|越南 05
+- name: 2#🇻🇳 VN|越南 05
   server: 103.186.155.114
   port: 38388
   type: ss
@@ -330,7 +357,7 @@ proxies:
   delay: 2111
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 1#🇻🇳 VN|越南 14
+- name: 2#🇻🇳 VN|越南 14
   server: 103.186.155.17
   port: 38388
   type: ss
@@ -338,7 +365,7 @@ proxies:
   delay: 1341
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 1#🇻🇳 VN|越南 15
+- name: 2#🇻🇳 VN|越南 15
   server: 103.186.155.108
   port: 38388
   type: ss
@@ -346,7 +373,7 @@ proxies:
   delay: 1586
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 1#🇻🇳 VN|越南 17
+- name: 2#🇻🇳 VN|越南 17
   server: 103.186.154.67
   port: 38388
   type: ss
@@ -354,7 +381,7 @@ proxies:
   delay: 2185
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 1#🇻🇳 VN|越南 18
+- name: 2#🇻🇳 VN|越南 18
   server: 103.186.154.249
   port: 38388
   type: ss
@@ -362,7 +389,7 @@ proxies:
   delay: 2025
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 1#🇻🇳 VN|越南 22
+- name: 2#🇻🇳 VN|越南 22
   server: 103.186.155.213
   port: 38388
   type: ss
@@ -370,7 +397,22 @@ proxies:
   delay: 1597
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 105#🌐 XX 97
+- name: 188#🌐 XX 162
+  server: api.dark-coffe.com
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  network: ws
+  servername: GfV5t2331T.sMaRtTeChZaAl.InFo
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 7e58699f-1d5d-4f6b-b181-cb74f0ad9509
+  ws-opts:
+    path: /
+    headers:
+      Host: GfV5t2331T.sMaRtTeChZaAl.InFo
+- name: 106#🌐 XX 98
   server: 162.159.44.142
   port: 443
   type: vless
@@ -388,7 +430,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 98#🌐 XX 98
+- name: 99#🌐 XX 99
   server: 162.159.45.232
   port: 443
   type: vless
@@ -406,7 +448,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 92#🌐 XX 158
+- name: 93#🌐 XX 158
   server: octopusss5.info
   port: 22955
   type: vless
@@ -423,14 +465,28 @@ proxies:
   tfo: false
   tls: true
   uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
-- name: 85#🌐 XX 59
+- name: 91#🌐 XX 105
+  server: betty.ns.cloudflare.com
+  port: 443
+  type: vless
+  network: ws
+  servername: 639031180460930556.altima-amsjq.info
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: d851e68a-af64-4dfc-a85a-7ffad2483230
+  ws-opts:
+    path: /oqxdqtws
+    headers:
+      Host: 639031180460930556.altima-amsjq.info
+- name: 86#🌐 XX 60
   server: 107.174.82.102.sslip.io
   port: 443
   type: trojan
   password: bb824a22-b7ce-427b-9ed6-1adf0751da02
   skip-cert-verify: true
   sni: 107.174.82.102.sslip.io
-- name: 74#🌐 XX 143
+- name: 75#🌐 XX 145
   server: cloudflare.182682.xyz
   port: 443
   type: vless
@@ -448,7 +504,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 67#🌐 XX 142
+- name: 68#🌐 XX 144
   server: www.udemy.com
   port: 2095
   type: vless
@@ -463,7 +519,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 58#🌐 XX 144
+- name: 59#🌐 XX 146
   server: 104.18.185.26
   port: 443
   type: vless
@@ -481,7 +537,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 57#🌐 XX 91
+- name: 58#🌐 XX 92
   server: vip3.kaixincloud.top
   port: 2096
   type: vless
@@ -499,7 +555,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 56#🌐 XX 84
+- name: 57#🌐 XX 85
   server: 162.159.16.63
   port: 443
   type: vless
@@ -517,7 +573,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 46#🌐 XX 20
+- name: 47#🌐 XX 20
   server: turkiye.torprospeed.ir
   port: 587
   type: vless
@@ -530,7 +586,7 @@ proxies:
   tls: true
   udp: true
   uuid: 65a1e22c-d37e-4b92-b6ca-1d09dcd1d441
-- name: 43#🌐 XX 11
+- name: 45#🌐 XX 11
   server: de3.xiaoliyu.cyou
   port: 4433
   type: hysteria2
@@ -538,7 +594,7 @@ proxies:
   skip-cert-verify: true
   sni: de3.xiaoliyu.cyou
   tls: false
-- name: 42#🌐 XX 93
+- name: 43#🌐 XX 94
   server: www.shopify.com
   port: 2095
   type: vless
@@ -553,7 +609,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 38#🌐 XX 92
+- name: 39#🌐 XX 93
   server: cf.090227.xyz
   port: 2095
   type: vless
@@ -568,7 +624,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 33#🌐 XX 135
+- name: 34#🌐 XX 137
   server: vip2.kaixincloud.top
   port: 443
   type: vless
@@ -585,7 +641,7 @@ proxies:
       Host: sni.meibidi.pp.ua
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 32#🌐 XX 87
+- name: 33#🌐 XX 88
   server: openai.com
   port: 2095
   type: vless
@@ -600,7 +656,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 32#🌐 XX 138
+- name: 33#🌐 XX 140
   server: docs.cloudflare.com
   port: 2095
   type: vless
@@ -615,7 +671,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 31#🌐 XX 133
+- name: 32#🌐 XX 135
   server: blog.cloudflare.com
   port: 2095
   type: vless
@@ -630,7 +686,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 30#🌐 XX 139
+- name: 31#🌐 XX 141
   server: www.fbi.gov
   port: 2095
   type: vless
@@ -645,7 +701,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 30#🌐 XX 141
+- name: 31#🌐 XX 143
   server: www.npmjs.com
   port: 2095
   type: vless
@@ -660,7 +716,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 30#🌐 XX 146
+- name: 31#🌐 XX 148
   server: vip1.kaixincloud.top
   port: 2096
   type: vless
@@ -677,7 +733,7 @@ proxies:
       Host: sni.meibidi.pp.ua
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 25#🌐 XX 134
+- name: 26#🌐 XX 136
   server: 104.21.224.5
   port: 443
   type: vless
@@ -695,7 +751,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 21#🌐 XX 86
+- name: 22#🌐 XX 87
   server: ns.cloudflare.com
   port: 2095
   type: vless
@@ -710,7 +766,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 21#🌐 XX 137
+- name: 22#🌐 XX 139
   server: www.temu.com
   port: 2095
   type: vless
@@ -725,7 +781,7 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 21#🌐 XX 140
+- name: 22#🌐 XX 142
   server: support.cloudflare.com
   port: 2095
   type: vless
@@ -740,7 +796,101 @@ proxies:
     path: /
     headers:
       Host: cnm-fangbinxing-nmsl.fangbinxing-wcnm.workers.dev
-- name: 12#🌐 XX 88
+- name: 19#🌐 XX 163
+  server: 188.114.98.224
+  port: 443
+  type: vless
+  network: ws
+  servername: hetzner.rahedarro.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 95fd8ed6-0c48-41be-ae26-dfea82fa67ad
+  ws-opts:
+    path: /dar
+    headers:
+      Host: hetzner.rahedarro.com
+- name: 16#🌐 XX 83
+  server: 123001.wdy88.com
+  port: 61142
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2314
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 16#🌐 XX 84
+  server: 123001.wdy88.com
+  port: 42492
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2286
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 16#🌐 XX 95
+  server: 123001.wdy88.com
+  port: 36008
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2108
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 16#🌐 XX 97
+  server: 123001.wdy88.com
+  port: 37473
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2631
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: v1.kwaicdn.com
+- name: 16#🌐 XX 134
+  server: 123001.wdy88.com
+  port: 57999
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2593
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 16#🌐 XX 138
+  server: 123001.wdy88.com
+  port: 38185
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2521
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 16#🌐 XX 153
+  server: 123001.wdy88.com
+  port: 19606
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2430
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 16#🌐 XX 154
+  server: 123001.wdy88.com
+  port: 43651
+  type: trojan
+  client-fingerprint: chrome
+  delay: 2469
+  network: tcp
+  password: 65762559-4288-4b42-b7ea-edf80342415d
+  skip-cert-verify: true
+  sni: mmbiz.qpic.cn
+- name: 13#🌐 XX 89
   server: staticdelivery.nexusmods.com
   port: 443
   type: vless
@@ -758,7 +908,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 11#🌐 XX 90
+- name: 12#🌐 XX 91
   server: saas.sin.fan
   port: 2096
   type: vless
@@ -776,87 +926,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 8#🌐 XX 82
-  server: 123001.wdy88.com
-  port: 61142
-  type: trojan
-  client-fingerprint: chrome
-  delay: 2314
-  network: tcp
-  password: 65762559-4288-4b42-b7ea-edf80342415d
-  skip-cert-verify: true
-  sni: mmbiz.qpic.cn
-- name: 8#🌐 XX 83
-  server: 123001.wdy88.com
-  port: 42492
-  type: trojan
-  client-fingerprint: chrome
-  delay: 2286
-  network: tcp
-  password: 65762559-4288-4b42-b7ea-edf80342415d
-  skip-cert-verify: true
-  sni: mmbiz.qpic.cn
-- name: 8#🌐 XX 94
-  server: 123001.wdy88.com
-  port: 36008
-  type: trojan
-  client-fingerprint: chrome
-  delay: 2108
-  network: tcp
-  password: 65762559-4288-4b42-b7ea-edf80342415d
-  skip-cert-verify: true
-  sni: mmbiz.qpic.cn
-- name: 8#🌐 XX 96
-  server: 123001.wdy88.com
-  port: 37473
-  type: trojan
-  client-fingerprint: chrome
-  delay: 2631
-  network: tcp
-  password: 65762559-4288-4b42-b7ea-edf80342415d
-  skip-cert-verify: true
-  sni: v1.kwaicdn.com
-- name: 8#🌐 XX 132
-  server: 123001.wdy88.com
-  port: 57999
-  type: trojan
-  client-fingerprint: chrome
-  delay: 2593
-  network: tcp
-  password: 65762559-4288-4b42-b7ea-edf80342415d
-  skip-cert-verify: true
-  sni: mmbiz.qpic.cn
-- name: 8#🌐 XX 136
-  server: 123001.wdy88.com
-  port: 38185
-  type: trojan
-  client-fingerprint: chrome
-  delay: 2521
-  network: tcp
-  password: 65762559-4288-4b42-b7ea-edf80342415d
-  skip-cert-verify: true
-  sni: mmbiz.qpic.cn
-- name: 8#🌐 XX 151
-  server: 123001.wdy88.com
-  port: 19606
-  type: trojan
-  client-fingerprint: chrome
-  delay: 2430
-  network: tcp
-  password: 65762559-4288-4b42-b7ea-edf80342415d
-  skip-cert-verify: true
-  sni: mmbiz.qpic.cn
-- name: 8#🌐 XX 152
-  server: 123001.wdy88.com
-  port: 43651
-  type: trojan
-  client-fingerprint: chrome
-  delay: 2469
-  network: tcp
-  password: 65762559-4288-4b42-b7ea-edf80342415d
-  skip-cert-verify: true
-  sni: mmbiz.qpic.cn
-- name: 6#🌐 XX 103
+- name: 7#🌐 XX 104
   server: midorinote.online
   port: 8443
   type: vless
@@ -871,7 +941,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 55e9b476-53fb-4a91-9d0e-48098267d926
-- name: 1#🌐 XX 89
+- name: 2#🌐 XX 90
   server: 104.18.45.223
   port: 443
   type: vless
@@ -889,7 +959,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 1#🌐 XX 99
+- name: 2#🌐 XX 100
   server: 172.64.229.220
   port: 2096
   type: vless
@@ -907,7 +977,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 1#🌐 XX 145
+- name: 2#🌐 XX 147
   server: 104.17.102.95
   port: 2096
   type: vless
@@ -925,7 +995,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 1#🌐 XX 147
+- name: 2#🌐 XX 149
   server: cf.3666888.xyz
   port: 2096
   type: vless
@@ -943,7 +1013,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 1#🌐 XX 149
+- name: 2#🌐 XX 151
   server: cdnjs.com
   port: 2095
   type: vless
