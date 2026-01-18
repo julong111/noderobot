@@ -3,6 +3,11 @@ name: Connective
 on:
   schedule:
     - cron: '5 * * * *'
+  push:
+      branches:
+        - main
+      paths:
+        - 's/node-connective.csv'
   workflow_dispatch:
     # 可以在这里定义输入参数，让用户在触发时选择或输入值 (可选)
     # inputs:
