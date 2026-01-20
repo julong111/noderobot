@@ -1,0 +1,317 @@
+{
+  "subs": [
+    {
+      "name": "peasoft-NoMoreWalls",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "",
+      "isIconColor": true,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "DISABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        }
+      ],
+      "source": "remote",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/peasoft/NoMoreWalls/refs/heads/master/list.meta.yml",
+      "content": "",
+      "ua": "",
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
+    },
+    {
+      "name": "go4sharing-sub",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "",
+      "isIconColor": true,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "DISABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        }
+      ],
+      "source": "remote",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/go4sharing/sub/refs/heads/main/sub.yaml",
+      "content": "",
+      "ua": "",
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
+    },
+    {
+      "name": "freenodes-clashfree",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "",
+      "isIconColor": true,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "DISABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        }
+      ],
+      "source": "remote",
+      "url": "https://ghfast.top/https://github.com/julong111/noderobot/raw/refs/heads/main/s/original/freenodes-clashfree-original.yml",
+      "content": "",
+      "ua": "",
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
+    },
+    {
+      "name": "Custom",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Star.png",
+      "isIconColor": true,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "DISABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        }
+      ],
+      "source": "local",
+      "url": "",
+      "content": "",
+      "ua": "",
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
+    }
+  ],
+  "collections": [
+    {
+      "name": "MyALL",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "",
+      "isIconColor": true,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "ENABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        },
+        {
+          "type": "Type Filter",
+          "args": {
+            "keep": false,
+            "value": [
+              "ss",
+              "ssr",
+              "http",
+              "socks5",
+              "anytls",
+              "wireguard",
+              "sudoku",
+              "external",
+              "ssh",
+              "direct",
+              "mieru",
+              "juicity",
+              "tuic",
+              "snell"
+            ]
+          },
+          "customName": "",
+          "id": "94558239.25919497",
+          "disabled": false
+        },
+        {
+          "type": "Regex Filter",
+          "args": {
+            "keep": false,
+            "regex": [
+              "防范境外势力渗透",
+              "V2rayAlpha",
+              "V2rayBaaz",
+              "ConfigV2RayNG",
+              "mainv𝟮ray"
+            ]
+          },
+          "customName": "",
+          "id": "41117436.26332792",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/filter-ipv6.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "24824299.76128494",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/quchong.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "96397772.21757495",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/renamebyip.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "54593802.908231035",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/speedtest.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "82357045.82910842",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/filter-ping-rate.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "11734992.295012847",
+          "disabled": false
+        }
+      ],
+      "subscriptions": [
+        "freenodes-clashfree",
+        "go4sharing-sub",
+        "peasoft-NoMoreWalls",
+        "Custom"
+      ],
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
+    }
+  ],
+  "artifacts": [],
+  "rules": [],
+  "files": [
+    {
+      "name": "MyMihomoSub",
+      "displayName": "",
+      "remark": "",
+      "icon": "",
+      "isIconColor": true,
+      "source": "local",
+      "sourceType": "collection",
+      "sourceName": "MyALL",
+      "process": [
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/convert.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "11549364.717765154",
+          "disabled": false
+        }
+      ],
+      "type": "mihomoProfile",
+      "content": "// 填入文件内容\n",
+      "tag": [],
+      "display-name": "",
+      "ignoreFailedRemoteFile": false,
+      "download": true
+    },
+    {
+      "name": "test",
+      "displayName": "",
+      "remark": "",
+      "icon": "",
+      "isIconColor": true,
+      "source": "local",
+      "sourceType": "collection",
+      "sourceName": "MyALL",
+      "process": [
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/convert-new.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "47727999.895533055",
+          "disabled": false
+        }
+      ],
+      "type": "mihomoProfile",
+      "tag": [],
+      "display-name": ""
+    }
+  ],
+  "tokens": [],
+  "schemaVersion": "2.0",
+  "settings": {},
+  "modules": []
+}
