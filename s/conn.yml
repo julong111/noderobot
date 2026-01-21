@@ -5,45 +5,28 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 118#🇨🇳 CN|中国 01
+- name: 120#🇨🇳 CN|中国 01
   server: 183.236.51.36
   port: '59003'
   type: vmess
   cipher: auto
-  alterId: 64
+  alterId: 0
   network: tcp
   tls: false
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 105#🇩🇪 DE|德国-黑森州 法兰克福 15
+- name: 107#🇩🇪 DE|德国-黑森州 法兰克福 13
   server: 193.233.254.7
   port: 1080
   type: socks5
   tls: false
   username: VDJkQU1Ua3pMakl6TXk0eU5UUXVOenBBTVRrekxqSXpNeTR5TlRRdU56b0AxOTMuMjMzLjI1NC43OkAxOTMuMjMzLjI1NC43Og%3D%3D
-- name: 38#🇩🇪 DE|德国-黑森州 法兰克福 13
+- name: 40#🇩🇪 DE|德国-黑森州 法兰克福 16
   server: 193.233.254.9
   port: 1080
   type: socks5
   tls: false
   username: T2dAMTkzLjIzMy4yNTQuOTpAMTkzLjIzMy4yNTQuOTo%3D
-- name: 29#🇩🇪 DE|德国 16
-  server: 89.144.35.25
-  port: 33550
-  type: hysteria2
-  password: dongtaiwang.com
-  skip-cert-verify: true
-  sni: apple.com
-  tls: false
-- name: 18#🇩🇪 DE|德国 14
-  server: 85.209.53.178
-  port: 8443
-  type: hysteria2
-  obfs: salamander
-  obfs-password: NDhhNmY5YTY0MGYzOTgxYQ%3D%3D
-  password: 3b796665-a343-4226-8908-b025fd95fc4f
-  skip-cert-verify: true
-  tls: false
-- name: 13#🇩🇪 DE|德国-黑森州 法兰克福 19
+- name: 15#🇩🇪 DE|德国-黑森州 法兰克福 17
   server: 185.94.29.250
   port: 443
   type: vless
@@ -56,7 +39,7 @@ proxies:
   tls: true
   udp: true
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 11#🇩🇪 DE|德国-黑森州 法兰克福 38
+- name: 13#🇩🇪 DE|德国-黑森州 法兰克福 33
   server: 94.141.161.83
   port: 2584
   type: vless
@@ -65,7 +48,7 @@ proxies:
   tfo: false
   tls: false
   uuid: 038a50c3-229c-41ef-a7ef-7abb504e4f33
-- name: 8#🇩🇪 DE|德国-黑森州 法兰克福 37
+- name: 10#🇩🇪 DE|德国-黑森州 法兰克福 32
   server: 193.233.85.244
   port: 2584
   type: vless
@@ -74,7 +57,7 @@ proxies:
   tfo: false
   tls: false
   uuid: 038a50c3-229c-41ef-a7ef-7abb504e4f33
-- name: 1#🇩🇪 DE|德国-黑森州 法兰克福 36
+- name: 3#🇩🇪 DE|德国-黑森州 法兰克福 31
   server: 63.181.195.69
   port: 22223
   type: trojan
@@ -83,31 +66,7 @@ proxies:
   password: telegram-id-directvpn
   skip-cert-verify: false
   sni: trojan.burgerip.co.uk
-- name: 70#🇪🇸 ES|西班牙 01
-  server: 109.234.211.66
-  port: 2087
-  type: trojan
-  network: ws
-  password: trojan
-  skip-cert-verify: true
-  sni: store.timimi.dpdns.org
-  ws-opts:
-    headers:
-      Host: store.timimi.dpdns.org
-    path: '%2F'
-- name: 70#🇪🇸 ES|西班牙 02
-  server: 109.234.211.66
-  port: 8443
-  type: trojan
-  network: ws
-  password: trojan
-  skip-cert-verify: true
-  sni: store.timimi.dpdns.org
-  ws-opts:
-    headers:
-      Host: store.timimi.dpdns.org
-    path: '%2F'
-- name: 63#🇫🇮 FI|芬兰-新地区 赫尔辛基 01
+- name: 65#🇫🇮 FI|芬兰-新地区 赫尔辛基 01
   server: 78.153.139.68
   port: 8443
   type: vless
@@ -121,7 +80,7 @@ proxies:
   tls: true
   udp: true
   uuid: fd8972d7-cf5e-11f0-9970-45e1d80c4039
-- name: 1#🇫🇮 FI|芬兰-新地区 赫尔辛基 03
+- name: 3#🇫🇮 FI|芬兰-新地区 赫尔辛基 03
   server: 85.192.48.50
   port: 443
   type: vless
@@ -131,16 +90,24 @@ proxies:
   tfo: false
   tls: true
   uuid: 02fb468f-21f2-460e-bfa1-ef52ae5e627f
-- name: 1#🇫🇷 FR|法国-Paris Department 巴黎 20
+- name: 3#🇫🇷 FR|法国-Paris Department 巴黎 21
   server: 13.36.35.251
-  port: 22222
+  port: 22223
   type: trojan
   alpn:
   - http/1.1
-  password: telegram-id-privatevpns
+  password: telegram-id-directvpn
   skip-cert-verify: false
   sni: trojan.burgerip.co.uk
-- name: 9#🇬🇧 GB|英国 32
+- name: 2#🇫🇷 FR|法国 08
+  server: 51.75.118.149
+  port: 20248
+  type: hysteria2
+  password: a516b408-e06d-4278-9e6d-5271571ecab5
+  skip-cert-verify: true
+  sni: dash.cloudflare.com
+  tls: false
+- name: 11#🇬🇧 GB|英国 32
   server: 5.181.21.246
   port: 443
   type: ss
@@ -148,13 +115,26 @@ proxies:
   delay: 1784
   password: gKYygTcRYhc3skc2x6tZ073lYz0DnieX
   udp: true
-- name: 16#🇬🇷 GR|希腊-Attica 雅典 01
+- name: 1#🇬🇧 GB|英国 33
+  server: 25.129.199.2
+  port: 2082
+  type: vless
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 22180bd5-7d26-4e1b-ef93-6329eef37709
+  ws-opts:
+    path: /assets/js/app.min.js
+    headers:
+      Host: mx5.mmd8563.ir
+- name: 18#🇬🇷 GR|希腊-Attica 雅典 01
   server: 38.54.29.18
   port: 11201
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 932a519c8147a998
-- name: 29#🇭🇰 HK|香港 09
+- name: 31#🇭🇰 HK|香港 08
   server: 103.149.183.200
   port: 8388
   type: ss
@@ -162,7 +142,7 @@ proxies:
   country: 🇭🇰HK
   delay: 534
   password: asd123456
-- name: 12#🇭🇰 HK|香港 14
+- name: 14#🇭🇰 HK|香港 12
   server: 58.152.18.98
   port: 443
   type: trojan
@@ -170,42 +150,7 @@ proxies:
   password: 4843e94d205f3893f588255a591abe94
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 12#🇭🇰 HK|香港 18
-  server: 218.250.156.130
-  port: 443
-  type: trojan
-  password: BxceQaOe
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-- name: 12#🇭🇰 HK|香港 19
-  server: 18.166.15.25
-  port: 4650
-  type: trojan
-  password: BxceQaOe
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-- name: 12#🇭🇰 HK|香港-香港 20
-  server: 18.163.116.85
-  port: 1112
-  type: trojan
-  password: BxceQaOe
-  skip-cert-verify: true
-  sni: t.me%2Fripaojiedian
-- name: 7#🇭🇰 HK|香港 10
-  server: 61.15.60.153
-  port: 52080
-  type: vmess
-  cipher: auto
-  alterId: 0
-  delay: 2272
-  h2-opts: {}
-  http-opts:
-    method: GET
-    path:
-    - /QQqun-737805443
-  network: http
-  uuid: bfb47846-aedb-4ea3-a81f-27895a4ec1bb
-- name: 7#🇭🇰 HK|香港 13
+- name: 11#🇭🇰 HK|香港 11
   server: 61.15.60.153
   port: '52080'
   type: vmess
@@ -215,7 +160,16 @@ proxies:
   servername: ''
   tls: false
   uuid: bfb47846-aedb-4ea3-a81f-27895a4ec1bb
-- name: 2#🇭🇰 HK|香港 12
+- name: 11#🇭🇰 HK|香港 16
+  server: 61.15.60.153
+  port: 52080
+  type: vmess
+  cipher: auto
+  alterId: 0
+  skip-cert-verify: false
+  tls: false
+  uuid: bfb47846-aedb-4ea3-a81f-27895a4ec1bb
+- name: 4#🇭🇰 HK|香港 10
   server: 16.162.22.195
   port: 4569
   type: trojan
@@ -223,7 +177,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-- name: 2#🇭🇰 HK|香港 15
+- name: 4#🇭🇰 HK|香港 13
   server: 16.162.252.215
   port: 3042
   type: trojan
@@ -231,7 +185,13 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-- name: 15#🇮🇷 IR|伊朗 01
+- name: 134#🇮🇱 IL|以色列-特拉维夫区 01
+  server: 5.188.227.18
+  port: 11205
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 317f13c5c2ebdea3
+- name: 17#🇮🇷 IR|伊朗 01
   server: 85.133.204.131
   port: 2024
   type: vless
@@ -240,49 +200,22 @@ proxies:
   tfo: false
   tls: false
   uuid: efdd92c0-c32d-4039-a564-374abaa5d8ce
-- name: 80#🇯🇵 JP|日本-东京都 东京 14
-  server: 153.121.45.139
+- name: 132#🇯🇵 JP|日本-东京都 东京 13
+  server: 153.121.38.213
   port: 3423
   type: trojan
   password: 4843e94d205f3893f588255a591abe94
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 80#🇯🇵 JP|日本-东京都 东京 19
-  server: 153.121.45.139
-  port: 3076
-  type: trojan
-  password: 4843e94d205f3893f588255a591abe94
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-- name: 80#🇯🇵 JP|日本-东京都 东京 21
-  server: 153.121.45.139
-  port: 544
-  type: trojan
-  password: 4843e94d205f3893f588255a591abe94
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-- name: 63#🇯🇵 JP|日本-东京都 东京 15
-  server: 153.121.39.240
-  port: 4006
-  type: trojan
-  password: 4843e94d205f3893f588255a591abe94
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-- name: 63#🇯🇵 JP|日本-东京都 东京 22
-  server: 153.121.39.240
-  port: 5076
-  type: trojan
-  password: 4843e94d205f3893f588255a591abe94
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-- name: 39#🇯🇵 JP|日本-东京都 东京 06
+- name: 43#🇯🇵 JP|日本-东京都 东京 06
   server: 160.16.57.238
   port: 1933
   type: trojan
   network: tcp
   password: 4843e94d205f3893f588255a591abe94
+  skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 39#🇯🇵 JP|日本-东京都 东京 10
+- name: 43#🇯🇵 JP|日本-东京都 东京 10
   server: 160.16.57.238
   port: 5076
   type: trojan
@@ -290,14 +223,7 @@ proxies:
   password: 4843e94d205f3893f588255a591abe94
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 36#🇯🇵 JP|日本-东京都 东京 17
-  server: 160.16.132.38
-  port: 544
-  type: trojan
-  password: 4843e94d205f3893f588255a591abe94
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-- name: 34#🇯🇵 JP|日本-东京都 东京 03
+- name: 36#🇯🇵 JP|日本-东京都 东京 03
   server: 160.16.124.55
   port: 3901
   type: trojan
@@ -305,42 +231,31 @@ proxies:
   password: 4843e94d205f3893f588255a591abe94
   skip-cert-verify: true
   sni: www.nintendogames.net
-- name: 33#🇯🇵 JP|日本 05
+- name: 35#🇯🇵 JP|日本 05
   server: 153.121.65.107
   port: 544
   type: trojan
   network: tcp
   password: 4843e94d205f3893f588255a591abe94
+  skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 25#🇯🇵 JP|日本-东京都 东京 07
+- name: 29#🇯🇵 JP|日本-东京都 东京 07
   server: 160.16.117.182
   port: 4006
   type: trojan
   network: tcp
   password: 4843e94d205f3893f588255a591abe94
+  skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 25#🇯🇵 JP|日本-东京都 东京 09
+- name: 29#🇯🇵 JP|日本-东京都 东京 09
   server: 160.16.117.182
   port: 5076
   type: trojan
   network: tcp
   password: 4843e94d205f3893f588255a591abe94
+  skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 12#🇯🇵 JP|日本-东京都 东京 16
-  server: 52.195.11.229
-  port: 2595
-  type: trojan
-  password: BxceQaOe
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-- name: 12#🇯🇵 JP|日本-东京都 东京 20
-  server: 57.180.20.143
-  port: 3127
-  type: trojan
-  password: BxceQaOe
-  skip-cert-verify: true
-  sni: t.me%252Fripaojiedian
-- name: 4#🇯🇵 JP|日本-东京都 东京 04
+- name: 8#🇯🇵 JP|日本-东京都 东京 04
   server: 13.114.140.34
   port: 1196
   type: trojan
@@ -348,7 +263,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-- name: 4#🇯🇵 JP|日本-东京都 东京 11
+- name: 8#🇯🇵 JP|日本-东京都 东京 11
   server: 13.114.140.34
   port: 3292
   type: trojan
@@ -356,7 +271,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-- name: 2#🇯🇵 JP|日本-东京都 东京 08
+- name: 4#🇯🇵 JP|日本-东京都 东京 08
   server: 18.181.201.166
   port: 2053
   type: trojan
@@ -364,19 +279,64 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-- name: 119#🇰🇷 KR|韩国-京畿道 Hwaseong-si 03
+- name: 121#🇰🇷 KR|韩国-京畿道 Hwaseong-si 03
   server: 121.169.46.116
   port: 1090
   type: socks5
   tls: false
   username: Og%3D%3D
-- name: 3#🇱🇹 LT|立陶宛 02
+- name: 5#🇱🇹 LT|立陶宛 02
   server: 5.199.173.116
   port: 5228
   type: ss
   cipher: chacha20-ietf-poly1305
   password: NQRCh-qm11GH9MaRWX9NdmSdWaGRhFeS
-- name: 6#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 05
+- name: 62#🇲🇩 MD|摩尔多瓦 19
+  server: 185.234.57.169
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: oXJYDXF6d8Bfx04xUNcI6SFSRyQ9SpBhU0Xf3tw4yy8
+    short-id: a5dc63d78eb0b1c9
+  servername: wikiportal.su
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: c7fd7017-71cf-4bfa-bc4f-bff8534c250b
+- name: 1#🇲🇩 MD|摩尔多瓦 17
+  server: 176.120.67.95
+  port: 8443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 7HejPU15kdTl9QG_8AygEM3w0ythsbhG6q_SwUumyR0
+    short-id: f1071c148a5aefc4
+  servername: ozon.ru
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: d0dea598-9047-4567-a934-84c2797c0978
+- name: 1#🇲🇩 MD|摩尔多瓦 18
+  server: 176.120.67.77
+  port: 8443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 7HejPU15kdTl9QG_8AygEM3w0ythsbhG6q_SwUumyR0
+    short-id: f1071c148a5aefc4
+  servername: ozon.ru
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: d0dea598-9047-4567-a934-84c2797c0978
+- name: 8#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 05
   server: 91.84.101.227
   port: 443
   type: vless
@@ -388,7 +348,7 @@ proxies:
   tls: true
   udp: true
   uuid: 94b14627-b624-4518-b9b6-9a3aae70f3ac
-- name: 6#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 06
+- name: 8#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 06
   server: 94.228.213.219
   port: 443
   type: vless
@@ -401,14 +361,14 @@ proxies:
   tls: true
   udp: true
   uuid: 45e3b7ad-03b6-42fc-b616-1e92bdd0a5b3
-- name: 24#🇳🇴 NO|挪威 01
+- name: 26#🇳🇴 NO|挪威 01
   server: 80.173.231.254
   port: 12420
   type: trojan
   password: wp9IsiY82uQhcmgNC1eoBM
   skip-cert-verify: false
   sni: www.semanticstaplegun.click
-- name: 6#🇵🇱 PL|波兰-Mazovia 华沙 01
+- name: 8#🇵🇱 PL|波兰-Mazovia 华沙 01
   server: 45.144.51.69
   port: 443
   type: vless
@@ -421,7 +381,7 @@ proxies:
   tls: true
   udp: true
   uuid: 96090e80-93bc-4e8e-897a-042f6068b500
-- name: 112#🇷🇺 RU|俄罗斯-Moscow 莫斯科 10
+- name: 114#🇷🇺 RU|俄罗斯-Moscow 莫斯科 10
   server: 45.139.26.152
   port: 7443
   type: vless
@@ -436,7 +396,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 7fc953d6-ae75-46fb-a970-10b57d513487
-- name: 36#🇷🇺 RU|俄罗斯-St.-Petersburg 17
+- name: 38#🇷🇺 RU|俄罗斯-St.-Petersburg 17
   server: 82.97.252.100
   port: 4443
   type: vless
@@ -451,7 +411,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 3f688b2a-373a-4be1-846d-b159404b73b2
-- name: 22#🇷🇺 RU|俄罗斯 06
+- name: 24#🇷🇺 RU|俄罗斯 06
   server: 51.250.42.73
   port: 8443
   type: vless
@@ -463,7 +423,7 @@ proxies:
   tls: true
   udp: true
   uuid: 71031aa1-067e-425e-97f5-37875f838a10
-- name: 16#🇷🇺 RU|俄罗斯-St.-Petersburg 圣彼得堡 07
+- name: 18#🇷🇺 RU|俄罗斯-St.-Petersburg 圣彼得堡 07
   server: 217.12.40.76
   port: 443
   type: vless
@@ -476,7 +436,7 @@ proxies:
   tls: true
   udp: true
   uuid: 4371ad14-b981-4699-bedf-83fb79bde3e6
-- name: 12#🇷🇺 RU|俄罗斯 09
+- name: 14#🇷🇺 RU|俄罗斯 09
   server: 51.250.38.137
   port: 4443
   type: vless
@@ -490,7 +450,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 71031aa1-067e-425e-97f5-37875f838a10
-- name: 4#🇷🇺 RU|俄罗斯 16
+- name: 6#🇷🇺 RU|俄罗斯 16
   server: 84.201.148.218
   port: 47014
   type: vless
@@ -499,34 +459,39 @@ proxies:
   tfo: false
   tls: false
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 125#🇹🇭 TH|泰国-曼谷 02
+- name: 127#🇹🇭 TH|泰国-曼谷 02
   server: 163.171.148.71
   port: 11201
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 312ee9bcc9570095
-- name: 55#🇹🇷 TR|土耳其-伊斯坦布尔 Levent 04
-  server: 92.60.70.36
+- name: 68#🇹🇼 TW|台湾-Taichung City Taichung 01
+  server: 220.130.58.136
+  port: 21101
+  type: trojan
+  password: bac3c766-edca-4082-a791-327509342122
+  skip-cert-verify: true
+  sni: cdnfire.xiaomispeed.com
+- name: 68#🇹🇼 TW|台湾-Taichung City Taichung 02
+  server: 220.130.58.136
+  port: 21102
+  type: trojan
+  password: bac3c766-edca-4082-a791-327509342122
+  skip-cert-verify: true
+  sni: cdnfire.xiaomispeed.com
+- name: 28#🇺🇸 US|美国 19
+  server: 167.68.4.199
   port: 2053
-  type: vless
-  network: tcp
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  uuid: 08c7f096-d057-4d53-82fd-c739d372887b
-- name: 26#🇺🇸 US|美国-Arizona 凤凰城 19
-  server: 158.101.11.204
-  port: 15805
   type: trojan
   network: ws
-  password: iwangjie
+  password: Aimer
   skip-cert-verify: true
-  sni: nodes.830901.xyz
+  sni: epge.muarua.filegear-sg.me
   ws-opts:
     headers:
-      Host: nodes.830901.xyz
-    path: '%2F%3Fed%3D2560'
-- name: 20#🇺🇸 US|美国 18
+      Host: epge.muarua.filegear-sg.me
+    path: '%2F'
+- name: 22#🇺🇸 US|美国 18
   server: 23.138.148.47
   port: '42507'
   type: vmess
@@ -535,13 +500,13 @@ proxies:
   network: tcp
   tls: false
   uuid: 4db07b13-6524-49d2-b432-1f312c0e9c7c
-- name: 17#🇺🇸 US|美国-弗吉尼亚州 Reston 20
+- name: 19#🇺🇸 US|美国-弗吉尼亚州 Reston 20
   server: 15.204.247.49
   port: 12000
   type: ss
   cipher: aes-256-gcm
   password: 8JCsPssfgS8tiRwiMlhARg==
-- name: 34#🇻🇳 VN|越南 32
+- name: 36#🇻🇳 VN|越南 32
   server: 103.186.155.58
   port: 38388
   type: ss
@@ -549,7 +514,7 @@ proxies:
   delay: 1049
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 32#🇻🇳 VN|越南 22
+- name: 34#🇻🇳 VN|越南 22
   server: 103.186.154.61
   port: 38388
   type: ss
@@ -557,7 +522,7 @@ proxies:
   delay: 2357
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 27#🇻🇳 VN|越南 06
+- name: 29#🇻🇳 VN|越南 06
   server: 103.186.154.33
   port: 38388
   type: ss
@@ -565,7 +530,7 @@ proxies:
   delay: 771
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 27#🇻🇳 VN|越南 08
+- name: 29#🇻🇳 VN|越南 08
   server: 103.186.155.33
   port: 38388
   type: ss
@@ -573,7 +538,7 @@ proxies:
   delay: 1805
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 27#🇻🇳 VN|越南 11
+- name: 29#🇻🇳 VN|越南 11
   server: 103.186.155.83
   port: 38388
   type: ss
@@ -581,7 +546,7 @@ proxies:
   delay: 2721
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 26#🇻🇳 VN|越南 15
+- name: 28#🇻🇳 VN|越南 15
   server: 103.186.155.124
   port: 38388
   type: ss
@@ -589,7 +554,7 @@ proxies:
   delay: 726
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 26#🇻🇳 VN|越南 24
+- name: 28#🇻🇳 VN|越南 24
   server: 103.186.155.69
   port: 38388
   type: ss
@@ -597,7 +562,7 @@ proxies:
   delay: 2182
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 26#🇻🇳 VN|越南 28
+- name: 28#🇻🇳 VN|越南 28
   server: 103.186.154.142
   port: 38388
   type: ss
@@ -605,7 +570,7 @@ proxies:
   delay: 1333
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 25#🇻🇳 VN|越南 10
+- name: 27#🇻🇳 VN|越南 10
   server: 103.186.155.145
   port: 38388
   type: ss
@@ -613,7 +578,7 @@ proxies:
   delay: 816
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 23#🇻🇳 VN|越南 31
+- name: 25#🇻🇳 VN|越南 31
   server: 103.186.154.224
   port: 38388
   type: ss
@@ -621,7 +586,7 @@ proxies:
   delay: 1350
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 22#🇻🇳 VN|越南 23
+- name: 24#🇻🇳 VN|越南 23
   server: 103.186.155.123
   port: 38388
   type: ss
@@ -629,7 +594,7 @@ proxies:
   delay: 1025
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 22#🇻🇳 VN|越南 27
+- name: 24#🇻🇳 VN|越南 27
   server: 103.186.154.13
   port: 38388
   type: ss
@@ -637,7 +602,7 @@ proxies:
   delay: 1045
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 21#🇻🇳 VN|越南 30
+- name: 23#🇻🇳 VN|越南 30
   server: 103.186.154.189
   port: 38388
   type: ss
@@ -645,13 +610,7 @@ proxies:
   delay: 1466
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 20#🇻🇳 VN|越南 34
-  server: 103.186.154.12
-  port: 38388
-  type: ss
-  cipher: aes-256-cfb
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- name: 18#🇻🇳 VN|越南 03
+- name: 20#🇻🇳 VN|越南 03
   server: 103.186.154.175
   port: 38388
   type: ss
@@ -659,7 +618,7 @@ proxies:
   delay: 971
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 18#🇻🇳 VN|越南 20
+- name: 20#🇻🇳 VN|越南 20
   server: 103.186.154.158
   port: 38388
   type: ss
@@ -667,7 +626,7 @@ proxies:
   delay: 965
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 17#🇻🇳 VN|越南 07
+- name: 19#🇻🇳 VN|越南 07
   server: 103.186.155.112
   port: 38388
   type: ss
@@ -675,7 +634,7 @@ proxies:
   delay: 748
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 17#🇻🇳 VN|越南 25
+- name: 19#🇻🇳 VN|越南 25
   server: 103.186.155.142
   port: 38388
   type: ss
@@ -683,7 +642,7 @@ proxies:
   delay: 748
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 16#🇻🇳 VN|越南 09
+- name: 18#🇻🇳 VN|越南 09
   server: 103.186.154.9
   port: 38388
   type: ss
@@ -691,7 +650,7 @@ proxies:
   delay: 813
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 16#🇻🇳 VN|越南 13
+- name: 18#🇻🇳 VN|越南 13
   server: 103.186.155.54
   port: 38388
   type: ss
@@ -699,7 +658,7 @@ proxies:
   delay: 758
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 16#🇻🇳 VN|越南 16
+- name: 18#🇻🇳 VN|越南 16
   server: 103.186.155.150
   port: 38388
   type: ss
@@ -707,7 +666,7 @@ proxies:
   delay: 815
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 16#🇻🇳 VN|越南 18
+- name: 18#🇻🇳 VN|越南 18
   server: 103.186.154.66
   port: 38388
   type: ss
@@ -715,7 +674,7 @@ proxies:
   delay: 2656
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 15#🇻🇳 VN|越南 04
+- name: 17#🇻🇳 VN|越南 04
   server: 103.186.155.4
   port: 38388
   type: ss
@@ -723,7 +682,7 @@ proxies:
   delay: 1015
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 15#🇻🇳 VN|越南 21
+- name: 17#🇻🇳 VN|越南 21
   server: 103.186.154.219
   port: 38388
   type: ss
@@ -731,7 +690,7 @@ proxies:
   delay: 744
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 15#🇻🇳 VN|越南 26
+- name: 17#🇻🇳 VN|越南 26
   server: 103.186.154.176
   port: 38388
   type: ss
@@ -739,7 +698,7 @@ proxies:
   delay: 1960
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 15#🇻🇳 VN|越南 29
+- name: 17#🇻🇳 VN|越南 29
   server: 103.186.155.10
   port: 38388
   type: ss
@@ -747,7 +706,7 @@ proxies:
   delay: 1470
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 7#🇻🇳 VN|越南 05
+- name: 9#🇻🇳 VN|越南 05
   server: 103.186.155.135
   port: 38388
   type: ss
@@ -755,7 +714,7 @@ proxies:
   delay: 827
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 7#🇻🇳 VN|越南 12
+- name: 9#🇻🇳 VN|越南 12
   server: 103.186.155.141
   port: 38388
   type: ss
@@ -763,13 +722,13 @@ proxies:
   delay: 1622
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 7#🇻🇳 VN|越南 33
+- name: 9#🇻🇳 VN|越南 33
   server: 103.186.155.125
   port: 38388
   type: ss
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- name: 6#🇻🇳 VN|越南 17
+- name: 8#🇻🇳 VN|越南 17
   server: 103.186.155.148
   port: 38388
   type: ss
@@ -777,7 +736,7 @@ proxies:
   delay: 1082
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 6#🇻🇳 VN|越南 19
+- name: 8#🇻🇳 VN|越南 19
   server: 103.186.155.117
   port: 38388
   type: ss
@@ -785,7 +744,7 @@ proxies:
   delay: 957
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 5#🇻🇳 VN|越南 14
+- name: 7#🇻🇳 VN|越南 14
   server: 103.186.154.63
   port: 38388
   type: ss
@@ -793,244 +752,35 @@ proxies:
   delay: 855
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 660#🌐 XX 37
+- name: 670#🌐 XX 31
   server: green2.cdntencentmusic.com
   port: 31102
   type: trojan
-  password: 9d23ec89-a50a-4634-b09e-37330ce09b37
+  password: 1f86e372-1ee6-47eb-8c33-72bfc310dee6
   skip-cert-verify: true
   sni: green2.cdntencentmusic.com
-- name: 333#🌐 XX 14
-  server: bestcdn4.868863.xyz
-  port: 8443
+- name: 267#🌐 XX 27
+  server: cdnfire.xiaomispeed.com
+  port: 21101
   type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
+  password: 29042ca8-e873-461c-a933-ecfda6c5e907
   skip-cert-verify: true
-  sni: 17688811601087.206353.xyz
-  ws-opts:
-    headers:
-      Host: 17688811608261.206353.xyz
-    path: '%2Fagrbniuh'
-- name: 333#🌐 XX 97
-  server: bestcdn4.868863.xyz
-  port: 2096
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811603509.206352.xyz
-  ws-opts:
-    headers:
-      Host: 17688811609104.206352.xyz
-    path: '%2Fagraeabtegrrh'
-- name: 333#🌐 XX 98
-  server: bestcdn4.868863.xyz
-  port: 2083
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811602171.206355.xyz
-  ws-opts:
-    headers:
-      Host: 17688811605586.206355.xyz
-    path: '%2Fvideomuaawe'
-- name: 263#🌐 XX 12
-  server: bestcdn2.868863.xyz
-  port: 2087
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811606332.206353.xyz
-  ws-opts:
-    headers:
-      Host: 17688811607950.206353.xyz
-    path: '%2Fagrbniuh'
-- name: 263#🌐 XX 93
-  server: bestcdn2.868863.xyz
-  port: 2083
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811604064.206352.xyz
-  ws-opts:
-    headers:
-      Host: 17688811601112.206352.xyz
-    path: '%2Fagraeabtegrrh'
-- name: 263#🌐 XX 94
-  server: bestcdn2.868863.xyz
-  port: 2096
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811603482.206355.xyz
-  ws-opts:
-    headers:
-      Host: 17688811603975.206355.xyz
-    path: '%2Fvideomuaawe'
-- name: 257#🌐 XX 34
+  sni: cdnfire.xiaomispeed.com
+- name: 267#🌐 XX 28
   server: cdnfire.xiaomispeed.com
   port: 21103
   type: trojan
-  password: 2e2891cc-d93d-4246-ade9-3844db62885e
+  password: 29042ca8-e873-461c-a933-ecfda6c5e907
   skip-cert-verify: true
   sni: cdnfire.xiaomispeed.com
-- name: 257#🌐 XX 104
+- name: 267#🌐 XX 73
   server: cdnfire.xiaomispeed.com
   port: 25501
   type: trojan
-  password: 2e2891cc-d93d-4246-ade9-3844db62885e
+  password: 29042ca8-e873-461c-a933-ecfda6c5e907
   skip-cert-verify: true
   sni: cdnfire.xiaomispeed.com
-- name: 194#🌐 XX 13
-  server: bestcdn3.868863.xyz
-  port: 2083
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811607228.206353.xyz
-  ws-opts:
-    headers:
-      Host: 17688811602954.206353.xyz
-    path: '%2Fagrbniuh'
-- name: 194#🌐 XX 95
-  server: bestcdn3.868863.xyz
-  port: 2087
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811604498.206352.xyz
-  ws-opts:
-    headers:
-      Host: 17688811602363.206352.xyz
-    path: '%2Fagraeabtegrrh'
-- name: 194#🌐 XX 96
-  server: bestcdn3.868863.xyz
-  port: 2053
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811606644.206355.xyz
-  ws-opts:
-    headers:
-      Host: 17688811604426.206355.xyz
-    path: '%2Fvideomuaawe'
-- name: 163#🌐 XX 11
-  server: bestcdn1.868863.xyz
-  port: 2096
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811607837.206353.xyz
-  ws-opts:
-    headers:
-      Host: 17688811605415.206353.xyz
-    path: '%2Fagrbniuh'
-- name: 163#🌐 XX 91
-  server: bestcdn1.868863.xyz
-  port: 2053
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811605920.206352.xyz
-  ws-opts:
-    headers:
-      Host: 17688811605267.206352.xyz
-    path: '%2Fagraeabtegrrh'
-- name: 163#🌐 XX 92
-  server: bestcdn1.868863.xyz
-  port: 2087
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811604227.206355.xyz
-  ws-opts:
-    headers:
-      Host: 17688811606553.206355.xyz
-    path: '%2Fvideomuaawe'
-- name: 142#🌐 XX 15
-  server: bestcdn5.868863.xyz
-  port: 2053
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811608155.206353.xyz
-  ws-opts:
-    headers:
-      Host: 17688811603672.206353.xyz
-    path: '%2Fagrbniuh'
-- name: 142#🌐 XX 99
-  server: bestcdn5.868863.xyz
-  port: 8443
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811609268.206352.xyz
-  ws-opts:
-    headers:
-      Host: 17688811605387.206352.xyz
-    path: '%2Fagraeabtegrrh'
-- name: 130#🌐 XX 87
-  server: bestcdn0.868863.xyz
-  port: 2087
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811604567.206355.xyz
-  ws-opts:
-    headers:
-      Host: 17688811609576.206355.xyz
-    path: '%2Fvideomuaawe'
-- name: 130#🌐 XX 88
-  server: bestcdn0.868863.xyz
-  port: 2096
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811608523.206355.xyz
-  ws-opts:
-    headers:
-      Host: 17688811602308.206355.xyz
-    path: '%2Fvideomuaawe'
-- name: 130#🌐 XX 89
-  server: bestcdn0.868863.xyz
-  port: 8443
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811603972.206355.xyz
-  ws-opts:
-    headers:
-      Host: 17688811603120.206355.xyz
-    path: '%2Fvideomuaawe'
-- name: 130#🌐 XX 90
-  server: bestcdn0.868863.xyz
-  port: 2053
-  type: trojan
-  network: ws
-  password: d27597f8-5f8a-4639-b499-126d348effc3
-  skip-cert-verify: true
-  sni: 17688811604793.206355.xyz
-  ws-opts:
-    headers:
-      Host: 17688811608440.206355.xyz
-    path: '%2Fvideomuaawe'
-- name: 116#🌐 XX 149
+- name: 118#🌐 XX 126
   server: octopusss5.info
   port: 22955
   type: vless
@@ -1047,116 +797,14 @@ proxies:
   tfo: false
   tls: true
   uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
-- name: 109#🌐 XX 73
+- name: 111#🌐 XX 58
   server: 107.174.82.102.sslip.io
   port: 443
   type: trojan
   password: bb824a22-b7ce-427b-9ed6-1adf0751da02
   skip-cert-verify: true
   sni: 107.174.82.102.sslip.io
-- name: 108#🌐 XX 29
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 26003
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 30
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 26004
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 48
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 27003
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 49
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 27005
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 50
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 27006
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 60
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 27001
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 61
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 26009
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 62
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 26010
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 70
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 26005
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 71
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 26007
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 85
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 27009
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 108#🌐 XX 86
-  server: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-  port: 27007
-  type: trojan
-  password: d0d61b6f-4a87-4a73-80cc-4bab641abfc9
-  skip-cert-verify: true
-  sni: f4d7f1c2f3b80976a5e2c1d4b3f0f321.358.onl
-- name: 95#🌐 XX 35
-  server: tunnel2.qqa678.com
-  port: '47081'
-  type: vmess
-  cipher: auto
-  alterId: 0
-  network: tcp
-  tls: false
-  uuid: 940962e9-85c7-43fa-a9ca-d523b15a32a5
-- name: 68#🌐 XX 46
-  server: cees.owwoedu.com
-  port: '49303'
-  type: vmess
-  cipher: auto
-  alterId: 0
-  network: tcp
-  tls: false
-  uuid: aa05b363-a8dc-4117-aa3e-b8a0f6a6e6b3
-- name: 63#🌐 XX 21
+- name: 65#🌐 XX 18
   server: turkiye.torprospeed.ir
   port: 587
   type: vless
@@ -1169,16 +817,21 @@ proxies:
   tls: true
   udp: true
   uuid: 65a1e22c-d37e-4b92-b6ca-1d09dcd1d441
-- name: 38#🌐 XX 47
-  server: ffiw.owwoedu.com
-  port: '59503'
-  type: vmess
-  cipher: auto
-  alterId: 0
-  network: tcp
-  tls: false
-  uuid: c45eba2d-cc3a-4722-9eb6-3afe343ebf43
-- name: 33#🌐 XX 147
+- name: 45#🌐 XX 88
+  server: openai.com
+  port: 443
+  type: vless
+  network: ws
+  servername: dev.qsaas.dev
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045
+  ws-opts:
+    path: /
+    headers:
+      Host: dev.qsaas.dev
+- name: 37#🌐 XX 124
   server: chatgpt.com
   port: 2096
   type: vless
@@ -1193,7 +846,7 @@ proxies:
     path: /
     headers:
       Host: s3d.maxriser.ir
-- name: 33#🌐 XX 155
+- name: 37#🌐 XX 133
   server: chatgpt.com
   port: 443
   type: vless
@@ -1207,45 +860,59 @@ proxies:
     path: /admin
     headers:
       Host: zitel.digikala-aparat-zula.com
-- name: 28#🌐 XX 40
-  server: tttyder.wsone.icu
-  port: 443
-  type: trojan
-  password: M7v%w11Se*
-  skip-cert-verify: true
-  sni: tttyder.wsone.icu
-- name: 19#🌐 XX 148
-  server: de23.ariyanln.com
-  port: 7945
-  type: vless
-  http-opts:
-    method: GET
-    path:
-    - /
-    headers:
-      Host:
-      - mmg.whatsapp.net
-  network: http
-  skip-cert-verify: false
-  tfo: false
+- name: 35#🌐 XX 48
+  server: v12.hdacd.com
+  port: '30812'
+  type: vmess
+  cipher: auto
+  alterId: 0
+  network: tcp
   tls: false
-  uuid: 7d12bf9a-63d6-4989-a27b-c9ddb2d6c0b6
-- name: 16#🌐 XX 143
-  server: 104.18.32.47
-  port: 2053
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 34#🌐 XX 131
+  server: 188.114.98.224
+  port: 443
   type: vless
-  client-fingerprint: chrome
   network: ws
-  servername: misd.abriabri.ir
+  servername: hetzner.rahedarro.com
   skip-cert-verify: false
   tfo: false
   tls: true
-  uuid: 7025adf2-2cf8-4dde-82be-18093b43e038
+  uuid: 95fd8ed6-0c48-41be-ae26-dfea82fa67ad
   ws-opts:
-    path: /AbriVPN---AbriVPN---AbriVPN---AbriVPN---AbriVPN---AbriVPN---AbriVPN---AbriVPN---
+    path: /dar
     headers:
-      Host: misd.abriabri.ir
-- name: 16#🌐 XX 144
+      Host: hetzner.rahedarro.com
+- name: 22#🌐 XX 109
+  server: 104.18.32.47
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  network: ws
+  servername: last.ownlink.pro
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 6abc75eb-b58b-4e28-af59-20f41bdf7a2a
+  ws-opts:
+    path: /restart
+    headers:
+      Host: last.ownlink.pro
+- name: 22#🌐 XX 120
+  server: 104.18.32.47
+  port: 2053
+  type: vless
+  network: ws
+  servername: s4294287AAMf.gamenexus.ir
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: a1a91a85-4997-40ca-a32c-269f39d1381c
+  ws-opts:
+    path: /
+    headers:
+      Host: s4294287AAMf.gamenexus.ir
+- name: 22#🌐 XX 121
   server: 104.18.32.47
   port: 8443
   type: vless
@@ -1262,19 +929,32 @@ proxies:
     path: /@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config
     headers:
       Host: nvm.website-game.ir
-- name: 16#🌐 XX 154
-  server: 104.18.32.47
-  port: 443
-  type: trojan
-  network: ws
-  password: humanity
-  skip-cert-verify: false
-  sni: www.gossipglove.com
-  ws-opts:
-    path: /assignment
+- name: 21#🌐 XX 125
+  server: de23.ariyanln.com
+  port: 7945
+  type: vless
+  http-opts:
+    method: GET
+    path:
+    - /
     headers:
-      Host: www.gossipglove.com
-- name: 8#🌐 XX 41
+      Host:
+      - mmg.whatsapp.net
+  network: http
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 7d12bf9a-63d6-4989-a27b-c9ddb2d6c0b6
+- name: 14#🌐 XX 11
+  server: v33.hdacd.com
+  port: '30833'
+  type: vmess
+  cipher: auto
+  alterId: 2
+  network: tcp
+  tls: false
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 10#🌐 XX 34
   server: mr13.digitalcity2.fun
   port: 58756
   type: vless
@@ -1291,7 +971,7 @@ proxies:
   tls: false
   udp: true
   uuid: ebe2de11-1ade-40e6-8045-cfb7a9b7e3d7
-- name: 8#🌐 XX 146
+- name: 10#🌐 XX 123
   server: ip-range.coin.name.ng
   port: 8443
   type: vless
@@ -1306,7 +986,7 @@ proxies:
     path: /
     headers:
       Host: hzr27.sepiol.name.NG
-- name: 6#🌐 XX 105
+- name: 8#🌐 XX 79
   server: pl.connect-iskra.cv
   port: 8443
   type: vless
@@ -1320,6 +1000,81 @@ proxies:
   tls: true
   udp: true
   uuid: 535235d3-5088-4746-8722-8720e820c043
+- name: 6#🌐 XX 75
+  server: bpbg.anguswen.top
+  port: 443
+  type: trojan
+  alpn:
+  - http/1.1
+  network: ws
+  password: '123456'
+  skip-cert-verify: true
+  sni: bPbG.ANguswen.tOP
+  ws-opts:
+    path: '%2FeyJqdW5rIjoidmNzMWVlWHpNTVh4M2siLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19%3Fed%3D2560'
+- name: 6#🌐 XX 76
+  server: bpbg.anguswen.top
+  port: 8443
+  type: trojan
+  alpn:
+  - http/1.1
+  network: ws
+  password: '123456'
+  skip-cert-verify: true
+  sni: bpbg.ANgusWeN.toP
+  ws-opts:
+    path: '%2FeyJqdW5rIjoiU3hiSEZzcm93Z2VaMSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0%3D%3Fed%3D2560'
+- name: 6#🌐 XX 77
+  server: bpbg.anguswen.top
+  port: 2053
+  type: trojan
+  alpn:
+  - http/1.1
+  network: ws
+  password: '123456'
+  skip-cert-verify: true
+  sni: Bpbg.aNGuSweN.top
+  ws-opts:
+    path: '%2FeyJqdW5rIjoiYWJZUDZ0Z2RMTSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0%3D%3Fed%3D2560'
+- name: 4#🌐 XX 128
+  server: ab.fxgoldensignals.com
+  port: 8443
+  type: vless
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - alibaba.com
+  network: http
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 636728f4-c7b1-47a3-91b0-243b258f997e
+- name: 2#🌐 XX 49
+  server: m.modzard.com
+  port: '8080'
+  type: vmess
+  cipher: auto
+  alterId: 0
+  network: tcp
+  tls: false
+  uuid: f2e17b4d-22fd-44a4-90db-40649717be8e
+- name: 1#🌐 XX 119
+  server: ChatGPT.com
+  port: 8443
+  type: vless
+  network: ws
+  servername: gpt.fastlink.blog
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: c9fd2964-be67-4b9e-b9ff-12f50cf1ba6a
+  ws-opts:
+    path: /MsV
+    headers:
+      Host: gpt.fastlink.blog
 dns:
   enable: true
   ipv6: false
