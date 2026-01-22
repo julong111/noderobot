@@ -5,7 +5,19 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 2#🇨🇭 CH|瑞士-苏黎世州 Rümlang 01
+- name: 110#🇨🇦 CA|加拿大 05
+  server: 51.161.80.138
+  port: 12743
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ae1f6fea74b7391a
+- name: 81#🇨🇦 CA|加拿大 06
+  server: 51.161.33.111
+  port: 11202
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: f6c4600d4d513857
+- name: 3#🇨🇭 CH|瑞士-苏黎世州 Rümlang 01
   server: 179.43.184.246
   port: 443
   type: vless
@@ -18,7 +30,7 @@ proxies:
   tls: true
   udp: true
   uuid: 88cf30e4-3206-440a-9495-5b971dcd8ad4
-- name: 130#🇨🇳 CN|中国 01
+- name: 131#🇨🇳 CN|中国 01
   server: 183.236.51.36
   port: '59003'
   type: vmess
@@ -27,20 +39,47 @@ proxies:
   network: tcp
   tls: false
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 117#🇩🇪 DE|德国-黑森州 法兰克福 13
+- name: 118#🇩🇪 DE|德国-黑森州 法兰克福 12
   server: 193.233.254.7
   port: 1080
   type: socks5
   tls: false
   username: VDJkQU1Ua3pMakl6TXk0eU5UUXVOenBBTVRrekxqSXpNeTR5TlRRdU56b0AxOTMuMjMzLjI1NC43OkAxOTMuMjMzLjI1NC43Og%3D%3D
-- name: 50#🇩🇪 DE|德国-黑森州 法兰克福 20
+- name: 70#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 31
+  server: 91.107.244.15
+  port: 443
+  type: vless
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: /
+  network: grpc
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 7b148add-4438-426e-a583-50f11e7bd0e4
+- name: 67#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 29
+  server: 188.34.193.153
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
+    short-id: 7cad5040
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 309fa273-6579-4cb2-9143-7cad50401eba
+- name: 51#🇩🇪 DE|德国-黑森州 法兰克福 18
   server: 193.233.254.9
   port: 1080
   type: socks5
   tls: false
   udp: true
   username: Og@193.233.254.9
-- name: 26#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 18
+- name: 27#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 16
   server: 159.195.26.28
   port: 443
   type: vless
@@ -52,7 +91,7 @@ proxies:
   tls: true
   udp: true
   uuid: 84f66368-8a37-468e-ae95-5622255fd4db
-- name: 25#🇩🇪 DE|德国-黑森州 法兰克福 17
+- name: 26#🇩🇪 DE|德国-黑森州 法兰克福 15
   server: 185.94.29.250
   port: 443
   type: vless
@@ -65,7 +104,7 @@ proxies:
   tls: true
   udp: true
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 19#🇩🇪 DE|德国-黑森州 法兰克福 38
+- name: 20#🇩🇪 DE|德国-黑森州 法兰克福 33
   server: 94.141.161.83
   port: 2584
   type: vless
@@ -74,7 +113,7 @@ proxies:
   tfo: false
   tls: false
   uuid: 038a50c3-229c-41ef-a7ef-7abb504e4f33
-- name: 18#🇩🇪 DE|德国-黑森州 法兰克福 37
+- name: 19#🇩🇪 DE|德国-黑森州 法兰克福 32
   server: 193.233.85.244
   port: 2584
   type: vless
@@ -83,14 +122,14 @@ proxies:
   tfo: false
   tls: false
   uuid: 038a50c3-229c-41ef-a7ef-7abb504e4f33
-- name: 15#🇩🇪 DE|德国-黑森州 法兰克福 35
+- name: 16#🇩🇪 DE|德国-黑森州 法兰克福 28
   server: 45.32.158.138
   port: 20994
   type: trojan
   password: x.8ur1QiCyzlRHXeaB5UwoDfgZ04s
   skip-cert-verify: false
   sni: ads.x5.ru
-- name: 12#🇩🇪 DE|德国-黑森州 法兰克福 24
+- name: 13#🇩🇪 DE|德国-黑森州 法兰克福 22
   server: 63.179.77.17
   port: 22222
   type: trojan
@@ -100,29 +139,16 @@ proxies:
   skip-cert-verify: true
   sni: trojan.burgerip.co.uk
   udp: true
-- name: 4#🇩🇪 DE|德国-黑森州 法兰克福 16
+- name: 5#🇩🇪 DE|德国-黑森州 法兰克福 27
   server: 18.196.155.223
   port: 22222
   type: trojan
+  alpn:
+  - http/1.1
   password: telegram-id-privatevpns
-  skip-cert-verify: true
-  sni: trojan.burgerip.co.uk
-  udp: true
-- name: 4#🇩🇪 DE|德国-黑森州 法兰克福 36
-  server: 18.196.155.223
-  port: 22224
-  type: vless
-  network: ws
-  servername: trojan.burgerip.co.uk
   skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
-  ws-opts:
-    path: /telegram-channel-vlessconfig
-    headers:
-      Host: trojan.burgerip.co.uk
-- name: 2#🇩🇪 DE|德国 19
+  sni: trojan.burgerip.co.uk
+- name: 3#🇩🇪 DE|德国 17
   server: 185.126.67.73
   port: 443
   type: vless
@@ -135,17 +161,36 @@ proxies:
   tls: true
   udp: true
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 10#🇫🇮 FI|芬兰-新地区 赫尔辛基 02
-  server: 85.192.48.50
+- name: 1#🇩🇪 DE|德国 35
+  server: 167.235.86.236
   port: 443
   type: vless
-  network: tcp
-  servername: ficdn1.suio.me
+  network: ws
+  servername: sni.111000.de5.net
   skip-cert-verify: false
   tfo: false
   tls: true
-  uuid: 02fb468f-21f2-460e-bfa1-ef52ae5e627f
-- name: 12#🇫🇷 FR|法国 08
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: sni.111000.de5.net
+- name: 10#🇫🇮 FI|芬兰-新地区 赫尔辛基 02
+  server: 144.31.119.84
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 9ajY_OBOn5CCPnCJTPjxg6J3IWE8uJYAiWQvG9CBGjU
+    short-id: 00684d2eae2cdd16
+  servername: st.ozone.ru
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
+- name: 13#🇫🇷 FR|法国 08
   server: 51.75.118.149
   port: 20248
   type: hysteria2
@@ -153,7 +198,7 @@ proxies:
   skip-cert-verify: true
   sni: dash.cloudflare.com
   tls: false
-- name: 8#🇫🇷 FR|法国-Paris Department 巴黎 12
+- name: 9#🇫🇷 FR|法国-Paris Department 巴黎 12
   server: 35.180.209.236
   port: 443
   type: ss
@@ -161,7 +206,7 @@ proxies:
   country: 🇫🇷FR
   delay: 1076
   password: amazonskr05
-- name: 8#🇫🇷 FR|法国-Paris Department 巴黎 13
+- name: 9#🇫🇷 FR|法国-Paris Department 巴黎 13
   server: 13.36.115.104
   port: 22222
   type: trojan
@@ -170,29 +215,28 @@ proxies:
   password: telegram-id-privatevpns
   skip-cert-verify: true
   udp: true
-- name: 5#🇫🇷 FR|法国-Paris Department 巴黎 09
+- name: 7#🇫🇷 FR|法国-Paris Department 巴黎 09
   server: 51.44.124.96
   port: 22223
   type: trojan
   password: telegram-id-directvpn
   skip-cert-verify: true
   udp: true
-- name: 5#🇫🇷 FR|法国-Paris Department 巴黎 23
+- name: 7#🇫🇷 FR|法国-Paris Department 巴黎 18
   server: 51.44.124.96
-  port: 22222
-  type: trojan
-  alpn:
-  - http/1.1
-  password: telegram-id-privatevpns
+  port: 22224
+  type: vless
+  network: ws
+  servername: trojan.burgerip.co.uk
   skip-cert-verify: false
-  sni: trojan.burgerip.co.uk
-- name: 26#🇬🇷 GR|希腊-Attica 雅典 01
-  server: 38.54.29.18
-  port: 11201
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 932a519c8147a998
-- name: 14#🇭🇰 HK|香港 11
+  tfo: false
+  tls: true
+  uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e
+  ws-opts:
+    path: /telegram-channel-vlessconfig
+    headers:
+      Host: trojan.burgerip.co.uk
+- name: 15#🇭🇰 HK|香港 11
   server: 16.162.252.227
   port: 2173
   type: trojan
@@ -200,7 +244,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-- name: 14#🇭🇰 HK|香港 13
+- name: 15#🇭🇰 HK|香港 13
   server: 16.162.252.215
   port: 3042
   type: trojan
@@ -208,7 +252,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-- name: 12#🇭🇰 HK|香港-香港 08
+- name: 14#🇭🇰 HK|香港-香港 08
   server: 47.242.192.233
   port: 34659
   type: vmess
@@ -222,7 +266,7 @@ proxies:
     - /
   network: http
   uuid: 8482671e-846f-45c7-aec4-531c79f775ec
-- name: 12#🇭🇰 HK|香港-香港 12
+- name: 14#🇭🇰 HK|香港-香港 12
   server: 47.242.192.233
   port: '34659'
   type: vmess
@@ -232,7 +276,7 @@ proxies:
   servername: ''
   tls: false
   uuid: 8482671e-846f-45c7-aec4-531c79f775ec
-- name: 4#🇭🇰 HK|香港-香港 09
+- name: 5#🇭🇰 HK|香港-香港 09
   server: 43.198.16.69
   port: 2673
   type: trojan
@@ -240,7 +284,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-- name: 8#🇮🇪 IE|爱尔兰-Leinster 都柏林 01
+- name: 9#🇮🇪 IE|爱尔兰-Leinster 都柏林 01
   server: 176.34.146.228
   port: 443
   type: ss
@@ -249,13 +293,7 @@ proxies:
   password: amazonskr05
   skip-cert-verify: false
   udp: false
-- name: 142#🇮🇱 IL|以色列-特拉维夫区 02
-  server: 5.188.227.18
-  port: 11204
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 317f13c5c2ebdea3
-- name: 26#🇮🇷 IR|伊朗 01
+- name: 27#🇮🇷 IR|伊朗 01
   server: 85.133.204.131
   port: 2024
   type: vless
@@ -264,54 +302,49 @@ proxies:
   tfo: false
   tls: false
   uuid: efdd92c0-c32d-4039-a564-374abaa5d8ce
-- name: 70#🇯🇵 JP|日本-东京都 东京 03
-  server: 160.16.89.176
-  port: 1933
-  type: trojan
-  network: tcp
-  password: 869e9086806483ca4744a4cb0f3d6e16
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  udp: true
-- name: 70#🇯🇵 JP|日本-东京都 东京 04
-  server: 160.16.89.176
-  port: 3076
-  type: trojan
-  network: tcp
-  password: 869e9086806483ca4744a4cb0f3d6e16
-  skip-cert-verify: false
-  sni: www.nintendogames.net
-  udp: true
-- name: 70#🇯🇵 JP|日本-东京都 东京 08
+- name: 73#🇯🇵 JP|日本-东京都 东京 05
   server: 160.16.89.176
   port: 5076
   type: trojan
   network: tcp
   password: 869e9086806483ca4744a4cb0f3d6e16
   sni: www.nintendogames.net
-- name: 45#🇯🇵 JP|日本 11
-  server: 153.121.65.107
-  port: 544
+- name: 73#🇯🇵 JP|日本-东京都 东京 07
+  server: 160.16.89.176
+  port: 1933
   type: trojan
-  password: 4843e94d205f3893f588255a591abe94
+  password: 869e9086806483ca4744a4cb0f3d6e16
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 40#🇯🇵 JP|日本-东京都 东京 07
+- name: 73#🇯🇵 JP|日本-东京都 东京 09
+  server: 160.16.89.176
+  port: 3076
+  type: trojan
+  password: 869e9086806483ca4744a4cb0f3d6e16
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+- name: 66#🇯🇵 JP|日本-东京都 东京 10
+  server: 160.16.196.59
+  port: 1281
+  type: trojan
+  password: 381f2e86233720eacda26d50e9aa26da
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+- name: 41#🇯🇵 JP|日本-东京都 东京 04
   server: 160.16.81.84
   port: 5076
   type: trojan
   network: tcp
   password: 869e9086806483ca4744a4cb0f3d6e16
   sni: www.nintendogames.net
-- name: 25#🇯🇵 JP|日本-东京都 东京 05
+- name: 26#🇯🇵 JP|日本-东京都 东京 08
   server: 160.16.106.99
   port: 544
   type: trojan
-  network: tcp
   password: 869e9086806483ca4744a4cb0f3d6e16
-  skip-cert-verify: true
+  skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 4#🇯🇵 JP|日本-东京都 东京 06
+- name: 5#🇯🇵 JP|日本-东京都 东京 03
   server: 54.238.172.125
   port: 2053
   type: trojan
@@ -319,7 +352,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-- name: 4#🇯🇵 JP|日本-东京都 东京 09
+- name: 5#🇯🇵 JP|日本-东京都 东京 06
   server: 13.159.22.132
   port: 3292
   type: trojan
@@ -327,7 +360,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-- name: 27#🇰🇭 KH|柬埔寨-Phnom Penh 金边 01
+- name: 28#🇰🇭 KH|柬埔寨-Phnom Penh 金边 01
   server: 38.54.93.66
   port: 49696
   type: ss
@@ -335,13 +368,13 @@ proxies:
   country: 🇺🇸US
   delay: 2339
   password: 3b72ad57035835c7
-- name: 131#🇰🇷 KR|韩国-京畿道 Hwaseong-si 03
+- name: 132#🇰🇷 KR|韩国-京畿道 Hwaseong-si 02
   server: 121.169.46.116
   port: 1090
   type: socks5
   tls: false
   username: Og%3D%3D
-- name: 13#🇰🇿 KZ|哈萨克斯坦 02
+- name: 14#🇰🇿 KZ|哈萨克斯坦 02
   server: 5.101.36.153
   port: 443
   type: vless
@@ -354,7 +387,7 @@ proxies:
   tls: true
   udp: true
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 3#🇰🇿 KZ|哈萨克斯坦 01
+- name: 4#🇰🇿 KZ|哈萨克斯坦 01
   server: 5.101.36.154
   port: 443
   type: vless
@@ -367,43 +400,13 @@ proxies:
   tls: true
   udp: true
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 8#🇱🇹 LT|立陶宛 02
+- name: 9#🇱🇹 LT|立陶宛 02
   server: 5.199.173.116
   port: 5228
   type: ss
   cipher: chacha20-ietf-poly1305
   password: NQRCh-qm11GH9MaRWX9NdmSdWaGRhFeS
-- name: 65#🇲🇩 MD|摩尔多瓦 19
-  server: 185.234.57.169
-  port: 443
-  type: vless
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: oXJYDXF6d8Bfx04xUNcI6SFSRyQ9SpBhU0Xf3tw4yy8
-    short-id: a5dc63d78eb0b1c9
-  servername: wikiportal.su
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: c7fd7017-71cf-4bfa-bc4f-bff8534c250b
-- name: 45#🇲🇩 MD|摩尔多瓦 18
-  server: 185.234.57.207
-  port: 443
-  type: vless
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: Yu1_Agl1_bJb298G9ukjGuvfksVTUs1X7laYJ3VqwwQ
-    short-id: b5e0cd9ca194c0a5
-  servername: teamdocs.su
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: dd92c4f8-be88-4c61-84eb-d261f798071e
-- name: 11#🇲🇩 MD|摩尔多瓦 20
+- name: 12#🇲🇩 MD|摩尔多瓦 18
   server: 176.120.67.95
   port: 8443
   type: vless
@@ -418,7 +421,7 @@ proxies:
   tfo: false
   tls: true
   uuid: d0dea598-9047-4567-a934-84c2797c0978
-- name: 9#🇲🇩 MD|摩尔多瓦 21
+- name: 10#🇲🇩 MD|摩尔多瓦 19
   server: 176.120.67.77
   port: 8443
   type: vless
@@ -433,7 +436,7 @@ proxies:
   tfo: false
   tls: true
   uuid: d0dea598-9047-4567-a934-84c2797c0978
-- name: 2#🇲🇩 MD|摩尔多瓦 15
+- name: 3#🇲🇩 MD|摩尔多瓦 15
   server: 94.131.104.188
   port: 8443
   type: vless
@@ -446,7 +449,22 @@ proxies:
   tls: true
   udp: true
   uuid: d0dea598-9047-4567-a934-84c2797c0978
-- name: 18#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 05
+- name: 25#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 10
+  server: 146.103.100.160
+  port: 4443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
+    short-id: aa7e96542880027a
+  servername: github.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 3f688b2a-373a-4be1-846d-b159404b73b2
+- name: 19#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 05
   server: 94.228.213.219
   port: 443
   type: vless
@@ -459,7 +477,7 @@ proxies:
   tls: true
   udp: true
   uuid: 45e3b7ad-03b6-42fc-b616-1e92bdd0a5b3
-- name: 17#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 15
+- name: 18#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 15
   server: 212.113.109.101
   port: 2584
   type: vless
@@ -468,7 +486,7 @@ proxies:
   tfo: false
   tls: false
   uuid: 038a50c3-229c-41ef-a7ef-7abb504e4f33
-- name: 10#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 16
+- name: 11#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 16
   server: 144.124.240.217
   port: 4443
   type: vless
@@ -483,23 +501,24 @@ proxies:
   tfo: false
   tls: true
   uuid: 3f688b2a-373a-4be1-846d-b159404b73b2
-- name: 3#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 14
+- name: 4#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 14
   server: 185.221.222.202
   port: 31779
   type: vless
+  client-fingerprint: chrome
   network: tcp
   skip-cert-verify: false
   tfo: false
   tls: false
   uuid: 052df1a5-f53f-46dc-8aeb-7ed893310551
-- name: 36#🇳🇴 NO|挪威 01
+- name: 37#🇳🇴 NO|挪威 01
   server: 80.173.231.254
   port: 12420
   type: trojan
   password: wp9IsiY82uQhcmgNC1eoBM
   skip-cert-verify: false
   sni: www.semanticstaplegun.click
-- name: 79#🇷🇺 RU|俄罗斯-Moscow 莫斯科 21
+- name: 80#🇷🇺 RU|俄罗斯-Moscow 莫斯科 20
   server: 158.160.201.80
   port: 443
   type: vless
@@ -512,7 +531,7 @@ proxies:
   tls: true
   udp: true
   uuid: 661e8eb5-c7eb-4bb0-b58f-46a5bb3f8f74
-- name: 56#🇷🇺 RU|俄罗斯 06
+- name: 57#🇷🇺 RU|俄罗斯 06
   server: 51.250.65.209
   port: 443
   type: vless
@@ -525,7 +544,7 @@ proxies:
   tls: true
   udp: true
   uuid: 4371ad14-b981-4699-bedf-83fb79bde3e6
-- name: 50#🇷🇺 RU|俄罗斯 31
+- name: 51#🇷🇺 RU|俄罗斯 35
   server: 185.40.153.254
   port: 443
   type: vless
@@ -540,7 +559,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 62770d79-dc4d-40b1-b01c-ea30399725aa
-- name: 48#🇷🇺 RU|俄罗斯-St.-Petersburg 32
+- name: 49#🇷🇺 RU|俄罗斯-St.-Petersburg 36
   server: 82.97.252.100
   port: 4443
   type: vless
@@ -555,7 +574,52 @@ proxies:
   tfo: false
   tls: true
   uuid: 3f688b2a-373a-4be1-846d-b159404b73b2
-- name: 34#🇷🇺 RU|俄罗斯 08
+- name: 46#🇷🇺 RU|俄罗斯-Moscow 莫斯科 30
+  server: 192.144.57.132
+  port: 4443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
+    short-id: aa7e96542880027a
+  servername: github.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 3f688b2a-373a-4be1-846d-b159404b73b2
+- name: 44#🇷🇺 RU|俄罗斯-Moscow 莫斯科 32
+  server: 89.110.90.65
+  port: 4443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
+    short-id: aa7e96542880027a
+  servername: github.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 3f688b2a-373a-4be1-846d-b159404b73b2
+- name: 39#🇷🇺 RU|俄罗斯-Moscow 莫斯科 31
+  server: 91.142.72.101
+  port: 4443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 5XB_N3ATilH-6tp_MXht-84_y5YaJnx_Z7MbuY2otHE
+    short-id: aa7e96542880027a
+  servername: github.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 3f688b2a-373a-4be1-846d-b159404b73b2
+- name: 35#🇷🇺 RU|俄罗斯 08
   server: 51.250.42.73
   port: 8443
   type: vless
@@ -567,20 +631,7 @@ proxies:
   tls: true
   udp: true
   uuid: 71031aa1-067e-425e-97f5-37875f838a10
-- name: 28#🇷🇺 RU|俄罗斯-St.-Petersburg 圣彼得堡 19
-  server: 217.12.40.76
-  port: 443
-  type: vless
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg
-    short-id: 048fe5c8be4bb687
-  servername: sun9-38.userapi.com
-  skip-cert-verify: false
-  tls: true
-  udp: true
-  uuid: 4371ad14-b981-4699-bedf-83fb79bde3e6
-- name: 28#🇷🇺 RU|俄罗斯-Moscow 莫斯科 23
+- name: 29#🇷🇺 RU|俄罗斯-Moscow 莫斯科 22
   server: 158.160.53.57
   port: 443
   type: vless
@@ -593,7 +644,22 @@ proxies:
   tls: true
   udp: true
   uuid: 3d29bd40-5f23-4024-aab6-17258cd55a7e
-- name: 24#🇷🇺 RU|俄罗斯 09
+- name: 29#🇷🇺 RU|俄罗斯-St.-Petersburg 圣彼得堡 34
+  server: 217.12.40.76
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg
+    short-id: 048fe5c8be4bb687
+  servername: sun9-38.userapi.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 4371ad14-b981-4699-bedf-83fb79bde3e6
+- name: 25#🇷🇺 RU|俄罗斯 09
   server: 51.250.38.137
   port: 4443
   type: vless
@@ -605,7 +671,7 @@ proxies:
   tls: true
   udp: true
   uuid: 71031aa1-067e-425e-97f5-37875f838a10
-- name: 19#🇷🇺 RU|俄罗斯 30
+- name: 20#🇷🇺 RU|俄罗斯 29
   server: 84.252.138.149
   port: 47014
   type: vless
@@ -614,7 +680,22 @@ proxies:
   tfo: false
   tls: false
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 17#🇷🇺 RU|俄罗斯 07
+- name: 19#🇷🇺 RU|俄罗斯 33
+  server: 176.108.242.76
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg
+    short-id: 6354585c37827955
+  servername: www.vkvideo.ru
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 4371ad14-b981-4699-bedf-83fb79bde3e6
+- name: 18#🇷🇺 RU|俄罗斯 07
   server: 51.250.87.167
   port: 443
   type: vless
@@ -627,7 +708,7 @@ proxies:
   tls: true
   udp: true
   uuid: 4371ad14-b981-4699-bedf-83fb79bde3e6
-- name: 10#🇷🇺 RU|俄罗斯-Moscow 莫斯科 26
+- name: 11#🇷🇺 RU|俄罗斯-Moscow 莫斯科 25
   server: 176.109.104.107
   port: 443
   type: vless
@@ -642,7 +723,7 @@ proxies:
   tfo: false
   tls: true
   uuid: cc61ea7c-92f2-4c2d-b272-32cfe8fdf99f
-- name: 8#🇷🇺 RU|俄罗斯 12
+- name: 10#🇷🇺 RU|俄罗斯 12
   server: 51.250.41.54
   port: 59152
   type: vless
@@ -654,7 +735,7 @@ proxies:
   tls: true
   udp: true
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 4#🇷🇺 RU|俄罗斯 10
+- name: 6#🇷🇺 RU|俄罗斯 10
   server: 51.250.41.237
   port: 8443
   type: vless
@@ -666,7 +747,7 @@ proxies:
   tls: true
   udp: true
   uuid: 71031aa1-067e-425e-97f5-37875f838a10
-- name: 4#🇷🇺 RU|俄罗斯 15
+- name: 6#🇷🇺 RU|俄罗斯 15
   server: 109.120.189.53
   port: 8443
   type: vless
@@ -678,7 +759,7 @@ proxies:
   tls: true
   udp: true
   uuid: 71031aa1-067e-425e-97f5-37875f838a10
-- name: 4#🇷🇺 RU|俄罗斯 16
+- name: 6#🇷🇺 RU|俄罗斯 16
   server: 109.120.189.53
   port: 4443
   type: vless
@@ -690,7 +771,7 @@ proxies:
   tls: true
   udp: true
   uuid: 71031aa1-067e-425e-97f5-37875f838a10
-- name: 4#🇷🇺 RU|俄罗斯 17
+- name: 6#🇷🇺 RU|俄罗斯 17
   server: 51.250.33.87
   port: 59152
   type: vless
@@ -702,7 +783,7 @@ proxies:
   tls: true
   udp: true
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 4#🇷🇺 RU|俄罗斯 20
+- name: 6#🇷🇺 RU|俄罗斯 19
   server: 51.250.41.237
   port: 4443
   type: vless
@@ -714,7 +795,7 @@ proxies:
   tls: true
   udp: true
   uuid: 71031aa1-067e-425e-97f5-37875f838a10
-- name: 4#🇷🇺 RU|俄罗斯 22
+- name: 6#🇷🇺 RU|俄罗斯 21
   server: 51.250.33.87
   port: 443
   type: vless
@@ -727,7 +808,7 @@ proxies:
   tls: true
   udp: true
   uuid: 95abaefc-7861-417a-81b7-166cb788ce1a
-- name: 2#🇷🇺 RU|俄罗斯 11
+- name: 3#🇷🇺 RU|俄罗斯 11
   server: 51.250.2.174
   port: 443
   type: vless
@@ -740,7 +821,7 @@ proxies:
   tls: true
   udp: true
   uuid: 63fa975a-035b-4f6f-a1d6-67953a5ada5e
-- name: 2#🇷🇺 RU|俄罗斯 14
+- name: 3#🇷🇺 RU|俄罗斯 14
   server: 51.250.45.183
   port: 4443
   type: vless
@@ -752,7 +833,7 @@ proxies:
   tls: true
   udp: true
   uuid: 71031aa1-067e-425e-97f5-37875f838a10
-- name: 2#🇷🇺 RU|俄罗斯 18
+- name: 3#🇷🇺 RU|俄罗斯 18
   server: 51.250.38.225
   port: 443
   type: vless
@@ -765,7 +846,7 @@ proxies:
   tls: true
   udp: true
   uuid: e34a84c4-8a52-4b4e-9a7d-cfa1a4d77e95
-- name: 12#🇸🇪 SE|瑞典-Stockholm County 斯德哥尔摩 01
+- name: 13#🇸🇪 SE|瑞典-Stockholm County 斯德哥尔摩 01
   server: 121.127.46.147
   port: 989
   type: ss
@@ -774,27 +855,45 @@ proxies:
   password: f8f7aCzcPKbsF8p3
   skip-cert-verify: false
   udp: false
-- name: 134#🇹🇭 TH|泰国-曼谷 02
+- name: 135#🇹🇭 TH|泰国-曼谷 02
   server: 163.171.148.71
   port: 11201
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 312ee9bcc9570095
-- name: 88#🇹🇼 TW|台湾-Taichung City Taichung 01
+- name: 90#🇹🇼 TW|台湾-Taichung City Taichung 01
   server: 220.130.58.136
   port: 21101
   type: trojan
   password: bac3c766-edca-4082-a791-327509342122
   skip-cert-verify: true
   sni: cdnfire.xiaomispeed.com
-- name: 88#🇹🇼 TW|台湾-Taichung City Taichung 02
+- name: 90#🇹🇼 TW|台湾-Taichung City Taichung 02
   server: 220.130.58.136
   port: 21102
   type: trojan
   password: bac3c766-edca-4082-a791-327509342122
   skip-cert-verify: true
   sni: cdnfire.xiaomispeed.com
-- name: 38#🇺🇸 US|美国 19
+- name: 84#🇺🇸 US|美国 27
+  server: 40.160.14.104
+  port: 8880
+  type: vless
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: /
+  network: grpc
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 6251f84e-9c02-4140-921c-6b47d394fb96
+- name: 73#🇺🇸 US|美国-弗吉尼亚州 奥克顿 21
+  server: 147.135.78.88
+  port: 11201
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: a7f8d870c0ca04bc
+- name: 39#🇺🇸 US|美国 19
   server: 167.68.4.199
   port: 2053
   type: trojan
@@ -806,7 +905,7 @@ proxies:
     headers:
       Host: epge.muarua.filegear-sg.me
     path: '%2F'
-- name: 32#🇺🇸 US|美国 18
+- name: 33#🇺🇸 US|美国 18
   server: 23.138.148.47
   port: '42507'
   type: vmess
@@ -815,13 +914,13 @@ proxies:
   network: tcp
   tls: false
   uuid: 4db07b13-6524-49d2-b432-1f312c0e9c7c
-- name: 29#🇺🇸 US|美国-弗吉尼亚州 Reston 20
+- name: 30#🇺🇸 US|美国-弗吉尼亚州 Reston 20
   server: 15.204.247.49
   port: 12000
   type: ss
   cipher: aes-256-gcm
   password: 8JCsPssfgS8tiRwiMlhARg==
-- name: 28#🇻🇳 VN|越南 06
+- name: 29#🇻🇳 VN|越南 06
   server: 103.186.155.70
   port: 38388
   type: ss
@@ -829,7 +928,7 @@ proxies:
   country: 🏁 ZZ
   delay: 1741
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- name: 27#🇻🇳 VN|越南 04
+- name: 28#🇻🇳 VN|越南 04
   server: 103.186.155.236
   port: 38388
   type: ss
@@ -837,7 +936,7 @@ proxies:
   country: 🏁 ZZ
   delay: 1932
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- name: 9#🇻🇳 VN|越南 05
+- name: 10#🇻🇳 VN|越南 05
   server: 103.186.154.216
   port: 38388
   type: ss
@@ -846,7 +945,7 @@ proxies:
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   skip-cert-verify: false
   udp: false
-- name: 8#🇻🇳 VN|越南 03
+- name: 9#🇻🇳 VN|越南 03
   server: 103.186.154.228
   port: 38388
   type: ss
@@ -854,41 +953,41 @@ proxies:
   country: 🏁 ZZ
   delay: 1426
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- name: 8#🇻🇳 VN|越南 07
+- name: 9#🇻🇳 VN|越南 07
   server: 103.186.155.51
   port: 38388
   type: ss
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- name: 720#🌐 XX 30
+- name: 725#🌐 XX 30
   server: green2.cdntencentmusic.com
   port: 31102
   type: trojan
   password: 1f86e372-1ee6-47eb-8c33-72bfc310dee6
   skip-cert-verify: true
   sni: green2.cdntencentmusic.com
-- name: 317#🌐 XX 26
+- name: 322#🌐 XX 26
   server: cdnfire.xiaomispeed.com
   port: 21101
   type: trojan
   password: 29042ca8-e873-461c-a933-ecfda6c5e907
   skip-cert-verify: true
   sni: cdnfire.xiaomispeed.com
-- name: 317#🌐 XX 27
+- name: 322#🌐 XX 27
   server: cdnfire.xiaomispeed.com
   port: 21103
   type: trojan
   password: 29042ca8-e873-461c-a933-ecfda6c5e907
   skip-cert-verify: true
   sni: cdnfire.xiaomispeed.com
-- name: 317#🌐 XX 73
+- name: 322#🌐 XX 73
   server: cdnfire.xiaomispeed.com
   port: 25501
   type: trojan
   password: 29042ca8-e873-461c-a933-ecfda6c5e907
   skip-cert-verify: true
   sni: cdnfire.xiaomispeed.com
-- name: 128#🌐 XX 137
+- name: 129#🌐 XX 140
   server: octopusss5.info
   port: 22955
   type: vless
@@ -905,14 +1004,14 @@ proxies:
   tfo: false
   tls: true
   uuid: 63f92f3c-447c-4283-80b9-0af8e164cdad
-- name: 121#🌐 XX 58
+- name: 122#🌐 XX 58
   server: 107.174.82.102.sslip.io
   port: 443
   type: trojan
   password: bb824a22-b7ce-427b-9ed6-1adf0751da02
   skip-cert-verify: true
   sni: 107.174.82.102.sslip.io
-- name: 114#🌐 XX 91
+- name: 115#🌐 XX 90
   server: 162.159.45.232
   port: 443
   type: vless
@@ -930,7 +1029,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 103#🌐 XX 83
+- name: 104#🌐 XX 83
   server: tunnel2.qqa678.com
   port: 47081
   type: vmess
@@ -942,7 +1041,7 @@ proxies:
   http-opts: {}
   skip-cert-verify: true
   uuid: 940962e9-85c7-43fa-a9ca-d523b15a32a5
-- name: 84#🌐 XX 86
+- name: 85#🌐 XX 85
   server: vip3.kaixincloud.top
   port: 443
   type: vless
@@ -960,7 +1059,34 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 63#🌐 XX 131
+- name: 67#🌐 XX 146
+  server: www.calmlunch.com
+  port: 443
+  type: trojan
+  network: ws
+  password: humanity
+  skip-cert-verify: false
+  sni: www.calmlunch.com
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 66#🌐 XX 97
+  server: chatgpt.com
+  port: 8443
+  type: vless
+  client-fingerprint: chrome
+  network: ws
+  servername: ovhwuxian.pai50288.uk
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 57ba2ab1-a283-42eb-82ee-dc3561a805b8
+  ws-opts:
+    path: /57ba2ab1
+    headers:
+      Host: ovhwuxian.pai50288.uk
+- name: 66#🌐 XX 134
   server: chatgpt.com
   port: 443
   type: vless
@@ -975,7 +1101,7 @@ proxies:
     path: /
     headers:
       Host: kosmos.darkmod.sbs
-- name: 63#🌐 XX 135
+- name: 66#🌐 XX 138
   server: chatgpt.com
   port: 2096
   type: vless
@@ -990,7 +1116,33 @@ proxies:
     path: /
     headers:
       Host: s3d.maxriser.ir
-- name: 53#🌐 XX 122
+- name: 60#🌐 XX 156
+  server: all.tellmethetrue.shop
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: /
+  network: grpc
+  servername: pqh41v3.carwashipdir.shop
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+- name: 56#🌐 XX 132
+  server: free-de-3.undef.network
+  port: 443
+  type: trojan
+  network: ws
+  password: xtA6WF92Itmhm9jfvXUH1MDVL
+  skip-cert-verify: false
+  sni: free-de-3.undef.network
+  ws-opts:
+    path: /f2fc2a1f
+    headers:
+      Host: free-de-3.undef.network
+- name: 54#🌐 XX 125
   server: vip2.kaixincloud.top
   port: 443
   type: vless
@@ -1008,7 +1160,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 53#🌐 XX 124
+- name: 54#🌐 XX 127
   server: v3.dabache.top
   port: 443
   type: vless
@@ -1025,7 +1177,7 @@ proxies:
       Host: kb.as129394.me
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 53#🌐 XX 126
+- name: 54#🌐 XX 129
   server: v2.dabache.top
   port: 443
   type: vless
@@ -1042,36 +1194,24 @@ proxies:
       Host: snip.qqq.hidns.co
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 45#🌐 XX 47
-  server: v12.hdacd.com
-  port: '30812'
-  type: vmess
-  cipher: auto
-  alterId: 0
-  network: tcp
-  tls: false
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 45#🌐 XX 84
+- name: 47#🌐 XX 98
   server: 104.18.32.47
   port: 443
   type: vless
   alpn:
-  - h3
-  - h2
   - http/1.1
   client-fingerprint: chrome
-  delay: 2305
-  encryption: none
   network: ws
-  servername: focalin.adaspolo2.store
+  servername: DigI.ZcOnNECtiOn.ToP
   skip-cert-verify: false
+  tfo: false
   tls: true
-  uuid: 9814fddd-c97d-4f62-8af2-0639d708b2d9
+  uuid: 86e42553-3576-48ec-bf69-b7e7c33d0ee6
   ws-opts:
+    path: /eyJqdW5rIjoiNDBNWGY3Z0NPd0loZ2YiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560/eyJqdW5rIjoiNDBNWGY3Z0NPd0loZ2YiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560
     headers:
-      Host: focalin.adaspolo2.store
-    path: /random
-- name: 45#🌐 XX 130
+      Host: DigI.ZcOnNECtiOn.ToP
+- name: 47#🌐 XX 144
   server: 104.18.32.47
   port: 8443
   type: vless
@@ -1088,7 +1228,16 @@ proxies:
     path: /@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config-@Alfred_Config
     headers:
       Host: nvm.website-game.ir
-- name: 43#🌐 XX 123
+- name: 46#🌐 XX 47
+  server: v12.hdacd.com
+  port: '30812'
+  type: vmess
+  cipher: auto
+  alterId: 0
+  network: tcp
+  tls: false
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+- name: 44#🌐 XX 126
   server: v1.dabache.top
   port: 443
   type: vless
@@ -1106,7 +1255,21 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 36#🌐 XX 75
+- name: 42#🌐 XX 143
+  server: 188.114.98.224
+  port: 443
+  type: vless
+  network: ws
+  servername: hetzner.rahedarro.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 95fd8ed6-0c48-41be-ae26-dfea82fa67ad
+  ws-opts:
+    path: /dar
+    headers:
+      Host: hetzner.rahedarro.com
+- name: 39#🌐 XX 75
   server: bpbg.anguswen.top
   port: 443
   type: trojan
@@ -1118,7 +1281,7 @@ proxies:
   sni: bPbG.ANguswen.tOP
   ws-opts:
     path: '%2FeyJqdW5rIjoidmNzMWVlWHpNTVh4M2siLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19%3Fed%3D2560'
-- name: 36#🌐 XX 76
+- name: 39#🌐 XX 76
   server: bpbg.anguswen.top
   port: 8443
   type: trojan
@@ -1130,7 +1293,7 @@ proxies:
   sni: bpbg.ANgusWeN.toP
   ws-opts:
     path: '%2FeyJqdW5rIjoiU3hiSEZzcm93Z2VaMSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0%3D%3Fed%3D2560'
-- name: 36#🌐 XX 77
+- name: 39#🌐 XX 77
   server: bpbg.anguswen.top
   port: 2053
   type: trojan
@@ -1142,7 +1305,19 @@ proxies:
   sni: Bpbg.aNGuSweN.top
   ws-opts:
     path: '%2FeyJqdW5rIjoiYWJZUDZ0Z2RMTSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0%3D%3Fed%3D2560'
-- name: 29#🌐 XX 136
+- name: 39#🌐 XX 157
+  server: pqh29v3.globalfymain.com
+  port: 8880
+  type: vless
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: /
+  network: grpc
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3
+- name: 30#🌐 XX 139
   server: de23.ariyanln.com
   port: 7945
   type: vless
@@ -1158,7 +1333,7 @@ proxies:
   tfo: false
   tls: false
   uuid: 7d12bf9a-63d6-4989-a27b-c9ddb2d6c0b6
-- name: 28#🌐 XX 85
+- name: 29#🌐 XX 84
   server: staticdelivery.nexusmods.com
   port: 443
   type: vless
@@ -1175,7 +1350,7 @@ proxies:
       Host: kb.as129394.me
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 24#🌐 XX 11
+- name: 25#🌐 XX 11
   server: v33.hdacd.com
   port: '30833'
   type: vmess
@@ -1184,7 +1359,7 @@ proxies:
   network: tcp
   tls: false
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-- name: 20#🌐 XX 134
+- name: 21#🌐 XX 137
   server: ip-range.coin.name.ng
   port: 8443
   type: vless
@@ -1199,7 +1374,20 @@ proxies:
     path: /
     headers:
       Host: hzr27.sepiol.name.NG
-- name: 19#🌐 XX 88
+- name: 21#🌐 XX 141
+  server: prosshprossh.ajorpare.ir
+  port: 8880
+  type: vless
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 9e5ae650-6de5-4ab0-b305-f97df5ce2cc6
+  ws-opts:
+    path: /
+    headers:
+      Host: servepross.ajorpare.ir
+- name: 20#🌐 XX 87
   server: store.ubi.com
   port: 443
   type: vless
@@ -1217,7 +1405,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 12#🌐 XX 48
+- name: 13#🌐 XX 48
   server: m.modzard.com
   port: '8080'
   type: vmess
@@ -1226,29 +1414,13 @@ proxies:
   network: tcp
   tls: false
   uuid: f2e17b4d-22fd-44a4-90db-40649717be8e
-- name: 12#🌐 XX 92
+- name: 13#🌐 XX 91
   server: lv.vpnsparta.pro
   port: 57456
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 8afc633eb63227e9
-- name: 12#🌐 XX 139
-  server: ab.fxgoldensignals.com
-  port: 8443
-  type: vless
-  http-opts:
-    method: GET
-    path:
-    - /
-    headers:
-      Host:
-      - alibaba.com
-  network: http
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  uuid: 636728f4-c7b1-47a3-91b0-243b258f997e
-- name: 8#🌐 XX 87
+- name: 9#🌐 XX 86
   server: registry.cyou
   port: 443
   type: vless
@@ -1265,7 +1437,7 @@ proxies:
       Host: snip.qqq.hidns.co
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 8#🌐 XX 89
+- name: 9#🌐 XX 88
   server: 172.64.157.136
   port: 8443
   type: vless
@@ -1283,7 +1455,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 8#🌐 XX 121
+- name: 9#🌐 XX 124
   server: 162.159.240.131
   port: 443
   type: vless
@@ -1301,7 +1473,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 8#🌐 XX 125
+- name: 9#🌐 XX 128
   server: 104.19.35.180
   port: 443
   type: vless
@@ -1319,7 +1491,7 @@ proxies:
     path: /
     early-data-header-name: Sec-WebSocket-Protocol
     max-early-data: 2560
-- name: 5#🌐 XX 133
+- name: 6#🌐 XX 136
   server: operator.chatgpt.com
   port: 8080
   type: vless
@@ -1332,24 +1504,24 @@ proxies:
     path: /
     headers:
       Host: mx5.mmd8563.ir
-- name: 3#🌐 XX 129
+- name: 4#🌐 XX 95
   server: 8.6.112.0
-  port: 443
+  port: 2096
   type: vless
   alpn:
   - http%2F1.1
   client-fingerprint: chrome
   network: ws
-  servername: cdn.vpsmee.ir
+  servername: rb11.fasst11.shop
   skip-cert-verify: false
   tfo: false
   tls: true
-  uuid: 3a4ddfac-e7da-48c9-9648-4a366109fc3a
+  uuid: f0693080-e004-4baf-a1e9-258025a134a7
   ws-opts:
-    path: /X0PX5Vup1qlVVzhxp6ic50a
+    path: /
     headers:
-      Host: cdn.vpsmee.ir
-- name: 2#🌐 XX 42
+      Host: rb11.fasst11.shop
+- name: 3#🌐 XX 42
   server: kz.fasti.win
   port: 443
   type: vless
@@ -1362,7 +1534,7 @@ proxies:
   tls: true
   udp: true
   uuid: 0d93b787-b66b-4696-a036-a0f549764f69
-- name: 2#🌐 XX 79
+- name: 3#🌐 XX 79
   server: plcdn14.suio.me
   port: 443
   type: vless
@@ -1371,21 +1543,20 @@ proxies:
   tls: true
   udp: true
   uuid: 02fb468f-21f2-460e-bfa1-ef52ae5e627f
-- name: 1#🌐 XX 143
-  server: 162.159.152.4
-  port: 2087
+- name: 1#🌐 XX 133
+  server: chatgpt.melonet.click
+  port: 2096
   type: vless
-  client-fingerprint: chrome
   network: ws
-  servername: land.karunwebco.com
+  servername: turboping1.melonet.com.tr
   skip-cert-verify: false
   tfo: false
   tls: true
-  uuid: 4ab48280-ac16-4e2d-b345-53367a6e89b9
+  uuid: 7ff14ec9-34ee-4271-9ca6-ad3ed642629e
   ws-opts:
-    path: /pablo
+    path: /
     headers:
-      Host: land.karunwebco.com
+      Host: turboping1.melonet.com.tr
 dns:
   enable: true
   ipv6: false
