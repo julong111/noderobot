@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 7#🇦🇹 AT|奥地利-Vienna 01
+- name: 8#🇦🇹 AT|奥地利-Vienna 01
   server: 212.183.88.29
   port: 443
   type: vless
@@ -20,7 +20,7 @@ proxies:
     path: /@AlaedinVPN?ed
     headers:
       Host: free.aliamini.net
-- name: 36#🇦🇺 AU|澳洲-澳大利亚首都领地 堪培拉 04
+- name: 37#🇦🇺 AU|澳洲-澳大利亚首都领地 堪培拉 04
   server: 45.15.185.70
   port: 990
   type: ss
@@ -28,7 +28,7 @@ proxies:
   country: 🇺🇸US
   delay: 2225
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-- name: 196#🇨🇳 CN|中国 01
+- name: 197#🇨🇳 CN|中国 01
   server: 183.236.51.36
   port: '59003'
   type: vmess
@@ -37,19 +37,40 @@ proxies:
   network: tcp
   tls: false
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-- name: 183#🇩🇪 DE|德国-黑森州 法兰克福 10
+- name: 184#🇩🇪 DE|德国-黑森州 法兰克福 08
   server: 193.233.254.7
   port: 1080
   type: socks5
   tls: false
   username: VDJkQU1Ua3pMakl6TXk0eU5UUXVOem9AMTkzLjIzMy4yNTQuNzpAMTkzLjIzMy4yNTQuNzo%3D
-- name: 116#🇩🇪 DE|德国-黑森州 法兰克福 12
+- name: 117#🇩🇪 DE|德国-黑森州 法兰克福 10
   server: 193.233.254.9
   port: 1080
   type: socks5
   tls: false
   username: T2dAMTkzLjIzMy4yNTQuOTo%3D
-- name: 43#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 14
+- name: 71#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 29
+  server: 188.34.193.153
+  port: 443
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
+    short-id: 7cad5040
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 309fa273-6579-4cb2-9143-7cad50401eba
+- name: 62#🇩🇪 DE|德国-黑森州 法兰克福 24
+  server: 45.32.158.138
+  port: 20994
+  type: trojan
+  password: x.8ur1QiCyzlRHXeaB5UwoDfgZ04s
+  skip-cert-verify: false
+- name: 44#🇩🇪 DE|德国-巴伐利亚州 纽伦堡 12
   server: 152.53.33.43
   port: 443
   type: vless
@@ -66,7 +87,7 @@ proxies:
   tls: false
   udp: true
   uuid: 057b649c-54b1-4f68-86b1-90381637a2cf
-- name: 40#🇩🇪 DE|德国 30
+- name: 41#🇩🇪 DE|德国 28
   server: 217.160.189.116
   port: 443
   type: vless
@@ -82,7 +103,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 2db1793c-48c5-4cc7-b893-02292fd9400b
-- name: 30#🇩🇪 DE|德国-黑森州 法兰克福 27
+- name: 31#🇩🇪 DE|德国-黑森州 法兰克福 25
   server: 94.141.123.12
   port: 558
   type: vless
@@ -97,7 +118,7 @@ proxies:
   tfo: false
   tls: true
   uuid: be695a55-8ac5-40a1-92c2-cc864651360a
-- name: 25#🇩🇪 DE|德国 31
+- name: 26#🇩🇪 DE|德国 30
   server: 178.162.241.204
   port: 443
   type: vless
@@ -113,7 +134,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 3e932ef4-a2a9-4c65-84a7-c5e892e6a532
-- name: 17#🇩🇪 DE|德国 29
+- name: 18#🇩🇪 DE|德国 27
   server: 185.230.162.56
   port: 443
   type: vless
@@ -127,34 +148,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 1#🇩🇪 DE|德国 19
-  server: 89.167.0.99
-  port: 7070
-  type: vless
-  http-opts:
-    method: GET
-    path:
-    - /
-    headers:
-      Host:
-      - Join---i10VPN---Join---i10VPN---Join---i10VPN---Join---i10VPN
-  network: http
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  uuid: c8e0cef7-b3fc-4f4c-c31f-15e38f5cf124
-- name: 1#🇩🇰 DK|丹麦-南丹麦大区 Asperup 01
-  server: 45.148.31.0
-  port: 15855
-  type: vless
-  network: ws
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  uuid: e4fc4761-154f-490e-bbaa-b4fa193f1073
-  ws-opts:
-    path: /
-- name: 4#🇪🇸 ES|西班牙-Madrid 马德里 01
+- name: 5#🇪🇸 ES|西班牙-Madrid 马德里 01
   server: 172.233.97.125
   port: 8443
   type: hysteria2
@@ -162,7 +156,7 @@ proxies:
   skip-cert-verify: true
   sni: hy8.hy2yydsapi.top
   tls: false
-- name: 34#🇫🇮 FI|芬兰 01
+- name: 35#🇫🇮 FI|芬兰 01
   server: 94.237.93.9
   port: 59421
   type: vless
@@ -179,22 +173,7 @@ proxies:
   tls: false
   udp: true
   uuid: ccbc334b-de33-4431-89b4-35b756230f51
-- name: 27#🇫🇮 FI|芬兰-新地区 赫尔辛基 03
-  server: 62.60.229.32
-  port: 443
-  type: vless
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: X6M54TjT_X10PF8zMBxr_m4Djoyy_m4nhP28o-lGKy8
-    short-id: cf563330b1a8ef60
-  servername: web.max.ru
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: e3379093-7c89-4c8a-be1f-abb92a3305a1
-- name: 33#🇫🇷 FR|法国-Paris Department 巴黎 15
+- name: 34#🇫🇷 FR|法国-Paris Department 巴黎 15
   server: 170.39.216.61
   port: 50511
   type: vless
@@ -208,13 +187,13 @@ proxies:
   tfo: false
   tls: true
   uuid: 3bc9c90e-dd6c-400d-bfb0-1d06b13fe46c
-- name: 118#🇬🇧 GB|英国-英格兰 伦敦 35
+- name: 119#🇬🇧 GB|英国-英格兰 伦敦 34
   server: 51.89.117.154
   port: 11201
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 9bfee1388e960537
-- name: 41#🇬🇧 GB|英国-英格兰 伦敦 38
+- name: 42#🇬🇧 GB|英国-英格兰 伦敦 36
   server: 8.208.27.141
   port: 443
   type: vless
@@ -228,7 +207,7 @@ proxies:
   tfo: false
   tls: true
   uuid: a5e872dd-8d1d-4d89-83ac-ac1e13d38912
-- name: 23#🇬🇧 GB|英国-斯劳 Slough 37
+- name: 24#🇬🇧 GB|英国-斯劳 Slough 37
   server: 140.238.100.35
   port: 40721
   type: vless
@@ -242,7 +221,7 @@ proxies:
   tfo: false
   tls: true
   uuid: bf3e8944-8d26-47de-8748-b9aa74cce974
-- name: 16#🇬🇧 GB|英国-Tower Hamlets Poplar 31
+- name: 17#🇬🇧 GB|英国-Tower Hamlets Poplar 31
   server: 185.245.83.41
   port: 31687
   type: trojan
@@ -255,13 +234,13 @@ proxies:
     headers:
       Host: 0000.hkvip.ip-ddns.com
     path: /?ed=2560
-- name: 15#🇬🇧 GB|英国 32
+- name: 16#🇬🇧 GB|英国 32
   server: 82.38.31.82
   port: 8080
   type: ss
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 6#🇬🇧 GB|英国 34
+- name: 7#🇬🇧 GB|英国 33
   server: 185.5.38.111
   port: 55988
   type: ss
@@ -269,34 +248,20 @@ proxies:
   country: 🇬🇧 GB
   delay: 1176
   password: BpFieMT6SobpqRiKFefvYu7eXk99XfCeWfjpntzSh81FfMx9R7rJW6LTmzH78StTEhCd7w32ZMxbGJZS98gpn1ozr9jAbMoa
-- name: 1#🇬🇧 GB|英国-斯劳 Slough 33
-  server: 188.166.159.141
-  port: 31212
-  type: vless
-  client-fingerprint: chrome
-  network: tcp
-  reality-opts:
-    public-key: CptKL5jRuLHXRCctK3pXzCbx-ksw8Tda3DgVYv6rIH0
-    short-id: 2b2da49cdf
-  servername: starlink.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 5bcc9ea0-b76c-4049-af62-ce10fe56a38b
-- name: 88#🇬🇷 GR|希腊-Attica 雅典 02
+- name: 89#🇬🇷 GR|希腊-Attica 雅典 02
   server: 38.54.29.18
   port: 11201
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 932a519c8147a998
-- name: 42#🇭🇰 HK|香港 14
+- name: 43#🇭🇰 HK|香港 14
   server: 219.76.135.98
   port: 443
   type: trojan
   password: BxceQaOe
   skip-cert-verify: false
   sni: t.me%2Fripaojiedian
-- name: 35#🇭🇰 HK|香港 08
+- name: 36#🇭🇰 HK|香港 08
   server: 103.149.182.79
   port: 8388
   type: ss
@@ -304,28 +269,28 @@ proxies:
   country: 🇭🇰 HK
   delay: 556
   password: asd123456
-- name: 30#🇭🇰 HK|香港 13
+- name: 31#🇭🇰 HK|香港 13
   server: 58.152.110.210
   port: 443
   type: trojan
   password: 869e9086806483ca4744a4cb0f3d6e16
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 30#🇭🇰 HK|香港 15
+- name: 31#🇭🇰 HK|香港 15
   server: 58.152.53.45
   port: 443
   type: trojan
   password: BxceQaOe
   skip-cert-verify: false
   sni: t.me%2Fripaojiedian
-- name: 20#🇭🇰 HK|香港 07
+- name: 21#🇭🇰 HK|香港 07
   server: 203.198.122.187
   port: 443
   type: trojan
   password: BxceQaOe
   skip-cert-verify: true
   sni: 203.198.122.187
-- name: 4#🇭🇰 HK|香港-香港 10
+- name: 6#🇭🇰 HK|香港-香港 10
   server: 95.40.9.178
   port: 2173
   type: trojan
@@ -333,7 +298,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-- name: 4#🇭🇰 HK|香港-香港 12
+- name: 6#🇭🇰 HK|香港-香港 12
   server: 95.40.9.178
   port: 2266
   type: trojan
@@ -341,7 +306,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-- name: 2#🇭🇰 HK|香港-香港 11
+- name: 3#🇭🇰 HK|香港-香港 11
   server: 95.40.16.175
   port: 2266
   type: trojan
@@ -349,28 +314,46 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%2Fripaojiedian
-- name: 186#🇯🇵 JP|日本-东京都 东京 05
+- name: 14#🇮🇸 IS|冰岛-Reykjavíkurborg 雷克亞維克 01
+  server: 167.17.185.228
+  port: 10889
+  type: trojan
+  password: cTv.9PDdCt-wybBrG1qlxI5UJuaEj
+  skip-cert-verify: false
+  sni: web.max
+- name: 14#🇮🇹 IT|意大利-巴勒莫省 巴勒莫市 02
+  server: 91.201.65.220
+  port: 10004
+  type: vless
+  network: ws
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 343cc844-f964-11f0-9840-00163e0951db
+  ws-opts:
+    path: /vpnjantit
+- name: 187#🇯🇵 JP|日本-东京都 东京 05
   server: 160.16.87.174
   port: 3901
   type: trojan
   password: 869e9086806483ca4744a4cb0f3d6e16
   skip-cert-verify: true
   sni: www.nintendogames.net
-- name: 145#🇯🇵 JP|日本-东京都 东京 17
-  server: 160.16.72.33
-  port: 544
+- name: 97#🇯🇵 JP|日本-东京都 东京 16
+  server: 153.121.39.240
+  port: 1933
   type: trojan
   password: 869e9086806483ca4744a4cb0f3d6e16
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 87#🇯🇵 JP|日本 15
+- name: 88#🇯🇵 JP|日本 17
   server: 202.181.103.246
   port: 3423
   type: trojan
   password: 869e9086806483ca4744a4cb0f3d6e16
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 84#🇯🇵 JP|日本-东京都 东京 11
+- name: 85#🇯🇵 JP|日本-东京都 东京 12
   server: 153.121.45.139
   port: 3423
   type: trojan
@@ -378,7 +361,7 @@ proxies:
   password: c1d83c0c7d57cead4379ba14a82df69b
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 78#🇯🇵 JP|日本-东京都 东京 16
+- name: 79#🇯🇵 JP|日本-东京都 东京 18
   server: 47.245.38.111
   port: 443
   type: vless
@@ -392,28 +375,35 @@ proxies:
   tfo: false
   tls: true
   uuid: 86b414b6-966e-4f6d-ab16-32049ef732d3
-- name: 60#🇯🇵 JP|日本-东京都 东京 03
+- name: 78#🇯🇵 JP|日本-东京都 东京 19
+  server: 160.16.70.180
+  port: 3901
+  type: trojan
+  password: 869e9086806483ca4744a4cb0f3d6e16
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+- name: 63#🇯🇵 JP|日本-东京都 东京 03
   server: 13.158.129.83
   port: 2595
   type: trojan
   password: BxceQaOe
   skip-cert-verify: true
   sni: 13.158.129.83
-- name: 60#🇯🇵 JP|日本-东京都 东京 04
+- name: 63#🇯🇵 JP|日本-东京都 东京 04
   server: 13.158.129.83
   port: 3579
   type: trojan
   password: BxceQaOe
   skip-cert-verify: true
   sni: 13.158.129.83
-- name: 60#🇯🇵 JP|日本-东京都 东京 06
+- name: 63#🇯🇵 JP|日本-东京都 东京 06
   server: 13.158.129.83
   port: 2173
   type: trojan
   password: BxceQaOe
   skip-cert-verify: true
   sni: 13.158.129.83
-- name: 58#🇯🇵 JP|日本-东京都 东京 10
+- name: 59#🇯🇵 JP|日本-东京都 东京 11
   server: 160.16.57.238
   port: 1933
   type: trojan
@@ -421,7 +411,14 @@ proxies:
   password: c1d83c0c7d57cead4379ba14a82df69b
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 44#🇯🇵 JP|日本-东京都 东京 13
+- name: 48#🇯🇵 JP|日本-东京都 东京 20
+  server: 160.16.85.33
+  port: 5076
+  type: trojan
+  password: 869e9086806483ca4744a4cb0f3d6e16
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+- name: 45#🇯🇵 JP|日本-东京都 东京 14
   server: 160.16.117.182
   port: 491
   type: trojan
@@ -429,7 +426,7 @@ proxies:
   password: c1d83c0c7d57cead4379ba14a82df69b
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 44#🇯🇵 JP|日本-东京都 东京 14
+- name: 45#🇯🇵 JP|日本-东京都 东京 15
   server: 160.16.124.55
   port: 491
   type: trojan
@@ -437,7 +434,7 @@ proxies:
   password: c1d83c0c7d57cead4379ba14a82df69b
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 38#🇯🇵 JP|日本-东京都 东京 07
+- name: 40#🇯🇵 JP|日本-东京都 东京 08
   server: 160.16.116.227
   port: 3901
   type: trojan
@@ -445,7 +442,7 @@ proxies:
   password: c1d83c0c7d57cead4379ba14a82df69b
   skip-cert-verify: true
   sni: www.nintendogames.net
-- name: 38#🇯🇵 JP|日本-东京都 东京 09
+- name: 40#🇯🇵 JP|日本-东京都 东京 10
   server: 160.16.116.227
   port: 544
   type: trojan
@@ -453,14 +450,14 @@ proxies:
   password: c1d83c0c7d57cead4379ba14a82df69b
   skip-cert-verify: false
   sni: www.nintendogames.net
-- name: 30#🇯🇵 JP|日本-东京都 东京 18
+- name: 31#🇯🇵 JP|日本-东京都 东京 07
   server: 52.195.170.6
   port: 491
   type: trojan
   password: 869e9086806483ca4744a4cb0f3d6e16
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: www.nintendogames.net
-- name: 2#🇯🇵 JP|日本-东京都 东京 08
+- name: 3#🇯🇵 JP|日本-东京都 东京 09
   server: 13.113.58.166
   port: 1196
   type: trojan
@@ -468,7 +465,7 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-- name: 2#🇯🇵 JP|日本-东京都 东京 12
+- name: 3#🇯🇵 JP|日本-东京都 东京 13
   server: 57.181.41.46
   port: 2595
   type: trojan
@@ -476,13 +473,13 @@ proxies:
   password: BxceQaOe
   skip-cert-verify: true
   sni: t.me%252Fripaojiedian
-- name: 197#🇰🇷 KR|韩国-京畿道 Hwaseong-si 02
+- name: 198#🇰🇷 KR|韩国-京畿道 Hwaseong-si 02
   server: 121.169.46.116
   port: 1090
   type: socks5
   tls: false
   username: Og%3D%3D
-- name: 6#🇰🇷 KR|韩国 03
+- name: 7#🇰🇷 KR|韩国 03
   server: 49.128.219.75
   port: 52838
   type: vmess
@@ -498,7 +495,7 @@ proxies:
   tls: false
   udp: true
   uuid: 77bc10e1-65b0-443c-8a6d-e0a08506e056
-- name: 6#🇰🇷 KR|韩国 04
+- name: 7#🇰🇷 KR|韩国 04
   server: 49.128.219.117
   port: 52967
   type: vmess
@@ -514,7 +511,7 @@ proxies:
   tls: false
   udp: true
   uuid: 1e76907e-6dc3-4127-b17c-a57b417ff579
-- name: 42#🇳🇱 NL|荷兰-北荷兰省 阿尔克马尔 11
+- name: 43#🇳🇱 NL|荷兰-北荷兰省 阿尔克马尔 11
   server: 149.115.110.173
   port: 443
   type: vless
@@ -528,7 +525,7 @@ proxies:
   tfo: false
   tls: true
   uuid: cb33f36c-b531-4318-9be3-568e8d6c56c7
-- name: 41#🇳🇱 NL|荷兰-北荷兰省 哈勒姆 17
+- name: 42#🇳🇱 NL|荷兰-北荷兰省 哈勒姆 16
   server: 51.158.206.19
   port: 23576
   type: vless
@@ -543,22 +540,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- name: 20#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 12
-  server: 188.253.26.39
-  port: 442
-  type: vless
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: T_gyZwngrYUe24q6-mieGT9WJfzja0PQad_y_SnhBk0
-    short-id: 6ac998b514
-  servername: yahoo.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: e929f51d-5a95-5432-b66f-cfe725ea1f61
-- name: 18#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 16
+- name: 19#🇳🇱 NL|荷兰-北荷兰省 阿姆斯特丹 15
   server: 94.228.213.239
   port: 443
   type: vless
@@ -573,7 +555,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 45e3b7ad-03b6-42fc-b616-1e92bdd0a5b3
-- name: 17#🇳🇱 NL|荷兰 19
+- name: 18#🇳🇱 NL|荷兰 19
   server: 193.142.59.180
   port: 443
   type: vless
@@ -585,7 +567,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 16#🇳🇱 NL|荷兰-德伦特省 Meppel 01
+- name: 17#🇳🇱 NL|荷兰-德伦特省 Meppel 01
   server: 163.5.207.235
   port: 443
   type: trojan
@@ -598,7 +580,7 @@ proxies:
     headers:
       Host: 0000.hkvip.ip-ddns.com
     path: /?ed=2560
-- name: 16#🇳🇱 NL|荷兰-德伦特省 Meppel 02
+- name: 17#🇳🇱 NL|荷兰-德伦特省 Meppel 02
   server: 163.5.207.31
   port: 443
   type: trojan
@@ -611,7 +593,7 @@ proxies:
     headers:
       Host: 0000.hkvip.ip-ddns.com
     path: /?ed=2560
-- name: 16#🇳🇱 NL|荷兰-德伦特省 Meppel 03
+- name: 17#🇳🇱 NL|荷兰-德伦特省 Meppel 03
   server: 2.59.183.233
   port: 444
   type: trojan
@@ -624,7 +606,7 @@ proxies:
     headers:
       Host: 0000.hkvip.ip-ddns.com
     path: /?ed=2560
-- name: 8#🇳🇱 NL|荷兰-北荷兰省 哈勒姆 18
+- name: 9#🇳🇱 NL|荷兰-北荷兰省 哈勒姆 17
   server: 51.158.206.20
   port: 23576
   type: vless
@@ -639,14 +621,29 @@ proxies:
   tfo: false
   tls: true
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-- name: 102#🇳🇴 NO|挪威 01
+- name: 7#🇳🇱 NL|荷兰-北荷兰省 哈勒姆 18
+  server: 51.158.206.26
+  port: 23576
+  type: vless
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+  servername: fuck.rkn
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+- name: 103#🇳🇴 NO|挪威 02
   server: 80.173.231.254
   port: 12420
   type: trojan
   password: wp9IsiY82uQhcmgNC1eoBM
   skip-cert-verify: false
   sni: www.semanticstaplegun.click
-- name: 42#🇵🇱 PL|波兰-Mazovia 华沙 04
+- name: 43#🇵🇱 PL|波兰-Mazovia 华沙 04
   server: 45.144.48.192
   port: 8443
   type: vless
@@ -661,7 +658,7 @@ proxies:
   tfo: false
   tls: true
   uuid: 787ae54e-40ad-4caf-899b-ad3a19ff1103
-- name: 16#🇵🇱 PL|波兰 01
+- name: 17#🇵🇱 PL|波兰 01
   server: 31.133.0.167
   port: 2053
   type: trojan
@@ -674,7 +671,7 @@ proxies:
     headers:
       Host: 0000.hkvip.ip-ddns.com
     path: /?ed=2560
-- name: 16#🇵🇱 PL|波兰-Mazovia 华沙 02
+- name: 17#🇵🇱 PL|波兰-Mazovia 华沙 02
   server: 176.105.253.102
   port: 8443
   type: trojan
@@ -687,22 +684,7 @@ proxies:
     headers:
       Host: 0000.hkvip.ip-ddns.com
     path: /?ed=2560
-- name: 16#🇵🇱 PL|波兰-Mazovia 华沙 05
-  server: 151.115.96.243
-  port: 7242
-  type: vless
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: jGmjU0vrRXCnIwn0rVatYKf5ihWZhMvqidp2ceY1QAM
-    short-id: 8c01e365
-  servername: modily.net
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 859b7d71-a9fc-4234-8e03-42eb876a170a
-- name: 56#🇷🇺 RU|俄罗斯-St.-Petersburg 圣彼得堡 06
+- name: 57#🇷🇺 RU|俄罗斯-St.-Petersburg 圣彼得堡 06
   server: 217.12.40.76
   port: 443
   type: vless
@@ -715,7 +697,7 @@ proxies:
   tls: true
   udp: true
   uuid: c38e6142-9223-47ef-84ce-2a84a308cafb
-- name: 17#🇷🇺 RU|俄罗斯-新西伯利亚州 新西伯利亚 13
+- name: 18#🇷🇺 RU|俄罗斯-新西伯利亚州 新西伯利亚 13
   server: 195.133.52.89
   port: 443
   type: vless
@@ -729,7 +711,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 16#🇷🇺 RU|俄罗斯 07
+- name: 17#🇷🇺 RU|俄罗斯 07
   server: 45.89.52.247
   port: 443
   type: trojan
@@ -742,7 +724,7 @@ proxies:
     headers:
       Host: 0000.hkvip.ip-ddns.com
     path: /?ed=2560
-- name: 40#🇸🇪 SE|瑞典-Stockholm County 斯德哥尔摩 01
+- name: 41#🇸🇪 SE|瑞典-Stockholm County 斯德哥尔摩 01
   server: 77.91.84.103
   port: 443
   type: vless
@@ -756,19 +738,19 @@ proxies:
   tfo: false
   tls: true
   uuid: 772d810c-4886-4475-81b2-2673b682c778
-- name: 170#🇹🇭 TH|泰国-曼谷 02
+- name: 171#🇹🇭 TH|泰国-曼谷 02
   server: 163.171.148.71
   port: 11201
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 312ee9bcc9570095
-- name: 27#🇹🇷 TR|土耳其-伊斯坦布尔 01
+- name: 28#🇹🇷 TR|土耳其-伊斯坦布尔 01
   server: 77.83.245.98
   port: 2222
   type: ss
   cipher: chacha20-ietf-poly1305
   password: qscavF5UviIL-8V-E4raBA
-- name: 16#🇹🇼 TW|台湾-新北市 新北 01
+- name: 17#🇹🇼 TW|台湾-新北市 新北 01
   server: 220.128.110.108
   port: 43
   type: vless
@@ -782,7 +764,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /?ed=2560
-- name: 16#🇹🇼 TW|台湾-台北市 02
+- name: 17#🇹🇼 TW|台湾-台北市 02
   server: 114.32.9.249
   port: 51443
   type: vless
@@ -796,7 +778,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /?ed=2560
-- name: 66#🇺🇸 US|美国 22
+- name: 67#🇺🇸 US|美国 22
   server: 151.101.3.8
   port: 80
   type: vless
@@ -810,7 +792,13 @@ proxies:
     headers:
       Host: mitivpn.global.ssl.fastly.net
     path: /--@v2rayngzendegimamadv2rayngzendegimamadv2rayngzendegimamadv2rayngzendegimamad
-- name: 26#🇺🇸 US|美国 02
+- name: 58#🇺🇸 US|美国-弗吉尼亚州 Reston 26
+  server: 15.204.247.49
+  port: 12000
+  type: ss
+  cipher: aes-256-gcm
+  password: 8JCsPssfgS8tiRwiMlhARg==
+- name: 27#🇺🇸 US|美国 02
   server: 208.103.161.110
   port: 443
   type: trojan
@@ -822,7 +810,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.creationlong.org
-- name: 18#🇺🇸 US|美国 01
+- name: 19#🇺🇸 US|美国 01
   server: 208.103.161.231
   port: 443
   type: trojan
@@ -834,7 +822,7 @@ proxies:
     headers:
       Host: gzjx.dpdns.org
     path: '%2F51.91.253.83%3D8443'
-- name: 17#🇺🇸 US|美国-伊利诺伊州 Elk Grove Village 29
+- name: 18#🇺🇸 US|美国-伊利诺伊州 Elk Grove Village 28
   server: 192.3.118.133
   port: 443
   type: vless
@@ -848,7 +836,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🇺🇸 US|美国-纽约州 水牛城 30
+- name: 18#🇺🇸 US|美国-纽约州 水牛城 29
   server: 198.12.124.74
   port: 443
   type: vless
@@ -862,7 +850,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🇺🇸 US|美国-加州 San Jose 31
+- name: 18#🇺🇸 US|美国-加州 San Jose 30
   server: 185.106.96.231
   port: 443
   type: vless
@@ -876,7 +864,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 16#🇺🇸 US|美国-加州 San Jose 24
+- name: 17#🇺🇸 US|美国-加州 San Jose 24
   server: 173.249.201.109
   port: 54443
   type: trojan
@@ -889,35 +877,7 @@ proxies:
     headers:
       Host: 0000.hkvip.ip-ddns.com
     path: /?ed=2560
-- name: 13#🇺🇸 US|美国 27
-  server: 151.101.3.19
-  port: 80
-  type: vless
-  network: ws
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  uuid: 0b516cf6-cd76-470c-954d-9374d734f445
-  ws-opts:
-    path: /site
-    headers:
-      Host: yalandonya.global.ssl.fastly.net
-- name: 5#🇺🇸 US|美国 26
-  server: 192.200.160.9
-  port: 2083
-  type: vless
-  client-fingerprint: chrome
-  network: ws
-  servername: xiz20.wizard2shop.org
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 517c776e-afbf-4749-9643-73c3ea26b905
-  ws-opts:
-    path: /
-    headers:
-      Host: xiz20.wizard2shop.org
-- name: 4#🇺🇸 US|美国-华盛顿州 Seattle 25
+- name: 5#🇺🇸 US|美国-华盛顿州 Seattle 25
   server: 75.127.13.83
   port: 47974
   type: hysteria2
@@ -925,7 +885,7 @@ proxies:
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
-- name: 44#🇻🇳 VN|越南 11
+- name: 45#🇻🇳 VN|越南 11
   server: 103.186.155.58
   port: 38388
   type: ss
@@ -933,7 +893,7 @@ proxies:
   delay: 1386
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 33#🇻🇳 VN|越南 07
+- name: 34#🇻🇳 VN|越南 07
   server: 103.186.154.215
   port: 38388
   type: ss
@@ -941,7 +901,7 @@ proxies:
   delay: 1066
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 29#🇻🇳 VN|越南 08
+- name: 30#🇻🇳 VN|越南 08
   server: 103.186.155.105
   port: 38388
   type: ss
@@ -949,7 +909,7 @@ proxies:
   delay: 2165
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 25#🇻🇳 VN|越南 10
+- name: 26#🇻🇳 VN|越南 10
   server: 103.186.155.4
   port: 38388
   type: ss
@@ -957,7 +917,7 @@ proxies:
   delay: 2174
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 25#🇻🇳 VN|越南 13
+- name: 26#🇻🇳 VN|越南 13
   server: 103.186.154.219
   port: 38388
   type: ss
@@ -965,7 +925,7 @@ proxies:
   delay: 2236
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 17#🇻🇳 VN|越南-Hanoi 02
+- name: 18#🇻🇳 VN|越南-Hanoi 02
   server: 103.81.86.158
   port: 443
   type: vless
@@ -979,7 +939,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🇻🇳 VN|越南 04
+- name: 18#🇻🇳 VN|越南 04
   server: 103.186.154.73
   port: 38388
   type: ss
@@ -987,7 +947,7 @@ proxies:
   delay: 1267
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 17#🇻🇳 VN|越南 05
+- name: 18#🇻🇳 VN|越南 05
   server: 103.186.155.65
   port: 38388
   type: ss
@@ -995,7 +955,7 @@ proxies:
   delay: 1473
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 17#🇻🇳 VN|越南 06
+- name: 18#🇻🇳 VN|越南 06
   server: 103.186.155.135
   port: 38388
   type: ss
@@ -1003,7 +963,7 @@ proxies:
   delay: 1544
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 17#🇻🇳 VN|越南 09
+- name: 18#🇻🇳 VN|越南 09
   server: 103.186.155.141
   port: 38388
   type: ss
@@ -1011,7 +971,7 @@ proxies:
   delay: 2953
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 8#🇻🇳 VN|越南 12
+- name: 9#🇻🇳 VN|越南 12
   server: 103.186.155.55
   port: 38388
   type: ss
@@ -1019,7 +979,7 @@ proxies:
   delay: 2443
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   udp: true
-- name: 6#🇻🇳 VN|越南 14
+- name: 7#🇻🇳 VN|越南 14
   server: 160.191.245.48
   port: 58623
   type: vmess
@@ -1031,28 +991,28 @@ proxies:
   http-opts: {}
   skip-cert-verify: true
   uuid: 8d74803e-aa74-47ef-e3ae-23eeaa96f89d
-- name: 203#🌐 XX 31
+- name: 206#🌐 XX 31
   server: xiaozhu1.kkieo555.cn
   port: 41273
   type: trojan
   password: cdfb1e22-e278-4eca-8030-916b906a3169
   skip-cert-verify: true
   sni: xiaozhu1.kkieo555.cn
-- name: 203#🌐 XX 56
+- name: 206#🌐 XX 58
   server: xiaozhu1.kkieo555.cn
   port: 41274
   type: trojan
   password: 815deda8-824b-4703-9fe2-1282b28900c3
   skip-cert-verify: true
   sni: xiaozhu1.kkieo555.cn
-- name: 187#🌐 XX 59
+- name: 188#🌐 XX 61
   server: 107.174.82.102.sslip.io
   port: 443
   type: trojan
   password: bb824a22-b7ce-427b-9ed6-1adf0751da02
   skip-cert-verify: true
   sni: 107.174.82.102.sslip.io
-- name: 177#🌐 XX 91
+- name: 178#🌐 XX 93
   server: 162.159.45.232
   port: 443
   type: vless
@@ -1066,7 +1026,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /x-aniu/?ed=2560
-- name: 176#🌐 XX 98
+- name: 177#🌐 XX 100
   server: 162.159.44.142
   port: 443
   type: vless
@@ -1080,7 +1040,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /?ed=2560
-- name: 169#🌐 XX 30
+- name: 171#🌐 XX 30
   server: tunnel2.qqa678.com
   port: '47083'
   type: vmess
@@ -1089,7 +1049,7 @@ proxies:
   network: tcp
   tls: false
   uuid: 2ab2ff5b-9684-4150-bec0-6bd036ae7c26
-- name: 169#🌐 XX 81
+- name: 171#🌐 XX 83
   server: tunnel2.qqa678.com
   port: '47084'
   type: vmess
@@ -1098,7 +1058,7 @@ proxies:
   network: tcp
   tls: false
   uuid: 2ab2ff5b-9684-4150-bec0-6bd036ae7c26
-- name: 167#🌐 XX 105
+- name: 168#🌐 XX 107
   server: c37b0be5n-t3kyo0-t3lvgh-2gok.la.shifen.uk
   port: 1743
   type: hysteria2
@@ -1106,7 +1066,7 @@ proxies:
   skip-cert-verify: true
   sni: c37b0be5-t3kyo0-t3lvgh-2gok.la.shifen.uk
   tls: false
-- name: 153#🌐 XX 155
+- name: 154#🌐 XX 153
   server: 104.18.32.47
   port: 443
   type: trojan
@@ -1118,7 +1078,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.gossipglove.com
-- name: 137#🌐 XX 85
+- name: 138#🌐 XX 87
   server: cloudflare.182682.xyz
   port: 443
   type: vless
@@ -1133,7 +1093,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 133#🌐 XX 84
+- name: 134#🌐 XX 86
   server: 104.18.185.26
   port: 443
   type: vless
@@ -1147,7 +1107,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /?ed=2560
-- name: 127#🌐 XX 94
+- name: 128#🌐 XX 96
   server: 162.159.16.63
   port: 443
   type: vless
@@ -1161,7 +1121,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /?ed=2560
-- name: 115#🌐 XX 89
+- name: 116#🌐 XX 91
   server: vip3.kaixincloud.top
   port: 443
   type: vless
@@ -1175,7 +1135,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /x-aniu/?ed=2560
-- name: 114#🌐 XX 87
+- name: 115#🌐 XX 89
   server: 104.17.25.173
   port: 443
   type: vless
@@ -1189,7 +1149,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /?ed=2560
-- name: 114#🌐 XX 101
+- name: 115#🌐 XX 103
   server: 104.21.227.134
   port: 443
   type: vless
@@ -1203,7 +1163,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /?ed=2560
-- name: 104#🌐 XX 83
+- name: 105#🌐 XX 85
   server: 104.16.250.22
   port: 443
   type: vless
@@ -1217,7 +1177,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /x-aniu/?ed=2560
-- name: 100#🌐 XX 103
+- name: 101#🌐 XX 105
   server: 104.21.224.5
   port: 443
   type: vless
@@ -1231,7 +1191,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /x-aniu/?ed=2560
-- name: 79#🌐 XX 156
+- name: 80#🌐 XX 154
   server: www.calmlunch.com
   port: 443
   type: trojan
@@ -1243,13 +1203,13 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 77#🌐 XX 110
+- name: 78#🌐 XX 111
   server: lv.vpnsparta.pro
   port: 57456
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 8afc633eb63227e9
-- name: 64#🌐 XX 03
+- name: 68#🌐 XX 03
   server: mofahx2.til69.com
   port: 59009
   type: trojan
@@ -1257,7 +1217,7 @@ proxies:
   skip-cert-verify: true
   sni: v1-dy.ixigua.com
   udp: true
-- name: 64#🌐 XX 04
+- name: 68#🌐 XX 04
   server: mofahx2.til69.com
   port: 19797
   type: trojan
@@ -1265,7 +1225,7 @@ proxies:
   skip-cert-verify: true
   sni: v1-dy.ixigua.com
   udp: true
-- name: 64#🌐 XX 05
+- name: 68#🌐 XX 05
   server: mofahx2.til69.com
   port: 40391
   type: trojan
@@ -1273,7 +1233,7 @@ proxies:
   skip-cert-verify: true
   sni: v1-dy.ixigua.com
   udp: true
-- name: 64#🌐 XX 06
+- name: 68#🌐 XX 06
   server: mofahx2.til69.com
   port: 33243
   type: trojan
@@ -1281,7 +1241,7 @@ proxies:
   skip-cert-verify: true
   sni: v1-dy.ixigua.com
   udp: true
-- name: 64#🌐 XX 55
+- name: 67#🌐 XX 57
   server: faq1.lieerr222.cn
   port: '43527'
   type: vmess
@@ -1290,14 +1250,14 @@ proxies:
   network: tcp
   tls: false
   uuid: 2267c4b6-5b0b-41f7-a4af-369c84180c59
-- name: 64#🌐 XX 82
+- name: 67#🌐 XX 84
   server: faq1.lieerr222.cn
   port: 43533
   type: trojan
   password: 54faef23-3516-4131-b788-8f3853dac8fa
   skip-cert-verify: true
   sni: faq1.lieerr222.cn
-- name: 64#🌐 XX 104
+- name: 67#🌐 XX 106
   server: faq1.lieerr222.cn
   port: '43528'
   type: vmess
@@ -1306,7 +1266,21 @@ proxies:
   network: tcp
   tls: false
   uuid: fb1348c8-c0c0-48a0-bb0a-753f0e7ba7da
-- name: 59#🌐 XX 88
+- name: 67#🌐 XX 150
+  server: 8.6.112.0
+  port: 443
+  type: vless
+  network: ws
+  servername: cdn.55994421.xyz
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 22e7f0d3-8d3b-40c7-a1c5-8a912f6a16b3
+  ws-opts:
+    path: /memo
+    headers:
+      Host: cdn.55994421.xyz
+- name: 60#🌐 XX 90
   server: staticdelivery.nexusmods.com
   port: 443
   type: vless
@@ -1321,7 +1295,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 56#🌐 XX 43
+- name: 57#🌐 XX 43
   server: ffiw.owwoedu.com
   port: '59510'
   type: vmess
@@ -1330,7 +1304,7 @@ proxies:
   network: tcp
   tls: false
   uuid: 012e03ba-ff1a-4b78-a2e9-f367d56af706
-- name: 54#🌐 XX 86
+- name: 55#🌐 XX 88
   server: 104.16.147.32
   port: 443
   type: vless
@@ -1344,7 +1318,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /?ed=2560
-- name: 53#🌐 XX 100
+- name: 54#🌐 XX 102
   server: mfa.gov.ua
   port: 443
   type: vless
@@ -1359,7 +1333,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 53#🌐 XX 112
+- name: 54#🌐 XX 115
   server: zzula.ir
   port: 443
   type: vless
@@ -1373,7 +1347,7 @@ proxies:
     path: /admin
     headers:
       Host: zitel.digikala-aparat-zula.com
-- name: 44#🌐 XX 157
+- name: 45#🌐 XX 155
   server: 188.114.98.0
   port: 443
   type: vless
@@ -1390,14 +1364,14 @@ proxies:
     path: /upload/?ed=2560
     headers:
       Host: fr.uploadsho.com
-- name: 34#🌐 XX 47
+- name: 35#🌐 XX 47
   server: node-tr-1.v2sv.top
   port: 2083
   type: trojan
   password: nodes-b211f28a
   skip-cert-verify: false
   sni: node-tr-1.v2sv.top
-- name: 33#🌐 XX 150
+- name: 34#🌐 XX 149
   server: 172.64.152.23
   port: 443
   type: vless
@@ -1412,7 +1386,7 @@ proxies:
     path: /
     headers:
       Host: ch1.sooot.ir
-- name: 28#🌐 XX 96
+- name: 29#🌐 XX 98
   server: zrf.cf.090227.xyz
   port: 443
   type: vless
@@ -1427,7 +1401,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 28#🌐 XX 97
+- name: 29#🌐 XX 99
   server: 162.159.44.5
   port: 443
   type: vless
@@ -1442,7 +1416,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 27#🌐 XX 144
+- name: 28#🌐 XX 139
   server: nodejs.org
   port: 80
   type: vless
@@ -1450,25 +1424,12 @@ proxies:
   skip-cert-verify: false
   tfo: false
   tls: false
-  uuid: 1a94fbd9-79d2-4aa7-bf1d-074f678d27ab
+  uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148
   ws-opts:
     path: /?ed
     headers:
-      Host: EqUiPPed-phOToZkoA7K5e6P.eCoTOuRiss.Co.uk.
-- name: 27#🌐 XX 153
-  server: 104.17.74.206
-  port: 2086
-  type: vless
-  network: ws
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  uuid: 902cdea8-75e9-4f61-80d1-48a0ddd3857a
-  ws-opts:
-    path: /?ed=2056
-    headers:
-      Host: tech.narkhesanj.ir
-- name: 27#🌐 XX 154
+      Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.
+- name: 28#🌐 XX 144
   server: 104.17.74.206
   port: 2053
   type: vless
@@ -1485,13 +1446,13 @@ proxies:
     path: /JeiwoBjOYwhwoabA
     headers:
       Host: afranet1.nitromobile.online
-- name: 25#🌐 XX 158
+- name: 26#🌐 XX 156
   server: admin.c2.havij.co
   port: 443
   type: ss
   cipher: chacha20-ietf-poly1305
   password: kaQH3hGdcP80XEDI
-- name: 23#🌐 XX 151
+- name: 24#🌐 XX 151
   server: cdn.halazzon.ir
   port: 443
   type: vless
@@ -1508,7 +1469,23 @@ proxies:
     path: /X0PX5Vup1qlVVzhxp6ic50a
     headers:
       Host: cdn.vpsmee.ir
-- name: 20#🌐 XX 140
+- name: 23#🌐 XX 54
+  server: Gody.xrayshop.store
+  port: 54230
+  type: vless
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - tamin.ir
+  network: http
+  skip-cert-verify: false
+  tfo: false
+  tls: false
+  uuid: 4ed0f31f-a400-4012-be63-b7104ce1bb1e
+- name: 21#🌐 XX 114
   server: neth.pingxbaz.com
   port: 443
   type: vless
@@ -1524,14 +1501,14 @@ proxies:
   tfo: false
   tls: false
   uuid: b3176e0b-ffaf-4e1b-fd8a-c073bcc4272d
-- name: 18#🌐 XX 45
+- name: 19#🌐 XX 45
   server: vn.yiciyuanquicken.online
   port: 27638
   type: trojan
   password: d51abb35-94a4-4529-9244-2808beaa4624
   skip-cert-verify: false
   sni: vn.yiciyuanquicken.online
-- name: 18#🌐 XX 57
+- name: 19#🌐 XX 59
   server: tw.yiciyuanquicken.online
   port: '31224'
   type: vmess
@@ -1541,7 +1518,7 @@ proxies:
   servername: tw.yiciyuanquicken.online
   tls: true
   uuid: d51abb35-94a4-4529-9244-2808beaa4624
-- name: 17#🌐 XX 48
+- name: 18#🌐 XX 48
   server: s472.ccgfw.top
   port: 443
   type: vless
@@ -1553,7 +1530,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 50
+- name: 18#🌐 XX 50
   server: s471.ccgfw.top
   port: 443
   type: vless
@@ -1565,7 +1542,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 51
+- name: 18#🌐 XX 51
   server: s474.ccgfw.top
   port: 443
   type: vless
@@ -1577,7 +1554,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 114
+- name: 18#🌐 XX 116
   server: s321.okgfw.top
   port: 443
   type: vless
@@ -1591,7 +1568,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 115
+- name: 18#🌐 XX 119
   server: s256.okgfw.top
   port: 443
   type: vless
@@ -1605,7 +1582,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 122
+- name: 18#🌐 XX 124
   server: s249.okgfw.top
   port: 443
   type: vless
@@ -1619,7 +1596,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 123
+- name: 18#🌐 XX 125
   server: s480.ccgfw.top
   port: 443
   type: vless
@@ -1631,7 +1608,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 124
+- name: 18#🌐 XX 126
   server: s482.ccgfw.top
   port: 443
   type: vless
@@ -1643,7 +1620,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 147
+- name: 18#🌐 XX 146
   server: s839.ccgfw.top
   port: 443
   type: vless
@@ -1657,7 +1634,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 149
+- name: 18#🌐 XX 148
   server: wiki.makemefree.info
   port: 443
   type: vless
@@ -1672,7 +1649,7 @@ proxies:
     path: /iran
     headers:
       Host: home.makemefree.info
-- name: 17#🌐 XX 159
+- name: 18#🌐 XX 157
   server: s128.okgfw.top
   port: 443
   type: vless
@@ -1684,7 +1661,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 160
+- name: 18#🌐 XX 158
   server: s726.ccgfw.top
   port: 443
   type: vless
@@ -1696,7 +1673,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 161
+- name: 18#🌐 XX 159
   server: s193.okgfw.top
   port: 443
   type: vless
@@ -1708,7 +1685,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 162
+- name: 18#🌐 XX 160
   server: ipv6s313.ccgfw.top
   port: 443
   type: vless
@@ -1720,7 +1697,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 163
+- name: 18#🌐 XX 161
   server: s725.ccgfw.top
   port: 443
   type: vless
@@ -1732,7 +1709,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 164
+- name: 18#🌐 XX 162
   server: s736.ccgfw.top
   port: 443
   type: vless
@@ -1744,7 +1721,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 165
+- name: 18#🌐 XX 163
   server: s124.okgfw.top
   port: 443
   type: vless
@@ -1756,7 +1733,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 166
+- name: 18#🌐 XX 164
   server: ipv6s195.okgfw.top
   port: 443
   type: vless
@@ -1768,7 +1745,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 168
+- name: 18#🌐 XX 166
   server: s467.ccgfw.top
   port: 443
   type: vless
@@ -1780,7 +1757,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 169
+- name: 18#🌐 XX 167
   server: s487.ccgfw.top
   port: 443
   type: vless
@@ -1792,7 +1769,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 170
+- name: 18#🌐 XX 168
   server: s486.ccgfw.top
   port: 443
   type: vless
@@ -1804,7 +1781,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 171
+- name: 18#🌐 XX 169
   server: s465.ccgfw.top
   port: 443
   type: vless
@@ -1816,7 +1793,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 173
+- name: 18#🌐 XX 171
   server: s478.ccgfw.top
   port: 443
   type: vless
@@ -1828,7 +1805,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 174
+- name: 18#🌐 XX 172
   server: s475.ccgfw.top
   port: 443
   type: vless
@@ -1840,7 +1817,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 175
+- name: 18#🌐 XX 173
   server: s477.ccgfw.top
   port: 443
   type: vless
@@ -1852,7 +1829,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 179
+- name: 18#🌐 XX 176
   server: s470.ccgfw.top
   port: 443
   type: vless
@@ -1864,7 +1841,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 180
+- name: 18#🌐 XX 177
   server: s469.ccgfw.top
   port: 443
   type: vless
@@ -1876,7 +1853,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 181
+- name: 18#🌐 XX 178
   server: s468.ccgfw.top
   port: 443
   type: vless
@@ -1888,7 +1865,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 183
+- name: 18#🌐 XX 179
   server: s687.okgfw.top
   port: 443
   type: vless
@@ -1900,7 +1877,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 184
+- name: 18#🌐 XX 180
   server: s733.okgfw.top
   port: 443
   type: vless
@@ -1912,7 +1889,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 185
+- name: 18#🌐 XX 181
   server: s849.ccgfw.top
   port: 443
   type: vless
@@ -1926,7 +1903,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 186
+- name: 18#🌐 XX 182
   server: ipv6s261.okgfw.top
   port: 443
   type: vless
@@ -1940,7 +1917,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 187
+- name: 18#🌐 XX 183
   server: s702.okgfw.top
   port: 443
   type: vless
@@ -1954,7 +1931,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 188
+- name: 18#🌐 XX 184
   server: s541.ccgfw.top
   port: 443
   type: vless
@@ -1968,7 +1945,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 189
+- name: 18#🌐 XX 185
   server: s555.okgfw.top
   port: 443
   type: vless
@@ -1982,7 +1959,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 190
+- name: 18#🌐 XX 186
   server: s539.ccgfw.top
   port: 443
   type: vless
@@ -1996,7 +1973,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 191
+- name: 18#🌐 XX 187
   server: s442.okgfw.top
   port: 443
   type: vless
@@ -2010,7 +1987,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 192
+- name: 18#🌐 XX 188
   server: s559.ccgfw.top
   port: 443
   type: vless
@@ -2024,7 +2001,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 193
+- name: 18#🌐 XX 189
   server: s538.ccgfw.top
   port: 443
   type: vless
@@ -2038,7 +2015,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 194
+- name: 18#🌐 XX 190
   server: s848.ccgfw.top
   port: 443
   type: vless
@@ -2052,7 +2029,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 195
+- name: 18#🌐 XX 191
   server: s407.okgfw.top
   port: 443
   type: vless
@@ -2066,7 +2043,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 196
+- name: 18#🌐 XX 192
   server: s516.okgfw.top
   port: 443
   type: vless
@@ -2080,7 +2057,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 197
+- name: 18#🌐 XX 193
   server: s716.okgfw.top
   port: 443
   type: vless
@@ -2094,7 +2071,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 198
+- name: 18#🌐 XX 194
   server: s717.okgfw.top
   port: 443
   type: vless
@@ -2108,7 +2085,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 199
+- name: 18#🌐 XX 195
   server: s686.okgfw.top
   port: 443
   type: vless
@@ -2120,7 +2097,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 17#🌐 XX 200
+- name: 18#🌐 XX 196
   server: s701.okgfw.top
   port: 443
   type: vless
@@ -2134,7 +2111,7 @@ proxies:
   tfo: false
   tls: true
   uuid: e32f9c43-b141-3d58-b879-15c6a402e119
-- name: 16#🌐 XX 32
+- name: 17#🌐 XX 32
   server: 2026.01.1.kr.aimirror.top
   port: 443
   type: vless
@@ -2147,7 +2124,7 @@ proxies:
   tls: true
   udp: true
   uuid: eeaa07ca-2693-42f8-e544-a16521d8e922
-- name: 16#🌐 XX 33
+- name: 17#🌐 XX 33
   server: 8.35.211.15
   port: 2087
   type: vless
@@ -2161,7 +2138,7 @@ proxies:
     headers:
       Host: l.ayovo.netlib.re
     path: /?ed=2560
-- name: 16#🌐 XX 90
+- name: 17#🌐 XX 92
   server: 162.159.44.27
   port: 443
   type: vless
@@ -2176,7 +2153,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 16#🌐 XX 92
+- name: 17#🌐 XX 94
   server: 162.159.44.228
   port: 443
   type: vless
@@ -2191,7 +2168,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 16#🌐 XX 93
+- name: 17#🌐 XX 95
   server: 172.64.52.218
   port: 443
   type: vless
@@ -2206,7 +2183,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 16#🌐 XX 95
+- name: 17#🌐 XX 97
   server: 104.18.33.181
   port: 443
   type: vless
@@ -2221,7 +2198,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 16#🌐 XX 99
+- name: 17#🌐 XX 101
   server: 104.19.118.83
   port: 443
   type: vless
@@ -2236,7 +2213,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 16#🌐 XX 102
+- name: 17#🌐 XX 104
   server: 198.41.223.212
   port: 443
   type: vless
@@ -2251,7 +2228,7 @@ proxies:
     headers:
       Host: snip.ere.de5.net
     path: /?ed=2560
-- name: 15#🌐 XX 182
+- name: 16#🌐 XX 175
   server: bf.branly23.cloud
   port: 2087
   type: vless
@@ -2260,7 +2237,22 @@ proxies:
   tfo: false
   tls: false
   uuid: 9f6ffb3c-de36-4a48-8cae-34d7e3ede5ea
-- name: 11#🌐 XX 46
+- name: 14#🌐 XX 55
+  server: iar.blackhoster.com
+  port: 351
+  type: vless
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  network: tcp
+  reality-opts:
+    public-key: YWfCdTnr4FAOMYTY2dLrMtQUokyxOGpPhYEEszPj20E
+    short-id: fd1dff03520d8f56
+  servername: refersion.com
+  skip-cert-verify: false
+  tfo: false
+  tls: true
+  uuid: 563c07c5-d7a7-4f67-abee-ca323b5ce0ba
+- name: 12#🌐 XX 46
   server: www.multiplydose.com
   port: 443
   type: trojan
@@ -2272,24 +2264,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.multiplydose.com
-- name: 11#🌐 XX 146
-  server: 188.114.96.3
-  port: 2053
-  type: vless
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  servername: ds2-mx-hel22-protection.iranlease.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: ec77b9ff-ba31-4b1d-8a81-ee9de133bcf0
-  ws-opts:
-    path: /
-    headers:
-      Host: ds2-mx-hel22-protection.iranlease.com
-- name: 11#🌐 XX 152
+- name: 12#🌐 XX 152
   server: pypi.org
   port: 80
   type: vless
@@ -2302,55 +2277,7 @@ proxies:
     path: /download
     headers:
       Host: sabzeu.global.ssl.fastly.net
-- name: 10#🌐 XX 113
-  server: ipbaz.ping-box.com
-  port: 443
-  type: vless
-  alpn:
-  - h2,http/1.1
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: /
-  network: grpc
-  servername: vbox.ping-box.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: e765eb5b-8442-40e3-9532-857ba5ececa7
-- name: 10#🌐 XX 139
-  server: mpc.mobayandeh.top
-  port: 443
-  type: vless
-  alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  network: ws
-  servername: filamcl.wordperessweb.ir
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 74c8f7ec-9c3c-49eb-a4f3-667032b2d7dd
-  ws-opts:
-    path: /?ed=2082
-    headers:
-      Host: filamcl.wordperessweb.ir
-- name: 7#🌐 XX 177
-  server: fl-1.seemsflower.ru
-  port: 8443
-  type: vless
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-    short-id: 6ba85179e30d4fc2
-  servername: www.samsung.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: df7f9ba3-ea64-4275-b2aa-d4fef07d9ab7
-- name: 6#🌐 XX 106
+- name: 7#🌐 XX 108
   server: 172.67.204.84
   port: 8080
   type: vmess
@@ -2366,7 +2293,7 @@ proxies:
     path: /nasnet/cdn
     headers:
       Host: nasnet-511952424.mcitel.co
-- name: 6#🌐 XX 142
+- name: 7#🌐 XX 142
   server: mx2.drawnrisha.one
   port: 55988
   type: ss
@@ -2374,7 +2301,7 @@ proxies:
   country: 🇬🇧GB
   delay: 1218
   password: YLpDMwoLZi9Dvkr7Q6PCfkwCKJt23MkhD1LHDjnKVjS1R9Z4dD9vY5FffuYCtDVcSzHJLdicZbm4Dh6p8Nsd5d88gzAWYrQY
-- name: 5#🌐 XX 176
+- name: 6#🌐 XX 174
   server: es-1.seemsflower.ru
   port: 8443
   type: vless
@@ -2388,21 +2315,7 @@ proxies:
   tfo: false
   tls: true
   uuid: df7f9ba3-ea64-4275-b2aa-d4fef07d9ab7
-- name: 5#🌐 XX 178
-  server: fl-1.bot-iphone.ru
-  port: 8443
-  type: vless
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  network: tcp
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: www.samsung.com
-  skip-cert-verify: false
-  tfo: false
-  tls: true
-  uuid: 0016ff75-c6c9-4867-b5b3-15aedb37206f
-- name: 2#🌐 XX 145
+- name: 4#🌐 XX 145
   server: ip.ali.lat
   port: 2087
   type: vless
@@ -2417,7 +2330,7 @@ proxies:
     path: /
     headers:
       Host: temp4.ali.lat
-- name: 2#🌐 XX 148
+- name: 4#🌐 XX 147
   server: ip.ali.lat
   port: 2083
   type: vless
@@ -2432,22 +2345,6 @@ proxies:
     path: /
     headers:
       Host: temp3.ali.lat
-- name: 1#🌐 XX 137
-  server: ok.1eta.site
-  port: 80
-  type: vless
-  http-opts:
-    method: GET
-    path:
-    - /
-    headers:
-      Host:
-      - tgju.org
-  network: http
-  skip-cert-verify: false
-  tfo: false
-  tls: false
-  uuid: 32663838-6132-4561-b532-653431613036
 dns:
   enable: true
   ipv6: false
