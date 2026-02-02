@@ -249,6 +249,19 @@
           "customName": "",
           "id": "11734992.295012847",
           "disabled": true
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/6-save-to-json.js#output_path=%2FUsers%2Fjulong%2Fnodes.json#noCache",
+            "mode": "link",
+            "arguments": {
+              "output_path": "/Users/julong/nodes.json"
+            }
+          },
+          "customName": "",
+          "id": "54931691.78145979",
+          "disabled": false
         }
       ],
       "subscriptions": [

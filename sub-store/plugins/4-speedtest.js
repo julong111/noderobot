@@ -83,30 +83,44 @@ async function operator(proxies = [], targetPlatform, env) {
 
   const http_meta_host = $arguments.http_meta_host || '127.0.0.1';
   const http_meta_port = $arguments.http_meta_port || 9876;
-  const timeout = parseInt($arguments.timeout || 500);
+  const timeout = parseInt($arguments.timeout || 1000);
   const concurrency = parseInt($arguments.concurrency || 10);
 
   const http_meta_api = `http://${http_meta_host}:${http_meta_port}`;
   const validProxies = [];
   const uniqueServers = [...new Set(proxies.map(p => p.server).filter(s => s))];
   const serverResults = new Set();
+  const totalTasks = uniqueServers.length;
+  let processedCount = 0;
+  
+  // 统计变量初始化
+  let minLatency = Infinity;
+  let maxLatency = 0;
+  let successCount = 0;
+  let timeoutCount = 0;
 
-  $.info(`[${getTime()}] [Speedtest] 开始检测. 节点总数: ${proxies.length} (去重后: ${uniqueServers.length}), 并发数: ${concurrency}, 超时设置: ${timeout}ms`);
+  $.info(`[${getTime()}] [Speedtest] 开始检测. 节点总数: ${proxies.length} (去重后: ${totalTasks}), 并发数: ${concurrency}, 超时设置: ${timeout}ms`);
 
   async function check(target) {
+    processedCount++;
     try {
       const apiUrl = `${http_meta_api}/ping?server=${target}&timeout=${timeout}`;
       const res = await $.http.get(apiUrl);
       const latency = parseInt(res.body || '0');
-
       if (latency > 0) {
-        $.info(`[${getTime()}] [${target}]: ${latency}ms`);
+        successCount++;
+        if (latency < minLatency) minLatency = latency;
+        if (latency > maxLatency) maxLatency = latency;
+        $.info(`[${getTime()}] [${processedCount}/${totalTasks}] [${target}]: ${latency}ms`);
         serverResults.add(target);
-      } else {
-        $.info(`[${getTime()}] [${target}]: Timeout`);
+      } 
+      else {
+        timeoutCount++;
+        $.info(`[${getTime()}] [${processedCount}/${totalTasks}] [${target}]: Timeout`);
       }
     } catch (e) {
-      $.error(`[${getTime()}] 检测发生错误: ${e.message || e}`);
+      timeoutCount++;
+      $.error(`[${getTime()}] [${processedCount}/${totalTasks}] [${target}] 检测发生错误: ${e.message || e}`);
     }
   }
 
@@ -143,6 +157,17 @@ async function operator(proxies = [], targetPlatform, env) {
   const tasks = uniqueServers.map(server => () => check(server));
   
   await executeTasks(tasks, concurrency);
+
+  // 计算统计结果
+  const passRate = totalTasks > 0 ? ((successCount / totalTasks) * 100).toFixed(2) : '0.00';
+  const displayMin = minLatency === Infinity ? 0 : minLatency;
+
+  $.info(`[${getTime()}] [Speedtest] 总结 --------------------------------------`);
+  $.info(`[${getTime()}] [Speedtest] 总检测节点: ${totalTasks}`);
+  $.info(`[${getTime()}] [Speedtest] 成功: ${successCount}, 超时/失败: ${timeoutCount}`);
+  $.info(`[${getTime()}] [Speedtest] 最小延时: ${displayMin}ms, 最大延时: ${maxLatency}ms`);
+  $.info(`[${getTime()}] [Speedtest] 通过率: ${passRate}%`);
+  $.info(`[${getTime()}] [Speedtest] -------------------------------------------`);
 
   const db = loadCsvDb(csvDbPath);
   let dbUpdated = false;
