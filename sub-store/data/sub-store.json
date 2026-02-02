@@ -148,8 +148,6 @@
           "args": {
             "keep": false,
             "value": [
-              "ss",
-              "ssr",
               "http",
               "socks5",
               "anytls",
@@ -173,11 +171,7 @@
           "args": {
             "keep": false,
             "regex": [
-              "防范境外势力渗透",
-              "V2rayAlpha",
-              "V2rayBaaz",
-              "ConfigV2RayNG",
-              "mainv𝟮ray"
+              "防范境外势力渗透"
             ]
           },
           "customName": "",
@@ -187,7 +181,7 @@
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/filter-ipv6.js#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/1-filter-ipv6.js#noCache",
             "mode": "link",
             "arguments": {}
           },
@@ -204,14 +198,16 @@
           },
           "customName": "",
           "id": "96397772.21757495",
-          "disabled": false
+          "disabled": true
         },
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/renamebyip.js#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/3-rename-ip-count.js#csv_path=%2FUsers%2Fjulong%2Fnode-ip-count.csv#noCache",
             "mode": "link",
-            "arguments": {}
+            "arguments": {
+              "csv_path": "/Users/julong/node-ip-count.csv"
+            }
           },
           "customName": "",
           "id": "54593802.908231035",
@@ -226,7 +222,7 @@
           },
           "customName": "",
           "id": "82357045.82910842",
-          "disabled": false
+          "disabled": true
         },
         {
           "type": "Script Operator",
@@ -237,7 +233,7 @@
           },
           "customName": "",
           "id": "11734992.295012847",
-          "disabled": false
+          "disabled": true
         }
       ],
       "subscriptions": [
@@ -245,6 +241,35 @@
         "go4sharing-sub",
         "peasoft-NoMoreWalls",
         "Custom"
+      ],
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
+    },
+    {
+      "name": "MyALL-Fast",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "",
+      "isIconColor": true,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "ENABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        }
+      ],
+      "subscriptions": [
+        "freenodes-clashfree"
       ],
       "tag": [],
       "subscriptionTags": [],

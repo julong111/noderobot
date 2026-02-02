@@ -1,0 +1,58 @@
+在终端里直接运行以下命令：
+
+
+function sub
+    set -l script_path "/Users/julong/Projects/noderobot/sub-store/substore.sh"
+    
+    # 检查文件是否存在
+    if test -f $script_path
+        # 执行脚本，并将所有参数 ($argv) 传递过去
+        sh $script_path $argv
+    else
+        echo (set_color red)"错误: 找不到脚本文件 $script_path"(set_color normal)
+    end
+end
+
+# 将函数保存到 ~/.config/fish/functions/sub.fish
+funcsave sub
+
+
+使用方法
+现在，无论你在哪个目录下，都可以直接输入 sub（我简写了命令名，你也可以改成 substore）加上你的参数：
+
+启动： sub start
+
+停止： sub stop
+
+其他： sub restart (只要你的 .sh 支持)
+
+
+
+
+
+# 创建补全文件夹（如果不存在）
+mkdir -p ~/.config/fish/completions/
+
+# 创建并编辑补全文件
+nano ~/.config/fish/completions/sub.fish
+
+
+将以下代码粘贴进去：
+
+# 禁用默认的文件补全（因为你的命令后面跟的是动作，不是路径）
+complete -c sub -f
+
+# 定义常用的参数
+complete -c sub -a "start" -d "启动 Sub-Store 服务"
+complete -c sub -a "stop" -d "停止 Sub-Store 服务"
+complete -c sub -a "restart" -d "重启 Sub-Store 服务"
+complete -c sub -a "status" -d "查看服务状态"
+
+
+-c sub: 指定是对 sub 这个命令进行补全。
+
+-f: 告诉 Fish 不要在这里提示文件名（比如你按 Tab 时不会跳出一堆文件夹）。
+
+-a "start": 候选的参数值。
+
+-d "...": 后面跟着的描述文字，会在补全列表右侧显示。
