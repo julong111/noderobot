@@ -7,6 +7,7 @@ import os
 import signal
 import sys
 import concurrent.futures
+import argparse
 from urllib.parse import urlparse
 
 # ================= 配置区域 =================
@@ -33,18 +34,29 @@ TIMEOUT_MS = 2000
 CONCURRENCY = 32
 # ===========================================
 
-def generate_test_config():
+def generate_test_config(url=None):
     """读取原始订阅，生成一个只用于测试的临时配置"""
-    if not os.path.exists(SOURCE_YAML):
-        print(f"错误: 找不到源文件 {SOURCE_YAML}")
-        sys.exit(1)
-
-    with open(SOURCE_YAML, 'r', encoding='utf-8') as f:
+    config = None
+    if url:
+        print(f"正在从 URL 下载配置: {url}")
         try:
-            config = yaml.safe_load(f)
+            resp = requests.get(url, timeout=30)
+            resp.raise_for_status()
+            config = yaml.safe_load(resp.text)
         except Exception as e:
-            print(f"解析 YAML 失败: {e}")
+            print(f"下载或解析 URL 失败: {e}")
             sys.exit(1)
+    else:
+        if not os.path.exists(SOURCE_YAML):
+            print(f"错误: 找不到源文件 {SOURCE_YAML}")
+            sys.exit(1)
+
+        with open(SOURCE_YAML, 'r', encoding='utf-8') as f:
+            try:
+                config = yaml.safe_load(f)
+            except Exception as e:
+                print(f"解析 YAML 失败: {e}")
+                sys.exit(1)
 
     # 强制覆盖关键设置，确保不影响宿主机
     config['port'] = TEST_HTTP_PORT
@@ -137,13 +149,13 @@ def save_csv_db(path, db):
     rows = []
     for (ip, port, protocol), stats in db.items():
         total = stats['pass'] + stats['notpass']
-        rate = f"{(stats['pass'] / total * 100):.1f}%" if total > 0 else "0.0%"
+        rate = f"{(stats['pass'] / total * 100):.1f}" if total > 0 else "0.0"
         rows.append({
             'ip': ip, 'port': port, 'protocol': protocol,
             'pass': stats['pass'], 'notpass': stats['notpass'], 'success_rate': rate
         })
     
-    rows.sort(key=lambda x: float(x['success_rate'].strip('%')), reverse=True)
+    rows.sort(key=lambda x: float(x['success_rate']), reverse=True)
     
     with open(path, 'w', newline='', encoding='utf-8-sig') as f:
         writer = csv.DictWriter(f, fieldnames=headers)
@@ -227,10 +239,14 @@ def cleanup(process):
     print("清理完成。")
 
 def main():
+    parser = argparse.ArgumentParser(description="测试节点连通性")
+    parser.add_argument('--url', type=str, help='从指定 URL 下载配置文件进行测试')
+    args = parser.parse_args()
+
     process = None
     try:
         # 1. 生成配置
-        proxies_list = generate_test_config()
+        proxies_list = generate_test_config(args.url)
         
         # 2. 启动内核
         process = start_kernel()

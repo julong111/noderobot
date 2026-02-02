@@ -2,6 +2,8 @@ import yaml
 import csv
 import os
 import sys
+import argparse
+import requests
 
 # ================= 配置区域 =================
 # 获取当前脚本所在目录
@@ -11,7 +13,6 @@ PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 # 文件路径配置
 MERGE_YAML_PATH = os.path.join(PROJECT_ROOT, "s", "merge.yml")
 CSV_PATH = os.path.join(PROJECT_ROOT, "s", "node-connective.csv")
-OUTPUT_YAML_PATH = os.path.join(PROJECT_ROOT, "s","conn.yml")
 # ===========================================
 
 def load_csv_db(path):
@@ -36,6 +37,11 @@ def load_csv_db(path):
     return db
 
 def main():
+    parser = argparse.ArgumentParser(description="根据连通性历史记录过滤节点")
+    parser.add_argument('--url', type=str, help='从指定 URL 下载配置文件')
+    parser.add_argument('--outfile', type=str, default='conn.yml', help='输出文件名 (默认: conn.yml)')
+    args = parser.parse_args()
+
     # 1. 加载历史数据
     if not os.path.exists(CSV_PATH):
         print(f"错误: 找不到 CSV 文件 {CSV_PATH}")
@@ -45,19 +51,30 @@ def main():
     print(f"已加载历史记录: {len(db)} 条")
 
     # 2. 读取原始 YAML
-    if not os.path.exists(MERGE_YAML_PATH):
-        print(f"错误: 找不到 YAML 文件 {MERGE_YAML_PATH}")
-        return
-
-    with open(MERGE_YAML_PATH, 'r', encoding='utf-8') as f:
+    config = None
+    if args.url:
+        print(f"正在从 URL 下载配置: {args.url}")
         try:
-            config = yaml.safe_load(f)
+            resp = requests.get(args.url, timeout=30)
+            resp.raise_for_status()
+            config = yaml.safe_load(resp.text)
         except Exception as e:
-            print(f"解析 YAML 失败: {e}")
+            print(f"下载或解析 URL 失败: {e}")
+            return
+    else:
+        if not os.path.exists(MERGE_YAML_PATH):
+            print(f"错误: 找不到 YAML 文件 {MERGE_YAML_PATH}")
             return
 
+        with open(MERGE_YAML_PATH, 'r', encoding='utf-8') as f:
+            try:
+                config = yaml.safe_load(f)
+            except Exception as e:
+                print(f"解析 YAML 失败: {e}")
+                return
+
     if 'proxies' not in config or not config['proxies']:
-        print("警告: merge.yml 中没有找到 proxies 节点")
+        print("警告: 配置文件中没有找到 proxies 节点")
         return
 
     # 3. 执行过滤逻辑
@@ -102,11 +119,13 @@ def main():
     print(f"剔除节点数: {removed_count}")
     print(f"剩余节点数: {len(filtered_proxies)}")
     
-    with open(OUTPUT_YAML_PATH, 'w', encoding='utf-8') as f:
+    # 构造输出路径，默认保存在 s 目录下
+    output_path = os.path.join(PROJECT_ROOT, "s", args.outfile)
+    with open(output_path, 'w', encoding='utf-8') as f:
         # allow_unicode=True 确保中文不乱码，sort_keys=False 保持字段顺序
         yaml.dump(config, f, allow_unicode=True, sort_keys=False)
     
-    print(f"已生成新配置文件: {OUTPUT_YAML_PATH}")
+    print(f"已生成新配置文件: {output_path}")
 
 if __name__ == "__main__":
     main()

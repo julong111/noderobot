@@ -1,3 +1,37 @@
+proxy-groups:
+  - name: 🚀 代理
+    type: select
+    proxies:
+      - 🌟 手工精选
+      - 🔧 我的规则
+      - 🪬 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🔧 我的规则
+    include-all: true
+    filter: (?i)🌟|新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|France|法国|Paris|Netherlands
+    type: select
+  - name: 🌟 手工精选
+    include-all: true
+    filter: (?i)🌟
+    type: select
+  - name: 🪬 手动切换
+    include-all: true
+    type: select
+  - name: ♻️ 自动选择
+    type: url-test
+    include-all: true
+    interval: 300
+    tolerance: 100
+  - name: 🛑 广告拦截
+    type: select
+    proxies:
+      - REJECT
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+
 rules:
   # 1. 最高优先级：局域网和特殊地址直连，避免代理冲突
   - "GEOSITE,private,🎯 全球直连"
