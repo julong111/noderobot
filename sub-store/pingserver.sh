@@ -66,11 +66,21 @@ log() {
     tail -f "$LOG_FILE"
 }
 
+clean() {
+    if [ -f "$LOG_FILE" ]; then
+        > "$LOG_FILE"
+        echo "✅ 日志文件已清空: $LOG_FILE"
+    else
+        echo "ℹ️  日志文件不存在: $LOG_FILE"
+    fi
+}
+
 case "$1" in
     start) start ;;
     stop) stop ;;
     restart) stop; start ;;
     status) status ;;
     log) log ;;
-    *) echo "用法: $0 {start|stop|restart|status|log}"; exit 1 ;;
+    clean) clean ;;
+    *) echo "用法: $0 {start|stop|restart|status|log|clean}"; exit 1 ;;
 esac
