@@ -216,13 +216,28 @@
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/speedtest.js#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/4-speedtest.js#csv_path=%2FUsers%2Fjulong%2Fnode-connective.csv#noCache",
             "mode": "link",
-            "arguments": {}
+            "arguments": {
+              "csv_path": "/Users/julong/node-connective.csv"
+            }
           },
           "customName": "",
           "id": "82357045.82910842",
-          "disabled": true
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/4.2-rename-add-pass-count.js#csv_path=%2FUsers%2Fjulong%2Fnode-connective.csv#noCache",
+            "mode": "link",
+            "arguments": {
+              "csv_path": "/Users/julong/node-connective.csv"
+            }
+          },
+          "customName": "",
+          "id": "66723721.055215605",
+          "disabled": false
         },
         {
           "type": "Script Operator",

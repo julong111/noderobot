@@ -56,3 +56,36 @@ complete -c sub -a "status" -d "查看服务状态"
 -a "start": 候选的参数值。
 
 -d "...": 后面跟着的描述文字，会在补全列表右侧显示。
+
+
+---
+
+### pingserver 函数
+
+function pingserver
+    set -l script_path "/Users/julong/Projects/noderobot/sub-store/pingserver.sh"
+    
+    # 检查文件是否存在
+    if test -f $script_path
+        # 执行脚本，并将所有参数 ($argv) 传递过去
+        sh $script_path $argv
+    else
+        echo (set_color red)"错误: 找不到脚本文件 $script_path"(set_color normal)
+    end
+end
+
+# 将函数保存到 ~/.config/fish/functions/pingserver.fish
+funcsave pingserver
+
+### pingserver 补全
+
+# 创建并编辑补全文件
+nano ~/.config/fish/completions/pingserver.fish
+
+# 将以下代码粘贴进去：
+complete -c pingserver -f
+complete -c pingserver -a "start" -d "启动 Ping Server"
+complete -c pingserver -a "stop" -d "停止 Ping Server"
+complete -c pingserver -a "restart" -d "重启 Ping Server"
+complete -c pingserver -a "status" -d "查看服务状态"
+complete -c pingserver -a "log" -d "查看实时日志"
