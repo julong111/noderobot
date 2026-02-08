@@ -76,7 +76,7 @@ async function operator(proxies = [], targetPlatform, context) {
   proxies.forEach(proxy => {
     const count = serverCounts[proxy.server];
     if (count) {
-      proxy.name = `${count}|${proxy.name}`;
+      proxy.name = `${count}C|${proxy.name}`;
     }
   });
 

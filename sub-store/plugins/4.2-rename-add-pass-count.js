@@ -94,7 +94,7 @@ function operator(proxies = [], targetPlatform, context) {
       const rate = stats.rate.toFixed(0);
       const originalName = proxy.name;
       proxy.name = nameFormat
-        .replace('{rate}', rate)
+        .replace('{rate}', rate+"%")
         .replace('{name}', originalName);
       renamedCount++;
       $.info(`[${getTime()}] [${scriptName}] Renamed: [${originalName}] -> [${proxy.name}]`);
