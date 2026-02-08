@@ -32,16 +32,32 @@ proxy-groups:
     proxies:
       - DIRECT
 
+rule-providers:
+  myreject:
+    behavior: "domain"
+    type: file
+    format: text
+    path: ./MyReject.txt
+  mydirect:
+    behavior: "domain"
+    type: file
+    format: text
+    path: ./MyDirect.txt
+  myproxy:
+    behavior: "domain"
+    type: file
+    format: text
+    path: ./MyProxy.txt
+
 rules:
+  # 建议把自定义规则放在最上方，优先级最高
+  - RULE-SET,myreject,🛑 广告拦截
+  - RULE-SET,mydirect,🎯 全球直连
+  - RULE-SET,myproxy,🚀 代理
+
   # 1. 最高优先级：局域网和特殊地址直连，避免代理冲突
   - "GEOSITE,private,🎯 全球直连"
   - "GEOIP,private,🎯 全球直连,no-resolve"
-
-  # 2. 手工指定的需要代理的域名
-  - "DOMAIN-SUFFIX,github.com,🚀 代理"
-  - "DOMAIN-SUFFIX,tinyurl.com,🚀 代理"
-  - "DOMAIN-SUFFIX,rogueamoeba.net,🚀 代理"
-  - "DOMAIN-SUFFIX,st.com,🚀 代理"
 
   # 3. 广告拦截
   - "GEOSITE,category-ads-all,🛑 广告拦截"
@@ -64,8 +80,10 @@ rules:
   - "GEOSITE,gfw,🚀 代理"
 
   # 7. 国内域名和IP地址直连
+  - "GEOIP,LAN,🎯 全球直连"
   - "GEOSITE,cn,🎯 全球直连"
   - "GEOIP,CN,🎯 全球直连"
+
 
   # 8. 最终规则：所有其他流量直连 (黑名单模式)
   - "MATCH,🎯 全球直连"
