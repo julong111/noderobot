@@ -29,6 +29,7 @@ start() {
         mkdir -p "$DATA_PATH"
         
         nohup env \
+            NODE_PATH="$BASE_DIR/node_modules"
             SUB_STORE_FRONTEND_BACKEND_PATH="$CUSTOM_PATH" \
             SUB_STORE_BACKEND_API_HOST="0.0.0.0" \
             SUB_STORE_BACKEND_API_PORT="$PORT" \

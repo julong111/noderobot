@@ -44,6 +44,7 @@ async function operator(proxies = [], targetPlatform, env) {
 
   // CSV 统计功能
   const fs = eval('require("fs")');
+  const ping = eval('require("ping")');
   const csvDbPath = $arguments.csv_path || '/Users/julong/Projects/noderobot/s/node-connective.csv';
 
   function loadCsvDb(filePath) {
@@ -81,12 +82,9 @@ async function operator(proxies = [], targetPlatform, env) {
     } catch (e) { $.error(`[CSV] Save error: ${e.message}`); }
   }
 
-  const http_meta_host = $arguments.http_meta_host || '127.0.0.1';
-  const http_meta_port = $arguments.http_meta_port || 9876;
   const timeout = parseInt($arguments.timeout || 1000);
   const concurrency = parseInt($arguments.concurrency || 10);
 
-  const http_meta_api = `http://${http_meta_host}:${http_meta_port}`;
   const validProxies = [];
   const uniqueServers = [...new Set(proxies.map(p => p.server).filter(s => s))];
   const serverResults = new Set();
@@ -104,9 +102,15 @@ async function operator(proxies = [], targetPlatform, env) {
   async function check(target) {
     processedCount++;
     try {
-      const apiUrl = `${http_meta_api}/ping?server=${target}&timeout=${timeout}`;
-      const res = await $.http.get(apiUrl);
-      const latency = parseInt(res.body || '0');
+      // 平台适配：Windows 用 ms，macOS/Linux 用秒
+      const isWin = eval('process.platform === "win32"');
+      const timeoutValue = isWin ? timeout : timeout / 1000;
+
+      const res = await ping.promise.probe(target, {
+        timeout: timeoutValue,
+      });
+      const latency = res.alive ? Math.round(parseFloat(res.time)) : 0;
+
       if (latency > 0) {
         successCount++;
         if (latency < minLatency) minLatency = latency;
