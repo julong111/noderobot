@@ -45,6 +45,8 @@ log_info "正在获取 workflow runs 列表..."
 
 # 创建临时文件存储所有 runs
 runs_file=$(mktemp)
+# 添加这一行查看具体路径
+log_info "临时文件路径: $runs_file"
 
 # 获取第一页
 page=1
@@ -106,8 +108,10 @@ delete_count=${#ids_to_delete[@]}
 log_info "解析完成，共有 $delete_count 条记录等待删除。"
 
 # 批量删除
+current_index=0
 for run_id in "${ids_to_delete[@]}"; do
-  log_info "正在删除 Run ID: $run_id ..."
+  current_index=$((current_index + 1))
+  log_info "[$current_index/$delete_count] 正在删除 Run ID: $run_id ..."
   curl -s -X DELETE -H "Authorization: token $GITHUB_TOKEN" \
     "https://api.github.com/repos/$owner/$repo/actions/runs/$run_id"
 done
