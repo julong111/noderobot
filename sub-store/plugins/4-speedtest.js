@@ -58,10 +58,18 @@ async function operator(proxies = [], targetPlatform, env) {
         const line = lines[i].trim();
         if (!line) continue;
         const parts = line.split(',');
-        if (parts.length >= 5) {
-          const [ip, port, protocol, pass, notpass] = parts;
+        if (parts.length >= 7) {
+          const [ip, port, protocol, pass, notpass, firsttime, updatetime] = parts;
           const key = `${ip},${port},${protocol}`;
-          db[key] = { ip, port, protocol, pass: parseInt(pass) || 0, notpass: parseInt(notpass) || 0 };
+          db[key] = { 
+            ip, 
+            port, 
+            protocol, 
+            pass: parseInt(pass) || 0, 
+            notpass: parseInt(notpass) || 0,
+            firsttime,
+            updatetime
+          };
         }
       }
     } catch (e) { $.error(`[CSV] Load error: ${e.message}`); }
@@ -70,16 +78,69 @@ async function operator(proxies = [], targetPlatform, env) {
 
   function saveCsvDb(filePath, db) {
     try {
-      const header = 'ip,port,protocol,pass,notpass,success_rate';
-      const rows = Object.values(db).map(item => {
-        const total = item.pass + item.notpass;
-        const rate = total === 0 ? 0.0 : (item.pass / total) * 100;
-        return { ...item, rate };
-      }).sort((a, b) => b.rate - a.rate); // Sort by success rate descending
-      const lines = rows.map(r => `${r.ip},${r.port},${r.protocol},${r.pass},${r.notpass},${r.rate.toFixed(1)}`);
-      fs.writeFileSync(filePath, '\uFEFF' + [header, ...lines].join('\n'), 'utf8'); // Add BOM for Excel compatibility
+      const header = 'ip,port,protocol,pass,notpass,success_rate,firsttime,updatetime';
+      const currentTime = getTime();
+      let existingData = {};
+
+      // 读取现有数据（如果文件存在）
+      if (fs.existsSync(filePath)) {
+        const existingContent = fs.readFileSync(filePath, 'utf8');
+        const lines = existingContent.split(/\r?\n/).slice(1); // 跳过头部
+        lines.forEach(line => {
+          if (line.trim()) {
+            const [ip, port, protocol, pass, notpass, , firsttime, updatetime] = line.split(',');
+            const key = `${ip},${port},${protocol}`;
+            existingData[key] = {
+              ip,
+              port,
+              protocol,
+              pass: parseInt(pass, 10),
+              notpass: parseInt(notpass, 10),
+              firsttime,
+              updatetime
+            };
+          }
+        });
+      }
+
+      // 合并现有数据和新数据
+      Object.entries(db).forEach(([key, newData]) => {
+        if (existingData[key]) {
+          // 如果记录已存在，合并 pass/notpass 并保留最早 firsttime
+          existingData[key] = {
+            ...existingData[key],
+            pass: existingData[key].pass + newData.pass,
+            notpass: existingData[key].notpass + newData.notpass,
+            updatetime: currentTime
+          };
+        } else {
+          // 新记录，直接添加
+          existingData[key] = {
+            ...newData,
+            firsttime: newData.firsttime || currentTime,
+            updatetime: currentTime
+          };
+        }
+      });
+
+      // 按成功率排序
+      const rows = Object.values(existingData)
+        .map(item => {
+          const total = item.pass + item.notpass;
+          const rate = total === 0 ? 0.0 : (item.pass / total) * 100;
+          return { ...item, rate };
+        })
+        .sort((a, b) => b.rate - a.rate);
+
+      const lines = rows.map(r =>
+        `${r.ip},${r.port},${r.protocol},${r.pass},${r.notpass},${r.rate.toFixed(1)},${r.firsttime},${r.updatetime}`
+      );
+
+      fs.writeFileSync(filePath, '\uFEFF' + [header, ...lines].join('\n'), 'utf8');
       $.info(`[CSV] Statistics saved to ${filePath}`);
-    } catch (e) { $.error(`[CSV] Save error: ${e.message}`); }
+    } catch (e) {
+      $.error(`[CSV] Save error: ${e.message}`);
+    }
   }
 
   const timeout = parseInt($arguments.timeout || 1000);
@@ -186,7 +247,17 @@ async function operator(proxies = [], targetPlatform, env) {
     if (proxy.server && proxy.port) {
       const protocol = proxy.type || 'unknown';
       const key = `${proxy.server},${proxy.port},${protocol}`;
-      if (!db[key]) db[key] = { ip: proxy.server, port: proxy.port, protocol: protocol, pass: 0, notpass: 0 };
+      if (!db[key]) {
+        db[key] = { 
+          ip: proxy.server, 
+          port: proxy.port, 
+          protocol: protocol, 
+          pass: 0, 
+          notpass: 0,
+          firsttime: null,
+          updatetime: null
+        };
+      }
       isPass ? db[key].pass++ : db[key].notpass++;
       dbUpdated = true;
     }

@@ -9,7 +9,7 @@ proxy-groups:
       - DIRECT
   - name: 🔧 我的规则
     include-all: true
-    filter: (?i)🌟|新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|France|法国|Paris|Netherlands
+    filter: (?i)🌟|新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|France|法国|Paris|Netherlands|GB
     type: select
   - name: 🌟 手工精选
     include-all: true
