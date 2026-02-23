@@ -199,5 +199,5 @@ async function operator(proxies = [], targetPlatform, env) {
 
   $.info(`[${getTime()}] [Speedtest] End --------------------------------------`);
  
-  return validProxies;
+  return proxies;
 }
