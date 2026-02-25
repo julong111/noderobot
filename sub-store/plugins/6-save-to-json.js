@@ -7,42 +7,25 @@
  * - output_path: 输出 JSON 文件的路径 (默认: /Users/julong/Projects/noderobot/s/all_nodes.json)
  */
 
-function operator(proxies = [], targetPlatform, context) {
-  const $ = $substore;
-  const fs = eval('require("fs")');
+async function operator(proxies = [], targetPlatform, context) {
+  const { log, performance } = $substore.julong;
+  const fs = require('fs');
+  const scriptName = 'SaveNodes';
 
   // 参数处理
   const outputPath = $arguments.output_path || './all_nodes.json';
 
-  // 复用高性能时间函数
-  const getTime = (() => {
-    let lastSecond = 0;
-    let cachedPrefix = '';
-    return () => {
-      const now = Date.now();
-      const ms = now % 1000;
-      const second = (now / 1000) | 0;
-      if (second !== lastSecond) {
-        lastSecond = second;
-        const d = new Date(now);
-        const m = d.getMonth() + 1;
-        const date = d.getDate();
-        const h = d.getHours();
-        const min = d.getMinutes();
-        const s = d.getSeconds();
-        cachedPrefix = `${d.getFullYear()}-${m < 10 ? '0' + m : m}-${date < 10 ? '0' + date : date} ` +
-                       `${h < 10 ? '0' + h : h}:${min < 10 ? '0' + min : min}:${s < 10 ? '0' + s : s}`;
-      }
-      if (ms < 10) return cachedPrefix + '.00' + ms;
-      if (ms < 100) return cachedPrefix + '.0' + ms;
-      return cachedPrefix + '.' + ms;
-    };
-  })();
+  performance.startTimer(scriptName);
+  log.info(scriptName, 'Start --------------------------------------');
+  log.info(scriptName, `Output Path: ${outputPath}`);
 
-  $.info(`[${getTime()}] [SaveNodes] Start --------------------------------------`);
-  $.info(`[${getTime()}] [SaveNodes] Output Path: ${outputPath}`);
+  try {
+    fs.writeFileSync(outputPath, JSON.stringify(proxies, null, 2), 'utf8');
+    log.info(scriptName, `Saved ${proxies.length} nodes to ${outputPath}`);
+  } catch (e) {
+    log.error(scriptName, `Failed to save nodes: ${e.message}`);
+  }
 
-  fs.writeFileSync(outputPath, JSON.stringify(proxies, null, 2), 'utf8');
-  $.info(`[${getTime()}] [SaveNodes] Saved ${proxies.length} nodes to ${outputPath}`);
-  $.info(`[${getTime()}] [SaveNodes] End --------------------------------------`);
+  const totalTime = performance.formatDuration(performance.endTimer(scriptName));
+  log.info(scriptName, `End. Total time: ${totalTime} --------------------------------------`);
 }

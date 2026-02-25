@@ -11,52 +11,28 @@
  */
 
 function operator(proxies = [], targetPlatform, context) {
-  const $ = $substore;
+  const { log, utils, performance, network } = $substore.julong;
 
-  // 复用高性能时间函数
-  const getTime = (() => {
-    let lastSecond = 0;
-    let cachedPrefix = '';
-    return () => {
-      const now = Date.now();
-      const ms = now % 1000;
-      const second = (now / 1000) | 0;
-      if (second !== lastSecond) {
-        lastSecond = second;
-        const d = new Date(now);
-        const m = d.getMonth() + 1;
-        const date = d.getDate();
-        const h = d.getHours();
-        const min = d.getMinutes();
-        const s = d.getSeconds();
-        cachedPrefix = `${d.getFullYear()}-${m < 10 ? '0' + m : m}-${date < 10 ? '0' + date : date} ` +
-                       `${h < 10 ? '0' + h : h}:${min < 10 ? '0' + min : min}:${s < 10 ? '0' + s : s}`;
-      }
-      if (ms < 10) return cachedPrefix + '.00' + ms;
-      if (ms < 100) return cachedPrefix + '.0' + ms;
-      return cachedPrefix + '.' + ms;
-    };
-  })();
+  performance.startTimer('remove-duplicates');
 
-  $.info(`[${getTime()}] [RemoveDuplicates] Start --------------------------------------`);
+  log.info('RemoveDuplicates', `开始... 节点数：${proxies.length}`);
+
+  // Reverse the proxies array to process from last to first
+  const reversedProxies = [...proxies].reverse();
+
   // 用于存储去重后的节点列表
   const uniqueProxies = [];
   // 用于记录已经出现过的 server:port:type 组合
   const seen = new Set();
 
-  proxies.forEach((proxy) => {
+  reversedProxies.forEach((proxy) => {
     // 兼容性处理：检查节点是否有 server 和 port 字段
-    // 有些特殊类型的节点（如 external-proxy 或其他非标准节点）可能没有这些字段
-    // 对于这些节点，我们选择直接保留，不参与去重逻辑
     if (!proxy.server || !proxy.port) {
       uniqueProxies.push(proxy);
       return;
     }
 
     // 构造唯一标识键
-    // 将 server 转换为小写，以忽略域名大小写的差异 (例如 example.com 和 EXAMPLE.COM 应视为同一个)
-    // port 是数字，直接拼接
-    // 增加类型检查，防止 server 不是字符串导致报错
     const server = typeof proxy.server === 'string' ? proxy.server.toLowerCase() : String(proxy.server);
     const type = proxy.type || '';
     const key = `${server}:${proxy.port}:${type}`;
@@ -66,12 +42,30 @@ function operator(proxies = [], targetPlatform, context) {
       seen.add(key);
       uniqueProxies.push(proxy);
     } else {
-      $.info(`[${getTime()}] [RemoveDuplicates] Remove Key: ${key}, ${JSON.stringify(proxy)} `);
+      // 如果键已经存在，移除旧节点并保留当前节点
+      const indexToRemove = uniqueProxies.findIndex(
+        (p) =>
+          (typeof p.server === 'string' ? p.server.toLowerCase() : String(p.server)) === server &&
+          p.port === proxy.port &&
+          (p.type || '') === type
+      );
+      if (indexToRemove !== -1) {
+        uniqueProxies.splice(indexToRemove, 1); // 移除旧节点
+        uniqueProxies.push(proxy); // 保留新节点
+      }
+      log.info('RemoveDuplicates', `Replace Key: ${key}, ${JSON.stringify(proxy)}`);
     }
-    // 如果键已经出现过，说明是重复节点，直接忽略（即删除）
   });
 
-  $.info(`[${getTime()}] [RemoveDuplicates] 执行完毕. Pass: ${uniqueProxies.length} Total: ${proxies.length}`);
-  $.info(`[${getTime()}] [RemoveDuplicates] End --------------------------------------`);
+  // 恢复原始顺序（因为是从后往前处理的）
+  uniqueProxies.reverse();
+
+  // 获取耗时信息
+  const elapsedMs = performance.endTimer('remove-duplicates');
+  const totalTime = performance.formatDuration(elapsedMs);
+
+  log.info('RemoveDuplicates', `检测完毕. 剩余节点: ${uniqueProxies.length}, 总耗时: ${totalTime}`);
+  log.info('RemoveDuplicates', `End`);
+
   return uniqueProxies;
 }
