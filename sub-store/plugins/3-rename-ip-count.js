@@ -40,12 +40,13 @@ async function operator(proxies = [], targetPlatform, context) {
   log.info('RenameByServerCount', `Found ${Object.keys(serverCounts).length} unique servers (IPs/domains).`);
 
   // 3. 保存统计到 CSV - 使用 Julong 工具库的通用函数
+  let allData = [];
   if (Object.keys(serverCounts).length > 0) {
     try {
       // 确保 $ 变量已定义
       const $ = $substore;
 
-      let allData = [];
+      allData = await csv.read(csvPath, csvColumns);
       for (const [server, newData] of Object.entries(serverCounts)) {
         const item = {
           server: server,
@@ -84,10 +85,17 @@ async function operator(proxies = [], targetPlatform, context) {
   }
 
   // 4. 重命名节点
+  const totalCounts = {};
+  if (allData && allData.length > 0) {
+    allData.forEach(row => totalCounts[row.server] = row.count);
+  } else {
+    Object.entries(serverCounts).forEach(([k, v]) => totalCounts[k] = v.count);
+  }
+
   proxies.forEach(proxy => {
-    const serverData = serverCounts[proxy.server];
-    if (serverData) {
-      proxy.name = `${serverData.count}C|${proxy.name}`;
+    const count = totalCounts[proxy.server];
+    if (count) {
+      proxy.name = `${count}C|${proxy.name}`;
     }
   });
 

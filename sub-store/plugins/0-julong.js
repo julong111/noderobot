@@ -279,7 +279,17 @@ async function operator(proxies = [], targetPlatform, context) {
                             }
 
                             // 从适当的位置开始读取数据行
-                            const startIndex = customHeaders ? 0 : 1;
+                            let startIndex = 0;
+                            if (!customHeaders) {
+                                startIndex = 1;
+                            } else {
+                                // 检查第一行是否为标题行，如果是则跳过
+                                const firstLine = lines[0].trim();
+                                const expectedHeader = headers.join(',');
+                                if (firstLine === expectedHeader) {
+                                    startIndex = 1;
+                                }
+                            }
 
                             for (let i = startIndex; i < lines.length; i++) {
                                 if (lines[i].trim()) {
