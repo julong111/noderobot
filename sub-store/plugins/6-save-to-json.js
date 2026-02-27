@@ -13,7 +13,10 @@ async function operator(proxies = [], targetPlatform, context) {
   const scriptName = 'SaveNodes';
 
   // 参数处理
-  const outputPath = $arguments.output_path || './all_nodes.json';
+  const outputPath = $arguments.output_path;
+  if (!outputPath) {
+    throw new Error('SaveNodes: `output_path` argument is required.');
+  }
 
   performance.startTimer(scriptName);
   log.info(scriptName, 'Start --------------------------------------');

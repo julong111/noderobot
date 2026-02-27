@@ -10,8 +10,11 @@ async function operator(proxies = [], targetPlatform, env) {
   log.info('Speedtest', 'Start --------------------------------------');
 
   // CSV 统计功能
-  const csvDbPath = $arguments.csv_path || '/Users/julong/Projects/noderobot/s/node-connective.csv';
-  const csvColumns = ['ip', 'port', 'protocol', 'pass', 'notpass', 'firsttime', 'updatetime'];
+  const csvDbPath = $arguments.csv_path;
+  if (!csvDbPath) {
+    throw new Error('Speedtest: `csv_path` argument is required.');
+  }
+  const csvColumns = ['server', 'port', 'protocol', 'pass', 'notpass', 'firsttime', 'updatetime'];
 
   const timeout = parseInt($arguments.timeout || 1000);
   const concurrency = parseInt($arguments.concurrency || 10);
@@ -21,7 +24,7 @@ async function operator(proxies = [], targetPlatform, env) {
   const serverResults = new Set();
   const totalTasks = uniqueServers.length;
   let processedCount = 0;
-  
+
   // 统计变量初始化
   let minLatency = Infinity;
   let maxLatency = 0;
@@ -29,6 +32,7 @@ async function operator(proxies = [], targetPlatform, env) {
   let timeoutCount = 0;
 
   log.info('Speedtest', `开始检测. 节点总数: ${proxies.length} (去重后: ${totalTasks}), 并发数: ${concurrency}, 超时设置: ${timeout}ms`);
+  let allData = null;
 
   // 预读取 CSV 数据到内存，避免每次检测都读取文件
   let historyMap = new Map();
@@ -36,29 +40,30 @@ async function operator(proxies = [], targetPlatform, env) {
     const csvData = await csv.read(csvDbPath);
     csvData.forEach(row => {
       // 构建唯一键用于快速查找
-      const key = `${row.ip},${row.port},${row.protocol}`;
+      const key = `${row.server},${row.port},${row.protocol}`;
       historyMap.set(key, row);
     });
+    allData = csvData;
   } catch (e) {
     log.error('Speedtest', `读取历史CSV失败: ${e.message}`);
   }
 
   // 从内存中获取旧通过率 (同步函数)
-  function getOldPassRate(ip, port, protocol) {
-      const key = `${ip},${port},${protocol}`;
-      const serverData = historyMap.get(key);
+  function getOldPassRate(server, port, protocol) {
+    const key = `${server},${port},${protocol}`;
+    const serverData = historyMap.get(key);
 
-      if (serverData) {
-        const passCount = parseInt(serverData.pass) || 0;
-        const notPassCount = parseInt(serverData.notpass) || 0;
-        const totalCount = passCount + notPassCount;
-        
-        if (totalCount > 0) {
-          const oldPassRate = ((passCount / totalCount) * 100).toFixed(2);
-          return { passRate: oldPassRate, totalCount };
-        }
+    if (serverData) {
+      const passCount = parseInt(serverData.pass) || 0;
+      const notPassCount = parseInt(serverData.notpass) || 0;
+      const totalCount = passCount + notPassCount;
+
+      if (totalCount > 0) {
+        const oldPassRate = ((passCount / totalCount) * 100).toFixed(2);
+        return { passRate: oldPassRate, totalCount };
       }
-      return { passRate: '0.00', totalCount: 0 };
+    }
+    return { passRate: '0.00', totalCount: 0 };
   }
 
   // 构建 server -> proxy 映射，用于快速查找端口和协议
@@ -71,13 +76,13 @@ async function operator(proxies = [], targetPlatform, env) {
 
   async function check(targetServer) {
     processedCount++;
+    // 获取旧的通过率信息 (移到 try 外面，以便 catch 中也能访问)
+    const proxyNode = serverToProxyMap.get(targetServer);
+    const port = proxyNode ? proxyNode.port : '';
+    const protocol = proxyNode ? (proxyNode.type || 'unknown') : '';
+    const oldStats = getOldPassRate(targetServer, port, protocol);
+
     try {
-      // 获取旧的通过率信息
-      const proxyNode = serverToProxyMap.get(targetServer);
-      const port = proxyNode ? proxyNode.port : '';
-      const protocol = proxyNode ? (proxyNode.type || 'unknown') : '';
-      const oldStats = getOldPassRate(targetServer, port, protocol);
-      
       // 平台适配：Windows 用 ms，macOS/Linux 用秒
       const isWin = eval('process.platform === "win32"');
       const timeoutValue = isWin ? timeout : timeout / 1000;
@@ -91,7 +96,7 @@ async function operator(proxies = [], targetPlatform, env) {
         successCount++;
         if (latency < minLatency) minLatency = latency;
         if (latency > maxLatency) maxLatency = latency;
-        
+
         log.columns('Speedtest', [
           { text: `[${processedCount}/${totalTasks}]`, width: 10 },
           { text: `[${targetServer}]`, width: 30 },
@@ -100,7 +105,7 @@ async function operator(proxies = [], targetPlatform, env) {
           { text: ` 通过率: ${oldStats.passRate}% ` }
         ]);
         serverResults.add(targetServer);
-      } 
+      }
       else {
         timeoutCount++;
         log.columns('Speedtest', [
@@ -113,7 +118,18 @@ async function operator(proxies = [], targetPlatform, env) {
       }
     } catch (e) {
       timeoutCount++;
-      log.error('Speedtest', `[${processedCount}/${totalTasks}] [${targetServer}] 检测发生错误: ${e.message || e}`);
+      // 忽略 ping6 不支持 timeout 的特定错误，视为超时/跳过
+      if (e.message && e.message.includes('no timeout option')) {
+        log.columns('Speedtest', [
+          { text: `[${processedCount}/${totalTasks}]`, width: 10 },
+          { text: `[${targetServer}]`, width: 30 },
+          { text: `IPv6 Skip`, width: 5, align: 'right' },
+          { text: `总: ${oldStats.totalCount}`, width: 5, align: 'right' },
+          { text: ` 通过率: ${oldStats.passRate}% ` }
+        ]);
+      } else {
+        log.error('Speedtest', `[${processedCount}/${totalTasks}] [${targetServer}] 检测发生错误: ${e.message || e}`);
+      }
     }
   }
 
@@ -148,7 +164,7 @@ async function operator(proxies = [], targetPlatform, env) {
 
   // 3. 封装任务并执行
   const tasks = uniqueServers.map(server => () => check(server));
-  
+
   await executeTasks(tasks, concurrency);
 
   // 计算统计结果
@@ -175,7 +191,7 @@ async function operator(proxies = [], targetPlatform, env) {
     const protocol = proxy.type || 'unknown';
     const currentTime = performance.getTime();
     const item = {
-      ip: proxy.server,
+      server: proxy.server,
       port: proxy.port,
       protocol: protocol,
       pass: isPass ? 1 : 0,
@@ -189,7 +205,8 @@ async function operator(proxies = [], targetPlatform, env) {
         csvDbPath, item,
         (existing, current) => {
           if (existing) {
-            return { ...current,
+            return {
+              ...current,
               pass: (parseInt(existing.pass) || 0) + current.pass,
               notpass: (parseInt(existing.notpass) || 0) + current.notpass,
               firsttime: existing.firsttime // 保留首次记录时间
@@ -197,16 +214,19 @@ async function operator(proxies = [], targetPlatform, env) {
           }
           return current; // 新记录
         }
-      , csvColumns, ['ip', 'port', 'protocol']);
+        , csvColumns, ['server', 'port', 'protocol'], ['pass', 'notpass', 'updatetime'], allData);
     } catch (e) {
       log.error('Speedtest', `CSV 更新失败 for ${proxy.server}: ${e.message}`);
     }
   }
-
+  // 保存
+  $substore.julong.csv.save(csvDbPath, csvColumns, allData);
   const totalTime = ((Date.now() - startTime) / 1000).toFixed(2);
   log.info('Speedtest', `检测完毕. Pass: ${validProxies.length} Fail:${proxies.length}, 总耗时: ${totalTime}s`);
 
+
+
   log.info('Speedtest', 'End --------------------------------------');
- 
+
   return proxies;
 }

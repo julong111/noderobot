@@ -12,9 +12,12 @@
 async function operator(proxies = [], targetPlatform, context) {
   const { log, csv } = $substore.julong;
   const scriptName = 'FilterPingRate';
-  
+
   // 参数处理
-  const csvDbPath = $arguments.csv_path || './node-connective.csv';
+  const csvDbPath = $arguments.csv_path;
+  if (!csvDbPath) {
+    throw new Error('FilterPingRate: `csv_path` argument is required.');
+  }
   const minRate = parseFloat($arguments.rate || 60);
 
   log.info(scriptName, 'Start --------------------------------------');

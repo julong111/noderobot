@@ -15,7 +15,7 @@ async function operator(proxies, targetPlatform, context) {
   const todayStr = getFormatDate(now);
   const yesterdayStr = getFormatDate(new Date(now.getTime() - 86400000));
 
-  const baseUrl = "https://ghfast.top/https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/"; 
+  const baseUrl = "https://ghfast.top/https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/";
   const urls = [
     { name: "今日文件", url: `${baseUrl}clash${todayStr}.yml` },
     { name: "昨日备选", url: `${baseUrl}clash${yesterdayStr}.yml` }
@@ -31,7 +31,7 @@ async function operator(proxies, targetPlatform, context) {
         url: item.url,
         timeout: 10000
       });
-      
+
       if (response.statusCode === 200) {
         content = response.body;
         if (content && content.trim().length > 10) {
@@ -46,16 +46,16 @@ async function operator(proxies, targetPlatform, context) {
 
   if (!content) {
     console.log(`[Sub-Store 日志] ⛔ 无法获取数据`);
-    return []; 
+    return [];
   }
 
   // --- 标准、完美解析核心逻辑 ---
   console.log(`[Sub-Store 日志] 正在使用 js-yaml 库解析 YAML...`);
-  
+
   try {
     // 2. 使用加载的 YAML 库将文本转换为 JS 对象
     const parsedData = YAML.load(content);
-    
+
     if (!parsedData) throw new Error("解析内容为空");
 
     // 3. 提取标准 proxies 数组
@@ -75,20 +75,20 @@ async function operator(proxies, targetPlatform, context) {
         }
       }
     }
-    
+
     console.log(`[Sub-Store 日志] 🎉 完美解析，共提取节点数: ${nodeArray.length}`);
-    
+
     // 检查数组有效性，确保 Sub-Store 不会报错
     if (!Array.isArray(nodeArray)) {
       console.log(`[Sub-Store 日志] 💣 错误：提取的节点结构不是 Array`);
       return [];
     }
-    
+
     // 返回标准 JS 数组对象，完美兼容 e.filter
     return nodeArray;
-    
+
   } catch (e) {
     console.log(`[Sub-Store 日志] 💥 解析运行错误: ${e.message}`);
-    return []; 
+    return [];
   }
 }

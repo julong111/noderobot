@@ -92,6 +92,7 @@ async function operator(proxies = [], targetPlatform, context) {
             network: {
                 isIPv6: (address) => {
                     if (!address) return false;
+                    address = address.trim();
 
                     // 处理带方括号的IPv6格式 [2001:db8::1]
                     if (address.startsWith('[') && address.endsWith(']')) {
@@ -106,6 +107,7 @@ async function operator(proxies = [], targetPlatform, context) {
 
                 isIPv4: (address) => {
                     if (!address) return false;
+                    address = address.trim();
 
                     // IPv4正则表达式
                     const ipv4Regex = /^(\d{1,3}\.){3}\d{1,3}$/;
@@ -164,65 +166,109 @@ async function operator(proxies = [], targetPlatform, context) {
                  * @param {string} csvPath - CSV文件路径
                  * @param {object} item - 要新增或更新的数据对象
                  * @param {function} callback - 回调函数，用于处理数据合并 (existingItem, newItem) => mergedItem
-                 * @param {string[]} headers - CSV文件的列头数组
-                 * @param {string[]} keyColumns - 用于构成唯一键的列名数组
+                 * @param {string[]} columns - CSV文件的列头数组
+                 * @param {string[]} keys - 用于构成唯一键的列名数组
+                 * @param {string[]} updates - 需要更新的列名数组
                  */
-                operate: async (csvPath, item, callback, headers, keyColumns) => {
+                operate: async (csvPath, item, callback, columns, keys, updates, allData = null) => {
                     const fs = require('fs');
-                    if (!headers || !Array.isArray(headers) || headers.length === 0) {
-                        throw new Error('Headers parameter is required and must be a non-empty array for CSV operations');
-                    }
-                    if (!keyColumns || !Array.isArray(keyColumns) || keyColumns.length === 0) {
-                        throw new Error('keyColumns parameter is required and must be a non-empty array for CSV operations');
+
+                    // 参数校验
+                    if (!columns || !Array.isArray(columns) || columns.length === 0) throw new Error('Columns parameter is required');
+                    if (!keys || !Array.isArray(keys) || keys.length === 0) throw new Error('Keys parameter is required');
+                    if (!updates || !Array.isArray(updates) || updates.length === 0) throw new Error('Updates parameter is required');
+
+                    const headerLine = columns.join(',');
+
+                    // 检查文件是否存在
+                    if (!fs.existsSync(csvPath)) {
+                        fs.writeFileSync(csvPath, '\uFEFF' + headerLine + '\n', 'utf8');
                     }
 
-                    const getKey = (data) => keyColumns.map(k => data[k]).join(',');
-                    const headerLine = headers.join(',');
-                    const existingData = new Map();
+                    let existingData = allData;
 
-                    if (fs.existsSync(csvPath)) {
-                        const content = fs.readFileSync(csvPath, 'utf8').replace(/^\uFEFF/, ''); // Handle BOM
-                        const lines = content.split('\n').slice(1);
-                        lines.forEach(line => {
-                            if (line.trim()) {
-                                const values = line.split(',');
-                                const rowData = {};
-                                headers.forEach((headerName, index) => {
-                                    rowData[headerName] = values[index] || '';
-                                });
-                                const rowKey = getKey(rowData);
-                                if (rowKey) {
-                                    existingData.set(rowKey, rowData);
-                                }
+                    if (!existingData) {
+                        // 读取并验证
+                        const content = fs.readFileSync(csvPath, 'utf8').replace(/^\uFEFF/, '');
+                        const lines = content.split(/\r?\n/).filter(line => line.trim() !== '');
+
+                        if (lines.length > 0) {
+                            const fileCols = lines[0].trim().split(',');
+                            if (fileCols.length !== columns.length) {
+                                throw new Error(`Column count mismatch: expected ${columns.length}, got ${fileCols.length}`);
+                            }
+                        }
+
+                        // 解析数据
+                        existingData = [];
+                        for (let i = 1; i < lines.length; i++) {
+                            const values = lines[i].split(',');
+                            const row = {};
+                            columns.forEach((col, idx) => {
+                                row[col] = values[idx] !== undefined ? values[idx] : '';
+                            });
+                            existingData.push(row);
+                        }
+                    }
+
+                    // 解析数据
+                    // 构建查找键
+                    const genKey = (obj) => keys.map(k => String(obj[k] || '')).join('|');
+                    const itemKey = genKey(item);
+
+                    const index = existingData.findIndex(row => genKey(row) === itemKey);
+
+                    if (index === -1) {
+                        // 新增
+                        let newItem = { ...item };
+                        if (callback) {
+                            const res = callback(null, newItem);
+                            if (res) newItem = res;
+                        }
+                        // 补全字段
+                        const finalItem = {};
+                        columns.forEach(col => finalItem[col] = newItem[col] !== undefined ? newItem[col] : '');
+                        existingData.push(finalItem);
+
+                    } else {
+                        // 更新
+                        const existingItem = existingData[index];
+                        let merged = { ...existingItem };
+
+                        if (callback) {
+                            const res = callback(existingItem, item);
+                            if (res) merged = res;
+                        }
+
+                        // 关键：只更新 updates 中定义的字段，防止覆盖其他数据
+                        updates.forEach(key => {
+                            if (merged[key] !== undefined) {
+                                existingItem[key] = merged[key];
                             }
                         });
                     }
+                    return existingData;
+                },
 
-                    const itemKey = getKey(item);
-                    const existingItem = existingData.get(itemKey) || null;
-                    const newItemData = callback(existingItem, item);
-
-                    if (newItemData) existingData.set(itemKey, newItemData);
-                    else existingData.delete(itemKey);
-
-                    const sortedKeys = Array.from(existingData.keys()).sort((a, b) => a.localeCompare(b));
-                    const csvLines = sortedKeys.map(key => headers.map(headerName => {
-                        const val = existingData.get(key)[headerName];
-                        return (val !== undefined && val !== null) ? val : '';
-                    }).join(','));
-
-                    fs.writeFileSync(csvPath, '\uFEFF' + [headerLine, ...csvLines].join('\n'), 'utf8');
+                save: (csvPath, columns, existingData) => {
+                    const fs = require('fs');
+                    const headerLine = columns.join(',');
+                    const output = [headerLine];
+                    existingData.forEach(row => {
+                        output.push(columns.map(c => row[c]).join(','));
+                    });
+                    fs.writeFileSync(csvPath, '\uFEFF' + output.join('\n') + '\n', 'utf8');
                 },
 
                 // 新增的CSV读取函数 - 支持自定义headers
                 read: async (csvPath, customHeaders = null) => {
                     const fs = require('fs');
                     const result = [];
-                    
+
                     if (fs.existsSync(csvPath)) {
                         const content = fs.readFileSync(csvPath, 'utf8').replace(/^\uFEFF/, ''); // 读取文件并移除BOM
                         const lines = content.split('\n');
-                        
+
                         if (lines.length > 0) {
                             // 如果提供了自定义headers，使用它们；否则从第一行推断
                             let headers;
@@ -231,25 +277,25 @@ async function operator(proxies = [], targetPlatform, context) {
                             } else {
                                 headers = lines[0].split(',').map(h => h.trim());
                             }
-                            
+
                             // 从适当的位置开始读取数据行
                             const startIndex = customHeaders ? 0 : 1;
-                            
+
                             for (let i = startIndex; i < lines.length; i++) {
                                 if (lines[i].trim()) {
                                     const values = lines[i].split(',');
                                     const row = {};
-                                    
+
                                     headers.forEach((header, index) => {
                                         row[header.trim()] = values[index] ? values[index].trim() : '';
                                     });
-                                    
+
                                     result.push(row);
                                 }
                             }
                         }
                     }
-                    
+
                     return result;
                 }
             }

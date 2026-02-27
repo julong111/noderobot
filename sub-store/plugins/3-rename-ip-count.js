@@ -1,6 +1,6 @@
 async function operator(proxies = [], targetPlatform, context) {
 
-  const { log, performance } = $substore.julong;
+  const { log, performance, csv } = $substore.julong;
 
   performance.startTimer('RenameByServerCount');
 
@@ -9,9 +9,14 @@ async function operator(proxies = [], targetPlatform, context) {
   const args = $arguments || {};
 
   // 1. 参数处理
-  const csvDbPath = args.csv_path || './node-server-count.csv';
-  const csvHeaders = ['server', 'count', 'firsttime', 'updatetime'];
-  log.info('RenameByServerCount', `CSV Path: ${csvDbPath}`);
+  const csvPath = args.csv_path;
+  const csvColumns = ['server', 'count', 'firsttime', 'updatetime'];
+  log.info('RenameByServerCount', `CSV Path: ${csvPath}`);
+
+  // Add validation for CSV path
+  if (!csvPath) {
+    throw new Error('CSV path is required. Please provide a valid CSV file path.');
+  }
 
   // 2. 统计服务器 (IP/域名) 出现次数
   const serverCounts = {};
@@ -39,16 +44,16 @@ async function operator(proxies = [], targetPlatform, context) {
     try {
       // 确保 $ 变量已定义
       const $ = $substore;
-      
-      // 使用通用的 CSV 操作函数处理每个服务器统计
+
+      let allData = [];
       for (const [server, newData] of Object.entries(serverCounts)) {
         const item = {
           server: server,
           ...newData
         };
 
-        await $.julong.csv.operate(
-          csvDbPath,
+        await csv.operate(
+          csvPath,
           item,
           (existing, current) => {
             if (existing) {
@@ -62,11 +67,17 @@ async function operator(proxies = [], targetPlatform, context) {
               // 新服务器，直接使用传入的数据
               return item;
             }
-          }
+          },
+          csvColumns,
+          ['server'], // keys
+          ['count', 'updatetime'], // updates
+          allData
         );
       }
 
-      log.info('RenameByServerCount', `Server count statistics saved to ${csvDbPath}`);
+      csv.save(csvPath, csvColumns, allData);
+      log.info('RenameByServerCount', `Server count statistics saved to ${csvPath}`);
+
     } catch (e) {
       log.error('RenameByServerCount', `Error saving server count CSV: ${e.message}`);
     }
