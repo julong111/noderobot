@@ -1,0 +1,14 @@
+port: 7890
+allow-lan: true
+mode: Global
+log-level: info
+external-controller: ':9090'
+proxies:
+  - name: test
+    server: 127.0.0.1
+    port: 31348
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: zDLmeWRsfcFdKT1Tpy02xodEToqCldTxvZcRoPIZZtBdnIEL
+    udp: true
+    delay: 1572
