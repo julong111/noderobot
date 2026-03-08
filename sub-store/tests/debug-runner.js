@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
+const commonScript = '../plugins/0-jcommon.js'
 /**
  * 模拟 Sub-Store 环境运行脚本
  * @param {string} scriptPath - 目标脚本的相对路径或绝对路径
@@ -60,7 +61,7 @@ async function runScript(scriptPath, options = {}) {
 
   // 3. 加载依赖库 (0-julong.js)
   // 假设 0-julong.js 在 plugins 目录下，根据实际情况调整路径
-  const julongPath = path.resolve(__dirname, '../plugins/0-julong.js');
+  const julongPath = path.resolve(__dirname, commonScript);
   if (fs.existsSync(julongPath)) {
     const julongCode = fs.readFileSync(julongPath, 'utf8');
     try {
@@ -114,32 +115,3 @@ async function runScript(scriptPath, options = {}) {
 }
 
 module.exports = { runScript };
-
-
-// 示例使用方法 (你可以把这个放在一个单独的 test.js 文件里)
-if (require.main === module) {
-  (async () => {
-    const mockProxies = [
-      { name: '节点A', server: '1.1.1.1', port: 80, type: 'vmess' },
-      { name: '节点B', server: '1.1.1.1', port: 443, type: 'vmess' }, // 重复IP
-      { name: '节点C', server: '8.8.8.8', port: 80, type: 'ss' }
-    ];
-
-    const args = {
-      csv_path: './temp_server_count.csv'  // 相对路径，会在 test 目录下生成
-    };
-
-    console.log('--- 开始测试 RenameByServerCount ---');
-
-    const result = await runScript('../plugins/3-rename-ip-count.js', {
-      args: args,
-      proxies: mockProxies,
-      debug: true
-    });
-
-    if (result) {
-      console.log('\n--- 测试结果 ---');
-      result.forEach(p => console.log(p.name));
-    }
-  })();
-}

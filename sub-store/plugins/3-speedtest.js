@@ -1,5 +1,5 @@
 /**
- * Speedtest 插件 - 详细日志与并发控制版
+ * Speedtest 插件 - server测速及连通性
  */
 async function operator(proxies = [], targetPlatform, env) {
   const { log, performance, csv } = $substore.julong;

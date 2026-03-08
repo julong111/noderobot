@@ -1,5 +1,5 @@
 /**
- * Sub-Store 节点去重脚本
+ * Sub-Store 节点去重脚本(根据 server:port:type 去重  不稳妥)
  * 
  * 功能：遍历节点列表，根据节点的 server (IP/域名), port 和 type 进行去重。
  * 逻辑：保留第一个出现的 server:port:type 组合，后续重复的节点将被移除。

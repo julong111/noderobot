@@ -1,5 +1,5 @@
 /**
- * Sub-Store 脚本: 根据 CSV 统计数据的成功率重命名节点
+ * Sub-Store 脚本: 根据 CSV 测速及联通统计数据重命名节点
  * 
  * 逻辑：读取 speedtest.js 生成的 CSV 文件，提取节点的成功率，并将其添加到节点名称前缀。
  * 
@@ -18,7 +18,7 @@ async function operator(proxies = [], targetPlatform, context) {
   if (!csvDbPath) {
     throw new Error('csv_path is required');
   }
-  const nameFormat = $arguments.name_format || '{rate}|{name}';
+  const nameFormat = $arguments.name_format || '{count}C|{rate}%|{name}';
   const scriptName = 'RenameByPassRate';
 
   log.info(scriptName, 'Start --------------------------------------');
@@ -46,7 +46,7 @@ async function operator(proxies = [], targetPlatform, context) {
           const protocol = row.protocol || 'unknown';
           const key = `${server},${row.port},${protocol}`;
 
-          db[key] = { pass, notpass, rate };
+          db[key] = { pass, notpass, count: total, rate };
         }
       });
       log.info(scriptName, `Loaded ${Object.keys(db).length} records from CSV.`);
@@ -71,7 +71,8 @@ async function operator(proxies = [], targetPlatform, context) {
       const rate = stats.rate.toFixed(0);
       const originalName = proxy.name;
       proxy.name = nameFormat
-        .replace('{rate}', rate + "%")
+        .replace('{rate}', rate)
+        .replace('{count}', stats.count)
         .replace('{name}', originalName);
       renamedCount++;
       log.info(scriptName, `Renamed: [${originalName}] -> [${proxy.name}]`);

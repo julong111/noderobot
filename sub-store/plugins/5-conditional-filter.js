@@ -1,3 +1,7 @@
+/**
+ * Sub-Store 脚本: 根据 CSV 测速及联通统计数据过滤连通性不佳的节点
+ */
+
 async function operator(proxies = [], targetPlatform, context) {
   const { log } = $substore.julong;
   const scriptName = 'FilterPingRate';
