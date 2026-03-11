@@ -61,7 +61,7 @@
       "display-name": ""
     },
     {
-      "name": "freenodes-clashfree",
+      "name": "freenodes-clashfree-script",
       "displayName": "",
       "form": "",
       "remark": "",
@@ -80,11 +80,22 @@
             "tfo": "DEFAULT",
             "vmess aead": "DEFAULT"
           }
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/freenodes-clashfree.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "68672125.30692728",
+          "disabled": false
         }
       ],
       "source": "remote",
-      "url": "https://ghfast.top/https://github.com/julong111/noderobot/raw/refs/heads/main/s/original/freenodes-clashfree-cleaner.yml",
-      "content": "",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/julong111/noderobot/refs/heads/main/s/original/freenodes-clashfree-cleaner.yml",
+      "content": "script:https://gist.githubusercontent.com/julong111/2680c82751a07478c3a17d46a120a12c/raw/a0e686605b8c4006eb05aa2b705d36e2838ad0df/gistfile1.txt",
       "ua": "",
       "tag": [],
       "subscriptionTags": [],
@@ -148,9 +159,7 @@
           "args": {
             "keep": false,
             "value": [
-              "http",
               "socks5",
-              "anytls",
               "wireguard",
               "sudoku",
               "external",
@@ -159,7 +168,10 @@
               "mieru",
               "juicity",
               "tuic",
-              "snell"
+              "snell",
+              "http",
+              "ss",
+              "ssr"
             ]
           },
           "customName": "",
@@ -181,7 +193,18 @@
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/1-filter-ipv6.js#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/0-jcommon.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "44094532.1899985",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/1-conditional-filter.js#noCache",
             "mode": "link",
             "arguments": {}
           },
@@ -192,7 +215,7 @@
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/quchong.js#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/2-deduplication.js#noCache",
             "mode": "link",
             "arguments": {}
           },
@@ -203,23 +226,10 @@
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/3-rename-ip-count.js#csv_path=%2FUsers%2Fjulong%2Fnode-ip-count.csv#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/3-speedtest.js#csv_path=%2FUsers%2Fjulong%2Fnode-conn.csv#noCache",
             "mode": "link",
             "arguments": {
-              "csv_path": "/Users/julong/node-ip-count.csv"
-            }
-          },
-          "customName": "",
-          "id": "54593802.908231035",
-          "disabled": false
-        },
-        {
-          "type": "Script Operator",
-          "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/4-speedtest.js#csv_path=%2FUsers%2Fjulong%2Fnode-connective.csv#noCache",
-            "mode": "link",
-            "arguments": {
-              "csv_path": "/Users/julong/node-connective.csv"
+              "csv_path": "/Users/julong/node-conn.csv"
             }
           },
           "customName": "",
@@ -229,10 +239,10 @@
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/4.2-rename-add-pass-count.js#csv_path=%2FUsers%2Fjulong%2Fnode-connective.csv#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/4-rename-aggregation.js#csv_path=%2FUsers%2Fjulong%2Fnode-conn.csv#noCache",
             "mode": "link",
             "arguments": {
-              "csv_path": "/Users/julong/node-connective.csv"
+              "csv_path": "/Users/julong/node-conn.csv"
             }
           },
           "customName": "",
@@ -242,18 +252,21 @@
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/filter-ping-rate.js#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/5-conditional-filter.js#count=30&rate=30#noCache",
             "mode": "link",
-            "arguments": {}
+            "arguments": {
+              "count": "30",
+              "rate": "30"
+            }
           },
           "customName": "",
           "id": "11734992.295012847",
-          "disabled": true
+          "disabled": false
         },
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/6-save-to-json.js#output_path=%2FUsers%2Fjulong%2Fnodes.json#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/6-save-json.js#output_path=%2FUsers%2Fjulong%2Fnodes.json#noCache",
             "mode": "link",
             "arguments": {
               "output_path": "/Users/julong/nodes.json"
@@ -265,39 +278,10 @@
         }
       ],
       "subscriptions": [
-        "freenodes-clashfree",
         "go4sharing-sub",
         "peasoft-NoMoreWalls",
+        "freenodes-clashfree-script",
         "Custom"
-      ],
-      "tag": [],
-      "subscriptionTags": [],
-      "display-name": ""
-    },
-    {
-      "name": "MyALL-Fast",
-      "displayName": "",
-      "form": "",
-      "remark": "",
-      "mergeSources": "",
-      "ignoreFailedRemoteSub": false,
-      "passThroughUA": false,
-      "icon": "",
-      "isIconColor": true,
-      "process": [
-        {
-          "type": "Quick Setting Operator",
-          "args": {
-            "useless": "ENABLED",
-            "udp": "DEFAULT",
-            "scert": "DEFAULT",
-            "tfo": "DEFAULT",
-            "vmess aead": "DEFAULT"
-          }
-        }
-      ],
-      "subscriptions": [
-        "freenodes-clashfree"
       ],
       "tag": [],
       "subscriptionTags": [],
@@ -306,63 +290,7 @@
   ],
   "artifacts": [],
   "rules": [],
-  "files": [
-    {
-      "name": "MyMihomoSub",
-      "displayName": "",
-      "remark": "",
-      "icon": "",
-      "isIconColor": true,
-      "source": "local",
-      "sourceType": "collection",
-      "sourceName": "MyALL",
-      "process": [
-        {
-          "type": "Script Operator",
-          "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/convert.js#noCache",
-            "mode": "link",
-            "arguments": {}
-          },
-          "customName": "",
-          "id": "11549364.717765154",
-          "disabled": false
-        }
-      ],
-      "type": "mihomoProfile",
-      "content": "// 填入文件内容\n",
-      "tag": [],
-      "display-name": "",
-      "ignoreFailedRemoteFile": false,
-      "download": true
-    },
-    {
-      "name": "test",
-      "displayName": "",
-      "remark": "",
-      "icon": "",
-      "isIconColor": true,
-      "source": "local",
-      "sourceType": "collection",
-      "sourceName": "MyALL",
-      "process": [
-        {
-          "type": "Script Operator",
-          "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/convert-new.js#noCache",
-            "mode": "link",
-            "arguments": {}
-          },
-          "customName": "",
-          "id": "47727999.895533055",
-          "disabled": false
-        }
-      ],
-      "type": "mihomoProfile",
-      "tag": [],
-      "display-name": ""
-    }
-  ],
+  "files": [],
   "tokens": [],
   "schemaVersion": "2.0",
   "settings": {},

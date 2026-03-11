@@ -23,13 +23,13 @@ start() {
     fi
 
     if pgrep -f "$BACKEND_JS" > /dev/null; then
-        echo "⚠️  Sub-Store 已经在运行中。"
+        echo "🟢  Sub-Store 已经在运行中。"
     else
-        echo "🚀 正在启动 Sub-Store..."
+        echo "✅ 正在启动 Sub-Store..."
         mkdir -p "$DATA_PATH"
         
         nohup env \
-            NODE_PATH="$BASE_DIR/node_modules"
+            NODE_PATH="$BASE_DIR/node_modules" \
             SUB_STORE_FRONTEND_BACKEND_PATH="$CUSTOM_PATH" \
             SUB_STORE_BACKEND_API_HOST="0.0.0.0" \
             SUB_STORE_BACKEND_API_PORT="$PORT" \
@@ -41,13 +41,13 @@ start() {
             
         sleep 2
         if pgrep -f "$BACKEND_JS" > /dev/null; then
-            echo "✅ 启动成功！"
             echo "🔗 前端访问地址: http://127.0.0.1:$PORT$CUSTOM_PATH"
             echo "🔗 自动配置链接: http://127.0.0.1:$PORT?api=http://127.0.0.1:$PORT$CUSTOM_PATH"
+            echo "🚀 启动成功！"
         else
             echo "❌ 启动失败，请检查日志: $LOG_FILE"
             # 顺便把最后几行错误打出来，方便排查
-            tail -n 5 "$LOG_FILE"
+            tail -n 10 "$LOG_FILE"
         fi
     fi
 }
@@ -55,9 +55,9 @@ start() {
 stop() {
     PID=$(pgrep -f "$BACKEND_JS")
     if [ -z "$PID" ]; then
-        echo "ℹ️  没有发现正在运行的 Sub-Store 进程。"
+        echo "❌  没有发现正在运行的 Sub-Store 进程。"
     else
-        echo "🛑 正在停止 Sub-Store (PID: $PID)..."
+        echo "🟢 正在停止 Sub-Store (PID: $PID)..."
         kill $PID
         while ps -p $PID > /dev/null; do sleep 1; done
         echo "✅ 已停止。"
@@ -77,12 +77,21 @@ log() {
     tail -f "$LOG_FILE"
 }
 
+# Function to open log file
+logf() {
+    if [ -f "$LOG_FILE" ]; then
+        open -a TextEdit "$LOG_FILE"
+    else
+        echo "❌ 日志文件不存在: $LOG_FILE"
+    fi
+}
+
 clean() {
     if [ -f "$LOG_FILE" ]; then
         > "$LOG_FILE"
         echo "✅ 日志文件已清空: $LOG_FILE"
     else
-        echo "ℹ️  日志文件不存在: $LOG_FILE"
+        echo "❌ 日志文件不存在: $LOG_FILE"
     fi
 }
 
@@ -92,6 +101,7 @@ case "$1" in
     restart) stop; start ;;
     status) status ;;
     log) log ;;
+    logf) logf ;;
     clean) clean ;;
-    *) echo "用法: $0 {start|stop|restart|status|log|clean}"; exit 1 ;;
+    *) echo "用法: $0 {start|stop|restart|status|log|logf|clean}"; exit 1 ;;
 esac
