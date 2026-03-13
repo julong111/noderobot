@@ -4,6 +4,10 @@ async function operator(proxies, targetPlatform, context) {
   const YAML = require('js-yaml');
   const $ = $substore;
 
+  const proxy = $arguments.proxy;
+  if (!proxy) {
+    proxy = '';
+  }
   const getFormatDate = (date) => {
     const y = date.getFullYear();
     const m = String(date.getMonth() + 1).padStart(2, '0');
@@ -15,14 +19,15 @@ async function operator(proxies, targetPlatform, context) {
   const todayStr = getFormatDate(now);
   const yesterdayStr = getFormatDate(new Date(now.getTime() - 86400000));
 
-  const baseUrl = "https://ghfast.top/https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/";
+  const baseUrl = proxy + "https://raw.githubusercontent.com/free-nodes/clashfree/refs/heads/main/";
+
   const urls = [
     { name: "今日文件", url: `${baseUrl}clash${todayStr}.yml` },
     { name: "昨日备选", url: `${baseUrl}clash${yesterdayStr}.yml` }
   ];
 
   console.log(`[Sub-Store 日志] === 开始启用内置工具解析 ===`);
-
+  console.log(`[Link] ${baseUrl}`);
   let content = "";
   for (const item of urls) {
     try {

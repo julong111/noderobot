@@ -43,7 +43,17 @@
 const FILTER_RULES = [
   { "field": "server", "matchType": "ipv6", "action": "exclude" },
   // { "field": "server", "pattern": "ipv6", "matchType": "contains", "action": "exclude" },
-  { "field": "server", "pattern": "jp.sanmaojichang.com", "matchType": "equals", "action": "exclude" }
+  { "field": "server", "pattern": "jp.sanmaojichang.com", "matchType": "equals", "action": "exclude" },
+  { "field": "name", "pattern": "NL_speednode", "matchType": "contains", "action": "exclude" },
+  { "field": "name", "pattern": "Telegram:@config", "matchType": "contains", "action": "exclude" },
+  { "field": "name", "pattern": "HK", "matchType": "contains", "action": "exclude" },
+  { "field": "name", "pattern": "香港", "matchType": "contains", "action": "exclude" },
+  { "field": "name", "pattern": "台湾", "matchType": "contains", "action": "exclude" },
+  { "field": "name", "pattern": "TW", "matchType": "contains", "action": "exclude" },
+  { "field": "name", "pattern": "印度", "matchType": "contains", "action": "exclude" },
+  { "field": "name", "pattern": "ID", "matchType": "contains", "action": "exclude" },
+  { "field": "name", "pattern": "GB", "matchType": "contains", "action": "exclude" },
+  { "field": "name", "pattern": "DE", "matchType": "contains", "action": "exclude" },
 ];
 
 // 全局常量配置 - 逻辑关系 (AND 或 OR)
@@ -144,31 +154,51 @@ async function operator(proxies = [], targetPlatform, context) {
   // 检查代理是否应被保留
   function shouldKeep(proxy) {
     if (rules.length === 0) {
-      return true; // 无规则时保留所有
+      return { keep: true, matchedRules: [] }; // 无规则时保留所有
     }
 
-    const ruleResults = rules.map((rule) => {
+    const ruleResults = rules.map((rule, index) => {
       const matched = checkRule(proxy, rule);
       const action = rule.action || 'exclude';
       // action=exclude: 匹配到则排除（返回 false）
       // action=include: 匹配到则保留（返回 true）
-      return action === 'exclude' ? !matched : matched;
+      const keepResult = action === 'exclude' ? !matched : matched;
+
+      return {
+        ruleIndex: index,
+        rule: rule,
+        matched: matched,
+        action: action,
+        keepResult: keepResult
+      };
     });
 
+    let keep;
     if (logic === 'OR') {
-      return ruleResults.some((r) => r);
+      keep = ruleResults.some((r) => r.keepResult);
     } else {
-      return ruleResults.every((r) => r);
+      keep = ruleResults.every((r) => r.keepResult);
     }
+
+    // 收集实际匹配到的规则（matched = true 的规则）
+    const matchedRules = ruleResults.filter((r) => r.matched).map((r) => ({
+      ruleIndex: r.ruleIndex,
+      field: r.rule.field,
+      pattern: r.rule.pattern,
+      matchType: r.rule.matchType,
+      action: r.rule.action
+    }));
+
+    return { keep, matchedRules };
   }
 
   // 过滤逻辑
   const filteredProxies = proxies.filter((proxy) => {
-    const keep = shouldKeep(proxy);
-    if (!keep) {
-      log.info('Custom-Filter', `已过滤节点：${proxy.name} (${proxy.server || 'N/A'})`);
+    const result = shouldKeep(proxy);
+    if (!result.keep) {
+      log.info('Custom-Filter', `已过滤节点：${proxy.name} (${proxy.server || 'N/A'}), 匹配规则：${JSON.stringify(result.matchedRules)}`);
     }
-    return keep;
+    return result.keep;
   });
 
   // 获取耗时信息
