@@ -1,7 +1,7 @@
 {
   "subs": [
     {
-      "name": "peasoft-NoMoreWalls",
+      "name": "Proxy-peasoft-NoMoreWalls",
       "displayName": "",
       "form": "",
       "remark": "",
@@ -31,7 +31,7 @@
       "display-name": ""
     },
     {
-      "name": "go4sharing-sub",
+      "name": "Proxy-go4sharing-sub",
       "displayName": "",
       "form": "",
       "remark": "",
@@ -61,7 +61,7 @@
       "display-name": ""
     },
     {
-      "name": "freenodes-clashfree-script",
+      "name": "Proxy-freenodes-clashfree-script",
       "displayName": "",
       "form": "",
       "remark": "",
@@ -84,9 +84,11 @@
         {
           "type": "Script Operator",
           "args": {
-            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/freenodes-clashfree.js#noCache",
+            "content": "/Users/julong/Projects/noderobot/sub-store/freenodes-clashfree.js#proxy=https%3A%2F%2Fghfast.top%2F#noCache",
             "mode": "link",
-            "arguments": {}
+            "arguments": {
+              "proxy": "https://ghfast.top/"
+            }
           },
           "customName": "",
           "id": "68672125.30692728",
@@ -130,11 +132,112 @@
       "tag": [],
       "subscriptionTags": [],
       "display-name": ""
+    },
+    {
+      "name": "Direct-peasoft-NoMoreWalls",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "",
+      "isIconColor": false,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "DISABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        }
+      ],
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/refs/heads/master/list.meta.yml",
+      "content": "",
+      "ua": "",
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
+    },
+    {
+      "name": "Direct-go4sharing-sub",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "",
+      "isIconColor": false,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "DISABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        }
+      ],
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/go4sharing/sub/refs/heads/main/sub.yaml",
+      "content": "",
+      "ua": "",
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
+    },
+    {
+      "name": "Direct-freenodes-clashfree-script",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "",
+      "isIconColor": false,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "DISABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/freenodes-clashfree.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "68672125.30692728",
+          "disabled": false
+        }
+      ],
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/julong111/noderobot/refs/heads/main/s/original/freenodes-clashfree-cleaner.yml",
+      "content": "script:https://gist.githubusercontent.com/julong111/2680c82751a07478c3a17d46a120a12c/raw/a0e686605b8c4006eb05aa2b705d36e2838ad0df/gistfile1.txt",
+      "ua": "",
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
     }
   ],
   "collections": [
     {
-      "name": "MyALL",
+      "name": "Proxy-MyALL",
       "displayName": "",
       "form": "",
       "remark": "",
@@ -278,9 +381,163 @@
         }
       ],
       "subscriptions": [
-        "go4sharing-sub",
-        "peasoft-NoMoreWalls",
-        "freenodes-clashfree-script",
+        "Proxy-go4sharing-sub",
+        "Proxy-peasoft-NoMoreWalls",
+        "Proxy-freenodes-clashfree-script",
+        "Custom"
+      ],
+      "tag": [],
+      "subscriptionTags": [],
+      "display-name": ""
+    },
+    {
+      "name": "Direct-MyALL",
+      "displayName": "",
+      "form": "",
+      "remark": "",
+      "mergeSources": "",
+      "ignoreFailedRemoteSub": false,
+      "passThroughUA": false,
+      "icon": "",
+      "isIconColor": false,
+      "process": [
+        {
+          "type": "Quick Setting Operator",
+          "args": {
+            "useless": "ENABLED",
+            "udp": "DEFAULT",
+            "scert": "DEFAULT",
+            "tfo": "DEFAULT",
+            "vmess aead": "DEFAULT"
+          }
+        },
+        {
+          "type": "Type Filter",
+          "args": {
+            "keep": false,
+            "value": [
+              "socks5",
+              "wireguard",
+              "sudoku",
+              "external",
+              "ssh",
+              "direct",
+              "mieru",
+              "juicity",
+              "tuic",
+              "snell",
+              "http",
+              "ss",
+              "ssr"
+            ]
+          },
+          "customName": "",
+          "id": "94558239.25919497",
+          "disabled": false
+        },
+        {
+          "type": "Regex Filter",
+          "args": {
+            "keep": false,
+            "regex": [
+              "防范境外势力渗透"
+            ]
+          },
+          "customName": "",
+          "id": "41117436.26332792",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/0-jcommon.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "44094532.1899985",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/1-conditional-filter.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "24824299.76128494",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/2-deduplication.js#noCache",
+            "mode": "link",
+            "arguments": {}
+          },
+          "customName": "",
+          "id": "96397772.21757495",
+          "disabled": true
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/3-speedtest.js#csv_path=%2FUsers%2Fjulong%2Fnode-conn.csv#noCache",
+            "mode": "link",
+            "arguments": {
+              "csv_path": "/Users/julong/node-conn.csv"
+            }
+          },
+          "customName": "",
+          "id": "82357045.82910842",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/4-rename-aggregation.js#csv_path=%2FUsers%2Fjulong%2Fnode-conn.csv#noCache",
+            "mode": "link",
+            "arguments": {
+              "csv_path": "/Users/julong/node-conn.csv"
+            }
+          },
+          "customName": "",
+          "id": "66723721.055215605",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/5-conditional-filter.js#count=30&rate=30#noCache",
+            "mode": "link",
+            "arguments": {
+              "count": "30",
+              "rate": "30"
+            }
+          },
+          "customName": "",
+          "id": "11734992.295012847",
+          "disabled": false
+        },
+        {
+          "type": "Script Operator",
+          "args": {
+            "content": "/Users/julong/Projects/noderobot/sub-store/plugins/6-save-json.js#output_path=%2FUsers%2Fjulong%2Fnodes.json#noCache",
+            "mode": "link",
+            "arguments": {
+              "output_path": "/Users/julong/nodes.json"
+            }
+          },
+          "customName": "",
+          "id": "54931691.78145979",
+          "disabled": false
+        }
+      ],
+      "subscriptions": [
+        "Direct-peasoft-NoMoreWalls",
+        "Direct-go4sharing-sub",
+        "Direct-freenodes-clashfree-script",
         "Custom"
       ],
       "tag": [],
