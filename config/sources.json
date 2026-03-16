@@ -7,7 +7,7 @@
   {
     "name": "freenodes-clashfree-clean",
     "url": "../s/original/freenodes-clashfree-cleaner.yml",
-    "sha256": "5128ce0358b9e39420c81bed434b771a497d9ec7185abe5d78da55da33627f0e"
+    "sha256": "46064456cde35b8450135893c154174db280985cfda3ad688f930bc6f23337c0"
   },
   {
     "name": "NoMoreWalls",
@@ -17,6 +17,6 @@
   {
     "name": "go4sharing",
     "url": "https://raw.githubusercontent.com/go4sharing/sub/refs/heads/main/sub.yaml",
-    "sha256": "67b911ebedcf1a86b80c8f8a393fc35732f019ad50d0c3320340dcce220d005a"
+    "sha256": "e06d3d7ed6eeb36c86672591afd597cbe2e7ffa541a2dd9f0928a9b2652976e1"
   }
 ]
