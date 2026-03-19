@@ -1,4 +1,3 @@
-# comment
 youxi.baidu.com
 wan.baidu.com
 ad.doubleclick.net
