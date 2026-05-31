@@ -12,11 +12,11 @@
   {
     "name": "NoMoreWalls",
     "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/refs/heads/master/list.meta.yml",
-    "sha256": "997ef0dfbf0468e14a36abce127f60c1df03698672a161f480d9c4421fb20fd3"
+    "sha256": "4cb852c2b873545f9dbe9b2f50f13eeebe67ac407dac7194e28c93d4afcba727"
   },
   {
     "name": "go4sharing",
     "url": "https://raw.githubusercontent.com/go4sharing/sub/refs/heads/main/sub.yaml",
-    "sha256": "f721069eb2d4aa89cc1a0b9a70073d76a9c465ac873d78f0d76bb08da8c88b98"
+    "sha256": "6a01616268fa79e9c4e3c21d67a515707132b4140473533262bab793100eb1d2"
   }
 ]
