@@ -1,21 +1,21 @@
 name: Clean and Merge
 
 on:
-  schedule:
-    - cron: '5 * * * *'
-  workflow_dispatch:
-    # 可以在这里定义输入参数，让用户在触发时选择或输入值 (可选)
-    inputs:
-      run_v2rayn_conversion:
-        description: '执行v2rayN转换'
-        required: false
-        default: false
-        type: boolean
-      force_execution:
-        description: '强制执行 (跳过验证)'
-        required: false
-        default: false
-        type: boolean
+#   schedule:
+#     - cron: '5 * * * *'
+#   workflow_dispatch:
+#     # 可以在这里定义输入参数，让用户在触发时选择或输入值 (可选)
+#     inputs:
+#       run_v2rayn_conversion:
+#         description: '执行v2rayN转换'
+#         required: false
+#         default: false
+#         type: boolean
+#       force_execution:
+#         description: '强制执行 (跳过验证)'
+#         required: false
+#         default: false
+#         type: boolean
 jobs:
   fetch:
     runs-on: ubuntu-latest
