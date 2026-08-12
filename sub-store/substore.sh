@@ -1,6 +1,7 @@
 #!/bin/bash
 # ================= 配置区 =================
-BASE_DIR="/Users/julong/Projects/noderobot/sub-store"
+# 使用 $HOME 自动获取当前用户主目录，隐藏绝对路径
+BASE_DIR="$HOME/Projects/noderobot/sub-store"
 FRONTEND_PATH="$BASE_DIR/frontend"
 DATA_PATH="$BASE_DIR/data"
 BACKEND_JS="$BASE_DIR/backend/sub-store.bundle.js"
@@ -11,7 +12,7 @@ LOG_FILE="${TMPDIR:-/tmp}sub-store.log"
 CUSTOM_PATH="/2cXaAxRGfddmGz2yx1wA"
 PORT=3001
 
-# 代理设置 (当传入 proxy 参数时使用)
+# 代理设置 (默认开启，除非传入 noproxy)
 PROXY_URL="http://127.0.0.1:7890"
 
 # 重要：切换到项目根目录，解决 Node.js 找不到模块的问题
@@ -28,8 +29,11 @@ start() {
     if pgrep -f "$BACKEND_JS" > /dev/null; then
         echo "🟢  Sub-Store 已经在运行中。"
     else
-        # 判断是否开启代理
-        if [ "$1" = "proxy" ] || [ "$2" = "proxy" ]; then
+        # 判断是否指定不使用代理
+        if [ "$1" = "noproxy" ] || [ "$2" = "noproxy" ]; then
+            echo "⚡️ 启动模式: 直连模式 (未启用代理)"
+            unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy NODE_TLS_REJECT_UNAUTHORIZED
+        else
             echo "🌐 启动模式: 已开启代理 ($PROXY_URL)"
             export HTTP_PROXY="$PROXY_URL"
             export HTTPS_PROXY="$PROXY_URL"
@@ -37,9 +41,6 @@ start() {
             export https_proxy="$PROXY_URL"
             # 顺便关闭 TLS 证书严格校验，避免代理/中间人导致的证书报错
             export NODE_TLS_REJECT_UNAUTHORIZED="0"
-        else
-            echo "⚡️ 启动模式: 直连模式 (未启用代理)"
-            unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy NODE_TLS_REJECT_UNAUTHORIZED
         fi
 
         echo "✅ 正在启动 Sub-Store..."
@@ -132,5 +133,5 @@ case "$1" in
     log) log ;;
     logf) logf ;;
     clean) clean ;;
-    *) echo "用法: $0 {start|stop|restart|status|log|logf|clean} [proxy]"; exit 1 ;;
+    *) echo "用法: $0 {start|stop|restart|status|log|logf|clean} [noproxy]"; exit 1 ;;
 esac
