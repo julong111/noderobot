@@ -3,13 +3,16 @@
 BASE_DIR="/Users/julong/Projects/noderobot/sub-store"
 FRONTEND_PATH="$BASE_DIR/frontend"
 DATA_PATH="$BASE_DIR/data"
-BACKEND_JS="$BASE_DIR/sub-store.bundle.js"
+BACKEND_JS="$BASE_DIR/backend/sub-store.bundle.js"
 # 优化：使用系统环境变量 TMPDIR，重启自动清理
 LOG_FILE="${TMPDIR:-/tmp}sub-store.log"
 
 # 业务参数
 CUSTOM_PATH="/2cXaAxRGfddmGz2yx1wA"
 PORT=3001
+
+# 代理设置 (当传入 proxy 参数时使用)
+PROXY_URL="http://127.0.0.1:7890"
 
 # 重要：切换到项目根目录，解决 Node.js 找不到模块的问题
 cd "$BASE_DIR" || { echo "❌ 错误：找不到目录 $BASE_DIR"; exit 1; }
@@ -25,6 +28,20 @@ start() {
     if pgrep -f "$BACKEND_JS" > /dev/null; then
         echo "🟢  Sub-Store 已经在运行中。"
     else
+        # 判断是否开启代理
+        if [ "$1" = "proxy" ] || [ "$2" = "proxy" ]; then
+            echo "🌐 启动模式: 已开启代理 ($PROXY_URL)"
+            export HTTP_PROXY="$PROXY_URL"
+            export HTTPS_PROXY="$PROXY_URL"
+            export http_proxy="$PROXY_URL"
+            export https_proxy="$PROXY_URL"
+            # 顺便关闭 TLS 证书严格校验，避免代理/中间人导致的证书报错
+            export NODE_TLS_REJECT_UNAUTHORIZED="0"
+        else
+            echo "⚡️ 启动模式: 直连模式 (未启用代理)"
+            unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy NODE_TLS_REJECT_UNAUTHORIZED
+        fi
+
         echo "✅ 正在启动 Sub-Store..."
         mkdir -p "$DATA_PATH"
         
@@ -37,6 +54,11 @@ start() {
             SUB_STORE_BACKEND_PREFIX=true \
             SUB_STORE_FRONTEND_PATH="$FRONTEND_PATH" \
             SUB_STORE_DATA_BASE_PATH="$DATA_PATH" \
+            HTTP_PROXY="$HTTP_PROXY" \
+            HTTPS_PROXY="$HTTPS_PROXY" \
+            http_proxy="$http_proxy" \
+            https_proxy="$https_proxy" \
+            NODE_TLS_REJECT_UNAUTHORIZED="$NODE_TLS_REJECT_UNAUTHORIZED" \
             node "$BACKEND_JS" > "$LOG_FILE" 2>&1 &
             
         sleep 2
@@ -69,7 +91,14 @@ status() {
     if [ -z "$PID" ]; then
         echo "❌ Sub-Store 当前状态: 未运行"
     else
-        echo "🟢 Sub-Store 当前状态: 运行中 (PID: $PID)"
+        # 检查进程的环境变量判断代理状态
+        PROXY_ENV=$(ps -E -p "$PID" | grep -o 'HTTP_PROXY=[^ ]*' | cut -d= -f2)
+        
+        if [ -n "$PROXY_ENV" ]; then
+            echo "🟢 Sub-Store 当前状态: 运行中 (PID: $PID) | 🌐 代理模式: 开启 ($PROXY_ENV)"
+        else
+            echo "🟢 Sub-Store 当前状态: 运行中 (PID: $PID) | ⚡️ 代理模式: 关闭 (直连)"
+        fi
     fi
 }
 
@@ -96,12 +125,12 @@ clean() {
 }
 
 case "$1" in
-    start) start ;;
+    start) start "$2" ;;
     stop) stop ;;
-    restart) stop; start ;;
+    restart) stop; start "$2" ;;
     status) status ;;
     log) log ;;
     logf) logf ;;
     clean) clean ;;
-    *) echo "用法: $0 {start|stop|restart|status|log|logf|clean}"; exit 1 ;;
+    *) echo "用法: $0 {start|stop|restart|status|log|logf|clean} [proxy]"; exit 1 ;;
 esac
